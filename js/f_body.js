@@ -460,7 +460,7 @@ if((lRootNid==vnDisques)||(lRootNid==vnFnacMusic))
            }
          }
        }
-       function switcherBandeau(id){
+/*       function switcherBandeau(id){
          m = document.getElementById("bandeauTournantImages");
          l = m.getElementsByTagName("img");
          for (var i = 0; i < l.length; i++)
@@ -471,7 +471,7 @@ if((lRootNid==vnDisques)||(lRootNid==vnFnacMusic))
              l[i].style.display = "block";
            }
          }
-       }
+       }*/
 
 
 //-------
@@ -531,3 +531,18 @@ if((lRootNid==vnDisques)||(lRootNid==vnFnacMusic))
 			});
 		}
 	});
+
+
+$(document).ready(function(){
+	$('.MarketPlaceOffers').each(function(){
+		var url = $('a',this);
+		if (url.length) {
+			url = url.attr('href');
+			var me = $(this);
+			if (url)
+				$.getJSON(url,
+				 function(data){ me.html(data.MarketPlaceSummary);}
+				);
+		}
+	});
+});
