@@ -7,8 +7,8 @@
   padding:7px 0 2px 0
 }
 
-/* Univers des héros */
-/* bloc "leurs héros préférés..." */
+/* Univers des hï¿½ros */
+/* bloc "leurs hï¿½ros prï¿½fï¿½rï¿½s..." */
 	#univ_heros ul,#univ_heros li
 	{margin:0;padding:0;list-style-type:none}
 	#univ_heros ul {margin-left:4px;margin-right:4px;}
@@ -16,20 +16,20 @@
 	#univ_heros li * {text-align:center}
 	#univ_heros li.last {float:right;margin-right:0}
 	
-	/* rollover - opacité */
+	/* rollover - opacitï¿½ */
 	#univ_heros a.heros_img:hover img {
 	-moz-opacity:0.5;
 	filter:alpha(opacity=50);
 	opacity:0.5;
 }
 	a.heros_desc {display:block;color:#777777;cursor:pointer;margin-top:.2em;font-size:.8em}
-	/* /bloc "leurs héros préférés..." */
+	/* /bloc "leurs hï¿½ros prï¿½fï¿½rï¿½s..." */
 	
 	/* bloc "Et Aussi..." */
 	div#univ_heros_aussi {margin-bottom:25px;text-align:justify;font-size:0.9em;width:98%}
 	#univ_heros_aussi h3,#univ_heros_aussi ul,#univ_heros_aussi li {display:inline;margin:0;padding:0;}
 	#univ_heros_aussi ul,#univ_heros_aussi li {line-height:1.6em}
-	#univ_heros_aussi li {background:#FFF url(tiret.gif) no-repeat center right; 
+	#univ_heros_aussi li {background:#FFF url(img/tiret.gif) no-repeat center right;
 	padding-right:9px;padding-left:4px}
 	*+html #univ_heros_aussi li, * html #univ_heros_aussi li {padding-right:6px;padding-left:7px} /* ie7+ie6 */
 	#univ_heros_aussi li.last {background:none; padding-right:0}
@@ -41,7 +41,7 @@
 	width:545px;
 	min-height:353px;
 }
-/* l'image de background est précisée en ligne */
+/* l'image de background est prï¿½cisï¿½e en ligne */
 /*#mea_enf .line_3cols .block {float:left;margin-right:7px;width:31.5%}
 #mea_enf .line_3cols .block_last {float:none;margin-right:0;width:31.5%}
 #mea_enf .mise_en_avant .tl, #mea_enf .mise_en_avant .tr, #mea_enf .mise_en_avant .bl, #mea_enf .mise_en_avant .br {
@@ -61,6 +61,6 @@ ul.enf_vignette li.link_1 a {font-weight:bold}
 ul.enf_vignette li.link_2,ul.enf_vignette li.link_2 a {color:#CC0104}
 
 #mea_enf .blk_footer .links .grey, #mea_enf .blk_footer .links .grey a{
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
 }
 

@@ -1,6 +1,6 @@
 
 
-/* ajout barbare - à ranger plus tard */
+/* ajout barbare - ï¿½ ranger plus tard */
 .gras{
   font-weight:bold!important;
 }
@@ -38,7 +38,7 @@ ul.arrow{
   padding:0;
 }
 ul.arrow li{
-  list-style-image:url(http://www.fnac.com/Img/account/MyFnac/ACC_fleche.gif);
+  /* 404 list-style-image:url(http://www.fnac.com/Img/account/MyFnac/ACC_fleche.gif);*/
   list-style-position:outside;
   margin:0 0 0 10px;
   padding:0;
@@ -64,7 +64,7 @@ body{
   _font-size:0.75em;
   zoom:1;
   color:#666; /* gris */
-  background:#FFF url(body-background-standard.png) repeat-x center top;
+  background:#FFF url(img/body-background-standard.png) repeat-x center top;
 }
 a{
   text-decoration:none;
@@ -123,7 +123,7 @@ input.text, select,#deliverTable input{
   padding:0.2em 0;
   border:1px solid #A7A6AA; /* gris */
   font-size:0.9em;
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
 }
 textarea{
   font-family:Arial, Verdana, Helvetica, sans-serif;
@@ -133,14 +133,14 @@ textarea{
   height:10em;
   border:1px solid #A7A6AA; /* gris */
   font-size:1em;
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
 }
 
 select{
   padding:0;
   overflow:hidden;
   height:2em;
-  //height:1.8em; /* hack IE7 et IE6 dû au fait que le border n'a pas l'air d'être pris en compte dans le calcul */
+  //height:1.8em; /* hack IE7 et IE6 dï¿½ au fait que le border n'a pas l'air d'ï¿½tre pris en compte dans le calcul */
   _height:1.5em /* remise propre pour IE6 */
 }
 select option{
@@ -178,7 +178,7 @@ form, fieldset{
   float:right;
   width:250px;
 }
-/*elements cachés si JS activé, JS activé via classe hasJS */
+/*elements cachï¿½s si JS activï¿½, JS activï¿½ via classe hasJS */
 .hasJS .hidesubmit .submit{display:none }
 
 /* context :applique le contexte de formatage (cf la doc fournie lot1 pour plus d'informations */
@@ -193,7 +193,7 @@ h4 cite{
   font-weight:normal;
 }
 /******************
-* margins et paddings // Vu la simplicité et la fonction de ces classes, il est inutile de les structurer
+* margins et paddings // Vu la simplicitï¿½ et la fonction de ces classes, il est inutile de les structurer
 ********************/
 /* padding */
 .pdg_no{padding:0 !important}
@@ -302,7 +302,7 @@ html body .mrg_b_no{margin-bottom:0 !important}
 .bg_bl{background-position:left bottom!important}
 .bg_c{background-position:center center!important}
 /* image des background generalises */
-.fondTriangleGris{background-image:url(triangleGris.png)!important}
+.fondTriangleGris{background-image:url(img/triangleGris.png)!important}
 /**************  gestion de bordure ***************/
 .no_brd{border:none !important;}
 .no_brd_t{border-top:none !important;}
@@ -410,7 +410,7 @@ dl.generique dt{padding:0;margin:0;}
   margin:0;
 }
 #col_gauche, #col_droite{
-  color:#333; /* gris foncé */
+  color:#333; /* gris foncï¿½ */
 }
 /* ====== Colonnes Template 2 cols ====== */
 #page_2cols #col_centre{
@@ -436,7 +436,7 @@ dl.generique dt{padding:0;margin:0;}
   list-style:none;
 }
 #cheminfer, #cheminfer ul{
-  background:#E6E6E6 url(cheminfer_background.png) no-repeat left top; /*gris clair */
+  background:#E6E6E6 url(img/cheminfer_background.png) no-repeat left top; /*gris clair */
 }
 #cheminfer{
   padding:0 0 0 7px;
@@ -478,16 +478,16 @@ dl.generique dt{padding:0;margin:0;}
 	min-width:993px;
 	width:993px;
 	padding:0;
-	background:#F0F0F0 url(bg_footer.png) no-repeat top left;
+	background:#F0F0F0 url(img/bg_footer.png) no-repeat top left;
 	margin:30px auto 0;
 	padding-top:10px;
 }
 #footer .inside{
-   background:url(bg_footer.png) no-repeat bottom left;
+   background:url(img/bg_footer.png) no-repeat bottom left;
    padding:5px 20px 10px 20px;
 }
-body.adherents #footer{ background-image:url(bg_footer_adh.png);}
-body.adherents #footer .inside{ background-image:url(bg_footer_adh.png);}
+body.adherents #footer{ background-image:url(img/bg_footer_adh.png);}
+body.adherents #footer .inside{ background-image:url(img/bg_footer_adh.png);}
 #page, #page_2cols, #page_1col, #enfants {
    padding-bottom:10px;
 }
@@ -555,7 +555,7 @@ overflow:hidden;
   padding:0 0 0 10px;
   font-size:0.8em;
   white-space:nowrap;
-  border-left:1px solid #666;  /* gris foncé */
+  border-left:1px solid #666;  /* gris foncï¿½ */
 }
 #subfooter li.first{
   margin:0;
@@ -564,12 +564,12 @@ overflow:hidden;
 }
 #subfooter a{
   text-decoration:none;
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
   text-transform:uppercase;
   font-weight:bold
 }
 body.adherents #subfooter a{
-  color:#666; /* gris très foncé */
+  color:#666; /* gris trï¿½s foncï¿½ */
 }
 #subfooter a:hover, body.adherents #subfooter a:hover{
   color:#000; /* noir */
@@ -620,15 +620,15 @@ body.adherents #subfooter a{
   #TOP{height:91px}
 	/*-----*/
     #topLEFT{float:left;width:147px;margin:0;}
-      #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(logo-fnac-png24.png) no-repeat 0 0}
-      * html #logoFnac{background-image: url(logo-fnac-png8.png)} /*ie6*/
+      #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(img/logo-fnac-png24.png) no-repeat 0 0}
+      * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6*/
     /*-----*/
 	#topRIGHT{margin-left:148px}
-	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(background-chaines.png) no-repeat top right}
+	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(img/background-chaines.png) no-repeat top right}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
-	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(sprite-chaines.png) no-repeat -820px 0;}
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/sprite-chaines.png) no-repeat -820px 0;}
 	    #CHAINES li.first{background:none}
-	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(sprite-chaines.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(img/sprite-chaines.png) ;background-repeat:no-repeat  }
 	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
 	      #CHAINES li a:active{outline:none}
 	      #ch-Myfnac a{width:82px; background-position:0 0 }
@@ -645,12 +645,12 @@ body.adherents #subfooter a{
 	  #MONCOIN{float:left;width:35%;padding-top:18px;}
 	    #monCompte{float:left;width:33%;padding-top:4px}
 	      #monCompte img{vertical-align:-15%;padding-right:5px}
-	      #monCompte a{color:#000;background:url(ico-mon-compte-png24.png) no-repeat 0 0;padding-left:17px;text-decoration:underline}
+	      #monCompte a{color:#000;background:url(img/ico-mon-compte-png24.png) no-repeat 0 0;padding-left:17px;text-decoration:underline}
 	      #monCompte a:hover{text-decoration:none;}
 	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
 	    * html HeaderBasket{width:15.7em;}	    
 		  #monPanier #cartouche{position:relative;z-index:9999;height:23px;padding-left:6px}
-		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(background-panier.png) no-repeat left bottom;}
+		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(img/background-panier.png) no-repeat left bottom;}
 			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
 			* html #monPanier #cartouche p{width:176px}
 				#monPanier img.panier{display:block;float:left;padding-right:5px;}
@@ -660,7 +660,7 @@ body.adherents #subfooter a{
 				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
 				#monPanier .totArticles a {color:#FFF;text-decoration:none}
 				#monPanier .totArticles a:hover {text-decoration:underline}
-				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(ico-switch.png) no-repeat 0 0;cursor:pointer}
+				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(img/ico-switch.png) no-repeat 0 0;cursor:pointer}
 			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
 				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
 				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
@@ -683,7 +683,7 @@ body.adherents #subfooter a{
 		  position:relative;
 		  margin-right:2px;
 		  padding-bottom:9px;
-		  background:url(reflet-onglets-png24.png) repeat-x 0 34px;
+		  background:url(img/reflet-onglets-png24.png) repeat-x 0 34px;
       }
       #MENU #onglets li.current,
       * html #MENU #onglets li{
@@ -693,14 +693,14 @@ body.adherents #subfooter a{
 			  display:block;
 			  height:36px;
 			  text-indent:-5000px;
-			  background-image:url(sprite-onglets-png24.png) ;
+			  background-image:url(img/sprite-onglets-png24.png) ;
 			  background-repeat:no-repeat;
 			  position:relative;
 			  z-index:101;/* 1 couche de plus que les megaMenu */
 		  }
 		  #onglets .ongLink:active{outline:none}
 		  #onglets .current .ongLink{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
-		  #onglets .current .hover, #onglets .current .ongLink:hover{position:relative}/* SAUF si le megaMenu est deplié */
+		  #onglets .current .hover, #onglets .current .ongLink:hover{position:relative}/* SAUF si le megaMenu est depliï¿½ */
 
 		/* -- positionnement de l'image des onglets -- */
 		  #ong-Livres .ongLink{width:47px; background-position:0 0 }
@@ -804,7 +804,7 @@ body.adherents #subfooter a{
 		  border-bottom-right-radius:5px;
 		  -moz-border-radius-bottomright:5px;
 		  -webkit-border-bottom-right-radius:5px;
-		  background:#FFF url(background-megaMenu.png) repeat-x 0 0;
+		  background:#FFF url(img/background-megaMenu.png) repeat-x 0 0;
 		  position:absolute;
 		  top:35px;
 		  z-index:100;/* doit reste une couche de moins que le lien des onglets .ongLink */
@@ -847,7 +847,7 @@ body.adherents #subfooter a{
 		    #onglets .megaMenu dt, #onglets .megaMenu dt a{color:#DE9C00;font-weight:bold;margin-bottom:3px}
 		    #onglets .megaMenu dt a{text-decoration:underline}
 		    #onglets .megaMenu dt a:hover{text-decoration:none}
-		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(chevron-raquo.png) no-repeat 0 5px}
+		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(img/chevron-raquo.png) no-repeat 0 5px}
 		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
 		      #onglets .megaMenu dd a:hover{text-decoration:underline}
  		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}		      
@@ -870,7 +870,7 @@ body.adherents #subfooter a{
 #navigation {
   margin-top:7px;
 }
-/* on pose le cas où la vignette livraison précède directement le menu gauche */
+/* on pose le cas oï¿½ la vignette livraison prï¿½cï¿½de directement le menu gauche */
 #col_gauche_header + #navigation * {
   padding:0 !important;
   margin:0 !important;
@@ -886,7 +886,7 @@ body.adherents #subfooter a{
 
 #navigation .header h1,.navigation .header h1,#navigation .header, #navigation .header h2, #navigation .bottom, #navigation .bottom div, .navigation .header, .navigation .header h2, .navigation .bottom, .navigation .bottom div
 {
-  background:url(navn2_background.png) no-repeat left top;
+  background:url(img/navn2_background.png) no-repeat left top;
 }
 /*body.enfants #navigation .header .topleft, body.enfants #navigation .header, body.enfants #navigation .header h2, body.enfants #navigation .bottom, body.enfants #navigation .bottom div
 {
@@ -996,11 +996,11 @@ body.enfants #navigation dl, body.enfants #navigation ul{
 }
 
 #navigation dl a, #navigation ul a, .navigation dl a, .navigation ul a{
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
   text-decoration:none;
 }
 body.enfants #navigation dd a, body.enfants #navigation ul a {
- /*color:#fff; /* gris foncé */
+ /*color:#fff; /* gris foncï¿½ */
  text-decoration:none;
 }
 #navigation dl a:hover, #navigation li a:hover, .navigation dl a:hover, .navigation li a:hover, body.enfants #navigation dd a:hover, body.enfants #navigation  li a:hover {
@@ -1056,7 +1056,7 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
   margin-bottom:10px;
 }
 
-/* Bandeau tournant de la home général */
+/* Bandeau tournant de la home gï¿½nï¿½ral */
 
 #bandeauTournantImages img{
  display:block;
@@ -1100,12 +1100,12 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
 }
 
 /*****************
-* contenus génériques
+* contenus gï¿½nï¿½riques
 ******************/
 
 /* ======== produit et contact ========= */
-/* on affiche un produit avec une image sur la gauche et la description sur la droite. Le contact se présente exactement pareil et le code est identique.
-Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dédoublés.
+/* on affiche un produit avec une image sur la gauche et la description sur la droite. Le contact se prï¿½sente exactement pareil et le code est identique.
+Afin de ne pas faire de  redondance de code, les sï¿½lecteurs seront simplement dï¿½doublï¿½s.
  /* lot2 */
 .produit .number, .produit .img, .contact .number, .contact .img{
   float:left;
@@ -1119,7 +1119,7 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dé
 /*contexte formatage */
 .produit .number, .produit .number span, .contact .number, .contact .number span{
   display:block;
-  background:url(block_gris_number_corners.png) no-repeat left bottom;
+  background:url(img/block_gris_number_corners.png) no-repeat left bottom;
 }
 .produit .number span, .contact .number span{
 			padding: 1em 0 1em 0;
@@ -1142,7 +1142,7 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dé
 .produit .img img, .contact .img img{
   display:block;
 }
-.produit .desc .img{ /* lorsque l'image est dans la description, cas de mise en avant, on supprime les propriétés déclarées précédemment */
+.produit .desc .img{ /* lorsque l'image est dans la description, cas de mise en avant, on supprime les propriï¿½tï¿½s dï¿½clarï¿½es prï¿½cï¿½demment */
   float:none;
   margin:8px 0;
   text-align:center;
@@ -1156,7 +1156,7 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dé
   font-size:1.1em;
 }
 .produit dt, .produit dt a{
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
 /*  text-decoration:none; TOUSSI */
 }
 .contact dt, .contact dt a{
@@ -1173,7 +1173,7 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dé
 .contact .details{
   color:#000;
 }
-.contact .details strong{ /* les détails important sont en couleur moutarde */
+.contact .details strong{ /* les dï¿½tails important sont en couleur moutarde */
   color:#DE9C00;
 }
 .produit .resume{
@@ -1260,61 +1260,63 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dé
   background-position:0 3px;
 }
 .produit dd.pictoPrixAdhSmall{
-  background-image:url(offre-adherents-small.png);
+  background-image:url(img/offre-adherents-small.png);
 }
 .produit dd.pictoPrixAdhNormal{
-  background-image:url(offre-adherents.gif);
+  background-image:url(img/offre-adherents.gif);
 }
 .produit dd.pictoPrixAdhBig{
-  background-image:url(offre-adherents.gif);
+  background-image:url(img/offre-adherents.gif);
 }
 .produit dd.pictoPrixVertSmall{
-  background-image:url(prix-vert-small.gif);
+  background-image:url(img/prix-vert-small.gif);
 }
 .produit dd.pictoPrixVertNormal{
-  background-image:url(minipictovert.gif);
+  background-image:url(img/minipictovert.gif);
 }
 .produit dd.pictoCoupDeCoeur{
-  background-image:url(coup-de-coeur.gif);
+  background-image:url(img/coup-de-coeur.gif);
 }
 .produit dd.pictoAffaireFnac{
-  background-image:url(minipictoaffaire.gif);
+  background-image:url(img/minipictoaffaire.gif);
 }
 .produit dd.pictoPrixVertBig{
-  background-image:url(prix-vert.gif);
+  background-image:url(img/prix-vert.gif);
 }
 .produit dd.pictoPrixRougeSmall{
-  background-image:url(bonne-affaire-small.gif);
+  background-image:url(img/bonne-affaire-small.gif);
 }
 .produit dd.pictoPrixRougeNormal{
-  background-image:url(minipictoaffaire.gif);
+  background-image:url(img/minipictoaffaire.gif);
 }
 .produit dd.pictoPremierPrix {
-  background-image:url(mini1erprix.gif);
+  background-image:url(img/mini1erprix.gif);
 }
 .produit dd.pictoPrixRougeBig{
-  background-image:url(bonne-affaire.gif);
+  background-image:url(img/bonne-affaire.gif);
 }
 .produit dd.pictoSoldesNormal{
-  background-image:url(soldes24.png);
+  background-image:url(img/soldes24.png);
 }
 
-.produit dd.pictoAdutalent {background:url(star.gif) 10px 0px no-repeat ;}
-.produit dd span.pictomp3{background:url(mp3.gif) right no-repeat;padding:0 34px 0 0;}
-.produit dd.pictoMp3 {background:url(mp3.gif) 60px 3px no-repeat;}
-.produit dd.pictoMp3block {background:url(mp3.gif) 10px 0px no-repeat;margin:10px 0 -5px 0px;}
+.produit dd.pictoAdutalent {background:url(img/star.gif) 10px 0px no-repeat ;}
+.produit dd span.pictomp3{background:url(img/mp3.gif) right no-repeat;padding:0 34px 0 0;}
+.produit dd.pictoMp3 {background:url(img/mp3.gif) 60px 3px no-repeat;}
+.produit dd.pictoMp3block {background:url(img/mp3.gif) 10px 0px no-repeat;margin:10px 0 -5px 0px;}
 *+html .produit dd.pictoMp3block {margin:10px 0 8px 0px;}
 *html .produit dd.pictoMp3block {margin:10px 0 12px 0px;}
-.produit dd.pictoCameraTexteBleu {background:url(camera.gif) 10px 0px no-repeat ;color:#006699;font-weight:bold;font-size:12px;height:16px;}
+.produit dd.pictoCameraTexteBleu {background:url(img/camera.gif) 10px 0px no-repeat ;color:#006699;font-weight:bold;font-size:12px;height:16px;}
 .produit dd.pictoCameraTexteBleu  strong{margin:0 0 0 25px;}
-.produit dd.pictoDiamond{background:url(diamond.gif) 0px 0px no-repeat;}
-.produit dd.pictostar{background-image:url(star.gif);}
-.produit dd.pictoGaming{background-image:url(picto_occaz-gaming_sur_gris_22x22.png);}
+.produit dd.pictoDiamond{background:url(img/diamond.gif) 0px 0px no-repeat;}
+.produit dd.pictostar{background-image:url(img/star.gif);}
+.produit dd.pictoGaming{background-image:url(img/picto_occaz-gaming_sur_gris_22x22.png);}
 
 /*import ancienne feuille de style*/
 .produit dd.pictocoeur{
-  background-image:url(minipictocoeur.gif);
+  background-image:url(img/minipictocoeur.gif);
 }
+/*
+404
 .produit dd.picto20pourcent{
   background-image:url(http://www.fnac.com/Img/v2/pictos/minipicto20pourcent.gif);
 }
@@ -1324,52 +1326,57 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dé
 .produit dd.pictopremier{
   background-image:url(http://www.fnac.com/Img/v2/pictos/minipictopremier.gif);
 }
+*/
 .produit dd.pictoadh{
-  background-image:url(minipictoadh.gif);
+  background-image:url(img/minipictoadh.gif);
 }
+/* 404
 .produit dd.pictoadh6{
   background-image:url(http://www.fnac.com/Img/v2/pictos/minipictoadh6.gif);
 }
+*/
 .produit dd.pictotalent{
-  background-image:url(minipictotalent.gif);
+  background-image:url(img/minipictotalent.gif);
 }
 .produit dd.pictoLivreSmall{
-  background-image:url(livre-small.gif);
+  background-image:url(img/livre-small.gif);
 }
 .produit dd.pictoLivre{
-  background-image:url(livre.gif);
+  background-image:url(img/livre.gif);
 }
 .produit dd.picto10Ans {
-  background-image:url(10ans.gif);
+  background-image:url(img/10ans.gif);
 }
 .produit dd.pictoSourisSmall{
-  background-image:url(souris-small.gif);
+  background-image:url(img/souris-small.gif);
 }
 .produit dd.pictoSouris{
-  background-image:url(souris.gif);
+  background-image:url(img/souris.gif);
 }
 .produit dd.pictopanier{
-  background-image:url(ACC_pictopanier.gif);
+  background-image:url(img/ACC_pictopanier.gif);
 }
 .produit dd.pictotelecharger{
-  background-image:url(LIVtelecharger_jaune.gif)
+  background-image:url(img/LIVtelecharger_jaune.gif)
 }
 .produit dd.pictoCadeauSmall{
-  background-image:url(cadeau-small.png);
+  background-image:url(img/cadeau-small.png);
 }
 .produit dd.pictoCadeau{
-  background-image:url(noel_picto.png);
+  background-image:url(img/noel_picto.png);
 }
-dd.pictoCadeauFnacmusic{background:url(gift.gif)  0px 0px no-repeat;padding:4px;}
+dd.pictoCadeauFnacmusic{background:url(img/gift.gif)  0px 0px no-repeat;padding:4px;}
 dd.pictoCadeauFnacmusic{margin:0;}
 dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
 
 .produit dd.pictoexcluadh{
-  background-image:url(minipictoexcluadh.png);
+  background-image:url(img/minipictoexcluadh.png);
 }
+/* 404
 .produit dd.pictoideecadeau{
   background-image:url(http://www.fnac.com/Img/v2/pictos/pictoideecadeau.png);
 }
+*/
 
 .produit dd .delStylePrice{
   font-weight:normal;
@@ -1435,7 +1442,7 @@ dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
   float:right;
 }
 
-/* liste de produits en 2 colonnes :avec une seule liste qui constitue la colonne, chaque LI est flotté gauche (float:left), des bordures sont rajoutées selon le block conteneur */
+/* liste de produits en 2 colonnes :avec une seule liste qui constitue la colonne, chaque LI est flottï¿½ gauche (float:left), des bordures sont rajoutï¿½es selon le block conteneur */
 ul.liste_2cols{ /* lot2 */
   /* contexte de formatage */
   overflow:hidden;
@@ -1462,7 +1469,7 @@ ul.liste_2cols_Vseparator li.even{
   padding-left:10px;
 }
 
-/* liste de produits conseillés :liste en ligne présentée par 3 produits (largeur 30%) avec bordure séparatrice.*/
+/* liste de produits conseillï¿½s :liste en ligne prï¿½sentï¿½e par 3 produits (largeur 30%) avec bordure sï¿½paratrice.*/
 .produits_conseilles,.produits_conseilles li{ /* lot2 */
   margin:0;
   padding:0;
@@ -1474,7 +1481,7 @@ ul.liste_2cols_Vseparator li.even{
   _overflow:visible;
   zoom:1;
 }
-.produits_conseilles li{ /* on définit les styles du LI */  /* lot2 */
+.produits_conseilles li{ /* on dï¿½finit les styles du LI */  /* lot2 */
   float:left;
   border-right:1px solid #FFF; /* blanc */
   padding:0 10px;
@@ -1489,7 +1496,7 @@ ul.liste_2cols_Vseparator li.even{
   padding:0;
   width:auto;
 }
-/* liste de produits alignés sur une ligne */
+/* liste de produits alignï¿½s sur une ligne */
 ul.liste_inline{ /* lot2 */
   /* contexte de formatage */
   overflow:hidden;
@@ -1561,7 +1568,7 @@ ul.liste_evaluations .evaluation a{
   padding:0;
   list-style:none;
 }
-ul.liste_3cols li{ /* on ne veut que 3 éléments */
+ul.liste_3cols li{ /* on ne veut que 3 ï¿½lï¿½ments */
   width:30%;
   padding-right:20px;
   margin-right:10px;
@@ -1571,7 +1578,7 @@ ul.liste_3cols li.last{
   padding:0;
 }
 
-/* avis :Avis sur un produit. Présenté presque à l'identique */
+/* avis :Avis sur un produit. Prï¿½sentï¿½ presque ï¿½ l'identique */
 .avis{
   margin-top:5px;
 }
@@ -1714,13 +1721,13 @@ ul.liste_3cols li.last{
   text-decoration:none;
 }
 .links span.type2, .links span.type2 a{
-  color:#666 !important; /* gris foncé */
+  color:#666 !important; /* gris foncï¿½ */
 }
 .links a:hover{
   text-decoration:underline;
 }
 .blk_footer .links, .blk_footer .links a{
-  color:#666; /* gris foncé */
+  color:#666; /* gris foncï¿½ */
 }
 /* links_lines */
 .links_lines, .links_lines li{
@@ -1744,7 +1751,7 @@ ul.liste_3cols li.last{
   text-decoration:underline;
 }
 #col_gauche .links_lines li{
-  padding-left:10px; /* ne pas mettre padding, car 1 seule valeur est remplacé car on a un cas spécifique et seul le left doit etre changer, sans altérer les autres padding */
+  padding-left:10px; /* ne pas mettre padding, car 1 seule valeur est remplacï¿½ car on a un cas spï¿½cifique et seul le left doit etre changer, sans altï¿½rer les autres padding */
 }
 .links_lines li{
   margin-top:1px; /* ne pas changer */
@@ -1765,7 +1772,7 @@ ul.liste_3cols li.last{
   text-align:center;
 }
 .listeimages li a{
-  display:block; /* le block doit faire la largeur de son contenu pour que celui-ci soit centré horizontalement, donc width:1% pour IE et display:table pour les autres */
+  display:block; /* le block doit faire la largeur de son contenu pour que celui-ci soit centrï¿½ horizontalement, donc width:1% pour IE et display:table pour les autres */
   display:table;
   _width:1%;
   margin:0 auto;
@@ -1801,10 +1808,10 @@ margin-bottom:15px;
 /*************  contenus customs ************/
 .gradient_bottom{
   padding-bottom:8px !important;
-  background:url(gradient_bottom.gif) repeat-x left bottom;
+  background:url(img/gradient_bottom.gif) repeat-x left bottom;
 }
 
-/* ===== Couleurs de texte générales ===== */
+/* ===== Couleurs de texte gï¿½nï¿½rales ===== */
 .pictoPrixVertSmall, .pictoPrixVertNormal, .pictoPrixVertBig, .vert{
   color:#00AA30 !important;
 }
@@ -1892,17 +1899,17 @@ color:#DA9914 !important;
 * Boutons
 ****************/
 .button, .button span{
-  background:url(bouton_noir_background.png) no-repeat left top;
+  background:url(img/bouton_noir_background.png) no-repeat left top;
   display:-moz-inline-box;
   display:inline-block;
-  /* propriétés particulières du display qui donne au block une
+  /* propriï¿½tï¿½s particuliï¿½res du display qui donne au block une
      consistance de block mais un comportement inline, la premiere
      propriete est pour Firefox, la seconde pour tous les autres
      navigateurs
   */
 }
 .buttonNoirMiddle, .buttonNoirMiddle span{
-  background-image:url(bouton_noirmiddle_background.png);
+  background-image:url(img/bouton_noirmiddle_background.png);
 }
 .button{
   padding-left:15px;
@@ -1935,7 +1942,7 @@ color:#DA9914 !important;
 /****************
 * Conteneurs de blocks  :Definissent les lignes qui peuvent contenir plusieurs blocks
 *****************/
-/* ici on défini les lignes qui contiennent les blocks, sachant que le dernier block d'une ligne porte la classe block_last */
+/* ici on dï¿½fini les lignes qui contiennent les blocks, sachant que le dernier block d'une ligne porte la classe block_last */
 .line_3cols, .line_3cols_mea, .line_2cols, .line_2cols_mea, .line_2cols_FM { /* lot 3 : update */
   overflow:hidden;
   _overflow:visible;
@@ -1969,11 +1976,11 @@ color:#DA9914 !important;
   margin-right:0;
 }
 
-/* il est possible aussi de définir des tailles pour les blocks */
+/* il est possible aussi de dï¿½finir des tailles pour les blocks */
 .size_1on3{width:32.5% !important}
 .size_2on3{width:66% !important}
 
-/* line_2col_mea :conteneur ligne où les blocs n'ont pas de bords arrondis vers l'intérieure */
+/* line_2col_mea :conteneur ligne oï¿½ les blocs n'ont pas de bords arrondis vers l'intï¿½rieure */
 .line_2cols_mea .block .blk_header span, .line_3cols_mea .block_first .blk_header span, .line_3cols_mea .block_middle .blk_header span, .line_2cols_mea .block .blk_header a, .line_3cols_mea .block_first .blk_header a, .line_3cols_mea .block_middle .blk_header a{ /* lot 3 : update */
 background-position: -50px 0;
 }
@@ -1985,7 +1992,7 @@ background-position: right top;
 }
 
 /****************
-* inside_block :block à l'intérieure d'un block
+* inside_block :block ï¿½ l'intï¿½rieure d'un block
 *******************/
 .inside_block{ /* lot2 */
   position:relative;
@@ -1994,13 +2001,13 @@ background-position: right top;
 }
 /* inside_block_corners*/
 #tarif1 span.tl, .inside_block .tl, .inside_block .tr, .inside_block .bl, .inside_block .br{ /* lot2 */
-  background-image:url(inside_block_corners.gif);
+  background-image:url(img/inside_block_corners.gif);
 }
 /*****************
-* block :Déclaration générique d'un block
+* block :Dï¿½claration gï¿½nï¿½rique d'un block
 ******************/
-/* =========== block (definition des éléments defaut)  ============ */
-/* on défini les parties principales qui constituent un block */
+/* =========== block (definition des ï¿½lï¿½ments defaut)  ============ */
+/* on dï¿½fini les parties principales qui constituent un block */
 .block{
   font-size:0.9em;
   /* contexte de formatage */
@@ -2017,7 +2024,7 @@ background-position: right top;
 .block .block{
   font-size:1em; /* permet de gommer le soucis d'indentation de class .block */
 }
-/* entête de block (header) */
+/* entï¿½te de block (header) */
 .block .blk_header, .block .blk_header span, .block .blk_header a{
   display:block;
   margin:0;
@@ -2052,7 +2059,7 @@ background-position: right top;
 .block .blk_header span.fine, .block .blk_header a.fine{
   padding:3px 6px 0px 1px;
 }
-/* picto header :defini les propriétés qui sont appliquées au picto quand celui-ci est mis dans une tétière*/
+/* picto header :defini les propriï¿½tï¿½s qui sont appliquï¿½es au picto quand celui-ci est mis dans une tï¿½tiï¿½re*/
 .block .blk_header .picto{
   float:left;
   margin:-3px -30px -2px 5px;
@@ -2072,7 +2079,7 @@ background-position: right top;
   zoom:1; /* correction IE bug */
 }
 
-/* corps intérieur du block, c'est la partie qui contient le texte, produits, etc... */
+/* corps intï¿½rieur du block, c'est la partie qui contient le texte, produits, etc... */
 .blk_content{
   /* contexte de formatage */
   zoom:1;
@@ -2144,7 +2151,7 @@ background-position: right top;
 .IS_IE .tr, .IS_IE .br{
   _right:expression(cssRight(this)); /* corrige le positionnement absolu sous IE */
 }
-/* IS_IE est là pour que IE7 n'utilise pas cette propriété */
+/* IS_IE est lï¿½ pour que IE7 n'utilise pas cette propriï¿½tï¿½ */
 .IS_IE .bl, .IS_IE .br{
   _bottom:expression(cssBottom(this,true)); /* corrige le positionnement absolu sous IE */
 }
@@ -2160,9 +2167,9 @@ background-position: right top;
 
 /* flat :aucune bordure sur le block */
 .flat .blk_header{
-  margin:0 !important /* le block d'entête ne doit pas avoir de marges quand il n'a pas de bordure */
+  margin:0 !important /* le block d'entï¿½te ne doit pas avoir de marges quand il n'a pas de bordure */
 }
-/* les coins arrondis en mode flat sont à 0 */
+/* les coins arrondis en mode flat sont ï¿½ 0 */
 .block .flat .tl{
   top:0;
   left:0;
@@ -2183,22 +2190,22 @@ background-position: right top;
 .IS_IE .flat .tr, .IS_IE .flat .br{
   _right:expression(cssRight(this)); /* corrige le positionnement absolu sous IE */
 }
-/* IS_IE est là pour que IE7 n'utilise pas cette propriété */
+/* IS_IE est lï¿½ pour que IE7 n'utilise pas cette propriï¿½tï¿½ */
 .IS_IE .flat .bl, .IS_IE .flat .br{
   _bottom:expression(cssBottom(this,true)); /* corrige le positionnement absolu sous IE */
 }
 
 .filled .flat .tl, .filled .flat .tr, .filled .flat .bl, .filled .flat .br{ /* coin sur fond parent gris */
-  background-image:url(block_flat_corners_gris.png);
+  background-image:url(img/block_flat_corners_gris.png);
 }
 .bg_gris .flat .tl, .bg_gris  .flat .tr, .bg_gris  .flat .bl, .bg_gris .flat .br{ /* coin sur fond parent gris */
-  background-image:url(block_flat_corners_gris_plein.png);
+  background-image:url(img/block_flat_corners_gris_plein.png);
 }
 .block .gradient{
-  background:url(fond_gradient.png) repeat-x left top
+  background:url(img/fond_gradient.png) repeat-x left top
 }
 .block .gradient_blanc{
-  background:url(fond_gradient.png) repeat-x left top;
+  background:url(img/fond_gradient.png) repeat-x left top;
   background-color:#FFF;
 }
 .block .filled_black{
@@ -2228,11 +2235,11 @@ background-position: right top;
 /* ombre de fin de block */
 .btmshadow, .btmshadow b{
   display:block;
-  background:url(bottom_shadow.png) repeat-x left top;
+  background:url(img/bottom_shadow.png) repeat-x left top;
 }
 .btmshadow2, .btmshadow2 b{
   display:block;
-  background:url(bottom_shadow2.png) repeat-x left top;
+  background:url(img/bottom_shadow2.png) repeat-x left top;
 }
 .btmshadow, .btmshadow2{
   padding-left:10px;
@@ -2253,10 +2260,10 @@ background-position: right top;
 /*********************
 *  blocks
 **********************/
-/* Les styles qui suivent ne vont réécrire que certaines propriétés qui ont été définies plus haut, mais pour certaines blocks elles doivent être réécrites. */
+/* Les styles qui suivent ne vont rï¿½ï¿½crire que certaines propriï¿½tï¿½s qui ont ï¿½tï¿½ dï¿½finies plus haut, mais pour certaines blocks elles doivent ï¿½tre rï¿½ï¿½crites. */
 /* ========  mise_en_avant ========= */
 .mise_en_avant .blk_header, .mise_en_avant .blk_header span, .mise_en_avant .blk_header a{
-  background-image:url(mise_en_avant_header.png);
+  background-image:url(img/mise_en_avant_header.png);
   color:#FFF; /* blanc */
   margin:0;
 }
@@ -2269,7 +2276,7 @@ background-position: right top;
   background:transparent!important;
 }
 .mise_en_avant .blk_header span, .mise_en_avant .blk_header a {
-  padding-top:3px; /* seul le top et bottom doivent être modifié (detail important) */
+  padding-top:3px; /* seul le top et bottom doivent ï¿½tre modifiï¿½ (detail important) */
   padding-bottom:3px;
   min-height:13px;
   _height:13px;
@@ -2278,14 +2285,14 @@ background-position: right top;
   font-size:1.1em;
 }
 .mise_en_avant .blk_inside{
-  background:#F3F3F3; /* gris très clair */
+  background:#F3F3F3; /* gris trï¿½s clair */
 }
 .mise_en_avant .tl{top:0;left:0;}
 .mise_en_avant .tr{top:0;right:0;}
 .mise_en_avant .bl{bottom:0;left:0;}
 .mise_en_avant .br{bottom:0;right:0;}
 #col_centre .mise_en_avant .tl, #col_centre .mise_en_avant .tr, #col_centre .mise_en_avant .bl, #col_centre .mise_en_avant .br{
-  background-image:url(mise_en_avant_corners.png);
+  background-image:url(img/mise_en_avant_corners.png);
 }
 
 
@@ -2319,7 +2326,7 @@ background-position: right top;
 /*padding:0; c'est doutueux, j'en ai eu besoin et plus maintenant, je la garde sous le coude au cas ou */
 }
 .brd_noir .tl, .brd_noir .tr, .brd_noir .bl, .brd_noir .br{
-  background-image:url(corner_noir_gris.png)!important;
+  background-image:url(img/corner_noir_gris.png)!important;
 }
 .brd_noir .blk_inside{
   border-color:#000!important;
@@ -2349,7 +2356,7 @@ background-position: right top;
 .IS_IE .cadre_produit .tr, .IS_IE .cadre_produit .br{
   _right:expression(cssRight(this)) /* corrige le positionnement absolu sous IE */
 }
-/* IS_IE est là pour que IE7 n'utilise pas cette propriété */
+/* IS_IE est lï¿½ pour que IE7 n'utilise pas cette propriï¿½tï¿½ */
 .IS_IE .cadre_produit .bl, .IS_IE .cadre_produit .br{
   _bottom:expression(cssBottom(this,true)) /* corrige le positionnement absolu sous IE */
 }
@@ -2395,12 +2402,12 @@ background-position: right top;
 /* ======= block_rouge =======*/
 .block_rouge .blk_header, .block_rouge .blk_header span, .block_rouge .blk_header a{
   background-color:#DD0000; /* rouge */
-  background-image:url(block_rouge_header.png);
+  background-image:url(img/block_rouge_header.png);
   color:#FFF; /* blanc */
 }
 .block_rouge_mea .blk_header, .block_rouge_mea .blk_header span, .block_rouge_mea .blk_header a{
   background-color:#FFF; /* blanc */
-  background-image:url(block_rouge_mea_header.png);
+  background-image:url(img/block_rouge_mea_header.png);
 }
 .block_rouge .blk_inside{
   border-left:1px solid #DD0000; /* rouge */
@@ -2412,16 +2419,16 @@ background-position: right top;
 }
 
 .block_rouge .blk_inside .tr, .block_rouge .blk_inside .tl, .block_rouge .blk_inside .br, .block_rouge .blk_inside .bl {
-background-image:url(block_rouge_corner_trans.png);
+background-image:url(img/block_rouge_corner_trans.png);
 }
 
 .block_rouge .blk_inside_red_brd_grey .tl, .block_rouge .blk_inside_red_brd_grey .tr, .block_rouge .blk_inside_red_brd_grey .bl, .block_rouge .blk_inside_red_brd_grey .br{
-  background-image:url(block_rouge_corner.png);
+  background-image:url(img/block_rouge_corner.png);
 }
 
 /* produit */
 .block_rouge .produit .number, .block_rouge .produit .number span{
-  background-image:url(block_rouge_number_corners.png);
+  background-image:url(img/block_rouge_number_corners.png);
   color:#FFF; /* blanc */
 }
 .block_rouge h4, .block_rouge .filled .produit dt, .block_rouge .filled .produit dt a{
@@ -2499,21 +2506,21 @@ background-image:url(block_rouge_corner_trans.png);
 .block_rouge .cadre_produit .tr,
 .block_rouge .cadre_produit .bl,
 .block_rouge .cadre_produit .br {
-  background-image:url(block_cadre_prod_rouge1_corner.png);
+  background-image:url(img/block_cadre_prod_rouge1_corner.png);
 }
 
 /******* block_jaune *******/
 .block_jaune .blk_header, .block_jaune .blk_header span, .block_jaune .blk_header a{
   background-color:#F9D500; /* jaune */
-  background-image:url(block_jaune_header_flat.png);
+  background-image:url(img/block_jaune_header_flat.png);
   color:#000; /* noir */
 }
 .block_jaune_blanc .blk_header, .block_jaune_blanc .blk_header span, .block_jaune_blanc .blk_header a{
-  background-image:url(block_jaune_blanc_header.png);
+  background-image:url(img/block_jaune_blanc_header.png);
 }
 .block_jaune_mea .blk_header, .block_jaune_mea .blk_header span, .block_jaune_mea .blk_header a{
   background-color:#FFF; /* blanc */
-  background-image:url(block_jaune_mea_header.png);
+  background-image:url(img/block_jaune_mea_header.png);
 }
 .block_jaune .blk_inside{
   border:1px solid #F9D500; /* jaune */
@@ -2585,25 +2592,25 @@ background-image:url(block_rouge_corner_trans.png);
 .block_jaune .cadre_produit .tr,
 .block_jaune .cadre_produit .bl,
 .block_jaune .cadre_produit .br {
-background-image:url(block_cadre_prod_jaune_corner.png);
+background-image:url(img/block_cadre_prod_jaune_corner.png);
 }
 /* ======= block_bleu =======  */
 .block_bleu .blk_header, .block_bleu .blk_header span, .block_bleu .blk_header a{
   background-color:#0099CC; /* bleu clair */
-  background-image:url(block_bleu_header.png);
+  background-image:url(img/block_bleu_header.png);
   color:#FFF; /* blanc */
 }
 .block_bleu .blk_inside{
   border:1px solid #0099CC; /*  bleu clair */
 }
 .block_bleu .filled{
-  background:#D9F7FF; /* bleu ciel (très clair) */
+  background:#D9F7FF; /* bleu ciel (trï¿½s clair) */
 }
 .block_bleu .produit dt, .block_bleu .produit dt a{
   color:#0099CC; /* bleu clair  */
 }
 .block_bleu .cadre_produit .tl, .block_bleu .cadre_produit .tr, .block_bleu .cadre_produit .bl, .block_bleu .cadre_produit .br{
-  background-image:url(block_cadre_prod_bleu_corner.png);
+  background-image:url(img/block_cadre_prod_bleu_corner.png);
 }
 .block_bleu .cadre_produit .number{
   border-color:#47B5DA; /* bleu clair */
@@ -2612,7 +2619,7 @@ background-image:url(block_cadre_prod_jaune_corner.png);
   background:#FFF; /* blanc */
 }
 .block_bleu .produit .number, .block_bleu .produit .number span{
-  background-image:url(block_bleu_number_corners.png);
+  background-image:url(img/block_bleu_number_corners.png);
   color:#FFF; /* blanc */
 }
 .block_bleu .cadre_produit .number, .block_bleu .cadre_produit .number span{
@@ -2645,12 +2652,12 @@ background-image:url(block_cadre_prod_jaune_corner.png);
 /* ======= block_orange ======= */
 .block_orange .blk_header, .block_orange .blk_header span, .block_orange .blk_header a{
   background-color:#FE7403; /* orange */
-  background-image:url(block_orange_header.png);
+  background-image:url(img/block_orange_header.png);
   color:#FFF; /* blanc */
 }
 .block_orange_mea .blk_header, .block_orange_mea .blk_header span, .block_orange_mea .blk_header a{
   background-color:#FFF; /* blanc */
-  background-image:url(block_orange_mea_header.png);
+  background-image:url(img/block_orange_mea_header.png);
 }
 .block_orange .blk_footer .links, .block_orange .blk_footer .links a{
   color:#FF6600; /* orange */
@@ -2704,31 +2711,31 @@ background-image:url(block_cadre_prod_jaune_corner.png);
 .block_orange .cadre_produit .tr,
 .block_orange .cadre_produit .bl,
 .block_orange .cadre_produit .br {
-background-image:url(block_cadre_prod_orange_corner.png);
+background-image:url(img/block_cadre_prod_orange_corner.png);
 }
 /* ======= block_noir ======= */
 .block_noir .blk_header, .block_noir .blk_header span, .block_noir .blk_header a{
   background-color:#000; /* noir */
-  background-image:url(block_noir_header.png);
+  background-image:url(img/block_noir_header.png);
   color:#FFF; /* blanc */
 }
 #col_gauche .block_noir .blk_header, #col_gauche .block_noir .blk_header span, #col_gauche .block_noir .blk_header a, #col_droite .block_noir .blk_header, #col_droite .block_noir .blk_header span, #col_droite .block_noir .blk_header a{
   color:#DE9C00; /* moutarde */
-  background-image:url(block_noir_header_on_col.png);
+  background-image:url(img/block_noir_header_on_col.png);
 }
 #col_gauche .block_top .blk_header, #col_gauche .block_top .blk_header span, #col_gauche .block_top .blk_header a, #col_droite .block_top .blk_header, #col_droite .block_top .blk_header span, #col_droite .block_top .blk_header a{
   color:#DE9C00; /* moutarde */
-  background-image:url(block_noir_header_on_col.png);
+  background-image:url(img/block_noir_header_on_col.png);
 }
 #col_gauche .block_noir .flat .blk_header, #col_gauche .block_noir .flat .blk_header span, #col_gauche .block_noir .flat .blk_header a, #col_droite .block_noir .flat .blk_header, #col_droite .block_noir .flat .blk_header span, #col_droite .block_noir .flat .blk_header a{
   color:#DE9C00; /* moutarde */
-  background-image:url(block_noir_flat_header_on_col.png);
+  background-image:url(img/block_noir_flat_header_on_col.png);
 }
 .block_noir .tl, .block_noir .tr, .block_noir .bl, .block_noir .br{
-  background-image:url(block_gris_corners.png);
+  background-image:url(img/block_gris_corners.png);
 }
 .block_noir .filled_black .tl, .block_noir .filled_black .tr, .block_noir .filled_black .bl, .block_noir .filled_black .br{
-  background-image:url(block_noir_corners.png);
+  background-image:url(img/block_noir_corners.png);
 }
 .block_noir .blk_inside{
   border:1px solid #CCC; /* gris  */
@@ -2755,7 +2762,7 @@ background-image:url(block_cadre_prod_orange_corner.png);
 .block_noir .cadre_produit .tr,
 .block_noir .cadre_produit .bl,
 .block_noir .cadre_produit .br {
-background-image:url(block_cadre_prod_noir_corner.png);
+background-image:url(img/block_cadre_prod_noir_corner.png);
 }
 		
 #col_droite .block_noir .links{
@@ -2782,10 +2789,10 @@ background-image:url(block_cadre_prod_noir_corner.png);
   color:#FFF; /* blanc */
 }
 .block_noir .sep{
-  border-color:#F5F5F5; /* blanc fumé */
+  border-color:#F5F5F5; /* blanc fumï¿½ */
 }
 .block_noir .sep{
-  border-color:#F5F5F5; /* blanc fumé */
+  border-color:#F5F5F5; /* blanc fumï¿½ */
 }
 .block_noir h4, .block_noir h4 a{
   color:#000; /* noir */
@@ -2809,13 +2816,13 @@ background-image:url(block_cadre_prod_noir_corner.png);
   color:#DE9C00; /* moutarde */
 }
 .block_noir .fluXml .blk_content{
-  background:url(flux-xml.png) no-repeat 9px 12px;
+  background:url(img/flux-xml.png) no-repeat 9px 12px;
 }
 .block_noir .fluXml .blk_content p{
   padding-left:42px;
   margin-bottom:0;
 }
-.block_noir .faq .blk_content{ background:url(icoFaq_Mobile.png) no-repeat 9px 12px; }
+.block_noir .faq .blk_content{ background:url(img/icoFaq_Mobile.png) no-repeat 9px 12px; }
 .block_noir .faq .blk_content p{
   padding-left:40px;
   margin-bottom:0;
@@ -2823,12 +2830,12 @@ background-image:url(block_cadre_prod_noir_corner.png);
 
 /* ======= block_gris ======= */
 .block_gris .blk_header, .block_gris .blk_header span, .block_gris .blk_header a{
-  background-color:#808080; /* gris foncé*/
-  background-image:url(block_gris_header.png);
+  background-color:#808080; /* gris foncï¿½*/
+  background-image:url(img/block_gris_header.png);
   color:#FFF; /* blanc */
 }
 .block_gris_fonce {
-  background:#bfbfbf; /* gris foncé*/
+  background:#bfbfbf; /* gris foncï¿½*/
   claer:left;
   padding:5px;
 }
@@ -2837,7 +2844,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   border-collapse: collapse;
 }
 .block_gris .tl, .block_gris .tr, .block_gris .bl, .block_gris .br{
-  background-image:url(block_gris_corners.png);
+  background-image:url(img/block_gris_corners.png);
 }
 .block_gris .blk_inside{
   border:1px solid #CCC; /* gris */
@@ -2857,32 +2864,31 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_gris .inside_block{
   background:#FFF; /* blanc */
 }
-.block_gris .inside_block .tl, .block_gris .inside_block .tr, .block_gris .inside_block .bl, .block_gris .inside_block .br{
-  background-image:url(block_gris_inside_corners.gif);
-}
+/*  background-image:url(img/block_gris_inside_corners.gif);
+}invalide*/
 .block_gris .gradient_bottom{
-  background-image:url(gradient_bottom_block_gris.gif);
+  background-image:url(img/gradient_bottom_block_gris.gif);
 }
 .block_gris .button, .block_gris .button span{
-  background-image:url(bouton_gris_background.png);
+  background-image:url(img/bouton_gris_background.png);
 }
 /* ======= block_moutarde ======= */
 .block_moutarde .blk_header, .block_moutarde .blk_header span, .block_moutarde .blk_header a{
   color:#FFF; /* blanc */
   background-color:#DE9C00; /* moutarde */
-  background-image:url(block_moutarde_header.png);
+  background-image:url(img/block_moutarde_header.png);
 }
 .filled .block_moutarde .flat .blk_header, .filled .block_moutarde .flat .blk_header span, .filled .block_moutarde .flat .blk_header a{
-  background-image:url(block_moutarde_flat_header_gris.png);
+  background-image:url(img/block_moutarde_flat_header_gris.png);
 }
 .block_moutarde .flat .blk_header, .block_moutarde .flat .blk_header span, .block_moutarde .flat .blk_header a{
-  background-image:url(block_moutarde_flat_header.png);
+  background-image:url(img/block_moutarde_flat_header.png);
 }
 .block_moutarde .tl, .block_moutarde .tr, .block_moutarde .bl, .block_moutarde .br{
-  background-image:url(block_gris_corners.png);
+  background-image:url(img/block_gris_corners.png);
 }
 .block_moutarde_mea .tl, .block_moutarde_mea .tr, .block_moutarde_mea .bl, .block_moutarde_mea .br{
-  background-image:url(mise_en_avant_corners.png);
+  background-image:url(img/mise_en_avant_corners.png);
 }
 .block_moutarde .bkg_ft{
   color:#FFF; /* blanc */
@@ -2902,13 +2908,13 @@ background-image:url(block_cadre_prod_noir_corner.png);
 }
 /*classe tetiere directe pour tableaux*/
 .tl_moutarde{ /*placer ds th de gauche*/
-  background:#DE9C00 url(block_moutarde_flat_header_gris.png) no-repeat left top;
+  background:#DE9C00 url(img/block_moutarde_flat_header_gris.png) no-repeat left top;
 }
 .tc_moutarde{ /*placer ds tr*/
-  background:#DE9C00 url(block_moutarde_flat_header_gris.png) no-repeat -20px 0;
+  background:#DE9C00 url(img/block_moutarde_flat_header_gris.png) no-repeat -20px 0;
 }
 .tr_moutarde{ /*placer ds th de droite*/
-  background:#DE9C00 url(block_moutarde_flat_header_gris.png) no-repeat right top;
+  background:#DE9C00 url(img/block_moutarde_flat_header_gris.png) no-repeat right top;
 }
 
 /* ======= block_blanc ======= */
@@ -2921,7 +2927,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   /* background-image:url(/Img/v2/skin/blocks/block_blanc_flat_header.png); */
 }
 .block_blanc .tl, .block_blanc .tr, .block_blanc .bl, .block_blanc .br{
-  background-image:url(block_blanc_corners.png);
+  background-image:url(img/block_blanc_corners.png);
 }
 .block_blanc .bkg_ft{
   color:#666; /* gris */
@@ -2940,10 +2946,10 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_vert .blk_header, .block_vert .blk_header span, .block_vert .blk_header a{
   color:#FFF; /* blanc */
   background-color:#008B7C; /* vert */
-  background-image:url(block_vert_header.png);
+  background-image:url(img/block_vert_header.png);
 }
 .block_vert .tl, .block_vert .tr, .block_vert .bl, .block_vert .br{
-  background-image:url(block_gris_corners.png);
+  background-image:url(img/block_gris_corners.png);
 }
 .block_vert .bkg_ft{
   color:#666; /* gris */
@@ -2965,7 +2971,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 /* ======= block_violet_mea (fnac gaming)=======*/
 .block_violet_mea  .blk_header, .block_violet_mea  .blk_header span, .block_violet_mea  .blk_header a{
   background-color:#FFF; 
-  background-image:url(http://www.fnac.com/Img/v2/skin/blocks/block_violet_mea_header.png);
+/*  background-image:url(http://www.fnac.com/Img/v2/skin/blocks/block_violet_mea_header.png);*/
 }
 .block_violet_mea .produit dt, .block_violet_mea .produit dt a{
   font-weight:bold;
@@ -2985,7 +2991,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 /* ======= block_bleu_mp_mea (marketplace)=======*/
 .block_bleu_mp_mea .blk_header, .block_bleu_mp_mea .blk_header span, .block_bleu_mp_mea .blk_header a{
   background-color:#FFF; 
-  background-image:url(block_bleu_mp_mea_header.png);
+  background-image:url(img/block_bleu_mp_mea_header.png);
 }
 .block_bleu_mp_mea .produit dt, .block_bleu_mp_mea .produit dt a{
   font-weight:bold;
@@ -3005,11 +3011,11 @@ background-image:url(block_cadre_prod_noir_corner.png);
 /* ======= block_bleu_mp (marketplace)=======*/
 .block_bleu_mp .blk_header, .block_bleu_mp .blk_header span, .block_bleu_mp .blk_header a{
   background-color:#244a9d;
-  background-image:url(block_bleu_mp_header_on_col.png);
+  background-image:url(img/block_bleu_mp_header_on_col.png);
   color:#fff;
 }
 .block_bleu_mp .tl, .block_bleu_mp .tr, .block_bleu_mp .bl, .block_bleu_mp .br{
-  background-image:url(block_gris_corners.png);
+  background-image:url(img/block_gris_corners.png);
 }
 .block_bleu_mp .blk_inside{
   border:1px solid #CCC; /* gris */
@@ -3021,14 +3027,13 @@ background-image:url(block_cadre_prod_noir_corner.png);
 
 .block_espace-fg .blk_header, .block_espace-fg .blk_header span{
   background-color:#543E7F; 
-  background-image:url(block_espace-fg_header.png);
   color:#FFF; /* blanc */
   font-size:12px;
   text-align:left;
 }
 .block_espace-fg .blk_header span{padding:0}
 .block_espace-fg .tl, .block_espace-fg .tr, .block_espace-fg .bl, .block_espace-fg .br{
-  background-image:url(block_gris_corners.png);
+  background-image:url(img/block_gris_corners.png);
 }
 .block_espace-fg .blk_inside{border:1px solid #CCC;}
 .block_espace-fg .blk_postHeader{background-color:#543E7F;color:#B2A5C9}
@@ -3036,7 +3041,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_espace-fg .blk_postHeader p{margin:0}
 .block_espace-fg .filled{background-color:#EFE6FF;color:#755d99}
 .block_espace-fg .filled a{color:#755d99}
-.block_espace-fg .blk_content .chevron{display:block;width:16px;height:8px;margin:0 auto;background:url(chevron-violet-fg.png) no-repeat 0 0 }
+.block_espace-fg .blk_content .chevron{display:block;width:16px;height:8px;margin:0 auto;background:url(img/chevron-violet-fg.png) no-repeat 0 0 }
 .block_espace-fg .links{background-color:#FFF;}
 .block_espace-fg .links a{color:#000;}
 .block_espace-fg .blk_content p{margin:5px 0 0 0}
@@ -3075,10 +3080,10 @@ background-image:url(block_cadre_prod_noir_corner.png);
   margin:3px 10px 0 0;
   height:13px;
   text-indent:-5000px;
-  background:url(rechercher.png) no-repeat left top;
+  background:url(img/rechercher.png) no-repeat left top;
 }
 .block_search_new label{
-  background:url(label_rechercher.png) no-repeat left top!important;
+  background:url(img/label_rechercher.png) no-repeat left top!important;
   height:23px;
 }
 .block_search .text, #HEADER .block_search .text {
@@ -3110,7 +3115,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   position:relative;
   margin:0;
   border:none;
-  background: url(bt-rechercher.png) no-repeat left top;
+  background: url(img/bt-rechercher.png) no-repeat left top;
 }
 .block_search .submit input{
   position:absolute;
@@ -3135,7 +3140,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   position:relative;
   margin:0;
   border:none;
-  background: url(Qsearch_OK.png) no-repeat left top;
+  background: url(img/Qsearch_OK.png) no-repeat left top;
   height:20px;
   width:30px;
   margin:2px 0 0;
@@ -3193,7 +3198,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   padding:0;
 }
 .search_results .blk_header, .search_results .blk_header div, .search_results .blk_footer, .search_results .blk_footer div{
-  background:url(mise_en_avant_header.png) no-repeat left top;
+  background:url(img/mise_en_avant_header.png) no-repeat left top;
   color:#FFF; /* blanc  */
   margin:0;
 }
@@ -3303,7 +3308,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   border-width:0 1px 1px 1px;
 }
 .espace_adherent .tl, .espace_adherent .tr, .espace_adherent .bl, .espace_adherent .br{
-  background-image:url(block_jaune_corners.png);
+  background-image:url(img/block_jaune_corners.png);
 }
 .espace_adherent .points{
   padding:10px 5px;
@@ -3344,7 +3349,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   _height:20px;
 }
 .block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
-  background-image:url(block_adherents_header_adh.png);
+  background-image:url(img/block_adherents_header_adh.png);
   color:#FFF; /* blanc */
 }
 .block_adherent .sub_header, .block_adherent .sub_header a {
@@ -3354,7 +3359,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 }
 
 .line_2cols .block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
-  background-image:url(block_adherents_header_2cols_adh.png);
+  background-image:url(img/block_adherents_header_2cols_adh.png);
   color:#FFF; /* blanc */
 }
 .block_adherent .blk_content{
@@ -3391,11 +3396,11 @@ background-image:url(block_cadre_prod_noir_corner.png);
   margin:0;
 }
 .block_affilies .top-menu{
-  background:url(affiliates-top-menu.png) no-repeat top left;
+  background:url(img/affiliates-top-menu.png) no-repeat top left;
   padding:10px 0 0 0;
 }
 .block_affilies .bottom-menu{
-  background:url(affiliates-bottom-menu.png) no-repeat bottom left;
+  background:url(img/affiliates-bottom-menu.png) no-repeat bottom left;
   padding:0 0 10px 0;
 }
 .block_affilies li{
@@ -3479,27 +3484,27 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-position:0 2px;
   background-repeat:no-repeat;
   list-style-type:none;
-  background-image:url(ACC_marron.gif);
+  background-image:url(img/ACC_marron.gif);
 }
 .flecheACCMarketing, .flecheREDMarketing, .flecheADHMarketing, .flecheMUSMarketing,
 .flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
 .flecheMICMarketing,.flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
   background-position:0 8px;
-  background-image:url(ACC_marron.gif);
+  background-image:url(img/ACC_marron.gif);
 }
 .flecheBLACK{
-  background-image:url(BLACK_fleche.gif);
+  background-image:url(img/BLACK_fleche.gif);
 }
 .flecheWHITE{
-  background-image:url(BLANC_fleche.gif);
+  background-image:url(img/BLANC_fleche.gif);
 }
 
 .flecheGRISE{
-  background-image:url(grise_fleche.gif);
+  background-image:url(img/grise_fleche.gif);
 }
 
 .flecheRED, .flecheREDMarketing{
-  background-image:url(RED_fleche.gif);
+  background-image:url(img/RED_fleche.gif);
 }
 
 .flechelarge{
@@ -3523,7 +3528,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-position:0 5px;
   background-repeat:no-repeat;
   list-style-type:none;
-  background-image:url(ACC_puceronde.gif);
+  background-image:url(img/ACC_puceronde.gif);
 }
 
 
@@ -3558,7 +3563,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 }
 .concoursFnac .question, .concoursFnac .infoPerso{
   width:360px;
-  position:relative;/* permet de gérer les positions absolute des erreurs */
+  position:relative;/* permet de gï¿½rer les positions absolute des erreurs */
 }
 .concoursFnac .question{
   float:left;
@@ -3720,18 +3725,18 @@ margin-left:0px;padding-top:12px;padding-bottom:12px;background-repeat:no-repeat
 ***********************/
 /* tableau listing commandes*/
 
-.grad {background:#fff url(gradiant_251-241.png) repeat-x left bottom; padding-bottom:10px}
+.grad {background:#fff url(img/gradiant_251-241.png) repeat-x left bottom; padding-bottom:10px}
 .block .listcmd .blk_header, .block .listcmd .blk_header span {
   font-size:12px;
   text-align:left;
   color:#000;
-  background-image:url(block_moutarde_header_grey_corners.png) ;
+  background-image:url(img/block_moutarde_header_grey_corners.png) ;
 }
 .block .listcmd .blk_header span {
   padding-left:10px
 }
 .listcmd .blk_inside .tl, .listcmd .blk_inside .tr, .listcmd .blk_inside .bl, .listcmd .blk_inside .br {
-  background-image:url(block_gris_onEAEAEA_corners.png);
+  background-image:url(img/block_gris_onEAEAEA_corners.png);
 }
 .listcmd table th, .factcmd table th{
   color:#666;
@@ -3781,7 +3786,7 @@ margin-left:0px;padding-top:12px;padding-bottom:12px;background-repeat:no-repeat
   text-decoration:none !important;
 }
 .bg_bt, .bg_bt div {
-  background:transparent url(bt_retour_bg.png) no-repeat scroll;
+  background:transparent url(img/bt_retour_bg.png) no-repeat scroll;
 }
 .bg_bt div {
   background-position:right top;
@@ -3815,7 +3820,7 @@ hr.white {
 }
 
 #navigation.menumoutarde .header, #navigation.menumoutarde .header .topleft, #navigation.menumoutarde .header h2, #navigation.menumoutarde .bottom, #navigation.menumoutarde .bottom div{
-  background-image:url(navn2_background_menumoutarde.png);
+  background-image:url(img/navn2_background_menumoutarde.png);
 }
 #navigation.menumoutarde dl{
   background:#e5b033; /* moutarde clair*/
@@ -3825,7 +3830,7 @@ hr.white {
   padding:0 12px; /*lot2 :update */
 }
 #navigation.menuframboise .header, #navigation.menuframboise .header .topleft, #navigation.menuframboise .header h2, #navigation.menuframboise .bottom, #navigation.menuframboise .bottom div{
-  background-image:url(navn2_background_menuframboise.png); /*menu gauche voyages*/
+  background-image:url(img/navn2_background_menuframboise.png); /*menu gauche voyages*/
 }
 #navigation.menuframboise dl{
   background:#EFBECE; /* framboise delavee*/
@@ -3849,7 +3854,7 @@ hr.white {
 }
 
 
-#navigation.menugris .header, #navigation.menugris .header .topleft, #navigation.menugris .header h2, #navigation.menugris .bottom, #navigation.menugris .bottom div{background-image:url(navn2_background_menugris.png);}
+#navigation.menugris .header, #navigation.menugris .header .topleft, #navigation.menugris .header h2, #navigation.menugris .bottom, #navigation.menugris .bottom div{background-image:url(img/navn2_background_menugris.png);}
 #navigation.menugris dl{background:#a9a9a9;color:#FFF;border:1px solid #939393;border-width:0 1px;padding:0 10px;}
 #navigation.menugris .topleft, #navigation.menugris h2{padding:0px;}
 #navigation.menugris dl dt, body.enfants #navigation dl dt{font-weight:bold;padding:5px 0 6px 0;}
@@ -3892,7 +3897,7 @@ hr.white {
   margin-left:0;
 }
 .listeflech dd.flech{
-  background: url(fleche_bottom_right.png) no-repeat 0 0.2em;
+  background: url(img/fleche_bottom_right.png) no-repeat 0 0.2em;
 }
 
 /* liste sans puces ni marges  */
@@ -4090,7 +4095,7 @@ body.popUpCredit #content{
 #affiliation h2 {font-size:0px;}
 #affiliation h3 {
 	color:#000000;
-	background:url(doublefleche.png) no-repeat 0 4px;
+	background:url(img/doublefleche.png) no-repeat 0 4px;
 	padding:0px 0px 0px 15px;
 	margin:20px 0px 0px 0px;
 }
@@ -4113,7 +4118,7 @@ body.popUpCredit #content{
 }
 #affiliation .ligne_affiliation {
 	text-align:center;
-	background:url(fondlignedeco.png) repeat-x 0 0;
+	background:url(img/fondlignedeco.png) repeat-x 0 0;
 	height:17px;
 	margin:10px 0;
 }
@@ -4192,13 +4197,13 @@ body.popUpCredit #content{
 /* ===================
  Conseils Persos
 =====================*/
-.conseilperso {background-image:url(conseil_perso_ul_bg.jpg);background-repeat:no-repeat;background-position:left top;padding:0;margin:0}
-.conseilperso li {padding:8px;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;border-bottom:solid 1px #cccccc;background-image:url(conseil_perso_li_bg.jpg);background-repeat:no-repeat;background-position:left bottom;}
+.conseilperso {background-image:url(img/conseil_perso_ul_bg.jpg);background-repeat:no-repeat;background-position:left top;padding:0;margin:0}
+.conseilperso li {padding:8px;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;border-bottom:solid 1px #cccccc;background-image:url(img/conseil_perso_li_bg.jpg);background-repeat:no-repeat;background-position:left bottom;}
 .conseilperso li.last {background:none;border:none;padding-bottom:0}
 .conseilperso .produit .img {margin-right:2px;}
 .conseilperso .produit dt,.conseilperso .produit dd {padding-left:8px}
 .conseilperso .produit dt,.conseilperso .produit dt	a {color:#000}
-.cperso_btm {background-image:url(myfnac_logo.jpg);background-repeat:no-repeat;background-position:right 0;height:50px;margin:0;padding:20px 0 0 0}
+.cperso_btm {background-image:url(img/myfnac_logo.jpg);background-repeat:no-repeat;background-position:right 0;height:50px;margin:0;padding:20px 0 0 0}
 .cperso_btm ul {padding:0;margin:0}
 .cperso_btm li {padding:0;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;}
 /* *** */
@@ -4215,7 +4220,7 @@ body.popUpCredit #content{
 #shadowLayer {background:black; -moz-opacity:0.2; filter:alpha(opacity=20); opacity:0.2; position:absolute; width:100%; top:0; left:0; z-index:999}
 
 /* Popin ajout au panier */
-.basket_popin_big{width:261px;height:187px;text-align:center;background:transparent url(bg_pop_ajoutpanier_bleu.png) no-repeat center bottom;color:#000;}
+.basket_popin_big{width:261px;height:187px;text-align:center;background:transparent url(img/bg_pop_ajoutpanier_bleu.png) no-repeat center bottom;color:#000;}
 
 /*
   *S&L Marketplace
@@ -4278,8 +4283,8 @@ span.chevron {display:none;}
 
 /* EBook : bloc bleu brilliant  */
 .blk_blue .blk_outside {background-color:#2ba0c3;border:1px solid #2ba0c3;position:relative;zoom:1;}
-.blk_blue_gradient {background-image:url(bloc_bleu_degrade.png);background-repeat:repeat-x;}
-.blk_blue .tl, .blk_blue .tr, .blk_blue .bl, .blk_blue .br {font-size:1%;position:absolute;width:7px;height:7px;overflow:hidden;background:url(bloc_bleu_border_2BA0C3.png) no-repeat;}
+.blk_blue_gradient {background-image:url(img/bloc_bleu_degrade.png);background-repeat:repeat-x;}
+.blk_blue .tl, .blk_blue .tr, .blk_blue .bl, .blk_blue .br {font-size:1%;position:absolute;width:7px;height:7px;overflow:hidden;background:url(img/bloc_bleu_border_2BA0C3.png) no-repeat;}
 .blk_blue .tl {background-position:top left;top:-1px;left:-1px;}
 .blk_blue .tr {background-position:top right;top:-1px;right:-1px;}
 .blk_blue .bl {background-position:bottom left;bottom:-1px;left:-1px;}
@@ -4288,10 +4293,10 @@ span.chevron {display:none;}
 
 /* Ebook : block meilleures ventes */
 .meilleures-ventes .h2 {font-size:14px;font-weight:bold;}
-.meilleures-ventes li {display:block;background:url(bg_item_meilleures_ventes.png) repeat-x bottom;border-bottom:1px solid #ccc;min-height:32px;/*height:37px*/;overflow:hidden;zoom:1;}
+.meilleures-ventes li {display:block;background:url(img/bg_item_meilleures_ventes.png) repeat-x bottom;border-bottom:1px solid #ccc;min-height:32px;/*height:37px*/;overflow:hidden;zoom:1;}
 *:first-child+html .meilleures-ventes li{margin-bottom:-3px;}/*IE7-8*/
 * html .meilleures-ventes li{margin-bottom:-3px;height:32px;}/*IE6*/
-.meilleures-ventes .numero {float:left;display:block;color:#fff;background:url(bg_numero.png) no-repeat top right; width:19px; height:19px;text-align:center;line-height:19px;}
+.meilleures-ventes .numero {float:left;display:block;color:#fff;background:url(img/bg_numero.png) no-repeat top right; width:19px; height:19px;text-align:center;line-height:19px;}
 .meilleures-ventes .floatr {width:155px;padding:3px 0 0 0;}
 .meilleures-ventes .titre {display:block;font-weight:bold;}
 .meilleures-ventes .auteur {display:block;color:#999;font-size:11px;}
