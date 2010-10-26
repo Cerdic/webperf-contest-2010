@@ -38,15 +38,6 @@
   	<link rel="stylesheet" type="text/css" media="all" href="css/cdc_2010.css"/>
   	<link rel="stylesheet" type="text/css" media="all" href="css/footer.css"/>
   
-   
-    <script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/package.js"></script>
-	<script type="text/javascript" src="js/master.js"></script>
-
-	
-	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
-	<script type="text/javascript" src="js/jquery.ajaxQueue.js"></script>
-	<script type="text/javascript" src="js/f_body.js"></script>
 
 </head>
 
@@ -2704,13 +2695,24 @@
     
 </div>
 
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/package.js"></script>
+	<script type="text/javascript" src="js/master.js"></script>
+
+
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<script type="text/javascript" src="js/jquery.ajaxQueue.js"></script>
+	<script type="text/javascript" src="js/f_body.js"></script>
+	
 <div style="display:none;">
 <!-- SiteCatalyst code version: H.14.
 Copyright 1997-2007 Omniture, Inc. More info available at
 http://www.omniture.com -->
-<script type="text/javascript">var s_account="fnaccomprod";</script>
 <script type="text/javascript" src="js/s_code.js-h.14.20090227.js"></script>
 <script type="text/javascript"><!--
+$(function(){
+
 /* You may give each page an identifying name, server, and channel on
 the next lines. */
 s.pageName="Home enfants"
@@ -2737,9 +2739,11 @@ s.eVar3=""
 s.eVar4=""
 s.eVar5=""
 /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+var s_code=s.t();/*if(s_code)document.write(s_code)*///-->
+/*if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')*/
+});
+</script>
 <script type="text/javascript"><!--
-if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
 //--></script><!--/DO NOT REMOVE/-->
 <!-- End SiteCatalyst code version: H.14. -->
 </div>
