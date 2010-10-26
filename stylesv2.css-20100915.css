@@ -1,0 +1,4324 @@
+
+
+/* ajout barbare - à ranger plus tard */
+.gras{
+  font-weight:bold!important;
+}
+.inlineList li{
+  display:inline;
+  margin:0 .3em;
+}
+.inlineList1em li{
+  display:inline;
+  margin:0 1em;
+}
+.erreurFormulaire{
+  font-weight:bold;
+  color:#DD0000;
+}
+.clearing{
+  display:block;
+  height:0;
+  clear:both;
+  font-size:1%;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+*+html .clearfix, * html .clearfix { /* IE7 et IE6 */
+    zoom: 1;
+}
+
+ul.arrow{
+  margin:0;
+  padding:0;
+}
+ul.arrow li{
+  list-style-image:url(http://www.fnac.com/Img/account/MyFnac/ACC_fleche.gif);
+  list-style-position:outside;
+  margin:0 0 0 10px;
+  padding:0;
+}
+.sanspuce{
+  list-style-type:none!important;
+}
+
+
+
+
+
+/****************
+* CSS fnac.com
+*****************/
+html, body{
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, Verdana, sans-serif;
+}
+body{
+  font-size:12px;
+  _font-size:0.75em;
+  zoom:1;
+  color:#666; /* gris */
+  background:#FFF url(body-background-standard.png) repeat-x center top;
+}
+a{
+  text-decoration:none;
+  color:#000; /* lot2 :update */
+}
+a:hover{
+  text-decoration:underline;
+}
+a img{
+  border:0
+}
+
+.lienInverse a{
+  text-decoration:underline !important;
+}
+.lienInverse a:hover{
+  text-decoration:none !important;
+}
+
+table{
+  font-size:1em;
+}
+h2, h3, h4, h5, h6{
+  margin:0
+}
+h1{font-size:2em;}   /* origine w3c - multi navigateur */
+h2{font-size:1.5em;} /* origine w3c - multi navigateur */
+h3{font-size:1.17em;}/* origine w3c - multi navigateur */
+h4{font-size:1.1em;} /* modifie par F6 */
+h5{font-size:0.83em;}/* origine w3c - multi navigateur */
+h6{font-size:0.67em;}/* origine w3c - multi navigateur */
+.h1-1em2{
+  font-size:1.2em;
+  margin-top:30px;
+}
+.h2-1em{
+  font-size:1em;
+
+}
+
+.text09em{
+  font-size:0.9em;
+}
+
+p{
+  margin:10px 0;
+}
+
+
+.subtitle{
+  margin:0;
+}
+
+/* form elements */
+input.text, select,#deliverTable input{
+  padding:0.2em 0;
+  border:1px solid #A7A6AA; /* gris */
+  font-size:0.9em;
+  color:#666; /* gris foncé */
+}
+textarea{
+  font-family:Arial, Verdana, Helvetica, sans-serif;
+}
+#deliverTable textarea{
+  padding:0.2em 0;
+  height:10em;
+  border:1px solid #A7A6AA; /* gris */
+  font-size:1em;
+  color:#666; /* gris foncé */
+}
+
+select{
+  padding:0;
+  overflow:hidden;
+  height:2em;
+  //height:1.8em; /* hack IE7 et IE6 dû au fait que le border n'a pas l'air d'être pris en compte dans le calcul */
+  _height:1.5em /* remise propre pour IE6 */
+}
+select option{
+  padding:0.2em 5px 0.2em 3px;
+}
+form, fieldset{
+  padding:0;
+  margin:0;
+  border:0;
+}
+.block form{
+  zoom:1; /* correction comportement IE */
+}
+.fullwidthselect{
+  _height:1%; /* haslayout IE */
+}
+.fullwidthselect select{
+  width:100%;
+}
+.halfwidthselect select{
+  width:50%;
+}
+.line_select{
+  margin:0;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.line_select label{
+  font-weight:bold;
+  float:left;
+}
+.line_select select{
+  float:right;
+  width:250px;
+}
+/*elements cachés si JS activé, JS activé via classe hasJS */
+.hasJS .hidesubmit .submit{display:none }
+
+/* context :applique le contexte de formatage (cf la doc fournie lot1 pour plus d'informations */
+.context{ /* lot2 */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+h4 cite{
+  color:#666; /* gris */
+  font-style:normal;
+  font-weight:normal;
+}
+/******************
+* margins et paddings // Vu la simplicité et la fonction de ces classes, il est inutile de les structurer
+********************/
+/* padding */
+.pdg_no{padding:0 !important}
+.pdg_sm{padding:5px !important}
+.pdg_t_sm{padding-top:5px !important}
+.pdg_r_sm{padding-right:5px !important}
+.pdg_b_sm{padding-bottom:5px !important}
+.pdg_l_sm{padding-left:5px !important}
+.pdg_h_sm{padding-left:5px !important;padding-right:5px !important}
+.pdg_v_sm{padding-top:5px !important;padding-bottom:5px !important}
+.pdg{padding:10px !important}
+.pdg_t{padding-top:10px !important}
+.pdg_r{padding-right:10px !important}
+.pdg_b{padding-bottom:10px !important}
+.pdg_l{padding-left:10px !important}
+.pdg_h{padding-left:10px !important;padding-right:10px !important}
+.pdg_v{padding-top:10px !important;padding-bottom:10px !important}
+.pdg_lg{padding:20px !important}
+.pdg_t_lg{padding-top:20px !important}
+.pdg_r_lg{padding-right:20px !important}
+.pdg_b_lg{padding-bottom:20px !important}
+.pdg_l_lg{padding-left:20px !important}
+.pdg_h_lg{padding-left:20px !important;padding-right:20px !important}
+.pdg_v_lg{padding-top:20px !important;padding-bottom:20px !important}
+.pdg_xlg{padding:50px !important}
+.pdg_t_xlg{padding-top:50px !important}
+.pdg_r_xlg{padding-right:50px !important}
+.pdg_b_xlg{padding-bottom:50px !important}
+.pdg_l_xlg{padding-left:50px !important}
+.pdg_h_xlg{padding-left:50px !important;padding-right:50px !important}
+.pdg_v_xlg{padding-top:50px !important;padding-bottom:50px !important}
+/* margin */
+.mrg_no{margin:0 !important}
+html body .mrg_b_no{margin-bottom:0 !important}
+.mrg_sm{margin:5px !important}
+.mrg_t_sm{margin-top:5px !important}
+.mrg_r_sm{margin-right:5px !important}
+.mrg_b_sm{margin-bottom:5px !important}
+.mrg_l_sm{margin-left:5px !important}
+.mrg_h_sm{margin-left:5px !important;margin-right:5px !important}
+.mrg_v_sm{margin-top:5px !important;margin-bottom:5px !important}
+.mrg{margin:10px !important}
+.mrg_t{margin-top:10px !important}
+.mrg_r{margin-right:10px !important}
+.mrg_b{margin-bottom:10px !important}
+.mrg_l{margin-left:10px !important}
+.mrg_h{margin-left:10px !important;margin-right:10px !important}
+.mrg_v{margin-top:10px !important;margin-bottom:10px !important}
+.mrg_lg{margin:20px !important}
+.mrg_t_lg{margin-top:20px !important}
+.mrg_r_lg{margin-right:20px !important}
+.mrg_b_lg{margin-bottom:20px !important}
+.mrg_l_lg{margin-left:20px !important}
+.mrg_h_lg{margin-left:20px !important;margin-right:20px !important}
+.mrg_v_lg{margin-top:20px !important;margin-bottom:20px !important}
+.mrg_xlg{margin:50px !important}
+.mrg_t_xlg{margin-top:50px !important}
+.mrg_r_xlg{margin-right:50px !important}
+.mrg_b_xlg{margin-bottom:50px !important}
+.mrg_b_50{margin-bottom:50px !important}
+.mrg_l_xlg{margin-left:50px !important}
+.mrg_h_xlg{margin-left:50px !important;margin-right:50px !important}
+.mrg_v_xlg{margin-top:50px !important;margin-bottom:50px !important}
+/* -- margins pour blocs -- */
+.mrg_b_shadw_big{margin-bottom:11px !important}/*blocs arbo*/
+.mrg_b_shadw_sm{margin-bottom:15px !important}/*blocs avec petite ombre*/
+.mrg_b_shadw_no{margin-bottom:25px !important}/*blocs sans ombre*/
+
+/**************  classes de mise en page***************/
+.txt_l{text-align:left !important;} /* lot2 :update */
+.txt_c{text-align:center !important;} /* lot2 :update */
+.txt_r{text-align:right !important;} /* lot2 :update */
+.txt_t{vertical-align:top !important;} /* lot2 :update */
+.txt_m{vertical-align:middle !important;} /* lot2 :update */
+.txt_b{vertical-align:bottom !important;} /* lot2 :update */
+.floatl{float:left} /* lot2 */
+.floatr{float:right} /* lot2 */
+.center{margin-left:auto !important; margin-right:auto !important;} /* lot2 */
+.img_m img, .img_m .inputImg{vertical-align:middle !important;} /* lot2 :update */
+
+/**************  gestion de background ***************/
+.no_bg{background:none !important;}
+.no_bg_color{background-color:transparent !important;}
+.no_bg_img{background-image:none !important;}
+.bg_blanc{background-color:#FFF !important;}
+.bg_gristresclair{background-color:#F3F3F3 !important;}
+.bg_gris_f7{background-color:#F7F7F7 !important;}
+.bg_gris{background-color:#828282 !important;}
+.bg_gris_eb{background-color:#EBEBEB !important;}
+.bg_grisfonce{background-color:#666 !important;}
+.bg_noir{background-color:#000 !important;}
+.bg_moutarde{background-color:#DE9C00 !important;}
+.bg_rouge{background-color:#DD0000 !important;}
+/* background image */
+.bg_no_rpt{background-repeat:no-repeat !important}
+.bg_rpt_y{background-repeat:repeat-y!important}
+.bg_rpt_x{background-repeat:repeat-x!important}
+.bg_rpt{background-repeat:repeat!important}
+.bg_l{background-position:left center!important}
+.bg_tl{background-position:left top!important}
+.bg_t{background-position:center top!important}
+.bg_tr{background-position:right top!important}
+.bg_r{background-position:right center!important}
+.bg_rb{background-position:right bottom!important}
+.bg_b{background-position:center bottom!important}
+.bg_bl{background-position:left bottom!important}
+.bg_c{background-position:center center!important}
+/* image des background generalises */
+.fondTriangleGris{background-image:url(triangleGris.png)!important}
+/**************  gestion de bordure ***************/
+.no_brd{border:none !important;}
+.no_brd_t{border-top:none !important;}
+.no_brd_r{border-right:none !important;}
+.no_brd_b{border-bottom:none !important;}
+.no_brd_l{border-left:none !important;}
+.brd_gris{border:1px solid #CCC !important;}
+.brd_t_gris{border-top:1px solid #CCC !important;}
+.brd_r_gris{border-right:1px solid #CCC !important;}
+.brd_b_gris{border-bottom:1px solid #CCC !important;}
+.brd_l_gris{border-left:1px solid #CCC !important;}
+/************** Liste DL sans marge generique **********/
+dl.generique dd{padding:0;margin:0;}
+dl.generique dt{padding:0;margin:0;}
+/* supression force de overflow */
+.noverflow{overflow:visible !important;}
+/************** classes de dimensions en % **********/
+.width30{width:30%}
+.width40{width:40%}
+.width50{width:50%} /* lot2 */
+.width60{width:60%}
+.width65{width:65%}
+.width70{width:70%} /* lot2 */
+.width75{width:75%} /* lot2 */
+.width80{width:80%} /* lot2 */
+/************** layout **********/
+.dispeblock{display:block!important}
+.table{display:table!important}
+.inline{display:inline!important}
+.posrel{position:relative!important}
+/************** context de formatage **********/
+.context {overflow:hidden;	_overflow:visible;zoom:1;}
+/************** z-index **********/
+.zIndex0{z-index:0;}
+.zIndex10{z-index:10;}
+.zIndex20{z-index:20;}
+.zIndex30{z-index:30;}
+.zIndex40{z-index:40;}
+
+/************** color **********/
+.bleu_MP {color:#1a3fa7 !important}
+/************** soulignement **********/
+.souligne {text-decoration:underline!important;}
+/****************** Structure ******************/
+/* ========= page ========= */
+#page, #page_2cols, #page_1col, #enfants {
+  margin:0 auto 0;
+  padding:0 0 20px 0;
+  min-width:996px;
+  width:83em;
+}
+	
+/* ========== Content ========== */
+#content{ /* lot2 :update */
+  clear:both;
+  padding:10px 10px 0 10px;
+  /* contexte de formatage */
+  overflow:auto;/* contexte de formatage optimise, sous navigateur w3c les blocs parents de float ne font pas 0 de hauteur */
+  _overflow:visible; /*special ie6 qui balance des scrolls, le zoom dessous permet de faire le haslayout et donc le modele de boite est correcte */
+  zoom:1;
+}
+/* ========== Colonnes ==========*/
+#col_gauche{
+  float:left;
+  margin:0 2.4em 0 0;
+  min-width:186px;
+  width:15.5em;
+  min-height:10px;
+}
+#col_centre{
+  float:left;
+  min-width:546px;
+  width:45.5em;
+}
+#col_droite{
+  float:right;
+  min-width:186px;
+  width:15.5em;
+  min-height:10px
+}
+#col_gauche_header, #col_center_header{
+  position:relative;
+  margin-bottom:8px;
+  padding:7px 0 5px 0;
+  min-height:8px;
+  height:auto !important;
+  height:8px;
+}
+
+#col_droite_header{
+  position:relative;
+  margin-bottom:8px;
+  padding:7px 0 5px 0;
+  min-height:60px;
+  _height:60px
+}
+
+#col_center_header{
+  margin:0 auto;
+}
+#page_1col #col_center_header{
+  width:544px;
+}
+#page_2cols #col_center_header{
+  margin:0;
+}
+#col_gauche, #col_droite{
+  color:#333; /* gris foncé */
+}
+/* ====== Colonnes Template 2 cols ====== */
+#page_2cols #col_centre{
+  min-width:747px;/* permet d'etaller en largeur */
+  width:61em;
+  /* contexte de formatage */
+  overflow:visible;
+  zoom:1;
+}
+/* cas problematique sur la page telechargement col centre et col droite uniquement */
+.IS_IE #page_2cols #col_centre{
+  width:62.25em;
+}
+/* seulement si nous sommes dans un page encore en tableau */
+.IS_IE #page_2cols table #col_centre{
+  width:747px;/* permet d'etaller en largeur */
+  float:none;
+}
+/* ======== Chemin de fer ====== */
+#cheminfer, #cheminfer *{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#cheminfer, #cheminfer ul{
+  background:#E6E6E6 url(cheminfer_background.png) no-repeat left top; /*gris clair */
+}
+#cheminfer{
+  padding:0 0 0 7px;
+  margin:0 0 30px 0;
+  min-width:539px;
+  width:auto;
+}
+#page_1col #cheminfer{
+  margin-left:auto;
+  margin-right:auto;
+  width:539px;
+}
+#cheminfer ul{
+  min-height:14px;
+  _height:14px;
+  font-size:0.9em;
+  background-position:right top;
+}
+#cheminfer li{
+  display:inline;
+  margin:0 5px 0 0;
+  color:#000; /* noir */
+}
+#cheminfer a{
+  vertical-align:top;
+  text-decoration:none;
+  color:#000; /* noir */
+}
+#cheminfer a:hover{
+  text-decoration:underline;
+}
+#cheminfer .current{
+  font-weight:bold;
+}
+/* ====== footer ======= */
+
+#footer{
+	text-align:left;
+	min-width:993px;
+	width:993px;
+	padding:0;
+	background:#F0F0F0 url(bg_footer.png) no-repeat top left;
+	margin:30px auto 0;
+	padding-top:10px;
+}
+#footer .inside{
+   background:url(bg_footer.png) no-repeat bottom left;
+   padding:5px 20px 10px 20px;
+}
+body.adherents #footer{ background-image:url(bg_footer_adh.png);}
+body.adherents #footer .inside{ background-image:url(bg_footer_adh.png);}
+#page, #page_2cols, #page_1col, #enfants {
+   padding-bottom:10px;
+}
+#footer dl{
+	width:32%;
+	float:left;
+	margin:0;
+}
+#footer dl.last{
+	width:30%;
+	float:right;
+	margin:0;
+}
+
+#footer dt{
+	color:#CE9014;
+	padding:0;
+	margin:0 0 10px 0;
+	font-weight:bold;
+	margin-bottom:3px;
+}
+#footer dd{
+	color:#CE9014;
+	padding:0;
+	margin:0;
+	font-size:1em;
+	margin-bottom:5px;
+}
+#footer dd a, #footer dd .nolink, .adherents #footer dd a, .adherents #footer dd .nolink{
+	color:#606060;
+	text-transform:none;
+	font-weight:normal;
+}
+#footer dd a:hover, .adherents #footer dd a:hover{
+	color:#606060;
+	text-decoration:underline;
+}
+/* ======iFrameFooter ======= */
+
+#iFrameFooter{
+margin:20px auto 10px auto;
+min-width:965px;
+text-align:center;
+clear:both;
+border:0;
+overflow:hidden;
+
+}
+
+/* ====== subfooter ======= */
+#subfooter{
+  margin:20px auto 10px auto;
+  min-width:965px;
+  text-align:center;
+  clear:both;
+}
+#subfooter ul, #subfooter li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#subfooter li{
+  display:inline;
+  margin:0 0 0 10px ;
+  padding:0 0 0 10px;
+  font-size:0.8em;
+  white-space:nowrap;
+  border-left:1px solid #666;  /* gris foncé */
+}
+#subfooter li.first{
+  margin:0;
+  padding:0;
+  border:0 !important;
+}
+#subfooter a{
+  text-decoration:none;
+  color:#666; /* gris foncé */
+  text-transform:uppercase;
+  font-weight:bold
+}
+body.adherents #subfooter a{
+  color:#666; /* gris très foncé */
+}
+#subfooter a:hover, body.adherents #subfooter a:hover{
+  color:#000; /* noir */
+}
+#subfooter a.min{
+  text-transform:none;
+  font-weight:bold
+  }
+
+/* === Top Recherche === */ 
+
+#topRecherche{margin-top:20px}
+
+#topRecherche ul, #topRecherche li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#topRecherche li{
+  display:inline;
+  margin:0 10px 0 0;
+  font-size:12px;
+}
+#topRecherche li.medium{font-size:16px;}
+#topRecherche li.big{font-size:20px;}
+#topRecherche li a{color:#666;}
+
+/* ======********====================
+          HEADER
+ ========********===================*/
+
+#HEADER{
+	/* initialement sur #page */
+		  margin:0 auto 0;
+		  min-width:996px;
+		  width:83em;
+	/* === */
+  position:relative;
+  z-index:55;
+  font-family:Arial,Helvetica,Verdana,sans-serif;
+}
+#HEADER *{/*cursor:default;*/margin:0;padding:0}
+#HEADER ul{list-style:none;}
+#HEADER a, #HEADER a *{cursor:pointer;}
+
+
+  /* ======* TOP *==================*/
+  #TOP{height:91px}
+	/*-----*/
+    #topLEFT{float:left;width:147px;margin:0;}
+      #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(logo-fnac-png24.png) no-repeat 0 0}
+      * html #logoFnac{background-image: url(logo-fnac-png8.png)} /*ie6*/
+    /*-----*/
+	#topRIGHT{margin-left:148px}
+	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(background-chaines.png) no-repeat top right}
+	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(sprite-chaines.png) no-repeat -820px 0;}
+	    #CHAINES li.first{background:none}
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(sprite-chaines.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
+	      #CHAINES li a:active{outline:none}
+	      #ch-Myfnac a{width:82px; background-position:0 0 }
+		  #ch-Actu a{width:97px; background-position:-83px 0 }
+		  #ch-Telech a{width:137px; background-position:-181px 0 }
+		  #ch-Passion a{width:137px; background-position:-319px 0 }
+		  #ch-Labo a{width:100px; background-position:-457px 0 }
+		  #ch-Magasins a{width:126px; background-position:-558px 0 }
+		  #ch-Adherents a{width:128px; background-position:-685px 0 }
+	  /*-*/
+	  #SEARCH{float:left;width:64.5%;padding-top:18px;}
+
+	  /*-*/
+	  #MONCOIN{float:left;width:35%;padding-top:18px;}
+	    #monCompte{float:left;width:33%;padding-top:4px}
+	      #monCompte img{vertical-align:-15%;padding-right:5px}
+	      #monCompte a{color:#000;background:url(ico-mon-compte-png24.png) no-repeat 0 0;padding-left:17px;text-decoration:underline}
+	      #monCompte a:hover{text-decoration:none;}
+	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
+	    * html HeaderBasket{width:15.7em;}	    
+		  #monPanier #cartouche{position:relative;z-index:9999;height:23px;padding-left:6px}
+		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(background-panier.png) no-repeat left bottom;}
+			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
+			* html #monPanier #cartouche p{width:176px}
+				#monPanier img.panier{display:block;float:left;padding-right:5px;}
+				#monPanier .recapPanier{display:block;float:left;width:5.5em;height:23px;}
+				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none}
+				#monPanier .recapPanier a:hover {text-decoration:underline}
+				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
+				#monPanier .totArticles a {color:#FFF;text-decoration:none}
+				#monPanier .totArticles a:hover {text-decoration:underline}
+				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(ico-switch.png) no-repeat 0 0;cursor:pointer}
+			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
+				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
+				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
+				#monPanier #detailPanier a{color:#FFF}
+				#monPanier #detailPanier dt {width:8.5em;float:left;font-weight:normal;margin:0}
+				#monPanier #detailPanier dd {width:5.5em;float:left;margin:0}
+				#monPanier .poignee{text-align:center;margin:0}
+				#monPanier .poignee img{display:block;margin:0 auto}
+		  #monPanier .basketInfo{color:#000;margin:0;padding:0 0 0 10px}
+    /*-----*/
+
+  /* ======* MENU *=================*/
+  #MENU{clear:both;position:relative;height:42px;}
+  * html #MENU{zoom:1}/*ie6*/
+  #MENU, #MENU *{margin:0;padding:0;}
+    #MENU #onglets{padding-left:5px}
+
+      #MENU #onglets li{
+		  float:left;
+		  position:relative;
+		  margin-right:2px;
+		  padding-bottom:9px;
+		  background:url(reflet-onglets-png24.png) repeat-x 0 34px;
+      }
+      #MENU #onglets li.current,
+      * html #MENU #onglets li{
+      	background-image:none
+      }
+		  #onglets .ongLink{
+			  display:block;
+			  height:36px;
+			  text-indent:-5000px;
+			  background-image:url(sprite-onglets-png24.png) ;
+			  background-repeat:no-repeat;
+			  position:relative;
+			  z-index:101;/* 1 couche de plus que les megaMenu */
+		  }
+		  #onglets .ongLink:active{outline:none}
+		  #onglets .current .ongLink{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
+		  #onglets .current .hover, #onglets .current .ongLink:hover{position:relative}/* SAUF si le megaMenu est deplié */
+
+		/* -- positionnement de l'image des onglets -- */
+		  #ong-Livres .ongLink{width:47px; background-position:0 0 }
+		  #ong-Livres.current .ongLink{background-position:0 -100px }
+		  #ong-Livres .hover,
+		  #ong-Livres.current .hover,
+		  #ong-Livres .ongLink:hover{background-position:0 -50px }
+
+		  #ong-Musique .ongLink{width:86px; background-position:-49px 0 }
+		  #ong-Musique.current .ongLink{background-position:-49px -100px }
+		  #ong-Musique .hover,
+		  #ong-Musique.current .hover,
+		  #ong-Musique .ongLink:hover{background-position:-49px -50px }
+
+		  #ong-DVD .ongLink{width:50px; background-position:-137px 0 }
+		  #ong-DVD.current .ongLink{background-position:-137px -100px }
+		  #ong-DVD .hover,
+		  #ong-DVD.current .hover,
+		  #ong-DVD .ongLink:hover{background-position:-137px -50px }
+
+		  #ong-JeuxVideo .ongLink{width:71px; background-position:-189px 0 }
+		  #ong-JeuxVideo.current .ongLink{background-position:-189px -100px }
+		  #ong-JeuxVideo .hover,
+		  #ong-JeuxVideo.current .hover,
+		  #ong-JeuxVideo .ongLink:hover{background-position:-189px -50px }
+
+		  #ong-Jouets .ongLink{width:48px; background-position:-262px 0 }
+		  #ong-Jouets.current .ongLink{background-position:-262px -100px }
+		  #ong-Jouets .hover,
+		  #ong-Jouets.current .hover,
+		  #ong-Jouets .ongLink:hover{background-position:-262px -50px }
+
+		  #ong-Informatique.current .ongLink{background-position:-312px -100px }
+		  #ong-Informatique .ongLink{width:81px; background-position:-312px 0 }
+		  #ong-Informatique .hover,
+		  #ong-Informatique.current .hover,
+		  #ong-Informatique .ongLink:hover{background-position:-312px -50px }
+
+		  #ong-Photo .ongLink{width:67px; background-position:-395px 0 }
+		  #ong-Photo.current .ongLink{background-position:-395px -100px }
+		  #ong-Photo .hover,
+		  #ong-Photo.current .hover,
+		  #ong-Photo .ongLink:hover{background-position:-395px -50px }
+
+		  #ong-TV .ongLink{width:73px; background-position:-464px 0 }
+		  #ong-TV.current .ongLink{background-position:-464px -100px }
+		  #ong-TV .hover,
+		  #ong-TV.current .hover,
+		  #ong-TV .ongLink:hover{background-position:-464px -50px }
+
+		  #ong-Son .ongLink{width:71px; background-position:-539px 0 }
+		  #ong-Son.current .ongLink{background-position:-539px -100px }
+		  #ong-Son .hover,
+		  #ong-Son.current .hover,
+		  #ong-Son .ongLink:hover{background-position:-539px -50px }
+
+		  #ong-GPS .ongLink{width:63px; background-position:-612px 0 }
+		  #ong-GPS.current .ongLink{background-position:-612px -100px }
+		  #ong-GPS .hover,
+		  #ong-GPS.current .hover,
+		  #ong-GPS .ongLink:hover{background-position:-612px -50px }
+
+		  #ong-Gadgets .ongLink{width:57px; background-position:-677px 0 }
+		  #ong-Gadgets.current .ongLink{background-position:-677px -100px }
+		  #ong-Gadgets .hover,
+		  #ong-Gadgets.current .hover,
+		  #ong-Gadgets .ongLink:hover{background-position:-677px -50px }
+
+		  #ong-TiragesPhoto .ongLink{width:52px; background-position:-736px 0 }
+		  #ong-TiragesPhoto.current .ongLink{background-position:-736px -100px }
+		  #ong-TiragesPhoto .hover,
+		  #ong-TiragesPhoto.current .hover,
+		  #ong-TiragesPhoto .ongLink:hover{background-position:-736px -50px }
+
+		  #ong-Evenement .ongLink{width:65px; background-position:-790px 0 }
+		  #ong-Evenement.current .ongLink{background-position:-790px -100px }
+		  #ong-Evenement .hover,
+		  #ong-Evenement.current .hover,
+		  #ong-Evenement .ongLink:hover{background-position:-790px -50px }
+
+		  #ong-Spectacles .ongLink{width:69px; background-position:-857px 0 }
+		  #ong-Spectacles.current .ongLink{background-position:-857px -100px }
+		  #ong-Spectacles .hover,
+		  #ong-Spectacles.current .hover,
+		  #ong-Spectacles .ongLink:hover{background-position:-857px -50px }
+
+		  #ong-Vendre .ongLink{width:50px; background-position:-928px 0 }
+		  #ong-Vendre.current .ongLink{background-position:-928px -100px }
+		  #ong-Vendre .hover,
+		  #ong-Vendre.current .hover,
+		  #ong-Vendre .ongLink:hover{background-position:-928px -50px }
+
+	/* -- les megaMenus -- */
+      #onglets li .megaMenu{
+		  width:514px;
+		  padding:10px;
+		  border:1px solid #727171;
+		  border-bottom-left-radius:5px;
+		  -moz-border-radius-bottomleft:5px;
+		  -webkit-border-bottom-left-radius:5px;
+		  border-bottom-right-radius:5px;
+		  -moz-border-radius-bottomright:5px;
+		  -webkit-border-bottom-right-radius:5px;
+		  background:#FFF url(background-megaMenu.png) repeat-x 0 0;
+		  position:absolute;
+		  top:35px;
+		  z-index:100;/* doit reste une couche de moins que le lien des onglets .ongLink */
+		  display:none;
+      }
+	  .posL{left:0}
+	  .posM{left:-200px}
+	  .posR{right:0}
+
+	  #onglets .megaMenu .mainCol,
+	  #onglets .megaMenu .rightCol{
+	  	background-color:white;
+	    border-top-left-radius:5px;
+	    -moz-border-radius-topleft:5px;
+	    -webkit-border-top-left-radius:5px;
+	    border-top-right-radius:5px;
+	    -moz-border-radius-topright:5px;
+	    -webkit-border-top-right-radius:5px;
+	  }
+	  #onglets .megaMenu .mainCol{
+		padding:10px;
+	  	min-height:250px;
+	  	height: auto !important;
+	  	height: 250px;
+	  }
+	  #onglets .megaMenu .rightCol{
+		position:relative;
+		padding:10px 10px 0 10px;
+	  	min-height:21em;
+	  	height: auto !important;
+	  	height: 21em;
+	  }	  
+	  #onglets .megaMenu .mainCol{width:60%;float:left;}
+	    #onglets .megaMenu .mainColLeft{width:48%;float:left}
+	    #onglets .megaMenu .mainColRight{width:48%;float:right;position:relative;min-height:21em;height:auto !important;height:21em}
+	    #onglets .megaMenu .allProd {position:absolute;bottom:0;font-weight:bold;padding:0}
+	      #onglets .megaMenu .allLink {font-weight:bold;color:#000;}
+	  #onglets .megaMenu .rightCol{width:30%;float:right;}
+		  #onglets .megaMenu dl{margin:0;padding-bottom:7px}
+		    #onglets .megaMenu dt, #onglets .megaMenu dt a{color:#DE9C00;font-weight:bold;margin-bottom:3px}
+		    #onglets .megaMenu dt a{text-decoration:underline}
+		    #onglets .megaMenu dt a:hover{text-decoration:none}
+		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(chevron-raquo.png) no-repeat 0 5px}
+		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
+		      #onglets .megaMenu dd a:hover{text-decoration:underline}
+ 		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}		      
+     
+
+/* ======**** fin header ****====================*/
+
+
+
+/* =========  navigation (menu N-2) ========== */
+
+#navigation, .navigation, body.enfants #navigation {
+  font-size:0.9em;
+}
+#navigation, #navigation *, .navigation, .navigation *, body.enfants #navigation, body.enfants #navigation * {
+  margin:0;
+  padding:0;
+}
+
+#navigation {
+  margin-top:7px;
+}
+/* on pose le cas où la vignette livraison précède directement le menu gauche */
+#col_gauche_header + #navigation * {
+  padding:0 !important;
+  margin:0 !important;
+}
+#navigation * + .navigation * {
+  padding:0 !important;
+  margin:0 !important;
+}
+#titres + #navigation {
+  padding:0 !important;
+  margin-top:0 !important;
+}
+
+#navigation .header h1,.navigation .header h1,#navigation .header, #navigation .header h2, #navigation .bottom, #navigation .bottom div, .navigation .header, .navigation .header h2, .navigation .bottom, .navigation .bottom div
+{
+  background:url(navn2_background.png) no-repeat left top;
+}
+/*body.enfants #navigation .header .topleft, body.enfants #navigation .header, body.enfants #navigation .header h2, body.enfants #navigation .bottom, body.enfants #navigation .bottom div
+{
+ background:url(/Img/v2/skin/navn3_background.png) no-repeat left top;
+}*/
+#navigation .header, #navigation .bottom , .navigation .header, .navigation .bottom, body.enfants #navigation .header, body.enfants #navigation .bottom{
+  padding:0 0 0 14px;
+}
+
+#navigation .header h1, .navigation .header h1, body.enfants #navigation .header .topleft, #navigation .header h2, #navigation .bottom div, .navigation .header h2, .navigation .bottom div, body.enfants #navigation .header h2, body.enfants #navigation .bottom div{
+  padding:0 6px 0 0;
+  min-height:6px;
+  _height:6px;
+}
+#navigation .header h2,.navigation .header h2, body.enfants #navigation .header h2,
+#navigation .header h1,.navigation .header h1, body.enfants #navigation .header .topleft,
+#navigation .header .topleft{
+  background-position:right top;
+  padding:0;
+  color:#DE9C00; /* moutarde */
+  font-size:1em;
+  font-weight:normal
+}
+#navigation .header h2 img,.navigation .header h2 img, body.enfants #navigation .header h2 img,
+#navigation .header h1 img,.navigation .header h1 img, body.enfants #navigation .header .topleft img  {
+  display:block;
+  padding:12px 0 8px 0;
+}
+#navigation .bottom, .navigation .bottom {
+  background-position:0 -150px;
+}
+/*body.enfants #navigation .bottom { background-position:0 -152px; }*/
+#navigation .bottom div,.navigation .bottom div, body.enfants #navigation .bottom div {
+  background-position:right -150px;
+  padding:25px 0 0 0;
+  min-height:0;
+  height:auto;
+  font-size:1px;
+}
+#navigation dl,#navigation ul, .navigation dl, .navigation ul {
+  background:#FFF; /* blanc */
+  border:1px solid #999; /* gris */
+  border-width:0 1px;
+  padding:0 12px; /*lot2 :update */
+  color:#000; /* noir */
+}
+#navigation .arboListe{
+  border:1px solid #999; /* gris */
+  border-width:0 1px;
+  padding-top:5px;
+}
+/*body.enfants #navigation .arboListe{
+  border:none;
+}
+body.enfants #navigation .arboListe .moutarde{
+  color:#FFF!important;
+}*/
+
+
+#navigation .arboActu dl, #navigation .arboListe dl, #navigation .arboActu ul, #navigation .arboListe ul {
+  padding-bottom:1em;
+  border:0;
+}
+#navigation .arboActu {
+  position:relative;
+}
+#navigation .arboActu dl {
+  background:#f3f3f3;
+}
+#navigation .arboActu span {
+  width:10px;
+  height:10px;
+  display:block;
+  position:absolute;
+}
+#navigation .arboActu span.tl {
+  background-color:#f00;
+  top:0;
+  left:12px;
+  _left:0;
+}
+#navigation .arboActu span.tr {
+  background-color:#f00;
+  top:0;
+  right:12px;
+}
+#navigation .arboActu span.bl {
+  background-color:#f00;
+  bottom:0;
+  left:12px;
+  _left:0;
+}
+#navigation .arboActu span.br {
+   background-color:#f00;
+  bottom:0;
+  right:12px;
+  _right:0;
+}
+
+body.enfants #navigation dl, body.enfants #navigation ul{
+  /*background-color:#d545ff; /* mauve */
+  padding:0 12px; /*lot2 :update */
+  /*color:#fff; /* blanc */
+}
+#navigation ul,.navigation ul{
+  list-style-type:none;
+}
+
+#navigation dl a, #navigation ul a, .navigation dl a, .navigation ul a{
+  color:#666; /* gris foncé */
+  text-decoration:none;
+}
+body.enfants #navigation dd a, body.enfants #navigation ul a {
+ /*color:#fff; /* gris foncé */
+ text-decoration:none;
+}
+#navigation dl a:hover, #navigation li a:hover, .navigation dl a:hover, .navigation li a:hover, body.enfants #navigation dd a:hover, body.enfants #navigation  li a:hover {
+  text-decoration:underline;
+}
+#navigation dl dt,.navigation dl dt{
+  font-weight:bold;
+  padding: 7px 0 3px 0;
+  font-size:1.1em;
+}
+#navigation dl dd, #navigation ul li, .navigation dl dd, .navigation ul li{
+  padding:2px 0;
+}
+#navigation dl .subcat, #navigation ul .subcat, .navigation dl .subcat, #navigation ul .subcat{
+  color:#666;
+  padding: 5px 0 3px 5px;
+  font-size:1em;}
+  
+#navigation .blkGris .inside_block, #navigation .blkOcre .inside_block, .navigation .blkGris .inside_block {
+	padding: 5px 0;
+  margin: 0 5px;
+}
+ #navigation .blkGris .inside_block dl, #navigation .blkOcre .inside_block dl {
+	border:0;
+	background-color:Transparent;
+	padding:0 5px 0 6px;
+}
+#navigation .blkGris, #navigation .blkOcre, .navigation .blkGris {
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+} 
+#navigation .blkGris dl dt, #navigation .blkOcre dl dt {
+	padding: 0;
+}
+#navigation .blkOcre .inside_block {
+			background-color:#FAF1DF;
+}
+/* liens Menu Marketing */
+#lkActus dd{color:#000 !important;}
+#lkBonPlans dd{color:#DE0000 !important;}
+#lkPrefs dd{color:#DE9C00 !important;}
+#lkActus a, #lkBonPlans a, #lkPrefs a{color:#666 !important;}
+#lkActus .rouge, #lkBonPlans .rouge, #lkPrefs .rouge,
+#lkActus .rouge a, #lkBonPlans .rouge a, #lkPrefs .rouge a{color:#DE0000 !important;}
+
+/* placement de la vignette */
+
+.vignette{
+  display:block;
+  position:relative;
+  top:0;
+  left:-3px;
+  margin-bottom:10px;
+}
+
+/* Bandeau tournant de la home général */
+
+#bandeauTournantImages img{
+ display:block;
+}
+#bandeauTournantTextes{
+  padding:0;
+  margin:0;
+}
+#bandeauTournantTextes li{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+#bandeauTournantTextes p{
+  margin:0;
+  padding:0;
+}
+#bandeauTournantTextes p a{
+  display:block;
+  padding:2px 9px;
+  color:#666;
+  background:#F3F3F3;
+  border:solid 1px white;
+  border-color:white #F3F3F3 #F3F3F3 #F3F3F3;
+}
+#bandeauTournantTextes p a:hover{
+  color:#666666;
+  background:#F0F0F0;
+  text-decoration:none;
+  border:solid 1px #DDD;
+}
+#bandeauTournantTextes .activ p a{
+  color:#DE9C00;
+}
+#bandeauTournantTextes .prixBandeau{
+  float:right;
+  font-weight:bold;
+}
+#bandeauTournantTextes .titre{
+  font-weight:bold;
+}
+
+/*****************
+* contenus génériques
+******************/
+
+/* ======== produit et contact ========= */
+/* on affiche un produit avec une image sur la gauche et la description sur la droite. Le contact se présente exactement pareil et le code est identique.
+Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dédoublés.
+ /* lot2 */
+.produit .number, .produit .img, .contact .number, .contact .img{
+  float:left;
+}
+.produit, .produit .desc, .contact, .contact .desc, .avis, .avis .desc{
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+/*contexte formatage */
+.produit .number, .produit .number span, .contact .number, .contact .number span{
+  display:block;
+  background:url(block_gris_number_corners.png) no-repeat left bottom;
+}
+.produit .number span, .contact .number span{
+			padding: 1em 0 1em 0;
+			width: 1.1em;
+  text-align:center;
+  font-size:1.8em;
+}
+.produit .number, .contact .number{
+  background-position:left top;
+  padding:5px 0 0 0;
+  margin:0 1px 0 0;
+}
+.produit .img, .contact .img{
+  margin-right:10px;
+}
+.contact .img{
+  padding-right:10px;
+  border-right:1px solid #000;
+}
+.produit .img img, .contact .img img{
+  display:block;
+}
+.produit .desc .img{ /* lorsque l'image est dans la description, cas de mise en avant, on supprime les propriétés déclarées précédemment */
+  float:none;
+  margin:8px 0;
+  text-align:center;
+}
+.produit .desc .img img{
+  margin:0 auto;
+}
+.produit dt, .contact dt{
+  /*line-height:0.9em;*/
+  font-weight:bold;
+  font-size:1.1em;
+}
+.produit dt, .produit dt a{
+  color:#666; /* gris foncé */
+/*  text-decoration:none; TOUSSI */
+}
+.contact dt, .contact dt a{
+  color:#DE9C00; /* moutarde */
+/*  text-decoration:none; TOUSSI */
+}
+.produit *, .contact *{
+  margin:0;
+  padding:0;
+}
+.produit .details, .produit .resume,.produit .details a{
+  color:#666; /* gris */
+}
+.contact .details{
+  color:#000;
+}
+.contact .details strong{ /* les détails important sont en couleur moutarde */
+  color:#DE9C00;
+}
+.produit .resume{
+  margin:8px 0;
+}
+.produit .pictoProduitSmall{
+  margin:3px 0;
+}
+.produit .pictoProduitNormal{
+  margin:3px 0;
+}
+.produit .pictoProduitBig{
+  margin:3px 0;
+}
+#col_droite .produit .prix{
+  margin:0;
+}
+
+/* gestion background des prix + couleurs dans les differentes declinaisons de tailles */
+
+#col_droite .produit dd.pictoProduitSmall{
+  padding-left:20px;
+  background-position:0;
+}
+#col_droite .produit dd.pictoProduitNormal{
+  padding-left:20px;
+  background-position:0;
+}
+#col_droite .produit dd.pictoProduitBig{
+  padding-left:20px;
+  background-position:0;
+}
+#page .produit dd.pictoProduitSmall{ /* soucis d heritage sous IE6 */
+  padding-left:28px;
+}
+#page .produit dd.pictoProduitBig{ /* soucis d heritage sous IE6 */
+  padding-left:28px;
+}
+
+.produit dd.pictoProduitSmall{
+  background-position:10px 0;
+  background-repeat:no-repeat;
+}
+.produit dd.pictoProduitNormal{
+  background-position:10px 0;
+  background-repeat:no-repeat;
+}
+.produit dd.pictoProduitBig{
+  background-position:10px 0;
+  background-repeat:no-repeat;
+}
+.listeproduits .produit dd, .listeproduits .produit dt{
+  padding-left:0;
+  padding-right:0;
+}
+.produit dd.pictoProduitSmall{
+  padding-left:18px;
+}
+.produit dd.pictoProduitNormal{
+  padding-left:38px;
+}
+.line_3cols .produit dd.pictoProduitSmall, .line_3cols_mea .produit dd.pictoProduitSmall{
+  padding-left:28px;
+}
+.line_3cols .produit dd.pictoProduitNormal, .line_3cols_mea .produit dd.pictoProduitNormal{
+  padding-left:38px;
+}
+.line_2cols .produit dd.pictoProduitSmall, .line_2cols_mea .produit dd.pictoProduitSmall{
+  padding-left:18px;
+}
+.line_2cols .produit dd.pictoProduitNormal, .line_2cols_mea .produit dd.pictoProduitNormal{
+  padding-left:28px;
+}
+/*inutilise*/.produit dd.pictoProduitBig{
+  padding-left:38px;
+}
+.listeproduits .produit dd.pictoProduitSmall{
+  background-position:0 0;
+}
+.listeproduits .produit dd.pictoProduitNormal{
+  background-position:0 0;
+}
+.listeproduits .produit dd.pictoProduitBig{
+  background-position:0 3px;
+}
+.produit dd.pictoPrixAdhSmall{
+  background-image:url(offre-adherents-small.png);
+}
+.produit dd.pictoPrixAdhNormal{
+  background-image:url(offre-adherents.gif);
+}
+.produit dd.pictoPrixAdhBig{
+  background-image:url(offre-adherents.gif);
+}
+.produit dd.pictoPrixVertSmall{
+  background-image:url(prix-vert-small.gif);
+}
+.produit dd.pictoPrixVertNormal{
+  background-image:url(minipictovert.gif);
+}
+.produit dd.pictoCoupDeCoeur{
+  background-image:url(coup-de-coeur.gif);
+}
+.produit dd.pictoAffaireFnac{
+  background-image:url(minipictoaffaire.gif);
+}
+.produit dd.pictoPrixVertBig{
+  background-image:url(prix-vert.gif);
+}
+.produit dd.pictoPrixRougeSmall{
+  background-image:url(bonne-affaire-small.gif);
+}
+.produit dd.pictoPrixRougeNormal{
+  background-image:url(minipictoaffaire.gif);
+}
+.produit dd.pictoPremierPrix {
+  background-image:url(mini1erprix.gif);
+}
+.produit dd.pictoPrixRougeBig{
+  background-image:url(bonne-affaire.gif);
+}
+.produit dd.pictoSoldesNormal{
+  background-image:url(soldes24.png);
+}
+
+.produit dd.pictoAdutalent {background:url(star.gif) 10px 0px no-repeat ;}
+.produit dd span.pictomp3{background:url(mp3.gif) right no-repeat;padding:0 34px 0 0;}
+.produit dd.pictoMp3 {background:url(mp3.gif) 60px 3px no-repeat;}
+.produit dd.pictoMp3block {background:url(mp3.gif) 10px 0px no-repeat;margin:10px 0 -5px 0px;}
+*+html .produit dd.pictoMp3block {margin:10px 0 8px 0px;}
+*html .produit dd.pictoMp3block {margin:10px 0 12px 0px;}
+.produit dd.pictoCameraTexteBleu {background:url(camera.gif) 10px 0px no-repeat ;color:#006699;font-weight:bold;font-size:12px;height:16px;}
+.produit dd.pictoCameraTexteBleu  strong{margin:0 0 0 25px;}
+.produit dd.pictoDiamond{background:url(diamond.gif) 0px 0px no-repeat;}
+.produit dd.pictostar{background-image:url(star.gif);}
+.produit dd.pictoGaming{background-image:url(picto_occaz-gaming_sur_gris_22x22.png);}
+
+/*import ancienne feuille de style*/
+.produit dd.pictocoeur{
+  background-image:url(minipictocoeur.gif);
+}
+.produit dd.picto20pourcent{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipicto20pourcent.gif);
+}
+.produit dd.picto38pourcent{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipicto38pourcent.gif);
+}
+.produit dd.pictopremier{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipictopremier.gif);
+}
+.produit dd.pictoadh{
+  background-image:url(minipictoadh.gif);
+}
+.produit dd.pictoadh6{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipictoadh6.gif);
+}
+.produit dd.pictotalent{
+  background-image:url(minipictotalent.gif);
+}
+.produit dd.pictoLivreSmall{
+  background-image:url(livre-small.gif);
+}
+.produit dd.pictoLivre{
+  background-image:url(livre.gif);
+}
+.produit dd.picto10Ans {
+  background-image:url(10ans.gif);
+}
+.produit dd.pictoSourisSmall{
+  background-image:url(souris-small.gif);
+}
+.produit dd.pictoSouris{
+  background-image:url(souris.gif);
+}
+.produit dd.pictopanier{
+  background-image:url(ACC_pictopanier.gif);
+}
+.produit dd.pictotelecharger{
+  background-image:url(LIVtelecharger_jaune.gif)
+}
+.produit dd.pictoCadeauSmall{
+  background-image:url(cadeau-small.png);
+}
+.produit dd.pictoCadeau{
+  background-image:url(noel_picto.png);
+}
+dd.pictoCadeauFnacmusic{background:url(gift.gif)  0px 0px no-repeat;padding:4px;}
+dd.pictoCadeauFnacmusic{margin:0;}
+dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
+
+.produit dd.pictoexcluadh{
+  background-image:url(minipictoexcluadh.png);
+}
+.produit dd.pictoideecadeau{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/pictoideecadeau.png);
+}
+
+.produit dd .delStylePrice{
+  font-weight:normal;
+  font-size:.65em;
+  font-style:normal;
+  color:#000;
+}
+
+/* contact */ /* lot2 */
+.contact_presentation .img{
+  float:none;
+  border:none !important;
+  margin:5px 0;
+}
+.contact_presentation .desc dt{
+  font-size:1.6em;
+  margin:10px 0;
+}
+
+/* liste produits */
+.listeproduits, .listeproduits li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.listeproduits li, .block .listeproduits li{ /* lot2 :update */
+  border-bottom:1px solid #ccc; /* gris clair */
+  padding:8px 0;
+}
+.flatproduit li, .block .flatproduit li{ /* maquette seb */
+  border-bottom:none; /* suppression bordure */
+}
+.slim_block .listeproduits li, .slim_block .block .listeproduits li{ /* lot2 :update */
+  padding:2px 0;
+  _zoom:1;
+}
+.listeproduits .produit dd, .listeproduits .produit dt{ /* pour eviter de generaliser le padding */
+/*   padding-left:0;
+  padding-right:0; */
+}
+#col_gauche .listeproduits li, #col_droite .listeproduits li{
+  padding:4px 0;
+}
+.listeproduits li.last, .block .listeproduits li.last{
+  border:none;
+}
+.lst_nobrd li{
+  border:none !important;
+}
+
+/* liste de produits en 2 colonnes avec une liste de produits (ul) par colonne */
+.listeprod_2cols{
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1
+}
+.listeprod_2cols ul{
+  float:left;
+  width:48%;
+}
+.listeprod_2cols ul.last{
+  float:right;
+}
+
+/* liste de produits en 2 colonnes :avec une seule liste qui constitue la colonne, chaque LI est flotté gauche (float:left), des bordures sont rajoutées selon le block conteneur */
+ul.liste_2cols{ /* lot2 */
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+ul.liste_2cols li{ /* lot2 */
+  clear:left;
+  float:left;
+  width:47%;
+  margin:5px 0;
+}
+
+ul.liste_2cols li.even{ /* lot2 */
+  clear:right;
+  float:right;
+}
+
+ul.liste_2cols_Vseparator li{
+  border:0 !important;
+}
+ul.liste_2cols_Vseparator li.even{
+  border-left:1px solid #CCC !important; /* gris */
+  padding-left:10px;
+}
+
+/* liste de produits conseillés :liste en ligne présentée par 3 produits (largeur 30%) avec bordure séparatrice.*/
+.produits_conseilles,.produits_conseilles li{ /* lot2 */
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.produits_conseilles{
+  /* contexte formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.produits_conseilles li{ /* on définit les styles du LI */  /* lot2 */
+  float:left;
+  border-right:1px solid #FFF; /* blanc */
+  padding:0 10px;
+  width:30%;
+}
+.produits_conseilles li.last{  /* lot2 */
+  border:0;
+}
+.produits_conseilles li li{ /* il faut supprimer les styles des sous li */ /* lot2 */
+  float:none;
+  border:0;
+  padding:0;
+  width:auto;
+}
+/* liste de produits alignés sur une ligne */
+ul.liste_inline{ /* lot2 */
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+ul.liste_inline li{ /* lot2 */
+  float:left;
+  width:23.3%;
+  margin-right:10px;
+}
+ul.liste_inline li.last{ /* lot2 */
+  margin-right:0;
+}
+ul.liste_inline .contact, ul.liste_inline .desc{ /* le contexte de formatage bug sous FF avec un overflow :hidden, alors on passe au display:table; */
+  overflow:visible;
+  display:table;
+}
+
+/* evaluations */
+ul.liste_evaluations li{
+  /* context formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+ul.liste_evaluations .produit{
+  float:left;
+  width:50%;
+}
+ul.liste_evaluations .evaluation{
+  color:#000;
+  border-left:1px solid #B2B2B2; /* gris */
+  padding-top:5px;
+  float:right;
+  width:17.27em;
+}
+ul.liste_evaluations .evaluation .pred, ul.liste_evaluations .evaluation .eval{
+  margin:0;
+  padding:5px;
+  /* contexte de formatage */
+  _overflow:hidden;
+  overflow:visible;
+  zoom:1;
+}
+ul.liste_evaluations .evaluation .eval{
+  background:#EDEDED; /* gris */
+}
+ul.liste_evaluations .evaluation strong{
+  float:left;
+  width:9.55em; /* 105px par calcul */
+}
+ul.liste_evaluations .evaluation .eval strong{
+  color:#DE9C00; /* moutarde */
+}
+ul.liste_evaluations .evaluation .link{
+  margin:2px 0 0 0;
+  padding-right:10px;
+  text-align:right;
+}
+ul.liste_evaluations .evaluation a{
+  text-decoration:none;
+  color:#000; /* noir */
+}
+
+/* liste_contact :liste de contact, elle se comporte comme une liste de produits */
+.listecontacts, .listecontacts li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+ul.liste_3cols li{ /* on ne veut que 3 éléments */
+  width:30%;
+  padding-right:20px;
+  margin-right:10px;
+}
+ul.liste_3cols li.last{
+  margin:0;
+  padding:0;
+}
+
+/* avis :Avis sur un produit. Présenté presque à l'identique */
+.avis{
+  margin-top:5px;
+}
+.avis .note{
+  float:left;
+  margin-right:10px;
+  width:47px; /* largeur d'une mini image */
+}
+.avis .desc dd{
+  margin:0;
+}
+.avis .desc dt{
+  font-weight:bold;
+}
+/* =========== separator ============ */
+.sep{
+  border-bottom:1px solid #000; /* noir */
+  margin:0;
+}
+.blk_content .sep{
+  margin:10px 0
+}
+
+/* ========== prix ========== */
+.prix{
+  font-weight:bold;
+  font-size:1.6em;
+  color:#000; /* noir */
+}
+.prixSeul{
+  padding-bottom:7px;
+}
+.prixBarre{
+  color:#666666;
+  font-weight:normal;
+  font-size:.65em;
+  text-decoration:line-through;
+}
+.prix strong{
+  font-size:1.16em;
+}
+.prix img{
+  vertical-align:middle;
+}
+.infosprice{
+  font-weight:normal;
+  color:#000; /* noir */
+  font-style:normal;
+  display:block;
+}
+/* ========= pagination ======== */
+.pagination, .pagination li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.pagination{
+  text-align:center;
+}
+.pagination li{
+  display:inline;
+  margin:0 2px;
+}
+.pagination li, .pagination li a{
+  color:#666666; /* gris */
+}
+.pagination li a{
+  text-decoration:underline;
+}
+.pagination li.current{
+  color:#E19A04; /* moutardeF6 */
+}
+.pagination li.before a, .pagination li.after a{
+  text-decoration:none;
+}
+/* ======== lists of links ========*/
+/*links_mea :conteneur de groups de liens avec une image sur la gauche */
+.links_mea, .links_mea li{
+  list-style:none;
+  margin:0;
+  padding:0;
+
+}
+.links_mea{
+  border-bottom:1px solid #000; /* noir */
+  font-size:0.9em;
+}
+.links_mea li{
+  border-top:1px solid #000; /* noir */
+  padding:2px 3px;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.links_mea li img{
+  float:left;
+  margin-right:5px;
+}
+.links_mea ul{ /* lot2 */
+  margin:0;
+  padding:0;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.links_mea ul, .links_mea ul li{
+  border:0;
+}
+
+/* links */
+.links, .links li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+/* links in block footer */
+.blk_footer .links li{
+  border-top:solid 1px white;
+  padding:2px 10px;
+  zoom:1;
+}
+
+.block_noir .blk_footer .links li{
+  border-top-color:#FFFFFF;
+}
+.blk_footer .links li.first{
+  border-top:none;
+  _zoom:1;
+}
+.blk_footer .links li.last_blanc {
+  color:#fff;
+}
+.links{
+  color:#DE9C00; /* moutarde */
+}
+.links a, .adherents .links a{ /* lot2 :update */
+  color:#DE9C00; /* moutarde */
+  text-decoration:none;
+}
+.links span.type2, .links span.type2 a{
+  color:#666 !important; /* gris foncé */
+}
+.links a:hover{
+  text-decoration:underline;
+}
+.blk_footer .links, .blk_footer .links a{
+  color:#666; /* gris foncé */
+}
+/* links_lines */
+.links_lines, .links_lines li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.links_lines li{
+  display:block;
+  background:#ccc; /* gris clair */
+  padding:2px 0 2px 15px;
+  _height:0; /* haslayout IE */
+  color:#000; /* noir */
+  text-decoration:none;
+}
+.links_lines a{
+  color:#000; /* noir */
+  text-decoration:none;
+}
+.links_lines a:hover{
+  text-decoration:underline;
+}
+#col_gauche .links_lines li{
+  padding-left:10px; /* ne pas mettre padding, car 1 seule valeur est remplacé car on a un cas spécifique et seul le left doit etre changer, sans altérer les autres padding */
+}
+.links_lines li{
+  margin-top:1px; /* ne pas changer */
+}
+.links_lines li.first{
+  margin-top:0;
+}
+/* ==== contenus ==== */
+.listeimages, .listeimages li{
+  padding:0;
+  margin:0;
+  text-align:center;
+  list-style:none
+}
+.listeimages li{
+  margin:2px 0;
+  _height:1%; /* haslyout IE */
+  text-align:center;
+}
+.listeimages li a{
+  display:block; /* le block doit faire la largeur de son contenu pour que celui-ci soit centré horizontalement, donc width:1% pour IE et display:table pour les autres */
+  display:table;
+  _width:1%;
+  margin:0 auto;
+  text-decoration:none;
+}
+.listeimages li a img{
+  display:block;
+}
+/* ======= tags ======== */
+.tags{
+  font-size:0.8em;
+  font-family:Arial, Verdana
+}
+.tags a{
+  color:#666; /* gris */
+  font-weight:bold;
+  text-decoration:none
+}
+.tags a:hover{
+  text-decoration:underline
+}
+/* ====== topbuttons ====== */
+ul.topbuttons, ul.topbuttons li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+ul.topbuttons li{
+margin-bottom:15px;
+}
+
+/*************  contenus customs ************/
+.gradient_bottom{
+  padding-bottom:8px !important;
+  background:url(gradient_bottom.gif) repeat-x left bottom;
+}
+
+/* ===== Couleurs de texte générales ===== */
+.pictoPrixVertSmall, .pictoPrixVertNormal, .pictoPrixVertBig, .vert{
+  color:#00AA30 !important;
+}
+.blanc{
+  color:#FFF !important;
+}
+.rouge, .pictoPrixRougeBig, .pictoPrixRougeNormal, .pictoPrixRougeSmall,
+.pictoPrixAdhBig, .pictoPrixAdhNormal, .pictoPrixAdhSmall,
+.pictoSourisSmall, .pictoSouris{
+  color:#DD0000 !important;
+}
+.jaune{
+  color:#F9D500 !important;
+}
+.bleu{
+  color:#09C !important;
+}
+.bleuMP{
+  color:#1a3fa7 !important;
+}
+.orange{
+  color:#FE7403 !important;
+}
+.noir{
+  color:#000 !important;
+}
+.gris{
+  color:#828282 !important;
+}
+.grisfonce{
+  color:#666 !important;
+}
+
+.grisclair{
+  color:#CCCCCC !important;
+}
+
+.orangeadh{
+  color:#F89C21 !important;
+}
+
+.moutarde, .moutarde-lk, .moutarde-lk a{
+  color:#DE9C00 !important;
+}
+.vert{
+  color:#008C7C !important;
+}
+.vertclair{
+	color:#A0C51D !important;
+}
+.vert2{
+	color:#44b716 !important;
+}
+.jauneAdh{
+  color:#F9D500 !important;
+}
+.marron{
+color:#DA9914 !important;
+}
+
+/* ===== texte ===== */
+.font0-8{
+	font-size:0.8em !important;
+}
+
+.fontnormal{
+  font-weight:normal !important;
+}
+.fontsmaller{
+  font-size:0.9em !important;
+}
+.fontsizenormal{
+  font-size:1em !important;
+}
+.fontbigger{
+  font-size:1.1em !important;
+}
+.fontbiggerplus{
+  font-size:1.5em !important;
+}
+
+
+
+/****************
+* Boutons
+****************/
+.button, .button span{
+  background:url(bouton_noir_background.png) no-repeat left top;
+  display:-moz-inline-box;
+  display:inline-block;
+  /* propriétés particulières du display qui donne au block une
+     consistance de block mais un comportement inline, la premiere
+     propriete est pour Firefox, la seconde pour tous les autres
+     navigateurs
+  */
+}
+.buttonNoirMiddle, .buttonNoirMiddle span{
+  background-image:url(bouton_noirmiddle_background.png);
+}
+.button{
+  padding-left:15px;
+  cursor:pointer;
+  text-decoration:none;
+  border:none;
+}
+.button:hover{
+  text-decoration:none;
+}
+.button span{
+  padding:4px 15px 0 0;
+  height:24px;
+  display:block;
+  font-weight:bold;
+  background-position:right top;
+  color:#FFF; /* blanc */
+  !width:1%;
+  !white-space:nowrap;
+}
+.button span.img{
+  padding-top:1px;
+}
+
+.fullwidth, .fullwidth span{
+  display:block;
+  width:auto;
+}
+
+/****************
+* Conteneurs de blocks  :Definissent les lignes qui peuvent contenir plusieurs blocks
+*****************/
+/* ici on défini les lignes qui contiennent les blocks, sachant que le dernier block d'une ligne porte la classe block_last */
+.line_3cols, .line_3cols_mea, .line_2cols, .line_2cols_mea, .line_2cols_FM { /* lot 3 : update */
+  overflow:hidden;
+  _overflow:visible;
+  _height:1%
+}
+.line_2cols_FM .block, .line_2cols .block, .line_2cols_mea .block{
+  float:left;
+  width:49.5%;
+}
+.line_2tiers .block, .line_2tiers_mea .block{
+  float:left;
+  width:64.5%;
+}
+.line_2cols.slim_block .block, .line_2cols_mea.slim_block .block{
+  width:49.9%;
+}
+.line_2cols .block_last, .line_2cols_mea .block_last{
+  float:right;
+}
+.line_3cols .block, .line_3cols_mea .block{
+  float:left;
+  width:32.5%;
+  margin-right:7px;
+}
+
+.line_3cols .block_last, .line_3cols_mea .block_last{
+  float:none;
+  _float:right;
+  width:auto;
+  _width:32.5%;
+  margin-right:0;
+}
+
+/* il est possible aussi de définir des tailles pour les blocks */
+.size_1on3{width:32.5% !important}
+.size_2on3{width:66% !important}
+
+/* line_2col_mea :conteneur ligne où les blocs n'ont pas de bords arrondis vers l'intérieure */
+.line_2cols_mea .block .blk_header span, .line_3cols_mea .block_first .blk_header span, .line_3cols_mea .block_middle .blk_header span, .line_2cols_mea .block .blk_header a, .line_3cols_mea .block_first .blk_header a, .line_3cols_mea .block_middle .blk_header a{ /* lot 3 : update */
+background-position: -50px 0;
+}
+.line_2cols_mea .block_last .blk_header, .line_3cols_mea .block_middle .blk_header, .line_3cols_mea .block_last .blk_header{/* lot 3 : update */
+background-position: -50px 0;
+}
+.line_2cols_mea .block_last .blk_header span, .line_2cols_mea .block_last .blk_header a{ /* lot 3 : update */
+background-position: right top;
+}
+
+/****************
+* inside_block :block à l'intérieure d'un block
+*******************/
+.inside_block{ /* lot2 */
+  position:relative;
+  zoom:1; /* ie bug fix */
+  background-color:#EAEAEA; /* gris clair */
+}
+/* inside_block_corners*/
+#tarif1 span.tl, .inside_block .tl, .inside_block .tr, .inside_block .bl, .inside_block .br{ /* lot2 */
+  background-image:url(inside_block_corners.gif);
+}
+/*****************
+* block :Déclaration générique d'un block
+******************/
+/* =========== block (definition des éléments defaut)  ============ */
+/* on défini les parties principales qui constituent un block */
+.block{
+  font-size:0.9em;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  _height:1%;
+}
+.blockAuto{
+  width:auto!important;
+}
+.block1em{
+  font-size:1em;
+}
+.block .block{
+  font-size:1em; /* permet de gommer le soucis d'indentation de class .block */
+}
+/* entête de block (header) */
+.block .blk_header, .block .blk_header span, .block .blk_header a{
+  display:block;
+  margin:0;
+  padding:0;
+  background-color:transparent;
+  background-repeat:no-repeat;
+  background-position:left top;
+  text-align:center;
+}
+.block .blk_header, .block .blk_postHeader{
+  position:relative;
+  z-index:10;
+  padding:0 0 0 6px;
+  margin:-1px -1px 0;
+  zoom:1;
+}
+.block .blk_header{ font-size:1.3em;}
+
+.block .blk_header span, .block .blk_header a{
+  padding:5px 6px 2px 1px;
+  min-height:20px;
+  _height:20px;
+  background-position:right top;
+  /* contexte formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.block .blk_header a:hover{
+  text-decoration:none;
+}
+.block .blk_header span.fine, .block .blk_header a.fine{
+  padding:3px 6px 0px 1px;
+}
+/* picto header :defini les propriétés qui sont appliquées au picto quand celui-ci est mis dans une tétière*/
+.block .blk_header .picto{
+  float:left;
+  margin:-3px -30px -2px 5px;
+}
+.block .blk_header .pictoright{
+  float:right;
+  margin:-3px 5px -2px -30px;
+  //margin-left:-5px; /* IE7 + IE6 */
+}
+.block .blk_header  img.txt_m{
+  margin-top:0; /* on ne doit supprimer que la marge haut et bas avec la classe txt_m, On ne doit pas toucher au reste*/
+  margin-bottom:0
+}
+/* blck_inside */
+.block .blk_inside{
+  position:relative;
+  zoom:1; /* correction IE bug */
+}
+
+/* corps intérieur du block, c'est la partie qui contient le texte, produits, etc... */
+.blk_content{
+  /* contexte de formatage */
+  zoom:1;
+  overflow:hidden;
+  _overflow:visible
+}
+
+/* Coins des blocks */
+#tarif1 span.tl, 
+.block .tl, 
+.block .tr,
+.block .bl,
+.block .br,
+.inside_block .tl,
+.inside_block .tr,
+.inside_block .bl,
+.inside_block .br,
+.arboActu .tl,
+.arboActu .tr,
+.arboActu .bl,
+.arboActu .br {
+  position:absolute;
+  z-index:5;
+  height:7px;
+  width:7px;
+  font-size:1%;
+}
+#tarif1 span.tl, .block .tl, .inside_block .tl{ /* coin haut gauche */
+  top:-1px;
+  left:-1px;
+  background-position:left top;
+}
+.block .tr, .inside_block .tr{ /* coin haut droit */
+  top:-1px;
+  right:-1px;
+  background-position:right top;
+}
+.block .bl, .inside_block .bl{ /* coin bas gauche */
+  bottom:-1px;
+  left:-1px;
+  background-position:left bottom;
+}
+.block .br, .inside_block .br{ /* coin bas droit */
+  bottom:-1px;
+  right:-1px;
+  background-position:right bottom;
+}
+
+/* inside block corners correction */
+.inside_block .tl{ /* coin haut gauche */
+  top:0;
+  left:0;
+
+}
+.inside_block .tr{ /* coin haut droit */
+  top:0;
+  right:0;
+}
+.inside_block .bl{ /* coin bas gauche */
+  bottom:0;
+  left:0;
+}
+.inside_block .br{ /* coin bas droit */
+  bottom:0;
+  right:0;
+}
+
+/* fix corners */
+.IS_IE .tr, .IS_IE .br{
+  _right:expression(cssRight(this)); /* corrige le positionnement absolu sous IE */
+}
+/* IS_IE est là pour que IE7 n'utilise pas cette propriété */
+.IS_IE .bl, .IS_IE .br{
+  _bottom:expression(cssBottom(this,true)); /* corrige le positionnement absolu sous IE */
+}
+
+/* fond/classes generiques */
+/* flat :aucune bordure sur le bloc */
+.flat{
+  border:none !important /* aucune bordure avec flat */
+}
+.flated *{
+  border:none !important /* aucune bordure avec flat */
+}
+
+/* flat :aucune bordure sur le block */
+.flat .blk_header{
+  margin:0 !important /* le block d'entête ne doit pas avoir de marges quand il n'a pas de bordure */
+}
+/* les coins arrondis en mode flat sont à 0 */
+.block .flat .tl{
+  top:0;
+  left:0;
+}
+.block .flat .tr{
+  top:0;
+  right:0;
+}
+.block .flat .bl{
+  bottom:0;
+  left:0;
+}
+.block .flat .br{
+  bottom:0;
+  right:0;
+}
+/* fix corners */
+.IS_IE .flat .tr, .IS_IE .flat .br{
+  _right:expression(cssRight(this)); /* corrige le positionnement absolu sous IE */
+}
+/* IS_IE est là pour que IE7 n'utilise pas cette propriété */
+.IS_IE .flat .bl, .IS_IE .flat .br{
+  _bottom:expression(cssBottom(this,true)); /* corrige le positionnement absolu sous IE */
+}
+
+.filled .flat .tl, .filled .flat .tr, .filled .flat .bl, .filled .flat .br{ /* coin sur fond parent gris */
+  background-image:url(block_flat_corners_gris.png);
+}
+.bg_gris .flat .tl, .bg_gris  .flat .tr, .bg_gris  .flat .bl, .bg_gris .flat .br{ /* coin sur fond parent gris */
+  background-image:url(block_flat_corners_gris_plein.png);
+}
+.block .gradient{
+  background:url(fond_gradient.png) repeat-x left top
+}
+.block .gradient_blanc{
+  background:url(fond_gradient.png) repeat-x left top;
+  background-color:#FFF;
+}
+.block .filled_black{
+  background-color:#000; /* noir */
+  color:#FFF; /* blanc */
+}
+.block .filled_black .blk_footer .links, .block .filled_black .blk_footer .links a{
+  color:#FFF; /* blanc */
+}
+.block .filled_black a, .block .filled_black .links{
+  color:#ccc; /* gris clair */
+}
+.block .filled_blanc{
+  background-color:#FFF; /* blanc */
+  color:#000; /* noir */
+}
+.block .filled_blanc a, .block .filled_blanc .links{
+  color:#666; /* gris fonce */
+}
+.nobkg{
+  background:none !important;
+  color:inherit !important
+}
+.pdg_ft{
+  padding:5px 10px;
+}
+/* ombre de fin de block */
+.btmshadow, .btmshadow b{
+  display:block;
+  background:url(bottom_shadow.png) repeat-x left top;
+}
+.btmshadow2, .btmshadow2 b{
+  display:block;
+  background:url(bottom_shadow2.png) repeat-x left top;
+}
+.btmshadow, .btmshadow2{
+  padding-left:10px;
+}
+.btmshadow2{
+  margin-bottom:10px;
+}
+.btmshadow b{
+  background-position:right top;
+  height:10px;
+  font-size:1%
+}
+.btmshadow2 b{
+  background-position:right top;
+  height:20px;
+  font-size:1%
+}
+/*********************
+*  blocks
+**********************/
+/* Les styles qui suivent ne vont réécrire que certaines propriétés qui ont été définies plus haut, mais pour certaines blocks elles doivent être réécrites. */
+/* ========  mise_en_avant ========= */
+.mise_en_avant .blk_header, .mise_en_avant .blk_header span, .mise_en_avant .blk_header a{
+  background-image:url(mise_en_avant_header.png);
+  color:#FFF; /* blanc */
+  margin:0;
+}
+.mise_en_avant .blk_header span img.universe {
+  float:left;
+  margin-left:10px;
+}
+.mise_en_avant .blk_header span a {
+  margin:0;
+  background:transparent!important;
+}
+.mise_en_avant .blk_header span, .mise_en_avant .blk_header a {
+  padding-top:3px; /* seul le top et bottom doivent être modifié (detail important) */
+  padding-bottom:3px;
+  min-height:13px;
+  _height:13px;
+}
+.mise_en_avant .blk_header{
+  font-size:1.1em;
+}
+.mise_en_avant .blk_inside{
+  background:#F3F3F3; /* gris très clair */
+}
+.mise_en_avant .tl{top:0;left:0;}
+.mise_en_avant .tr{top:0;right:0;}
+.mise_en_avant .bl{bottom:0;left:0;}
+.mise_en_avant .br{bottom:0;right:0;}
+#col_centre .mise_en_avant .tl, #col_centre .mise_en_avant .tr, #col_centre .mise_en_avant .bl, #col_centre .mise_en_avant .br{
+  background-image:url(mise_en_avant_corners.png);
+}
+
+
+
+.mise_en_avant .produit{
+  padding:5px 0;
+}
+.mise_en_avant .produit, .mise_en_avant .desc{
+  overflow:visible;
+}
+.mise_en_avant .produit, .mise_en_avant .produit dt, .mise_en_avant .produit dt a{
+  color:#000; /* noir */
+}
+.produit dt, .produit dd{/* supression de mise_en_avant pour deprioriser */
+  padding-left:10px;
+  padding-right:10px;
+}
+/* correction pour les mise en background */
+.mise_en_avant .produit dd.pictoProduitSmall{
+  padding-left:27px;
+}
+.mise_en_avant .produit dd.img{
+  padding:0;
+  background:#FFF; /* blanc */
+  border:1px solid #F3F3F3;
+}
+.mise_en_avant .sep{
+  border-bottom-color:#FFF; /* blanc */
+}
+.mise_en_avant .links li{
+/*padding:0; c'est doutueux, j'en ai eu besoin et plus maintenant, je la garde sous le coude au cas ou */
+}
+.brd_noir .tl, .brd_noir .tr, .brd_noir .bl, .brd_noir .br{
+  background-image:url(corner_noir_gris.png)!important;
+}
+.brd_noir .blk_inside{
+  border-color:#000!important;
+}
+/* cadre produit */
+.cadre_produit{
+  float:left;
+  position:relative;
+  margin-right:5px;
+}
+.cadre_produit .tl{
+  top:0;
+  left:0;
+}
+.cadre_produit .tr{
+  top:0;
+  right:0;
+}
+.cadre_produit .br{
+  right:0;
+  bottom:0;
+}
+.cadre_produit .bl{
+  bottom:0;
+  left:0;
+}
+.IS_IE .cadre_produit .tr, .IS_IE .cadre_produit .br{
+  _right:expression(cssRight(this)) /* corrige le positionnement absolu sous IE */
+}
+/* IS_IE est là pour que IE7 n'utilise pas cette propriété */
+.IS_IE .cadre_produit .bl, .IS_IE .cadre_produit .br{
+  _bottom:expression(cssBottom(this,true)) /* corrige le positionnement absolu sous IE */
+}
+/*2009-04-27*/
+.cadre_produit .number span{
+  float:left;
+  width:18px;
+  padding-top:0;
+  margin-right:0;
+}
+.cadre_produit .img{
+  /*height:80px;*/
+  margin:-5px 0pt 0pt;
+  overflow:hidden;
+  width:63px;
+}
+.cadre_produit .img img{
+  margin:0 auto;
+  padding:8px 0;
+  width:47px;/*provisoire*/
+  /*height:47px;provisoire*/
+}
+.cadre_produit .number{
+  border:solid 1px;
+  margin-right:0;
+}
+.produit .img img, .contact .img img {
+  display:block;
+}
+.produit .number, 
+.produit .img, 
+.contact .number, 
+.contact .img {
+  float:left;
+}
+
+/*separator gris*/
+.sep, .sep_gris {border-bottom: 1px solid #000; /* noir */margin: 0;}
+.blk_content .sep, .blk_content .sep_gris {margin: 10px 0}
+   .sep_gris {border-bottom-color: #ccc; /* gris */}
+
+
+/* ======= block_rouge =======*/
+.block_rouge .blk_header, .block_rouge .blk_header span, .block_rouge .blk_header a{
+  background-color:#DD0000; /* rouge */
+  background-image:url(block_rouge_header.png);
+  color:#FFF; /* blanc */
+}
+.block_rouge_mea .blk_header, .block_rouge_mea .blk_header span, .block_rouge_mea .blk_header a{
+  background-color:#FFF; /* blanc */
+  background-image:url(block_rouge_mea_header.png);
+}
+.block_rouge .blk_inside{
+  border-left:1px solid #DD0000; /* rouge */
+  border-bottom:1px solid #DD0000; /* rouge */
+  border-right:1px solid #DD0000; /* rouge */
+}
+.block_rouge .filled{
+  background:#FCE5E5; /* rouge clair */
+}
+
+.block_rouge .blk_inside .tr, .block_rouge .blk_inside .tl, .block_rouge .blk_inside .br, .block_rouge .blk_inside .bl {
+background-image:url(block_rouge_corner_trans.png);
+}
+
+.block_rouge .blk_inside_red_brd_grey .tl, .block_rouge .blk_inside_red_brd_grey .tr, .block_rouge .blk_inside_red_brd_grey .bl, .block_rouge .blk_inside_red_brd_grey .br{
+  background-image:url(block_rouge_corner.png);
+}
+
+/* produit */
+.block_rouge .produit .number, .block_rouge .produit .number span{
+  background-image:url(block_rouge_number_corners.png);
+  color:#FFF; /* blanc */
+}
+.block_rouge h4, .block_rouge .filled .produit dt, .block_rouge .filled .produit dt a{
+  color:#DD0000; /* rouge */
+  font-weight:bold;
+}
+.block_rouge .produit dt, .block_rouge .produit dt a{
+  color:#000; /* noir */
+  font-weight:bold;
+}
+.block_rouge .produit .details, .block_rouge .produit .details a{
+  color:#666; /* gris */
+  font-weight:normal;
+}
+/* mise en avant mea */
+.block_rouge_mea .produit dt, .block_rouge_mea .produit dt a{
+  font-weight:bold;
+  color:#DD0000;
+}
+.block_rouge_mea .produit .details, .block_rouge_mea .produit .details a{
+  color:#666; /* noir */
+  font-weight:normal;
+}
+/* mise en avant mea */
+.block_rouge .filled .produit .details{
+  color:#666; /* gris */
+  font-weight:normal;
+}
+.block_rouge .blk_footer .links, .block_rouge .blk_footer .links a{
+  color:#DD0000; /* rouge */
+}
+.block_rouge_mea .blk_footer .links, .block_rouge_mea .blk_footer .links a{
+  color:#666666; /* rouge */
+}
+.block_rouge .blk_footer .links_lines li{
+  color:#FFF; /* blanc */
+  background:#DD0000; /* rouge */
+}
+.block_rouge .blk_footer .links_lines a{
+  color:#FFF; /* blanc */
+}
+.block_rouge .bkg_ft{
+  background:#DD0000; /* rouge */
+}
+.block_rouge .bkg_ft a, .block_rouge .bkg_ft .links a{
+  color:#FFF; /* blanc */
+}
+.block_rouge .sep, .block_rouge .listeproduits li{
+  border-bottom-color:#ccc; /* gris clair */
+}
+.block_rouge .filled .sep{
+  border-bottom-color:#E94D4D; /* rouge */
+}
+.block_rouge .listeproduits li{
+  border-bottom-color:#DD0000; /* rouge */
+}
+.block_rouge_mea .sep{
+  border-bottom-color:#FFF; /* blanc */
+}
+
+/*Ajout test 2009-04-27*/
+.block_rouge .cadre_produit .number {
+  border:1px solid #DE0000; 
+}
+.block_rouge .cadre_produit .number, .block_rouge .cadre_produit .number span {
+ background:#DE0000 none repeat scroll 0% 50%;
+  color:#FFFFFF;
+}
+
+.block_rouge .cadre_produit .img {
+  background:#fff none repeat scroll 0% 50%;
+}
+
+.block_rouge .cadre_produit .tl,
+.block_rouge .cadre_produit .tr,
+.block_rouge .cadre_produit .bl,
+.block_rouge .cadre_produit .br {
+  background-image:url(block_cadre_prod_rouge1_corner.png);
+}
+
+/******* block_jaune *******/
+.block_jaune .blk_header, .block_jaune .blk_header span, .block_jaune .blk_header a{
+  background-color:#F9D500; /* jaune */
+  background-image:url(block_jaune_header_flat.png);
+  color:#000; /* noir */
+}
+.block_jaune_blanc .blk_header, .block_jaune_blanc .blk_header span, .block_jaune_blanc .blk_header a{
+  background-image:url(block_jaune_blanc_header.png);
+}
+.block_jaune_mea .blk_header, .block_jaune_mea .blk_header span, .block_jaune_mea .blk_header a{
+  background-color:#FFF; /* blanc */
+  background-image:url(block_jaune_mea_header.png);
+}
+.block_jaune .blk_inside{
+  border:1px solid #F9D500; /* jaune */
+}
+.block_jaune .downBorder .block_content{
+  border:solid #F9D500; /* jaune */
+  border-width:0 1px;
+}
+.block_jaune .downBorder .block_footer{
+  border:solid #F9D500; /* jaune */
+  border-width:0 1px 1px 1px; /* jaune */
+}
+.block_jaune .filled{
+  background:#FEFBE5; /* jaune clair */
+}
+.block_jaune .blk_footer .links_lines li{
+  color:#000; /* noir */
+  background:#fbd93b; /* jaune */
+}
+.block_jaune .blk_footer .links_lines a{
+  color:#000; /* noir */
+}
+.block_jaune .produit dt{
+  font-weight:bold;
+}
+.block_jaune .produit dd.img{
+  border-color:#FEFBE5;
+}
+.block_jaune .produit dt, .block_jaune .produit dt a{
+  color:#000000; /* noir */
+}
+.block_jaune .produit .details, .block_jaune .produit .details a{
+  color:#666; /* noir */
+  font-weight:normal;
+}
+/* mise en avant mea */
+.block_jaune_mea .produit dt{
+  font-weight:bold;
+}
+.block_jaune_mea .produit dt, .block_jaune_mea .produit dt a{
+  color:#000000; /* noir */
+}
+.block_jaune_mea .produit .details, .block_jaune_mea .produit .details a{
+  color:#666; /* gris */
+  font-weight:normal;
+}
+.block_jaune .sep{
+  border-bottom-color:#FBE24D; /* jaune */
+}
+.block_jaune .listeproduits li{
+  border-bottom-color:#FBE24D; /* jaune */
+}
+/* mise en avant mea */
+.block_jaune_mea .sep{
+  border-bottom-color:#FFF; /* blanc */
+}
+/* 2009-04-27 */
+.block_jaune .cadre_produit .number, .block_noir .cadre_produit .number span {
+	background:#fff none repeat scroll 0% 50%;
+	color:#FFFFFF;
+}
+.block_jaune .cadre_produit .number {
+	border-color:#FBE24D;
+}
+.block_jaune .cadre_produit .img {
+	background:#fff none repeat scroll 0% 50%;
+}
+.block_jaune .cadre_produit .tl,
+.block_jaune .cadre_produit .tr,
+.block_jaune .cadre_produit .bl,
+.block_jaune .cadre_produit .br {
+background-image:url(block_cadre_prod_jaune_corner.png);
+}
+/* ======= block_bleu =======  */
+.block_bleu .blk_header, .block_bleu .blk_header span, .block_bleu .blk_header a{
+  background-color:#0099CC; /* bleu clair */
+  background-image:url(block_bleu_header.png);
+  color:#FFF; /* blanc */
+}
+.block_bleu .blk_inside{
+  border:1px solid #0099CC; /*  bleu clair */
+}
+.block_bleu .filled{
+  background:#D9F7FF; /* bleu ciel (très clair) */
+}
+.block_bleu .produit dt, .block_bleu .produit dt a{
+  color:#0099CC; /* bleu clair  */
+}
+.block_bleu .cadre_produit .tl, .block_bleu .cadre_produit .tr, .block_bleu .cadre_produit .bl, .block_bleu .cadre_produit .br{
+  background-image:url(block_cadre_prod_bleu_corner.png);
+}
+.block_bleu .cadre_produit .number{
+  border-color:#47B5DA; /* bleu clair */
+}
+.block_bleu .cadre_produit .img{
+  background:#FFF; /* blanc */
+}
+.block_bleu .produit .number, .block_bleu .produit .number span{
+  background-image:url(block_bleu_number_corners.png);
+  color:#FFF; /* blanc */
+}
+.block_bleu .cadre_produit .number, .block_bleu .cadre_produit .number span{
+  background-image:none;
+  background:#43B4D9;
+  color:#FFF; /* blanc */
+}
+.block_bleu .blk_footer .links, .block_bleu .blk_footer .links a{
+  color:#0099CC; /* */
+}
+.block_bleu .blk_footer .links_lines li{
+  color:#FFF; /* blanc */
+  background:#0099CC; /* bleu clair */
+}
+.block_bleu .blk_footer .links_lines a{
+  color:#FFF; /* blanc */
+}
+.block_bleu h4, .block_bleu .produit dt, .block_bleu .produit dt a{
+  color:#0099CC; /* bleu clair */
+}
+.block_bleu .sep, .block_bleu .listeproduits li{
+  border-bottom-color:#09C; /* bleu clair */
+}
+.block_bleu .filled .sep, .block_bleu .filled .listeproduits li{
+  border-bottom-color:#47B5DA; /* blanc */
+}
+.block_bleu_mea .filled .sep{
+  border-bottom-color:#FFF; /* blanc */
+}
+/* ======= block_orange ======= */
+.block_orange .blk_header, .block_orange .blk_header span, .block_orange .blk_header a{
+  background-color:#FE7403; /* orange */
+  background-image:url(block_orange_header.png);
+  color:#FFF; /* blanc */
+}
+.block_orange_mea .blk_header, .block_orange_mea .blk_header span, .block_orange_mea .blk_header a{
+  background-color:#FFF; /* blanc */
+  background-image:url(block_orange_mea_header.png);
+}
+.block_orange .blk_footer .links, .block_orange .blk_footer .links a{
+  color:#FF6600; /* orange */
+}
+.block_orange_mea .blk_footer .links, .block_orange_mea .blk_footer .links a{
+  color:#666666; /* orange */
+}
+.block_orange .blk_footer .links_lines li{
+  color:#FFF; /* blanc */
+  background:#FE7403; /* orange */
+}
+.block_orange .blk_footer .links_lines a{
+  color:#FFF; /* blanc */
+}
+.block_orange .bkg_ft{
+  background:#FE7403; /* orange */
+}
+.block_orange .bkg_ft a, .block_orange .bkg_ft .links a{
+  color:#FFF; /* blanc */
+}
+.block_orange  h4, .block_orange .produit dt, .block_orange .produit dt a{
+  color:#FF6600; /* orange */
+}
+.block_orange .blk_inside{
+  border:1px solid #FE7403; /* orange */
+}
+.block_orange .filled{
+  background:#FFE8D9; /* orange clair */
+}
+.block_orange .sep, .block_orange .listeproduits li{
+  border-bottom-color:#FE9B49; /* orange */
+}
+.block_orange .filled .sep, .block_orange .filled .listeproduits li{
+  border-bottom-color:#FE9B49; /* blanc */
+}
+.block_orange_mea .sep{
+  border-bottom-color:#FFF; /* blanc */
+}
+/* 2009-04-27 */
+.block_orange .cadre_produit .number, .block_noir .cadre_produit .number span {
+	background:#fff none repeat scroll 0% 50%;
+	color:#FFFFFF;
+}
+.block_orange .cadre_produit .number {
+	border-color:#FE9B49;
+}
+.block_orange .cadre_produit .img {
+	background:#fff none repeat scroll 0% 50%;
+}
+.block_orange .cadre_produit .tl,
+.block_orange .cadre_produit .tr,
+.block_orange .cadre_produit .bl,
+.block_orange .cadre_produit .br {
+background-image:url(block_cadre_prod_orange_corner.png);
+}
+/* ======= block_noir ======= */
+.block_noir .blk_header, .block_noir .blk_header span, .block_noir .blk_header a{
+  background-color:#000; /* noir */
+  background-image:url(block_noir_header.png);
+  color:#FFF; /* blanc */
+}
+#col_gauche .block_noir .blk_header, #col_gauche .block_noir .blk_header span, #col_gauche .block_noir .blk_header a, #col_droite .block_noir .blk_header, #col_droite .block_noir .blk_header span, #col_droite .block_noir .blk_header a{
+  color:#DE9C00; /* moutarde */
+  background-image:url(block_noir_header_on_col.png);
+}
+#col_gauche .block_top .blk_header, #col_gauche .block_top .blk_header span, #col_gauche .block_top .blk_header a, #col_droite .block_top .blk_header, #col_droite .block_top .blk_header span, #col_droite .block_top .blk_header a{
+  color:#DE9C00; /* moutarde */
+  background-image:url(block_noir_header_on_col.png);
+}
+#col_gauche .block_noir .flat .blk_header, #col_gauche .block_noir .flat .blk_header span, #col_gauche .block_noir .flat .blk_header a, #col_droite .block_noir .flat .blk_header, #col_droite .block_noir .flat .blk_header span, #col_droite .block_noir .flat .blk_header a{
+  color:#DE9C00; /* moutarde */
+  background-image:url(block_noir_flat_header_on_col.png);
+}
+.block_noir .tl, .block_noir .tr, .block_noir .bl, .block_noir .br{
+  background-image:url(block_gris_corners.png);
+}
+.block_noir .filled_black .tl, .block_noir .filled_black .tr, .block_noir .filled_black .bl, .block_noir .filled_black .br{
+  background-image:url(block_noir_corners.png);
+}
+.block_noir .blk_inside{
+  border:1px solid #CCC; /* gris  */
+}
+.block_noir .filled{
+  background:#F0F0F0; /* gris tres clair */
+  border:1px solid #000; /* noir  */
+}
+.block_noir .blk_content{
+  border-top:solid 1px #333333; /* gris tres fonce */
+}
+/* 2009-04-27 */
+.block_noir .cadre_produit .number, .block_noir .cadre_produit .number span {
+	background:#fff none repeat scroll 0% 50%;
+	color:#FFFFFF;
+}
+.block_noir .cadre_produit .number {
+	border-color:#3e3e3e;
+}
+.block_noir .cadre_produit .img {
+	background:#fff none repeat scroll 0% 50%;
+}
+.block_noir .cadre_produit .tl,
+.block_noir .cadre_produit .tr,
+.block_noir .cadre_produit .bl,
+.block_noir .cadre_produit .br {
+background-image:url(block_cadre_prod_noir_corner.png);
+}
+		
+#col_droite .block_noir .links{
+  color:#666; /* gris fonce */
+}
+.block_noir .blk_footer .links_lines li{
+  color:#FFF; /* blanc */
+  background:#000; /* noir */
+}
+.block_noir .blk_footer .links_lines a{
+  color:#FFF; /* blanc */
+}
+.block_noir .bkg_ft{
+  background:#000; /* noir */
+  color:#FFF; /* blanc */
+}
+.block_noir .sep, .block_noir .listeproduits li{
+  border-bottom-color:#333333; /* gris tres fonce */
+}
+.block_noir .filled .sep, .block_noir_mea .sep, .block_noir .filled .listeproduits li{
+  border-bottom-color:#333333; /* gris tres fonce */
+}
+.block_noir .bkg_ft a, .block_noir .bkg_ft .links, .block_noir .bkg_ft .links a{
+  color:#FFF; /* blanc */
+}
+.block_noir .sep{
+  border-color:#F5F5F5; /* blanc fumé */
+}
+.block_noir .sep{
+  border-color:#F5F5F5; /* blanc fumé */
+}
+.block_noir h4, .block_noir h4 a{
+  color:#000; /* noir */
+  text-decoration:none;
+}
+.block_noir h4 cite{
+  color:#666; /* gris */
+  font-style:normal;
+  font-weight:normal;
+}
+.block_noir .filled_blanc h4 cite{
+  color:#000; /* gris */
+}
+.block_noir .links, .block_noir .links a{
+  color:#666;
+}
+.block_noir .filled_black .links, .block_noir .filled_black .links a{
+  color:#CCCCCC;
+}
+.block_noir .listeproduits .links, .block_noir .listeproduits .links a{
+  color:#DE9C00; /* moutarde */
+}
+.block_noir .fluXml .blk_content{
+  background:url(flux-xml.png) no-repeat 9px 12px;
+}
+.block_noir .fluXml .blk_content p{
+  padding-left:42px;
+  margin-bottom:0;
+}
+.block_noir .faq .blk_content{ background:url(icoFaq_Mobile.png) no-repeat 9px 12px; }
+.block_noir .faq .blk_content p{
+  padding-left:40px;
+  margin-bottom:0;
+}
+
+/* ======= block_gris ======= */
+.block_gris .blk_header, .block_gris .blk_header span, .block_gris .blk_header a{
+  background-color:#808080; /* gris foncé*/
+  background-image:url(block_gris_header.png);
+  color:#FFF; /* blanc */
+}
+.block_gris_fonce {
+  background:#bfbfbf; /* gris foncé*/
+  claer:left;
+  padding:5px;
+}
+.block_gris_fonce table {
+  border-spacing:0;
+  border-collapse: collapse;
+}
+.block_gris .tl, .block_gris .tr, .block_gris .bl, .block_gris .br{
+  background-image:url(block_gris_corners.png);
+}
+.block_gris .blk_inside{
+  border:1px solid #CCC; /* gris */
+}
+.block_gris .filled{
+  background:#EAEAEA; /*gris clair */
+}
+.block_gris .sep, .block_gris .listeproduits li{
+  border-color:#CCC; /* gris */
+}
+.block_gris .filled .sep, .block_gris .filled .listeproduits li{
+  border-color:#FFF; /* blanc */
+}
+.block_gris ,.block_gris p a{
+  color:#808080; /* noir */
+}
+.block_gris .inside_block{
+  background:#FFF; /* blanc */
+}
+.block_gris .inside_block .tl, .block_gris .inside_block .tr, .block_gris .inside_block .bl, .block_gris .inside_block .br{
+  background-image:url(block_gris_inside_corners.gif);
+}
+.block_gris .gradient_bottom{
+  background-image:url(gradient_bottom_block_gris.gif);
+}
+.block_gris .button, .block_gris .button span{
+  background-image:url(bouton_gris_background.png);
+}
+/* ======= block_moutarde ======= */
+.block_moutarde .blk_header, .block_moutarde .blk_header span, .block_moutarde .blk_header a{
+  color:#FFF; /* blanc */
+  background-color:#DE9C00; /* moutarde */
+  background-image:url(block_moutarde_header.png);
+}
+.filled .block_moutarde .flat .blk_header, .filled .block_moutarde .flat .blk_header span, .filled .block_moutarde .flat .blk_header a{
+  background-image:url(block_moutarde_flat_header_gris.png);
+}
+.block_moutarde .flat .blk_header, .block_moutarde .flat .blk_header span, .block_moutarde .flat .blk_header a{
+  background-image:url(block_moutarde_flat_header.png);
+}
+.block_moutarde .tl, .block_moutarde .tr, .block_moutarde .bl, .block_moutarde .br{
+  background-image:url(block_gris_corners.png);
+}
+.block_moutarde_mea .tl, .block_moutarde_mea .tr, .block_moutarde_mea .bl, .block_moutarde_mea .br{
+  background-image:url(mise_en_avant_corners.png);
+}
+.block_moutarde .bkg_ft{
+  color:#FFF; /* blanc */
+  background:#DE9C00; /* moutarde */
+}
+.block_moutarde .bkg_ft .links, .block_moutarde .bkg_ft .links a{
+  color:#FFF; /* blanc */
+}
+.block_moutarde .blk_inside{
+  border:1px solid #CCC; /* gris */
+}
+.block_moutarde .filled{
+  background:#F0F0F0; /* gris */
+}
+.block_moutarde a{
+  color:#666; /* gris */
+}
+/*classe tetiere directe pour tableaux*/
+.tl_moutarde{ /*placer ds th de gauche*/
+  background:#DE9C00 url(block_moutarde_flat_header_gris.png) no-repeat left top;
+}
+.tc_moutarde{ /*placer ds tr*/
+  background:#DE9C00 url(block_moutarde_flat_header_gris.png) no-repeat -20px 0;
+}
+.tr_moutarde{ /*placer ds th de droite*/
+  background:#DE9C00 url(block_moutarde_flat_header_gris.png) no-repeat right top;
+}
+
+/* ======= block_blanc ======= */
+.block_blanc .blk_header, .block_blanc .blk_header span, .block_blanc .blk_header a{
+  color:#666; /* gris */
+  background-color:#FFF; /* blanc */
+/*background-image:url(/Img/v2/skin/blocks/block_blanc_header.png); */
+}
+.block_blanc .flat .blk_header, .block_blanc .flat .blk_header span, .block_blanc .flat .blk_header a{
+  /* background-image:url(/Img/v2/skin/blocks/block_blanc_flat_header.png); */
+}
+.block_blanc .tl, .block_blanc .tr, .block_blanc .bl, .block_blanc .br{
+  background-image:url(block_blanc_corners.png);
+}
+.block_blanc .bkg_ft{
+  color:#666; /* gris */
+  background:#FFF; /* blanc */
+}
+.block_blanc .bkg_ft .links, .block_blanc .bkg_ft .links a{
+  color:#666; /* gris */
+}
+.block_blanc .blk_inside{
+  border:1px solid #CCC; /* gris */
+}
+.block_blanc .filled{
+  background:#FFF; /* gris */
+}
+/* ======= block_vert ======= */
+.block_vert .blk_header, .block_vert .blk_header span, .block_vert .blk_header a{
+  color:#FFF; /* blanc */
+  background-color:#008B7C; /* vert */
+  background-image:url(block_vert_header.png);
+}
+.block_vert .tl, .block_vert .tr, .block_vert .bl, .block_vert .br{
+  background-image:url(block_gris_corners.png);
+}
+.block_vert .bkg_ft{
+  color:#666; /* gris */
+  background:#FFF; /* blanc */
+}
+.block_vert .bkg_ft .links, .block_vert .bkg_ft .links a{
+  color:#666; /* gris */
+}
+.block_vert .blk_inside{
+  border:1px solid #CCC; /* gris */
+}
+.block_vert .filled{
+  background:#FFF; /* gris */
+}
+
+/* ======= block_vertMic  =======*/
+/* clean up */
+
+/* ======= block_violet_mea (fnac gaming)=======*/
+.block_violet_mea  .blk_header, .block_violet_mea  .blk_header span, .block_violet_mea  .blk_header a{
+  background-color:#FFF; 
+  background-image:url(http://www.fnac.com/Img/v2/skin/blocks/block_violet_mea_header.png);
+}
+.block_violet_mea .produit dt, .block_violet_mea .produit dt a{
+  font-weight:bold;
+  color:#000000;
+}
+.block_violet_mea .produit .details, .block_violet_mea .produit .details a{
+  color:#666; 
+  font-weight:normal;
+}
+.block_violet_mea .blk_footer .links, .block_violet_mea .blk_footer .links a{
+  color:#666;
+}
+.block_violet_mea .sep{
+  border-bottom-color:#FFF; 
+}
+
+/* ======= block_bleu_mp_mea (marketplace)=======*/
+.block_bleu_mp_mea .blk_header, .block_bleu_mp_mea .blk_header span, .block_bleu_mp_mea .blk_header a{
+  background-color:#FFF; 
+  background-image:url(block_bleu_mp_mea_header.png);
+}
+.block_bleu_mp_mea .produit dt, .block_bleu_mp_mea .produit dt a{
+  font-weight:bold;
+  color:#000000;
+}
+.block_bleu_mp_mea .produit .details, .block_bleu_mp_mea .produit .details a{
+  color:#666; 
+  font-weight:normal;
+}
+.block_bleu_mp_mea .blk_footer .links, .block_bleu_mp_mea .blk_footer .links a{
+  color:#666;
+}
+.block_bleu_mp_mea .sep{
+  border-bottom-color:#FFF; 
+}
+
+/* ======= block_bleu_mp (marketplace)=======*/
+.block_bleu_mp .blk_header, .block_bleu_mp .blk_header span, .block_bleu_mp .blk_header a{
+  background-color:#244a9d;
+  background-image:url(block_bleu_mp_header_on_col.png);
+  color:#fff;
+}
+.block_bleu_mp .tl, .block_bleu_mp .tr, .block_bleu_mp .bl, .block_bleu_mp .br{
+  background-image:url(block_gris_corners.png);
+}
+.block_bleu_mp .blk_inside{
+  border:1px solid #CCC; /* gris */
+}
+
+
+
+/* ======= block_espace-fg (fnac gaming: violet - mauve) =======*/
+
+.block_espace-fg .blk_header, .block_espace-fg .blk_header span{
+  background-color:#543E7F; 
+  background-image:url(block_espace-fg_header.png);
+  color:#FFF; /* blanc */
+  font-size:12px;
+  text-align:left;
+}
+.block_espace-fg .blk_header span{padding:0}
+.block_espace-fg .tl, .block_espace-fg .tr, .block_espace-fg .bl, .block_espace-fg .br{
+  background-image:url(block_gris_corners.png);
+}
+.block_espace-fg .blk_inside{border:1px solid #CCC;}
+.block_espace-fg .blk_postHeader{background-color:#543E7F;color:#B2A5C9}
+.block_espace-fg .blk_postHeader a{color:#B2A5C9}
+.block_espace-fg .blk_postHeader p{margin:0}
+.block_espace-fg .filled{background-color:#EFE6FF;color:#755d99}
+.block_espace-fg .filled a{color:#755d99}
+.block_espace-fg .blk_content .chevron{display:block;width:16px;height:8px;margin:0 auto;background:url(chevron-violet-fg.png) no-repeat 0 0 }
+.block_espace-fg .links{background-color:#FFF;}
+.block_espace-fg .links a{color:#000;}
+.block_espace-fg .blk_content p{margin:5px 0 0 0}
+
+
+/* ======= block_intervenant =======*/
+.block_intervenant .links, .block_intervenant .links a {color:#9dbe3b}
+.block_intervenant .blk_footer .links, .block_intervenant .blk_footer .links a {color:#666666;}
+/* style de bloc avec footer reduit+ombre block_moutarde gris seulement */
+
+.block_nicefoot{
+
+}
+.block_nicefoot .block_header{font-size:1.3em;}
+.block_nicefoot .blk_content{background:gray;}
+.block_nicefoot .blk_inside{background:none;}
+.block_nicefoot .blk_footer{background:grey;position:relative;margin:0 20px;}
+
+
+/****************** blocks particuliers ******************/
+/* ======== bloc recherche ===== */
+.block_search{
+  margin:0;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.block_search label, .block_search input, .block_search select, .block_search .submit, #HEADER .block_search input, #HEADER  .block_search select{
+  float:left;
+  margin-right:10px;
+}
+.block_search label{
+  overflow:hidden;
+  width:79px;
+  margin:3px 10px 0 0;
+  height:13px;
+  text-indent:-5000px;
+  background:url(rechercher.png) no-repeat left top;
+}
+.block_search_new label{
+  background:url(label_rechercher.png) no-repeat left top!important;
+  height:23px;
+}
+.block_search .text, #HEADER .block_search .text {
+	width: 16.5em;
+	font-size:1.1em;
+	padding:1px;
+	border-color:#000;
+	color:#000;
+}
+
+
+.block_search select, #HEADER .block_search select{
+	 width:14em;
+	 font-size:1.1em;
+	 height:1.60em;
+	 border-color:#000;
+	 font-weight:bold;
+	 color:#000;
+}
+
+.searchPT .block_search .text{
+	width:11em;
+}
+.searchPT .block_search select{
+	width:13.8em;
+}
+.block_search .submit{
+  float:left;
+  position:relative;
+  margin:0;
+  border:none;
+  background: url(bt-rechercher.png) no-repeat left top;
+}
+.block_search .submit input{
+  position:absolute;
+  overflow:hidden;
+  text-indent:5000px;
+  border:none;
+  -moz-opacity:0;
+  -khtml-opacity:0;
+  filter:alpha(opacity=0);
+  opacity:0;
+}
+.block_search .submit, .block_search .submit  input, #HEADER .block_search .submit, #HEADER .block_search .submit  input {
+  overflow:hidden;
+  cursor:pointer;
+  padding:0;
+  width: 75px;
+  height: 21px;
+}
+
+.block_search .submitnew {
+  float:left;
+  position:relative;
+  margin:0;
+  border:none;
+  background: url(Qsearch_OK.png) no-repeat left top;
+  height:20px;
+  width:30px;
+  margin:2px 0 0;
+}
+.block_search .submitnew input{
+  position:absolute;
+  overflow:hidden;
+  text-indent:5000px;
+  border:none;
+  -moz-opacity:0;
+  -khtml-opacity:0;
+  filter:alpha(opacity=0);
+  opacity:0;
+  height:20px;
+  width:30px;
+  cursor:pointer;
+}
+
+/* page magazine contact */
+.mag_contact{
+  margin:0;
+}
+.mag_contact dt{
+  padding:1em 0 0 0;
+  color:#DE9C00;
+  font-size:1.3em;
+  font-weight:bold;
+}
+.mag_contact dd{
+  margin:0;
+  padding:3px 0;
+}
+/* ========= resultats_recherche ======== */
+.search_results_head{
+  min-width:546px;
+  width:45.5em;
+  margin:0 0 10px 0;
+  color:#000; /* noir */
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+
+}
+.search_results_head p{
+  float:left;
+  font-weight:bold;
+  margin:0;
+}
+.search_results_head select{
+  float:right;
+}
+.search_results .blk_header *, .search_results .blk_footer *{
+  margin:0;
+  padding:0;
+}
+.search_results .blk_header, .search_results .blk_header div, .search_results .blk_footer, .search_results .blk_footer div{
+  background:url(mise_en_avant_header.png) no-repeat left top;
+  color:#FFF; /* blanc  */
+  margin:0;
+}
+.search_results .blk_header, .search_results .blk_footer{
+  padding-left:7px;
+  font-size:1.3em;
+}
+.search_results .blk_header div, .search_results .blk_footer div{
+  background-position:right top;
+  padding:2px 5px 2px 15px;
+  /*contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.search_results .blk_footer{
+  background-position:left bottom;
+}
+.search_results .blk_footer div{
+  background-position:right bottom;
+}
+.search_results .blk_header h3, .search_results .blk_footer h3, .search_results .blk_header h2, .search_results .blk_footer h2{
+  float:left;
+  font-size:1em;
+  background:none;
+}
+.search_results .blk_header ul, .search_results .blk_footer ul{
+  float:right;
+  margin:2px 15px 2px 0;
+  font-size:0.8em;
+  white-space:nowrap;
+  text-align:right;
+}
+.search_results .blk_header ul li, .search_results .blk_footer ul li{
+  display:inline;
+  margin:0 2px;
+  color:#FFF; /*  blanc */
+}
+.search_results .blk_header ul li a, .search_results .blk_footer ul li a{
+  color:#FFF; /* blanc */
+  text-decoration:underline;
+}
+.search_results .blk_header ul li.current, .search_results .blk_footer ul li.current{
+  color:#DE9C00; /* moutarde */
+}
+.search_results .blk_header ul li.before, .search_results .blk_header ul li.next, .search_results .blk_footer ul li.before, .search_results .blk_footer ul li.next{
+  margin:0 8px;
+}
+.search_results .blk_content{
+  overflow:visible;
+}
+.search_results .blk_content table{
+  width:100%;
+  border-collapse:collapse;
+}
+.search_results .blk_content table td{
+  padding:10px 0;
+  vertical-align:top;
+  border-bottom:1px solid #ebebeb; /* gris */
+}
+.search_results .blk_content table tr.last td{
+  border:none;
+}
+.search_results .blk_content table td.choix{
+  width:20%
+}
+.search_results .blk_content table td.img{
+  float:none;
+  margin:0;
+  width:1%;
+}
+.search_results .blk_content table td.img img{
+  display:inline;
+}
+.search_results .blk_content table td.desc{
+  padding-left:5px;
+  padding-right:20px
+}
+.search_results .blk_content table td.desc .picto{
+  min-height:24px;
+  _height:24px;
+}
+.search_results .blk_content table td.choix{
+  vertical-align:middle;
+  width:25%;
+  padding-right:10px;
+}
+.search_results .blk_content table td.choix dl{
+  display:table;
+  margin:0 0 0 auto;
+}
+.search_results .blk_content table td.choix .links{
+  margin-top:10px;
+}
+.search_results .blk_content .produit dt, .search_results .blk_content .produit dt a, .search_results .blk_content .produit .details{
+  color:#000; /* noIr */
+}
+/* ======== bloc espace_adherent ===== */
+.espace_adherent .blk_header span, .espace_adherent .blk_header a{
+  color:#FFF !important;
+}
+.espace_adherent .blk_header{
+  border-bottom:0px; 
+}
+.espace_adherent .blk_inside{
+  border:1px solid #F9D500;
+  border-width:0 1px 1px 1px;
+}
+.espace_adherent .tl, .espace_adherent .tr, .espace_adherent .bl, .espace_adherent .br{
+  background-image:url(block_jaune_corners.png);
+}
+.espace_adherent .points{
+  padding:10px 5px;
+  margin:0;
+  color:#F9D500; /* jaune */
+  text-align:center;
+  font-size:1.1em;
+  background:#000; /* noir */
+}
+.espace_adherent .points strong{
+  font-size:1.4em;
+}
+.espace_adherent .contenu_adh{
+  padding:10px 0;
+}
+.espace_adherent .img{
+  margin:5px 0;
+}
+.espace_adherent .links a{
+  color:#000; /* noir */
+}
+/* ===== fix CSS classes ===== */
+.hidecorners .bl, .hidecorners .br{
+  display:none !important;
+}
+
+
+/* bloc adherents */
+.block_adherent .blk_header{
+  padding-left:24px;
+}
+.block_adherent .blk_header span, .block_adherent .blk_header a{
+  text-align:left;
+}
+.block_adherent .blk_header span, .block_adherent .blk_header a{
+  padding:5px 6px 0 9px;
+  min-height:20px;
+  _height:20px;
+}
+.block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
+  background-image:url(block_adherents_header_adh.png);
+  color:#FFF; /* blanc */
+}
+.block_adherent .sub_header, .block_adherent .sub_header a {
+  background:#000;
+  color:#F9D500;
+  width:49,5%;
+}
+
+.line_2cols .block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
+  background-image:url(block_adherents_header_2cols_adh.png);
+  color:#FFF; /* blanc */
+}
+.block_adherent .blk_content{
+  background:#FFF; /* lot2 */
+}
+.block_adherent .links_lines li{
+  background:#000; /* gris clair */
+  color:#FFF; /* noir */
+}
+.block_adherent .links_lines li a{
+  color:#FFF;
+}
+
+
+/*************
+* titre au dessus des menus gauche
+*************/
+#titres{
+  margin:0;
+  padding:0;
+}
+#titres img{
+  display:block;
+}
+
+/*************
+* affiliation
+*************/
+
+
+.block_affilies{
+  background-color:#E3B22F;
+  padding:0;
+  margin:0;
+}
+.block_affilies .top-menu{
+  background:url(affiliates-top-menu.png) no-repeat top left;
+  padding:10px 0 0 0;
+}
+.block_affilies .bottom-menu{
+  background:url(affiliates-bottom-menu.png) no-repeat bottom left;
+  padding:0 0 10px 0;
+}
+.block_affilies li{
+  padding:0;
+  margin:0;
+  line-height:1.5em;
+  list-style:none;
+  font-size:0.9em;
+}
+.block_affilies a:hover{
+  text-decoration:underline;
+}
+.block_affilies ul{
+  padding:0 10px 0 10px;
+  margin:0 0 12px 0;
+  border-left:1px solid #D99800;
+  border-right:1px solid #D99800;
+}
+.block_affilies h2{
+  padding:0 10px 0 10px;
+  border-left:1px solid #D99800;
+  border-right:1px solid #D99800;
+  font-size:0.9em;
+}
+.sep-gris-clair{
+  border-top:1px solid #e5e5e5;
+  clear:left;
+  height:0;
+  margin:10px 0;
+}
+.sep-gris-clair hr{
+  visibility:hidden;
+  display:none;
+}
+.affiliates-program-menu{
+  float:left;
+  list-style:none;
+  margin:0 20px 0 0;
+  padding:0;
+}
+.affiliates-program-menu li{
+  margin:0 0 4px 0;
+}
+.bordure-jaune{
+  border-collapse:collapse;
+}
+.bordure-jaune td{
+  border:2px solid #D99800;
+  padding:5px;
+}
+
+
+/* Fausse AIDE */ 
+/**************/
+/* correction pour les pages dans /help/ mais qui ne sont pas des pages d'aide */
+
+.fausseAide a{
+  font-size:.9em;
+  text-decoration:underline;
+  color:#666;
+}
+.fausseAide a:hover{
+  text-decoration:none;
+}
+
+.fausseAide h1{
+  margin:0px;
+  padding:0px;
+  color:#DE9C00;
+  font-size:1.5em;
+}
+
+/* import depuis fnac.css :style pour les fleches risque de erdondance faible avec F6 vu le nomage. */
+.flecheACC, .flecheGRISE, .flecheRED,.flecheADH, .flecheTPN, .flecheMUS,.flecheLIV,
+.flecheBLACK, .flecheWHITE, .flecheNOEL, .flecheDVD, .flecheLOG, .flecheCDROMS,
+.flecheMIC, .flecheMOB, .flecheMOB2, .flecheMOB3, .flecheIMA, .flechepho, .flecheVOY,
+.flecheSPE, flecheACCMarketing, .flecheREDMarketing,.flecheADHMarketing, .flecheMUSMarketing,
+.flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
+.flecheMICMarketing, .flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
+  padding-left:12px;
+  background-position:0 2px;
+  background-repeat:no-repeat;
+  list-style-type:none;
+  background-image:url(ACC_marron.gif);
+}
+.flecheACCMarketing, .flecheREDMarketing, .flecheADHMarketing, .flecheMUSMarketing,
+.flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
+.flecheMICMarketing,.flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
+  background-position:0 8px;
+  background-image:url(ACC_marron.gif);
+}
+.flecheBLACK{
+  background-image:url(BLACK_fleche.gif);
+}
+.flecheWHITE{
+  background-image:url(BLANC_fleche.gif);
+}
+
+.flecheGRISE{
+  background-image:url(grise_fleche.gif);
+}
+
+.flecheRED, .flecheREDMarketing{
+  background-image:url(RED_fleche.gif);
+}
+
+.flechelarge{
+  background-repeat:no-repeat;
+  background-position:2px 2px;
+  padding-left:20px;
+  margin-left:0px;
+}
+.flechehaute{
+  background-repeat:no-repeat;
+  background-position:2px 2px;
+  padding-left:20px;
+  margin-left:0px;
+}
+/* Puces Rondes */
+
+.pucerondeACC, .pucerondeRED, .pucerondeADH, .pucerondeMUS, .pucerondeLIV,
+.pucerondeMUS, .pucerondeLIV, .pucerondeDVD, .pucerondeLOG, .pucerondeMIC,
+.pucerondeIMA, .pucerondePHO, .pucerondeVOY, .pucerondeSPE, .pucerondeNoel{
+  padding-left:12px;
+  background-position:0 5px;
+  background-repeat:no-repeat;
+  list-style-type:none;
+  background-image:url(ACC_puceronde.gif);
+}
+
+
+/**********************
+* Concours
+***********************/
+
+.concoursFnac{
+  padding:0 20px 0 0;
+}
+.concoursFnac h2{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.concoursFnac h2 img{
+  display:block;
+}
+.concoursFnac li, .concoursFnac p{
+  color:#000; /* noir */
+}
+.concoursFnac li.activ label{
+  color:#555; /* noir */
+}
+.concoursFnac li *{
+  vertical-align:middle;
+}
+.concoursFnac label{
+
+}
+.concoursFnac .infoPerso label{
+  font-weight:bold;
+}
+.concoursFnac .question, .concoursFnac .infoPerso{
+  width:360px;
+  position:relative;/* permet de gérer les positions absolute des erreurs */
+}
+.concoursFnac .question{
+  float:left;
+}
+.concoursFnac .infoPerso{
+  float:right;
+}
+.concoursFnac .question ol{
+  padding:0 20px;
+  margin:0;
+}
+.concoursFnac .question ul{
+  list-style-type:none;
+  margin:10px 10px;
+  padding:0;
+}
+.concoursFnac .question ul li{
+  padding:1px 5px 1px 2px;
+}
+.concoursFnac .question span.erreur, .concoursFnac .infoPerso span.erreur{
+  font-weight:bold;
+  color:#DD0000;
+}
+
+.concoursFnac ul.ADH_avant{
+padding-left:0px;margin-left:0px;list-style-type:none;
+}
+.concoursFnac ul.ADH_avant li {
+margin-left:0px;padding-top:12px;padding-bottom:12px;background-repeat:no-repeat;padding-left:45px;background-position: 0 50%;
+}
+
+
+/**********************
+*concours v2 - 04/03/10
+***********************/
+.concoursFnacV2{
+	width:940px;
+	margin:30px auto 0 auto !important
+}
+.concoursFnacV2 h1{
+	font-size:1%;
+	margin:0
+}
+.concoursFnacV2 h1 img{
+	display:block;
+	margin:0 auto !important
+}
+.concoursFnacV2 .illus,.concoursFnacV2 .desc{
+	width:460px;
+	margin-top:58px
+}
+.concoursFnacV2 .illus{
+	float:left
+}
+.concoursFnacV2 .illus .video320{
+	width:320px;
+}
+.concoursFnacV2 .desc{
+	margin-left:460px
+}
+.concoursFnacV2 .desc h2{
+	font-size:1.2em;
+	margin:0 0 10px 0
+}
+.concoursFnacV2 .desc .cadre{
+	border:1px solid #000;
+	padding:5px;
+	color:#000
+}
+.concoursFnacV2 .question,.concoursFnacV2 .infoPerso{
+	position:relative;
+	margin-top:40px
+}
+.concoursFnacV2 .question{
+	width:540px;
+	float:left;
+	position:relative
+}
+.concoursFnacV2 .infoPerso{
+	margin-left:560px;
+	width:360px;
+	position:relative
+}
+.concoursFnacV2 .question ol{
+  padding:0 20px;
+  margin:0;
+}
+.concoursFnacV2 .question ul{
+  list-style-type:none;
+  margin:10px 10px;
+  padding:0;
+}
+.concoursFnacV2 .question ul li{
+  padding:1px 5px 1px 2px;
+}
+.concoursFnacV2 .question span.erreur, .concoursFnacV2 .infoPerso span.erreur{
+  font-weight:bold;
+  color:#DD0000;
+}
+.concoursFnacV2 li, .concoursFnacV2 p{
+  color:#000; 
+}
+.concoursFnacV2 li *{
+  vertical-align:middle;
+}
+.concoursFnacV2 .reglementContent{
+	width:800px;
+	text-align:justify;
+	margin:45px auto !important
+}
+.concoursFnacV2 .reglementContent div{
+	margin-top:15px
+}
+.concoursFnacV2 .reglementContent h2,.concoursFnacV2 .merci p{
+	font-size:1.17em;
+	text-align:center;
+	margin-top:15px
+}
+.concoursFnacV2 .reglementContent h3{
+	font-size:1em;
+	margin:0;
+	font-weight:bold
+}
+.concoursFnacV2 p.merci{
+	font-size:1.17em;
+	text-align:center;
+	margin-top:40px;
+	font-weight:bold
+}
+.concoursFnacV2 .merciLien{
+	margin:50px 0;
+	text-align:center;
+}
+
+
+/* styles \help\resultats_concours.asp */
+.result_conc{
+  padding-bottom:15px;
+  padding-left:4px;
+  margin-top:15px;
+  border-bottom:1px solid #BEBEBE;
+}
+.result_conc dl{
+  margin-left:80px;
+  margin-bottom:0;
+}
+.result_conc dl dt{
+  color:#DE9C00;
+  font-size:1.1em;
+  font-weight:bold;
+}
+.result_conc dl dd{
+  margin:5px 0 0 0;
+}
+
+
+/**********************
+* Profil Mon compte
+***********************/
+/* tableau listing commandes*/
+
+.grad {background:#fff url(gradiant_251-241.png) repeat-x left bottom; padding-bottom:10px}
+.block .listcmd .blk_header, .block .listcmd .blk_header span {
+  font-size:12px;
+  text-align:left;
+  color:#000;
+  background-image:url(block_moutarde_header_grey_corners.png) ;
+}
+.block .listcmd .blk_header span {
+  padding-left:10px
+}
+.listcmd .blk_inside .tl, .listcmd .blk_inside .tr, .listcmd .blk_inside .bl, .listcmd .blk_inside .br {
+  background-image:url(block_gris_onEAEAEA_corners.png);
+}
+.listcmd table th, .factcmd table th{
+  color:#666;
+  font-weight:normal;
+  font-size:1em;
+  text-align:left;
+  padding:7px 10px 7px 15px;
+}
+.listcmd table td, .factcmd table td{
+  padding:7px 10px 7px 15px;
+  vertical-align:top;
+}
+.listcmd table th, .factcmd table th, .listcmd table td, .factcmd table td{
+  border-bottom:1px solid #C6C6C6; /* gris clair */
+}
+.listcmd .article_list ul{margin:0; padding:0}
+.listcmd .article_list li{list-style-type:none;margin:0 0 5px 0;padding0}
+.listcmd .article_list .nb_art{color:#DE9C00;font-weight:bold;float:left;display:block;width:8%}
+.listcmd .article_list .title_art{float:left;display:block;width:90%}
+
+.bg_bt {
+  background-position:left top;
+  padding-left:8px;
+}
+.autre-resultat {
+  min-width:30px;
+  width:11.5em;
+  position:absolute;
+  right:0;
+  _margin-right:10px;
+}
+.retour {
+  min-width:20px;
+  width:5.5em;
+  font-weight:normal;
+}
+.bg_bt div a {
+  color:#000;
+  text-decoration:none !important;
+  padding:2px 0;
+  display:block;
+}
+.retour div a {
+  padding:3px 0;
+}
+.bg_bt div a:hover {
+  text-decoration:none !important;
+}
+.bg_bt, .bg_bt div {
+  background:transparent url(bt_retour_bg.png) no-repeat scroll;
+}
+.bg_bt div {
+  background-position:right top;
+}
+hr.white {
+  border:1px solid #fff;
+}
+.lks {
+  margin:0; 
+  padding:0; 
+  list-style:none; 
+  border-top:1px solid #ccc;
+}
+.add {
+  margin:0;
+  padding: 0 0 10px 0; 
+}
+.addressList {
+  text-decoration:none !important;
+}
+.addressList:hover {
+  text-decoration:underline !important;
+}
+
+
+/* ========== Content ========== */
+
+#navigation .header .topleft{
+	font-size:1px;
+	height:7px;
+}
+
+#navigation.menumoutarde .header, #navigation.menumoutarde .header .topleft, #navigation.menumoutarde .header h2, #navigation.menumoutarde .bottom, #navigation.menumoutarde .bottom div{
+  background-image:url(navn2_background_menumoutarde.png);
+}
+#navigation.menumoutarde dl{
+  background:#e5b033; /* moutarde clair*/
+  color:#000; /* noir */
+  border:1px solid #DE9C00; /* moutarde */
+  border-width:0 1px;
+  padding:0 12px; /*lot2 :update */
+}
+#navigation.menuframboise .header, #navigation.menuframboise .header .topleft, #navigation.menuframboise .header h2, #navigation.menuframboise .bottom, #navigation.menuframboise .bottom div{
+  background-image:url(navn2_background_menuframboise.png); /*menu gauche voyages*/
+}
+#navigation.menuframboise dl{
+  background:#EFBECE; /* framboise delavee*/
+  color:#000; /* noir */
+  border:1px solid #B12C55; /* framboise */
+  border-width:0 1px;
+  padding:0 12px; 
+}
+#navigation.menumoutarde .topleft, #navigation.menuframboise .topleft, #navigation.menumoutarde h2, #navigation.menuframboise h2{
+  padding:0px
+}
+#navigation.menumoutarde dl dt, #navigation.menuframboise dl dt, body.enfants #navigation dl dt{
+  font-weight:bold;
+  padding:5px 0 2px 0;
+}
+#navigation.menumoutarde dl dd, #navigation.menuframboise dl dd,  body.enfants #navigation dl dd{
+  padding:2px 0;
+}
+#navigation.menumoutarde dl a, #navigation.menuframboise dl a{
+  color:#000 /* noir */
+}
+
+
+#navigation.menugris .header, #navigation.menugris .header .topleft, #navigation.menugris .header h2, #navigation.menugris .bottom, #navigation.menugris .bottom div{background-image:url(navn2_background_menugris.png);}
+#navigation.menugris dl{background:#a9a9a9;color:#FFF;border:1px solid #939393;border-width:0 1px;padding:0 10px;}
+#navigation.menugris .topleft, #navigation.menugris h2{padding:0px;}
+#navigation.menugris dl dt, body.enfants #navigation dl dt{font-weight:bold;padding:5px 0 6px 0;}
+#navigation.menugris dl dd, body.enfants #navigation dl dd{padding:2px 0;}
+#navigation.menugris dl a{color:#FFF;}
+
+
+/* Petites definitions supplementaires dans les blocks */
+
+.listeEspaceBord li{
+  padding:6px 0;
+  border-bottom:solid 1px;
+}
+.block_moutarde .listeEspaceBord li{
+  border-color:#eecd80;
+}
+.listeEspaceBord li.last{
+  border-bottom:none;
+}
+.bigPlus{
+  font-size:2em;
+  vertical-align:middle;
+}
+
+/* liste fleche */
+/* (exemple  en home entreprise pour liste comuniques et dossiers)*/
+.listeflech dl{
+  border-bottom:1px solid #ccc; /* gris clair */
+  padding: 10px 0;
+  margin:0;
+}
+.listeflech dt, .listeflech dd{
+  padding-left: 20px;
+}
+.listeflech dt{
+  font-weight: bold;
+  color: #DE9C00;
+}
+.listeflech dd{
+  margin-left:0;
+}
+.listeflech dd.flech{
+  background: url(fleche_bottom_right.png) no-repeat 0 0.2em;
+}
+
+/* liste sans puces ni marges  */
+.puce_no, .puce_no li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+/* pop ins  */
+
+div#event1{
+  top: 200px;
+}
+div.event{
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #A3A3A3;
+  width: 210px;
+  z-index: 2000;
+  background-color: #A3A3A3;
+  layer-background-color: #A3A3A3;
+}
+.toggle{
+  float: right;
+  clear: left;
+  padding: 5px;
+}
+.toggle a {
+  color:#FFF !important;
+}
+
+/* popup du site */
+
+body.popUpCredit{
+  max-width:800px;
+  /*background-position:0px -66px; suite refonte adh*/
+  background:none;
+}
+body.popUpCredit p, body.popUpCredit li, body.popUpCredit h2, body.popUpCredit a, body.popUpCredit h3{
+  color:#666;
+}
+body.popUpCredit a{
+  text-decoration:underline;
+}
+body.popUpCredit a:hover{
+  text-decoration:none;
+}
+body.popUpCredit h1{
+  height:65px; /* suite redonte adh */
+  overflow:hidden;
+  padding:0;
+  margin:0;
+}
+body.popUpCredit h1 img{
+  margin:-4px 0 0 0;
+}
+body.popUpCredit h2{
+  font-size:1.5em;
+  padding:0;
+}
+body.popUpCredit h3{
+  font-size:1.25em;
+}
+body.popUpCredit #content{
+  margin-top:0px; /* suite redonte adh */
+  background:#fff; /* suite redonte adh */
+}
+.listeFacilitePaiement{
+  position:relative;
+  min-width:460px;
+  margin-left:20px;
+}
+.listeFacilitePaiement li{
+  border-bottom:solid 1px #EEE;
+  padding-right:75px;
+}
+.listeFacilitePaiement li a{
+  position:absolute;
+  right:0;
+  margin-top:-5px;
+  vertical-align:top;
+}
+.listeFacilitePaiement li a img{
+  vertical-align:top;
+}
+
+/* popin */
+
+.popin{
+  position:absolute;
+  display:none;
+  cursor:help;
+  z-index:99;
+}
+.popin span.poptl{
+  top:0;
+  left:0;
+}
+.popin span.poptr{
+  top:0;
+  right:0;
+}
+.popin span.popbr{
+  bottom:0;
+  right:0;
+}
+.popin span.popbl{
+  bottom:0;
+  left:0;
+}
+.popin p{
+  text-align:justify;
+}
+.popin h3{
+  font-size:1.2em;
+}
+/* gris */
+.popin .popin_grise{
+  background:#EBEBEB;
+  color:#666;
+  border:solid 1px #999;
+}
+.popin_grise .close a{
+  color:#000;
+}
+/* noir */
+.popin .popin_noir{
+  background:#000;
+  color:#666;
+  border:solid 1px #666;
+}
+.popin_noir .close a{
+  color:#FFF;
+}
+/* blanc */
+.popin .popin_blanc{
+  background:#FFF;
+  color:#000;
+  border:solid 1px #000;
+}
+.popin_blanc .close a{
+  color:#000;
+}
+/* a defenir plus tard */
+.popin_bleu{
+  background:#999;
+}
+.popin_moutarde{
+  background:#999;
+}
+.popin_rouge{
+  background:#999;
+}
+.popin_vert{
+  background:#999;
+}
+/* placement de popin */
+/* Statut des commandes */
+
+.popinCommandeStatut{
+  width:250px;
+  margin-left:-250px;
+  margin-top:18px;
+}
+.popInDerouleDroite{
+  margin-right:-250px;
+  margin-left:auto;
+}
+.popinCommandeStatut .close{
+  text-align:right;
+}
+/* permet une mise en valeur du coin a viser par la popin */
+.popinCommandeStatut span{
+  position:absolute;
+  display:block;
+  width:5px;
+  height:5px;
+  background:black;
+  font-size:1px;/* pour IE */
+}
+
+
+
+/*-----------------------------------*/
+
+.sep-gris {
+	border-bottom:1px solid #B8B8B8 !important;
+}
+
+
+/* ====== Refonte affiliation ===== */
+
+#affiliation h2 {font-size:0px;}
+#affiliation h3 {
+	color:#000000;
+	background:url(doublefleche.png) no-repeat 0 4px;
+	padding:0px 0px 0px 15px;
+	margin:20px 0px 0px 0px;
+}
+#affiliation h4 {
+	color:#DE9C00;
+	padding:0px;
+	margin:10px 0px 0px 0px;
+}
+#affiliation p {color:#000000;}
+#affiliation ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+#affiliation ul li {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	color:#000000;
+}
+#affiliation .ligne_affiliation {
+	text-align:center;
+	background:url(fondlignedeco.png) repeat-x 0 0;
+	height:17px;
+	margin:10px 0;
+}
+#affiliation .ligne_affiliation img {margin:0 auto;}
+#affiliation table {
+	border-top:1px solid #DE9C00;
+	border-left:1px solid #DE9C00;
+	color:black;
+}
+#affiliation table td{
+	border-bottom:1px solid #DE9C00;
+	border-right:1px solid #DE9C00;
+	padding:10px;
+}
+
+
+.mrg_15{margin:15px !important}
+.mrg_t_15{margin-top:15px !important}
+.mrg_r_15{margin-right:15px !important}
+.mrg_b_15{margin-bottom:15px !important}
+.mrg_l_15{margin-left:15px !important}
+.mrg_h_15{margin-left:15px !important;margin-right:15px !important}
+.mrg_v_15{margin-top:15px !important;margin-bottom:15px !important}
+
+.mrg_30{margin:30px !important}
+.mrg_t_30{margin-top:30px !important}
+.mrg_r_30{margin-right:30px !important}
+.mrg_b_30{margin-bottom:30px !important}
+.mrg_l_30{margin-left:30px !important}
+.mrg_h_30{margin-left:30px !important;margin-right:30px !important}
+.mrg_v_30{margin-top:30px !important;margin-bottom:30px !important}
+
+.pdg_15{padding:15px !important}
+.pdg_t_15{padding-top:15px !important}
+.pdg_r_15{padding-right:15px !important}
+.pdg_b_15{padding-bottom:15px !important}
+.pdg_l_15{padding-left:15px !important}
+.pdg_h_15{padding-left:15px !important;padding-right:15px !important}
+.pdg_v_15{padding-top:15px !important;padding-bottom:15px !important}
+
+.pdg_30{padding:30px !important}
+.pdg_t_30{padding-top:30px !important}
+.pdg_r_30{padding-right:30px !important}
+.pdg_b_30{padding-bottom:30px !important}
+.pdg_l_30{padding-left:30px !important}
+.pdg_h_30{padding-left:30px !important;padding-right:30px !important}
+.pdg_v_30{padding-top:30px !important;padding-bottom:30px !important}
+
+.mrg_40{margin:40px !important}
+.mrg_t_40{margin-top:40px !important}
+.mrg_r_40{margin-right:40px !important}
+.mrg_b_40{margin-bottom:40px !important}
+.mrg_l_40{margin-left:40px !important}
+.mrg_h_40{margin-left:40px !important;margin-right:40px !important}
+.mrg_v_40{margin-top:40px !important;margin-bottom:40px !important}
+	
+/* =Pages simples plan et marques= */
+.plan #content{color:#000}
+.plan #content .titleh1{color:#000;font-size:1em;margin:0}
+.plan #content h2, .plan #content h2 a{color:#DE9C00;font-size:1.2em;}
+.plan #content .marques h2{font-size:1.4em;font-weight:bold;padding-left:5px}
+.plan #content h2{border-bottom:1px solid #DE9C00;}
+.plan #content h3, .plan #content h3 a{color:#333;font-size:1.1em}
+.plan #content ul, .plan #content li{margin:0;padding:0}
+.plan #content li{list-style-type:none;padding:1px 0;color:#666;}
+.plan #content li a{color:#000;}
+.plan #content h2{margin:15px 0 5px 0}
+.plan #content h2{margin-bottom:5px}
+.plan #content h3{margin-bottom:3px}
+.plan #content .col5{float:left;width:18%;}
+.plan #content .col4{float:left;width:23%;}
+.plan #content .col3{float:left;width:31%;}
+.plan #content div{overflow:hidden}
+
+
+/* ===================
+ Conseils Persos
+=====================*/
+.conseilperso {background-image:url(conseil_perso_ul_bg.jpg);background-repeat:no-repeat;background-position:left top;padding:0;margin:0}
+.conseilperso li {padding:8px;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;border-bottom:solid 1px #cccccc;background-image:url(conseil_perso_li_bg.jpg);background-repeat:no-repeat;background-position:left bottom;}
+.conseilperso li.last {background:none;border:none;padding-bottom:0}
+.conseilperso .produit .img {margin-right:2px;}
+.conseilperso .produit dt,.conseilperso .produit dd {padding-left:8px}
+.conseilperso .produit dt,.conseilperso .produit dt	a {color:#000}
+.cperso_btm {background-image:url(myfnac_logo.jpg);background-repeat:no-repeat;background-position:right 0;height:50px;margin:0;padding:20px 0 0 0}
+.cperso_btm ul {padding:0;margin:0}
+.cperso_btm li {padding:0;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;}
+/* *** */
+
+/* lien compteur vente flash */
+#smartAff,.smartAff_lien,.smartAff_lien a {
+	color: #000;
+	font-weight: bold}
+	
+/* Message d'attente */
+#waitingMsg { position:absolute; width:300px; zoom:1; border:1px solid black; background:#fff; padding:20px 10px; font-size:20px; display:none;  z-index:1000 }
+#waitingMsg img {float:left;}
+#waitingMsg p {zoom:1; overflow:hidden;text-align:center; margin:0; margin-left:10px; padding:0; line-height:1.2em;}
+#shadowLayer {background:black; -moz-opacity:0.2; filter:alpha(opacity=20); opacity:0.2; position:absolute; width:100%; top:0; left:0; z-index:999}
+
+/* Popin ajout au panier */
+.basket_popin_big{width:261px;height:187px;text-align:center;background:transparent url(bg_pop_ajoutpanier_bleu.png) no-repeat center bottom;color:#000;}
+
+/*
+  *S&L Marketplace
+  */
+
+span.chevron {display:none;}
+.MarketPlaceOffers {padding-top: 0px; margin-top: 0 !important}
+.MarketPlaceOffers {text-align: left;}
+.MarketPlaceOffers ul {list-style-type: none;margin:0px 10px}
+.MarketPlaceOffers ul li { list-style-type:none;}
+.labelMP .MarketPlaceOffers ul li {padding-left:0 !important;margin-top:5px;}
+.labelMP .MarketPlaceOffers .sep_gris, .shomeMV .MarketPlaceOffers .sep_gris {margin-top:5px !important;}
+.shome .MarketPlaceOffers ul li {padding:5px 0 !important;}
+.shome .MarketPlaceOffers .fontS_14 {font-size:12px !important;}
+.shome .MarketPlaceOffers .fontS_12, .shomeMV .MarketPlaceOffers .fontS_12  {font-size:11px !important;}
+.shomeMV .MarketPlaceOffers  ul li { border-bottom:none !important;}
+.shome .MarketPlaceOffers ul li span.chevron {display:inline;margin-right:2px;}
+.shomeMV .MarketPlaceOffers ul li {padding-left:0 !important; padding-top:5px !important;} /* Style pour les blocs Coups de coeurs et Meilleurs vente */
+.MarketPlaceOffers .pdg_t_sm {padding-top:0 !important; margin:0 !important;}
+.MarketPlaceOffers .pdg_b_no {padding-bottom:0 !important; margin-bottom:0 !important;}
+/*.MarketPlaceOffers ul li span {font-size: 11px !important}*/
+.MarketPlaceOffers li.sellyours {display: none;} /* Code bourrin pour non affichage du Vendez Le Votre */
+.listeproduits dd.shomeMV div.MarketPlaceOffers ul li div.sep { border:none !important; padding:0 !important; margin:0 !important;}
+/* */
+
+/*intro homes */
+.introHome {color:#666;margin:0 0 10px 0}
+.introHome a {color:#666}
+.introHome dt, .introHome dd {margin:0; padding:0; display:inline}
+
+/*pubfooter */
+#pubHgFooter div.pubtitre {/* background:#dcdcdc; */color:#a5a5a5 !important;font-size:10px !important;left:-2px;height:14px;text-align:center}
+#pubHgFooter div.pubtitre span {padding-left:5px}
+
+/* bando tournant */
+.blocBanner {
+	width:545px;
+	height:147px;
+	z-index:5;
+}
+.blocBanner .banner a { display:block;}
+.navIndex {position:relative;text-align:center;font-size:12px;color:#000;}
+.navIndex span {padding:0 2px;cursor:pointer;}
+.navIndex .active {font-weight:bold;color:#DE9C00;}
+
+
+
+
+
+/* concours */
+
+.concoursFnacV2 .illus, .concoursFnacV2 .desc {width:auto; }
+.concoursFnacV2 .desc {margin-left:530px;}
+
+/* EBook  */
+.nowrap {white-space:nowrap;}
+.gris666 {color:#666;}
+.gris333 {color:#333;}
+.sep_gris_E6 {border-top:1px solid #E6E6E6;}
+
+/* EBook : bloc bleu brilliant  */
+.blk_blue .blk_outside {background-color:#2ba0c3;border:1px solid #2ba0c3;position:relative;zoom:1;}
+.blk_blue_gradient {background-image:url(bloc_bleu_degrade.png);background-repeat:repeat-x;}
+.blk_blue .tl, .blk_blue .tr, .blk_blue .bl, .blk_blue .br {font-size:1%;position:absolute;width:7px;height:7px;overflow:hidden;background:url(bloc_bleu_border_2BA0C3.png) no-repeat;}
+.blk_blue .tl {background-position:top left;top:-1px;left:-1px;}
+.blk_blue .tr {background-position:top right;top:-1px;right:-1px;}
+.blk_blue .bl {background-position:bottom left;bottom:-1px;left:-1px;}
+.blk_blue .br {background-position:bottom right;bottom:-1px;right:-1px;}
+* html .blk_blue .bl, * html .blk_blue .br {bottom:-2px;}/* IE 6 */
+
+/* Ebook : block meilleures ventes */
+.meilleures-ventes .h2 {font-size:14px;font-weight:bold;}
+.meilleures-ventes li {display:block;background:url(bg_item_meilleures_ventes.png) repeat-x bottom;border-bottom:1px solid #ccc;min-height:32px;/*height:37px*/;overflow:hidden;zoom:1;}
+*:first-child+html .meilleures-ventes li{margin-bottom:-3px;}/*IE7-8*/
+* html .meilleures-ventes li{margin-bottom:-3px;height:32px;}/*IE6*/
+.meilleures-ventes .numero {float:left;display:block;color:#fff;background:url(bg_numero.png) no-repeat top right; width:19px; height:19px;text-align:center;line-height:19px;}
+.meilleures-ventes .floatr {width:155px;padding:3px 0 0 0;}
+.meilleures-ventes .titre {display:block;font-weight:bold;}
+.meilleures-ventes .auteur {display:block;color:#999;font-size:11px;}
+.meilleures-ventes .prix {line-height:16px;}
+.meilleures-ventes .prix:hover {text-decoration:none;}
+.meilleures-ventes .prix:hover span {text-decoration:underline;}
+.meilleures-ventes .feuilleter {display:block;}
+.meilleures-ventes .block {display:block!important;}
+.meilleures-ventes .posabs {position:absolute;}
+.meilleures-ventes .hide {display:none!important;}
+.meilleures-ventes ul {padding:0;margin:0;}
+.meilleures-ventes li.first-child {/*height:65px;*/}
+.meilleures-ventes li.first-child .numero {position:absolute;top:0;left:47px;float:none;/*text-align:right;padding-right:4px;*/}
+.meilleures-ventes li.first-child .floatr, .meilleures-ventes li.first-child:hover .floatr{width:105px;}
+.meilleures-ventes li.first-child .visuel {float:left;display:block!important;/*top:2px;right:132px;border:1px solid #ccc;height:60px;*/}
+
+.meilleures-ventes li:hover, .meilleures-ventes li.first-hover, .meilleures-ventes li.item-hover  {background-position:top;}
+.meilleures-ventes li.item:hover, .meilleures-ventes li.item-hover {/*height:65px;*/}
+.meilleures-ventes li.item:hover .floatr, .meilleures-ventes li.item-hover .floatr{width:125px;}
+.meilleures-ventes li.item:hover .numero, .meilleures-ventes li.item-hover .numero {display:none;}
+.meilleures-ventes li:hover .hide, .meilleures-ventes li.first-hover .hide, .meilleures-ventes li.item-hover .hide {display:block!important;}
+.meilleures-ventes li.item:hover .visuel, .meilleures-ventes li.item-hover .visuel {float:left;/*top:0;left:0;*/}
+
+
+
+#col_gauche .colPaddingTop {height:45px;}/* pour faire un espace dans la col gauche en haut sur les pages asp telechargements et ebooks */
+#col_droite .colPaddingTop {height:52px;}/* pour faire un espace dans la col droite en haut sur les pages asp telechargements et ebooks */
+
+/* Home_entreprise */
+#home_entreprise h3.blk_header,#home_entreprise h3.blk_header span {font-weight:bold;text-align:left;}

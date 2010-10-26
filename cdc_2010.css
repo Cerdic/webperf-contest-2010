@@ -1,0 +1,11 @@
+/* **********************
+	Coups de coeur 2010
+ ********************** */
+
+/* Gestion de la decoration laterale de la home géné */
+body.sideDecoration{
+  background:#e3dabd url(body-background-cdc.jpg) no-repeat top center;
+}
+.sideDecoration #page{
+  background:#FFF url(body-background-standard.png) repeat-x center top;
+}

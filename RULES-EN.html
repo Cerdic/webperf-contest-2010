@@ -1,0 +1,78 @@
+<h1>Webperf contest rules</h1>
+
+<h2>Goal</h2>
+
+<p>Optimize a real world web page et try to perform in the three categories :</p>
+
+<ul>
+	<li>Best YOTTAA score computed from <a href="http://www.yottaa.com">http://www.yottaa.com</a></li>
+	<li>Best <a href="https://developer.mozilla.org/en/DOM/window.onload#Notes" title="Onload event description">onload</a> &
+		<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a> times
+							computed from <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
+	<li>Smallest number of requests & total size computed from <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
+</ul>
+
+<p>All measurements on <a href="http://www.webpagetest.org">http://www.webpagetest.org</a> will have theses settings : Paris, IE7, DSL.</p>
+
+<p>Your optimized version of the webpage package have to be sent on our server.</p>
+
+<h2>Webpage used for the contest</h2>
+
+<p>One of the french biggest ecommerce websites : <a href="http://www.fnac.com">http://www.fnac.com</a> was kind enough to lend us one of their webpage.</p>
+
+<p>The original webpage url is : <a href="http://www.fnac.com/enfants.asp">http://www.fnac.com/enfants.asp</a>.</p>
+
+<p>On the <a href="register.html">register page</a> you'll find the packaged version of this webpage. This package is the webpage you'll have to optimize and send
+					back to us</p>
+
+<h2>Features to keep</h2>
+
+<p>There's a certain number of features to keep from the original webpage, i.e. you can't break features for performance optimizations :</p>
+<ul>
+	<li>Search and autocomplete</li>
+	<li>Smooth toggle when clicking on the arrow next to "mon panier" label</li>
+	<li>Central slider with automatic and manual switch</li>
+	<li>Top menu and hovering submenus</li>
+	<li>Ajax calls for "x produits trouvés"</li>
+	<li>Tracking system must be the same (s_code)</li>
+	<li>Any other features you would notice</li>
+</ul>
+
+<h2>Sending your optimizations</h2>
+
+<p>After your registration is ok, you'll receive your ftp credentials within 24 hours</p>
+
+<p>Each participant will have access to his FTP directory on 4 different domains :</p>
+<ul>
+	<li>entries.webperf-contest.com</li>
+	<li>s1.webperf-contest.com</li>
+	<li>s2.webperf-contest.com</li>
+	<li>s3.webperf-contest.com</li>
+</ul>
+
+<p>This will allow you to use domain sharding for example.</p>
+
+<p>All measurements will be done on your "index.html" file on the entries.webperf-contest.com domain. That means you can't change the name of the index file.</p>
+
+<h2>Cheating</h2>
+
+<ul>
+	<li>No cheating ! Displaying a big JPG for the complete website is cheating (even if you strip exif data, yes!)</li>
+	<li>No server side code (it is disabled)</li>
+	<li>User experience should not be degraded (but you are welcome to improve it), which is to say, for example:
+		<ul>
+			<li>Once page is loaded, all original features must still work</li>
+			<li>Accessibility must be preserved (also you can improve it)</li>
+			<li>SEO must be preserved (also you can improve it)</li>
+		</ul>
+	</li>
+	<li>Use our servers, you can't host files on other domains than *.webperf-contest.com</li>
+	<li>Use htaccess file to tweak your directory configuration if it does not fit your needs</li>
+	<li>CSS1-2-3, canvas, svg, JavaScript (inline, external, minified, ...), dataURIS, MHTML, defer, async, *insert crazy technique* <strong>ALLOWED</strong></li>
+</ul>
+
+<p>The main rule is : <strong>Do it as it was your own website</strong>, your customers & your design. Do not ruin  everything for performance.</p>
+
+<p>You may deliver a page wich is not an exact pixel per pixel copy and do some arrangements, provided you respect the "user experience" rule.</p>
+<p>If a typical product owner would refuse your change, you may be outside the rules. <a href="http://twitter.com/webperf_contest">Ask</a> if you're really unsure, we'll also contact you if there's a problem.</p>
+<p>The judges <strong>will have the final word</strong> on what they think is acceptable or not, especially when two participants have very similar timings and scores.</p>

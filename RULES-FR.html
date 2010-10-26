@@ -1,0 +1,91 @@
+<h1>Règlement concours performance web</h1>
+
+<h2>But du concours</h2>
+
+<p>Optimiser une page web existante et essayer d'obtenir la meilleur performance pour ces 3 catégories :</p>
+<ul>
+	<li>Meilleur score YOTTAA calculé avec le site web <a href="http://www.yottaa.com">http://www.yottaa.com</a></li>
+	<li>Meilleur temps <a href="https://developer.mozilla.org/en/DOM/window.onload#Notes" title="Onload event description">onload</a> et
+		<a href="http://www.webperformancecentral.com/wiki/WebPagetest/Page_Metrics#Start_Render" title="Start Render event description">start render</a>
+						calculés à l'aide du site web <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
+	<li>Plus petit nombre de requêtes et poids du site, à l'aide du site web <a href="http://www.webpagetest.org">http://www.webpagetest.org</a></li>
+</ul>
+
+<p>Pour les calculs réalisés avec <a href="http://www.webpagetest.org">http://www.webpagetest.org</a>, les paramètres seront : Paris, IE7, DSL.</p>
+
+<p>Vos pages web optimisées seront à renvoyer sur notre FTP, ainsi tous les tests de performance seront réalisés sur le même serveur.</p>
+
+<h2>Page objet du concours</h2>
+
+<p>La société <a href="http://www.fnac.com">FNAC</a> (FNAC DIRECT SA) a autorisé l'organisation du concours à prendre comme page d'exemple l'une des pages de leur site web
+	<a href="http://www.fnac.com">http://www.fnac.com</a>. Il s'agit d'un des plus grands sites de e-commerce Français.</p>
+
+<p>Nous remercions donc la FNAC pour sa confiance dans notre projet de concours performance web.</p>
+
+<p>L'url originale de la <strong>page choisie</strong> est : <a href="http://www.fnac.com/enfants.asp">http://www.fnac.com/enfants.asp</a>.</p>
+
+<p>Vous trouverez sur la page <a href="register-fr.html">inscription</a> une version packagée de cette page web pour le concours.</p>
+
+<h2>Fonctionnalités à conserver</h2>
+
+<p>En plus du fait que le résultat graphique doit être strictement identique à ce qui existe actuellement, vous veillerez à ce que vos optimisations conservent les fonctionnalités
+					de la page web originale.</p>
+
+<p>En effet, la page web <a href="http://www.fnac.com/enfants.asp">http://www.fnac.com/enfants.asp</a> comporte des fonctionnalités que vous devrez conserver, soit :</p>
+<ul>
+	<li>Le champs recherche et l'autocomplétion (essayez de rentrer "son" et il vous propose des pages correspondantes)</li>
+	<li>Le défilement doux lorsqu'on clique sur la flèche à droite de "mon panier"</li>
+	<li>Slider central avec changement automatique et manuel des images</li>
+	<li>Les menus du haut et sous menus au survol</li>
+	<li>Les indications "x produits trouvés" qui sont récupérées en ajax</li>
+	<li>Le système de tracking doit fonctionner (s_code)</li>
+	<li>Toutes autres fonctionnalités de la page originale que vous pourriez identifier, nous serons aussi là pour répondre à vos questions</li>
+</ul>
+
+<h2>Moyens fournis</h2>
+
+<p>Lorsque votre inscription sera validée, vous obtiendrez sous 24h vos identifiants FTP pour envoyer vos fichiers sur nos serveurs.</p>
+
+<p>Chaque participant aura accès à son répertoire FTP de base sur 4 domaines différents :</p>
+<ul>
+	<li>entries.webperf-contest.com</li>
+	<li>s1.webperf-contest.com</li>
+	<li>s2.webperf-contest.com</li>
+	<li>s3.webperf-contest.com</li>
+</ul>
+
+<p>Ceci vous permet par exemple de faire des appels d'images sur le domaine s1.webperf-contest.com plutôt que sur entries.webperf-contest.com.</p>
+
+<p>Les tests de performance pour les classements seront réalisés sur votre fichier "index.html" sur le domaine entries.webperf-contest.com (domaine principal).
+					Cela signifie que vous ne devez pas changer le nom du fichier html principal (index.html).</p>
+
+<h2>Triche</h2>
+
+<ul>
+	<li>Pas d'abus ! Afficher un JPG à la place du site, c'est tricher (si si, même si vous enlevez les données EXIF)</li>
+	<li>Pas de scripting côté serveur</li>
+	<li>L'expérience utilisateur doit être préservée (et vous pouvez l'améliorer), par exemple :
+		<ul>
+			<li>Une fois la page chargée, la page doit être aussi fonctionnelle qu'à l'origine</li>
+			<li>L'accessibilité ne doit pas être sacrifiée (vous pouvez même l'améliorer)</li>
+			<li>Les optimisations pour référencement doivent être préservées (vous pouvez également les améliorer)</li>
+		</ul>
+	</li>
+	<li>Utilisez nos serveurs, vous ne pouvez héberger vos fichiers ailleurs que sur *.webperf-contest.com</li>
+	<li>Vous avez le droit d'utiliser un fichier .htaccess pour modifier la configuration de votre répertoire</li>
+	<li>CSS1-2-3, Canvas, SVG, JavaScript (inline, externe, minifié ...), dataURIs, MHTML, defer, async, *insérez n'importe quelle technique de dingue ici* ... tout cela est <strong>AUTORIS&Eacute;</strong> et même encouragé</li>
+</ul>
+
+<p>La règle principale est : <strong>agissez comme s'il s'agissait de votre site</strong>, de votre client et de votre design. Tout sacrifier pour la performance web ne sert à rien.</p>
+
+<p>Nous croyons aux technique d'enrichissement progressif et de dégradation gracieuse,
+					vous pouvez donc livrer une page qui n'est pas conforme au pixel près de l'original, tant que vous ne dégradez pas l'expérience utilisateur.</p>
+
+<p>En cas de doute, <a href="http://twitter.com/webperf_contest">demandez nous !</a> Nous regardons régulièrement les Gist de vos modifications, donc nous pourrons aussi vous contacter si nous pensons qu'il y a un problème.</p>
+<p>Les juges <strong>auront le dernier mot</strong> pour déterminer ce qui est acceptable de ce qui ne l'est pas lors du départage final des candidats ayant des temps et des scores très proches.</p>
+
+<h2>Informations légales</h2>
+
+<p>L'organisateur est vincent Voyer (Zeroload), SIRET 487 751 059 00022 située au 20 avenue Léon Gambetta 92120 Montrouge.</p>
+<p>Ce tournoi internationnal est gratuit et sans obligation d'achat.</p>
+<p>Les lots sont offerts par nos sponsors.</p>

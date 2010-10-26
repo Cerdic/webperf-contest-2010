@@ -1,0 +1,66 @@
+/* ===================
+ contenu Home ENFANTS
+=====================*/
+#col_droite_header_enfant{
+  position:relative;
+  margin-bottom:8px;
+  padding:7px 0 2px 0
+}
+
+/* Univers des héros */
+/* bloc "leurs héros préférés..." */
+	#univ_heros ul,#univ_heros li
+	{margin:0;padding:0;list-style-type:none}
+	#univ_heros ul {margin-left:4px;margin-right:4px;}
+	#univ_heros li {float:left;margin-right:8px;margin-top:8px}
+	#univ_heros li * {text-align:center}
+	#univ_heros li.last {float:right;margin-right:0}
+	
+	/* rollover - opacité */
+	#univ_heros a.heros_img:hover img {
+	-moz-opacity:0.5;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+	a.heros_desc {display:block;color:#777777;cursor:pointer;margin-top:.2em;font-size:.8em}
+	/* /bloc "leurs héros préférés..." */
+	
+	/* bloc "Et Aussi..." */
+	div#univ_heros_aussi {margin-bottom:25px;text-align:justify;font-size:0.9em;width:98%}
+	#univ_heros_aussi h3,#univ_heros_aussi ul,#univ_heros_aussi li {display:inline;margin:0;padding:0;}
+	#univ_heros_aussi ul,#univ_heros_aussi li {line-height:1.6em}
+	#univ_heros_aussi li {background:#FFF url(tiret.gif) no-repeat center right; 
+	padding-right:9px;padding-left:4px}
+	*+html #univ_heros_aussi li, * html #univ_heros_aussi li {padding-right:6px;padding-left:7px} /* ie7+ie6 */
+	#univ_heros_aussi li.last {background:none; padding-right:0}
+	#univ_heros_aussi li a {color:#777777}
+	/* /bloc "Et Aussi..." */
+
+/* blocs multiproduit mise en avant */
+#mea_enf {
+	width:545px;
+	min-height:353px;
+}
+/* l'image de background est précisée en ligne */
+/*#mea_enf .line_3cols .block {float:left;margin-right:7px;width:31.5%}
+#mea_enf .line_3cols .block_last {float:none;margin-right:0;width:31.5%}
+#mea_enf .mise_en_avant .tl, #mea_enf .mise_en_avant .tr, #mea_enf .mise_en_avant .bl, #mea_enf .mise_en_avant .br {
+background-image:url(/img/v2/skin/blocks/mea_enf_corners.png);	}*/
+#mea_enf .prix {height:22px;}
+
+
+ul.enf_vignette {list-style:none;text-align:left;padding:0;margin-left:7px;margin-right:7px}
+ul.enf_vignette li.titre {color:#000;font-size:1.1em}
+ul.enf_vignette li.desc {color:#666666;font-size:1.1em}
+ul.enf_vignette li.priceseul {float:right;font-size:1.3em;color:#000000;margin-top:1em}
+ul.enf_vignette li.price {float:right;font-size:1.3em;color:#000000}
+ul.enf_vignette li.price .ssprice {font-size:0.8em;color:#666666}
+ul.enf_vignette li.link_1,ul.enf_vignette li.link_2 {margin-top:3px}
+ul.enf_vignette li.link_1,ul.enf_vignette li.link_1 a {color:#de9c00}
+ul.enf_vignette li.link_1 a {font-weight:bold}
+ul.enf_vignette li.link_2,ul.enf_vignette li.link_2 a {color:#CC0104}
+
+#mea_enf .blk_footer .links .grey, #mea_enf .blk_footer .links .grey a{
+  color:#666; /* gris foncé */
+}
+
