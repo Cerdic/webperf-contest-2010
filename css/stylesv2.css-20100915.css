@@ -472,7 +472,7 @@ dl.generique dt{padding:0;margin:0;}
   font-weight:bold;
 }
 /* ====== footer ======= */
-
+/*
 #footer{
 	text-align:left;
 	min-width:993px;
@@ -487,7 +487,7 @@ dl.generique dt{padding:0;margin:0;}
    padding:5px 20px 10px 20px;
 }
 body.adherents #footer{ background-image:url(img/bg_footer_adh.png);}
-body.adherents #footer .inside{ background-image:url(img/bg_footer_adh.png);}
+body.adherents #footer .inside{ background-image:url(img/bg_footer_adh.png);}*/
 #page, #page_2cols, #page_1col, #enfants {
    padding-bottom:10px;
 }
