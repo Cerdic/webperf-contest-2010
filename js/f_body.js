@@ -113,17 +113,6 @@ function findValueCallback(event, data, formatted) {
 
 $(function () {
 
-	$('.MarketPlaceOffers').each(function(){
-		var me = $(this);
-		var prid = me.attr('title');
-		if (prid) {
-			$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID="+prid+"&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",
-			 function(data){ me.html(data.MarketPlaceSummary);}
-			);
-		}
-	});
-
-
 	//-----
 
 	// au passage de la souris sur le lien de l'onglet
