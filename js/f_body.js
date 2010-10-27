@@ -1,8 +1,3 @@
-// fonction permettant d'afficher les popups des services sur les PT
-function PopUpService(theURL,Largeur,Hauteur) {
-	window.open(theURL,'diaporama','toolbar=no,location=no,menubar=no,status=no,scrollbars=yes,resizable=yes,width='+Largeur+',height='+Hauteur);
-}
-
 //-----
 function LaunchSearch(){
 	window.open('http://www4.fnac.com/r/'+$("#Fnac_Search").val()+'?SCat='+$("#SCat").val()+'&sft='+$("#sft").val(),'_self');
@@ -29,36 +24,28 @@ function checkKey()
 		}
 }
 
-function DisplayPopUp(theURL) {
-	window.open(theURL,'PopUp','toolbar=no,location=no,menubar=no,status=no,top=0,left=0,resizable=yes,scrollbars=yes,width=530,height=585');
+/**
+ * Afficher une popup parametrable, utilise par les autres fonctions
+ * @u : url
+ * @n : nom de la popup
+ * @l : largeur
+ * @h : hauteur
+ * @r : resizable 
+ * @z : mettre le coin a zero en haut a gauche
+ */
+function PopUpBase(u,n,l,h,r,z){
+	window.open(u,n,'toolbar=no,location=no,menubar=no,status=no,scrollbars=yes,resizable='+(r?'yes':'no')+(z?',top=0,left=0':'')+',width='+l+',height='+h);
 }
+// fonction permettant d'afficher les popups des services sur les PT
+function PopUpService(u,l,h) {PopUpBase(u,'diaporama',l,h,true);}
+function DisplayPopUp(u) {PopUpBase(u,'PopUp',530,585,true);}
+function DisplayPopUpGratuit(u) {PopUpBase(u,'PopUp',530,585,true,true);}
+function Diaporamas(u,l,h) {PopUpBase(u,'diaporama',l,h,true,true);}
+function SonDiapo(u) {window.open(u,'diaporama','top=0,left=0');}
+function EteFnac(u,l,h) {window.name = 'ete_fnac';PopUpBase(u,'EteFnac',l,h,true,false);}
+function PopupLibre(u,l,h) {PopUpBase(u,'diaporama',l,h,true);return false;}
+function PopupNoLibre(u,l,h) {PopUpBase(u,'diaporama',l,h,true);return false;}
 
-function DisplayPopUpGratuit(theURL) {
-	window.open(theURL,'PopUp','toolbar=no,location=no,menubar=no,status=no,top=0,left=0,resizable=yes,scrollbars=yes,width=530,height=585');
-}
-
-function Diaporamas(theURL,Largeur,Hauteur) {
-	window.open(theURL,'diaporama','toolbar=no,location=no,menubar=no,status=no,scrollbars=no,resizable=yes,top=0,left=0,width='+Largeur+',height='+Hauteur);
-}
-
-function SonDiapo(theURL) {
-	window.open(theURL,'diaporama','top=0,left=0');
-}
-
-function EteFnac(theURL,Largeur,Hauteur) {
-	window.name = 'ete_fnac'
-	window.open(theURL,'EteFnac','toolbar=no,location=no,menubar=no,status=no,scrollbars=no,width='+Largeur+',height='+Hauteur);
-}
-
-function PopupLibre(theURL, Largeur, Hauteur) {
-	window.open(theURL,'diaporama','toolbar=auto,location=no,menubar=no,status=no,scrollbars=yes,resizable=yes,top=0,left=0,width='+Largeur+',height='+Hauteur);
-	return false;
-}
-
-function PopupNoLibre(theURL, Largeur, Hauteur) {
-	window.open(theURL,'diaporama','toolbar=auto,location=no,menubar=no,status=no,scrollbars=no,top=0,left=0,width='+Largeur+',height='+Hauteur);
-	return false;
-}
 function switcherBandeau(id){
  m = document.getElementById("bandeauTournantImages");
  l = m.getElementsByTagName("img");
@@ -80,6 +67,15 @@ var puce;
 var monTimer
 function demarreRotation() {
 	afficheBanner("visu_banner_0","rotationOk");
+	for(var x=0;x<nbBanner;x++){
+		$("#puce_"+x).click(function(e){
+			e.preventDefault();
+			var index = $(e.target).attr("id");
+			index = index.substring(5);
+			clearTimeout(monTimer);
+			afficheBanner('visu_banner_'+index,'rotationOk');
+		});
+	}
 }
 
 function afficheBanner(idSolde,rotationSolde) {
@@ -148,15 +144,6 @@ $(function () {
 
 	
 	demarreRotation();
-	for(var x=0;x<nbBanner;x++){
-		$("#puce_"+x).click(function(e){
-			e.preventDefault();
-			var index = $(e.target).attr("id");
-			index = index.substring(5);
-			clearTimeout(monTimer);
-			afficheBanner('visu_banner_'+index,'rotationOk');
-		});
-	}
 
 	$("#SCat").change( function() {
 				$("#Fnac_Search").flushCache();
