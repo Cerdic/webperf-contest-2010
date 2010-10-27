@@ -111,6 +111,16 @@ function findValueCallback(event, data, formatted) {
 	$("#QuickSearchForm").submit();
 }
 
+function displayWaiting(){
+	if (!$('#waitingMsg').length){
+		$('#HeaderBasket').after('<div id="waitingMsg">'+
+	    '<img src="img/chrono_anim.gif" alt="Veuillez patienter..." />'+
+	    '<p>Veuillez patienter...</p>'+
+			'</div>');
+	}
+	$('#waitingMsg').show('fast');
+}
+
 $(function () {
 
 	//-----
