@@ -645,7 +645,7 @@ body.adherents #subfooter a{
 	  #MONCOIN{float:left;width:35%;padding-top:18px;}
 	    #monCompte{float:left;width:33%;padding-top:4px}
 	      #monCompte img{vertical-align:-15%;padding-right:5px}
-	      #monCompte a{color:#000;background:url(img/ico-mon-compte-png24.png) no-repeat 0 0;padding-left:17px;text-decoration:underline}
+	      #monCompte a{color:#000;background:url(img/spt-pictos.png) no-repeat -10px -117px;padding-left:17px;text-decoration:underline}
 	      #monCompte a:hover{text-decoration:none;}
 	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
 	    * html HeaderBasket{width:15.7em;}	    
@@ -653,13 +653,13 @@ body.adherents #subfooter a{
 		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(img/background-panier.png) no-repeat left bottom;}
 			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
 			* html #monPanier #cartouche p{width:176px}
-				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(img/ico-panier.png) no-repeat top left;}
+				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(img/spt-pictos.png) no-repeat -10px -152px;}
 				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none;}
 				#monPanier .recapPanier a:hover {text-decoration:underline}
 				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
 				#monPanier .totArticles a {color:#FFF;text-decoration:none}
 				#monPanier .totArticles a:hover {text-decoration:underline}
-				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(img/ico-switch.png) no-repeat 0 0;cursor:pointer}
+				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(img/spt-pictos.png) no-repeat -10px -51px;cursor:pointer}
 			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
 				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
 				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
@@ -846,11 +846,11 @@ body.adherents #subfooter a{
 		    #onglets .megaMenu dt, #onglets .megaMenu dt a{color:#DE9C00;font-weight:bold;margin-bottom:3px}
 		    #onglets .megaMenu dt a{text-decoration:underline}
 		    #onglets .megaMenu dt a:hover{text-decoration:none}
-		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(img/chevron-raquo.png) no-repeat 0 5px}
+		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(img/spt-pictos.png) no-repeat -10px -334px;}
 		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
 		      #onglets .megaMenu dd a:hover{text-decoration:underline}
  		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
-			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/picto-coeur.png) no-repeat top right;}
+			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/spt-pictos.png) no-repeat right -309px;}
      
 
 /* ======**** fin header ****====================*/
@@ -1263,10 +1263,10 @@ Afin de ne pas faire de  redondance de code, les s�lecteurs seront simplement 
   background-image:url(img/offre-adherents-small.png);
 }
 .produit dd.pictoPrixAdhNormal{
-  background-image:url(img/offre-adherents.gif);
+  background-image:url(img/spt-pictos.png);background-position: 0px -193px;
 }
 .produit dd.pictoPrixAdhBig{
-  background-image:url(img/offre-adherents.gif);
+  background-image:url(img/spt-pictos.png);background-position: 0px -193px;
 }
 .produit dd.pictoPrixVertSmall{
   background-image:url(img/prix-vert-small.gif);
@@ -1313,7 +1313,7 @@ Afin de ne pas faire de  redondance de code, les s�lecteurs seront simplement 
 
 /*import ancienne feuille de style*/
 .produit dd.pictocoeur{
-  background-image:url(img/minipictocoeur.gif);
+  background-image:url(img/spt-pictos.png);background-position: 0px -235px;
 }
 /*
 404
@@ -3115,7 +3115,7 @@ background-image:url(img/block_cadre_prod_noir_corner.png);
   position:relative;
   margin:0;
   border:none;
-  background: url(img/bt-rechercher.png) no-repeat left top;
+  background: url(img/spt-pictos.png) no-repeat -10px -10px;
 }
 .block_search .submit input{
   position:absolute;
