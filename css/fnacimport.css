@@ -1,0 +1,58 @@
+
+/* import depuis fnac.css :style pour les fleches risque de erdondance faible avec F6 vu le nomage. */
+.flecheACC, .flecheGRISE, .flecheRED,.flecheADH, .flecheTPN, .flecheMUS,.flecheLIV,
+.flecheBLACK, .flecheWHITE, .flecheNOEL, .flecheDVD, .flecheLOG, .flecheCDROMS,
+.flecheMIC, .flecheMOB, .flecheMOB2, .flecheMOB3, .flecheIMA, .flechepho, .flecheVOY,
+.flecheSPE, flecheACCMarketing, .flecheREDMarketing,.flecheADHMarketing, .flecheMUSMarketing,
+.flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
+.flecheMICMarketing, .flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
+  padding-left:12px;
+  background-position:0 2px;
+  background-repeat:no-repeat;
+  list-style-type:none;
+  background-image:url(img/ACC_marron.gif);
+}
+.flecheACCMarketing, .flecheREDMarketing, .flecheADHMarketing, .flecheMUSMarketing,
+.flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
+.flecheMICMarketing,.flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
+  background-position:0 8px;
+  background-image:url(img/ACC_marron.gif);
+}
+.flecheBLACK{
+  background-image:url(img/BLACK_fleche.gif);
+}
+.flecheWHITE{
+  background-image:url(img/BLANC_fleche.gif);
+}
+
+.flecheGRISE{
+  background-image:url(img/grise_fleche.gif);
+}
+
+.flecheRED, .flecheREDMarketing{
+  background-image:url(img/RED_fleche.gif);
+}
+
+.flechelarge{
+  background-repeat:no-repeat;
+  background-position:2px 2px;
+  padding-left:20px;
+  margin-left:0px;
+}
+.flechehaute{
+  background-repeat:no-repeat;
+  background-position:2px 2px;
+  padding-left:20px;
+  margin-left:0px;
+}
+/* Puces Rondes */
+
+.pucerondeACC, .pucerondeRED, .pucerondeADH, .pucerondeMUS, .pucerondeLIV,
+.pucerondeMUS, .pucerondeLIV, .pucerondeDVD, .pucerondeLOG, .pucerondeMIC,
+.pucerondeIMA, .pucerondePHO, .pucerondeVOY, .pucerondeSPE, .pucerondeNoel{
+  padding-left:12px;
+  background-position:0 5px;
+  background-repeat:no-repeat;
+  list-style-type:none;
+  background-image:url(img/ACC_puceronde.gif);
+}

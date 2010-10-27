@@ -1,0 +1,245 @@
+
+/**********************
+* Concours
+***********************/
+
+.concoursFnac{
+  padding:0 20px 0 0;
+}
+.concoursFnac h2{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.concoursFnac h2 img{
+  display:block;
+}
+.concoursFnac li, .concoursFnac p{
+  color:#000; /* noir */
+}
+.concoursFnac li.activ label{
+  color:#555; /* noir */
+}
+.concoursFnac li *{
+  vertical-align:middle;
+}
+.concoursFnac label{
+
+}
+.concoursFnac .infoPerso label{
+  font-weight:bold;
+}
+.concoursFnac .question, .concoursFnac .infoPerso{
+  width:360px;
+  position:relative;/* permet de g�rer les positions absolute des erreurs */
+}
+.concoursFnac .question{
+  float:left;
+}
+.concoursFnac .infoPerso{
+  float:right;
+}
+.concoursFnac .question ol{
+  padding:0 20px;
+  margin:0;
+}
+.concoursFnac .question ul{
+  list-style-type:none;
+  margin:10px 10px;
+  padding:0;
+}
+.concoursFnac .question ul li{
+  padding:1px 5px 1px 2px;
+}
+.concoursFnac .question span.erreur, .concoursFnac .infoPerso span.erreur{
+  font-weight:bold;
+  color:#DD0000;
+}
+
+.concoursFnac ul.ADH_avant{
+padding-left:0px;margin-left:0px;list-style-type:none;
+}
+.concoursFnac ul.ADH_avant li {
+margin-left:0px;padding-top:12px;padding-bottom:12px;background-repeat:no-repeat;padding-left:45px;background-position: 0 50%;
+}
+
+
+/**********************
+*concours v2 - 04/03/10
+***********************/
+.concoursFnacV2{
+	width:940px;
+	margin:30px auto 0 auto !important
+}
+.concoursFnacV2 h1{
+	font-size:1%;
+	margin:0
+}
+.concoursFnacV2 h1 img{
+	display:block;
+	margin:0 auto !important
+}
+.concoursFnacV2 .illus,.concoursFnacV2 .desc{
+	width:460px;
+	margin-top:58px
+}
+.concoursFnacV2 .illus{
+	float:left
+}
+.concoursFnacV2 .illus .video320{
+	width:320px;
+}
+.concoursFnacV2 .desc{
+	margin-left:460px
+}
+.concoursFnacV2 .desc h2{
+	font-size:1.2em;
+	margin:0 0 10px 0
+}
+.concoursFnacV2 .desc .cadre{
+	border:1px solid #000;
+	padding:5px;
+	color:#000
+}
+.concoursFnacV2 .question,.concoursFnacV2 .infoPerso{
+	position:relative;
+	margin-top:40px
+}
+.concoursFnacV2 .question{
+	width:540px;
+	float:left;
+	position:relative
+}
+.concoursFnacV2 .infoPerso{
+	margin-left:560px;
+	width:360px;
+	position:relative
+}
+.concoursFnacV2 .question ol{
+  padding:0 20px;
+  margin:0;
+}
+.concoursFnacV2 .question ul{
+  list-style-type:none;
+  margin:10px 10px;
+  padding:0;
+}
+.concoursFnacV2 .question ul li{
+  padding:1px 5px 1px 2px;
+}
+.concoursFnacV2 .question span.erreur, .concoursFnacV2 .infoPerso span.erreur{
+  font-weight:bold;
+  color:#DD0000;
+}
+.concoursFnacV2 li, .concoursFnacV2 p{
+  color:#000;
+}
+.concoursFnacV2 li *{
+  vertical-align:middle;
+}
+.concoursFnacV2 .reglementContent{
+	width:800px;
+	text-align:justify;
+	margin:45px auto !important
+}
+.concoursFnacV2 .reglementContent div{
+	margin-top:15px
+}
+.concoursFnacV2 .reglementContent h2,.concoursFnacV2 .merci p{
+	font-size:1.17em;
+	text-align:center;
+	margin-top:15px
+}
+.concoursFnacV2 .reglementContent h3{
+	font-size:1em;
+	margin:0;
+	font-weight:bold
+}
+.concoursFnacV2 p.merci{
+	font-size:1.17em;
+	text-align:center;
+	margin-top:40px;
+	font-weight:bold
+}
+.concoursFnacV2 .merciLien{
+	margin:50px 0;
+	text-align:center;
+}
+
+
+/* styles \help\resultats_concours.asp */
+.result_conc{
+  padding-bottom:15px;
+  padding-left:4px;
+  margin-top:15px;
+  border-bottom:1px solid #BEBEBE;
+}
+.result_conc dl{
+  margin-left:80px;
+  margin-bottom:0;
+}
+.result_conc dl dt{
+  color:#DE9C00;
+  font-size:1.1em;
+  font-weight:bold;
+}
+.result_conc dl dd{
+  margin:5px 0 0 0;
+}
+
+/* concours */
+
+.concoursFnacV2 .illus, .concoursFnacV2 .desc {width:auto; }
+.concoursFnacV2 .desc {margin-left:530px;}
+
+/* EBook  */
+.nowrap {white-space:nowrap;}
+.gris666 {color:#666;}
+.gris333 {color:#333;}
+.sep_gris_E6 {border-top:1px solid #E6E6E6;}
+
+/* EBook : bloc bleu brilliant  */
+.blk_blue .blk_outside {background-color:#2ba0c3;border:1px solid #2ba0c3;position:relative;zoom:1;}
+.blk_blue_gradient {background-image:url(img/bloc_bleu_degrade.png);background-repeat:repeat-x;}
+.blk_blue .tl, .blk_blue .tr, .blk_blue .bl, .blk_blue .br {font-size:1%;position:absolute;width:7px;height:7px;overflow:hidden;background:url(img/bloc_bleu_border_2BA0C3.png) no-repeat;}
+.blk_blue .tl {background-position:top left;top:-1px;left:-1px;}
+.blk_blue .tr {background-position:top right;top:-1px;right:-1px;}
+.blk_blue .bl {background-position:bottom left;bottom:-1px;left:-1px;}
+.blk_blue .br {background-position:bottom right;bottom:-1px;right:-1px;}
+* html .blk_blue .bl, * html .blk_blue .br {bottom:-2px;}/* IE 6 */
+
+/* Ebook : block meilleures ventes */
+.meilleures-ventes .h2 {font-size:14px;font-weight:bold;}
+.meilleures-ventes li {display:block;background:url(img/bg_item_meilleures_ventes.png) repeat-x bottom;border-bottom:1px solid #ccc;min-height:32px;/*height:37px*/;overflow:hidden;zoom:1;}
+*:first-child+html .meilleures-ventes li{margin-bottom:-3px;}/*IE7-8*/
+* html .meilleures-ventes li{margin-bottom:-3px;height:32px;}/*IE6*/
+.meilleures-ventes .numero {float:left;display:block;color:#fff;background:url(img/bg_numero.png) no-repeat top right; width:19px; height:19px;text-align:center;line-height:19px;}
+.meilleures-ventes .floatr {width:155px;padding:3px 0 0 0;}
+.meilleures-ventes .titre {display:block;font-weight:bold;}
+.meilleures-ventes .auteur {display:block;color:#999;font-size:11px;}
+.meilleures-ventes .prix {line-height:16px;}
+.meilleures-ventes .prix:hover {text-decoration:none;}
+.meilleures-ventes .prix:hover span {text-decoration:underline;}
+.meilleures-ventes .feuilleter {display:block;}
+.meilleures-ventes .block {display:block!important;}
+.meilleures-ventes .posabs {position:absolute;}
+.meilleures-ventes .hide {display:none!important;}
+.meilleures-ventes ul {padding:0;margin:0;}
+.meilleures-ventes li.first-child {/*height:65px;*/}
+.meilleures-ventes li.first-child .numero {position:absolute;top:0;left:47px;float:none;/*text-align:right;padding-right:4px;*/}
+.meilleures-ventes li.first-child .floatr, .meilleures-ventes li.first-child:hover .floatr{width:105px;}
+.meilleures-ventes li.first-child .visuel {float:left;display:block!important;/*top:2px;right:132px;border:1px solid #ccc;height:60px;*/}
+
+.meilleures-ventes li:hover, .meilleures-ventes li.first-hover, .meilleures-ventes li.item-hover  {background-position:top;}
+.meilleures-ventes li.item:hover, .meilleures-ventes li.item-hover {/*height:65px;*/}
+.meilleures-ventes li.item:hover .floatr, .meilleures-ventes li.item-hover .floatr{width:125px;}
+.meilleures-ventes li.item:hover .numero, .meilleures-ventes li.item-hover .numero {display:none;}
+.meilleures-ventes li:hover .hide, .meilleures-ventes li.first-hover .hide, .meilleures-ventes li.item-hover .hide {display:block!important;}
+.meilleures-ventes li.item:hover .visuel, .meilleures-ventes li.item-hover .visuel {float:left;/*top:0;left:0;*/}
+
+
+
+#col_gauche .colPaddingTop {height:45px;}/* pour faire un espace dans la col gauche en haut sur les pages asp telechargements et ebooks */
+#col_droite .colPaddingTop {height:52px;}/* pour faire un espace dans la col droite en haut sur les pages asp telechargements et ebooks */
+
+/* Home_entreprise */
+#home_entreprise h3.blk_header,#home_entreprise h3.blk_header span {font-weight:bold;text-align:left;}

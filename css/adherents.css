@@ -1,0 +1,76 @@
+/* ======== bloc espace_adherent ===== */
+.espace_adherent .blk_header span, .espace_adherent .blk_header a{
+  color:#FFF !important;
+}
+.espace_adherent .blk_header{
+  border-bottom:0px;
+}
+.espace_adherent .blk_inside{
+  border:1px solid #F9D500;
+  border-width:0 1px 1px 1px;
+}
+.espace_adherent .tl, .espace_adherent .tr, .espace_adherent .bl, .espace_adherent .br{
+  background-image:url(img/block_jaune_corners.png);
+}
+.espace_adherent .points{
+  padding:10px 5px;
+  margin:0;
+  color:#F9D500; /* jaune */
+  text-align:center;
+  font-size:1.1em;
+  background:#000; /* noir */
+}
+.espace_adherent .points strong{
+  font-size:1.4em;
+}
+.espace_adherent .contenu_adh{
+  padding:10px 0;
+}
+.espace_adherent .img{
+  margin:5px 0;
+}
+.espace_adherent .links a{
+  color:#000; /* noir */
+}
+/* ===== fix CSS classes ===== */
+.hidecorners .bl, .hidecorners .br{
+  display:none !important;
+}
+
+
+/* bloc adherents */
+.block_adherent .blk_header{
+  padding-left:24px;
+}
+.block_adherent .blk_header span, .block_adherent .blk_header a{
+  text-align:left;
+}
+.block_adherent .blk_header span, .block_adherent .blk_header a{
+  padding:5px 6px 0 9px;
+  min-height:20px;
+  _height:20px;
+}
+.block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
+  background-image:url(img/block_adherents_header_adh.png);
+  color:#FFF; /* blanc */
+}
+.block_adherent .sub_header, .block_adherent .sub_header a {
+  background:#000;
+  color:#F9D500;
+  width:49,5%;
+}
+
+.line_2cols .block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
+  background-image:url(img/block_adherents_header_2cols_adh.png);
+  color:#FFF; /* blanc */
+}
+.block_adherent .blk_content{
+  background:#FFF; /* lot2 */
+}
+.block_adherent .links_lines li{
+  background:#000; /* gris clair */
+  color:#FFF; /* noir */
+}
+.block_adherent .links_lines li a{
+  color:#FFF;
+}

@@ -1,0 +1,388 @@
+
+/* ajout barbare - � ranger plus tard */
+.gras{
+  font-weight:bold!important;
+}
+.inlineList li{
+  display:inline;
+  margin:0 .3em;
+}
+.inlineList1em li{
+  display:inline;
+  margin:0 1em;
+}
+.erreurFormulaire{
+  font-weight:bold;
+  color:#DD0000;
+}
+.clearing{
+  display:block;
+  height:0;
+  clear:both;
+  font-size:1%;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+*+html .clearfix, * html .clearfix { /* IE7 et IE6 */
+    zoom: 1;
+}
+
+ul.arrow{
+  margin:0;
+  padding:0;
+}
+ul.arrow li{
+  /* 404 list-style-image:url(http://www.fnac.com/Img/account/MyFnac/ACC_fleche.gif);*/
+  list-style-position:outside;
+  margin:0 0 0 10px;
+  padding:0;
+}
+.sanspuce{
+  list-style-type:none!important;
+}
+
+
+
+
+
+/****************
+* CSS fnac.com
+*****************/
+html, body{
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, Verdana, sans-serif;
+}
+body{
+  font-size:12px;
+  _font-size:0.75em;
+  zoom:1;
+  color:#666; /* gris */
+  background:#FFF url(img/body-background-standard.png) repeat-x center top;
+}
+a{
+  text-decoration:none;
+  color:#000; /* lot2 :update */
+}
+a:hover{
+  text-decoration:underline;
+}
+a img{
+  border:0
+}
+
+.lienInverse a{
+  text-decoration:underline !important;
+}
+.lienInverse a:hover{
+  text-decoration:none !important;
+}
+
+table{
+  font-size:1em;
+}
+h2, h3, h4, h5, h6{
+  margin:0
+}
+h1{font-size:2em;}   /* origine w3c - multi navigateur */
+h2{font-size:1.5em;} /* origine w3c - multi navigateur */
+h3{font-size:1.17em;}/* origine w3c - multi navigateur */
+h4{font-size:1.1em;} /* modifie par F6 */
+h5{font-size:0.83em;}/* origine w3c - multi navigateur */
+h6{font-size:0.67em;}/* origine w3c - multi navigateur */
+.h1-1em2{
+  font-size:1.2em;
+  margin-top:30px;
+}
+.h2-1em{
+  font-size:1em;
+
+}
+
+.text09em{
+  font-size:0.9em;
+}
+
+p{
+  margin:10px 0;
+}
+
+
+.subtitle{
+  margin:0;
+}
+
+/* form elements */
+input.text, select,#deliverTable input{
+  padding:0.2em 0;
+  border:1px solid #A7A6AA; /* gris */
+  font-size:0.9em;
+  color:#666; /* gris fonc� */
+}
+textarea{
+  font-family:Arial, Verdana, Helvetica, sans-serif;
+}
+#deliverTable textarea{
+  padding:0.2em 0;
+  height:10em;
+  border:1px solid #A7A6AA; /* gris */
+  font-size:1em;
+  color:#666; /* gris fonc� */
+}
+
+select{
+  padding:0;
+  overflow:hidden;
+  height:2em;
+  //height:1.8em; /* hack IE7 et IE6 d� au fait que le border n'a pas l'air d'�tre pris en compte dans le calcul */
+  _height:1.5em /* remise propre pour IE6 */
+}
+select option{
+  padding:0.2em 5px 0.2em 3px;
+}
+form, fieldset{
+  padding:0;
+  margin:0;
+  border:0;
+}
+.block form{
+  zoom:1; /* correction comportement IE */
+}
+.fullwidthselect{
+  _height:1%; /* haslayout IE */
+}
+.fullwidthselect select{
+  width:100%;
+}
+.halfwidthselect select{
+  width:50%;
+}
+.line_select{
+  margin:0;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.line_select label{
+  font-weight:bold;
+  float:left;
+}
+.line_select select{
+  float:right;
+  width:250px;
+}
+/*elements cach�s si JS activ�, JS activ� via classe hasJS */
+.hasJS .hidesubmit .submit{display:none }
+
+/* context :applique le contexte de formatage (cf la doc fournie lot1 pour plus d'informations */
+.context{ /* lot2 */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+h4 cite{
+  color:#666; /* gris */
+  font-style:normal;
+  font-weight:normal;
+}
+/******************
+* margins et paddings // Vu la simplicit� et la fonction de ces classes, il est inutile de les structurer
+********************/
+/* padding */
+.pdg_no{padding:0 !important}
+.pdg_sm{padding:5px !important}
+.pdg_t_sm{padding-top:5px !important}
+.pdg_r_sm{padding-right:5px !important}
+.pdg_b_sm{padding-bottom:5px !important}
+.pdg_l_sm{padding-left:5px !important}
+.pdg_h_sm{padding-left:5px !important;padding-right:5px !important}
+.pdg_v_sm{padding-top:5px !important;padding-bottom:5px !important}
+.pdg{padding:10px !important}
+.pdg_t{padding-top:10px !important}
+.pdg_r{padding-right:10px !important}
+.pdg_b{padding-bottom:10px !important}
+.pdg_l{padding-left:10px !important}
+.pdg_h{padding-left:10px !important;padding-right:10px !important}
+.pdg_v{padding-top:10px !important;padding-bottom:10px !important}
+.pdg_lg{padding:20px !important}
+.pdg_t_lg{padding-top:20px !important}
+.pdg_r_lg{padding-right:20px !important}
+.pdg_b_lg{padding-bottom:20px !important}
+.pdg_l_lg{padding-left:20px !important}
+.pdg_h_lg{padding-left:20px !important;padding-right:20px !important}
+.pdg_v_lg{padding-top:20px !important;padding-bottom:20px !important}
+.pdg_xlg{padding:50px !important}
+.pdg_t_xlg{padding-top:50px !important}
+.pdg_r_xlg{padding-right:50px !important}
+.pdg_b_xlg{padding-bottom:50px !important}
+.pdg_l_xlg{padding-left:50px !important}
+.pdg_h_xlg{padding-left:50px !important;padding-right:50px !important}
+.pdg_v_xlg{padding-top:50px !important;padding-bottom:50px !important}
+/* margin */
+.mrg_no{margin:0 !important}
+html body .mrg_b_no{margin-bottom:0 !important}
+.mrg_sm{margin:5px !important}
+.mrg_t_sm{margin-top:5px !important}
+.mrg_r_sm{margin-right:5px !important}
+.mrg_b_sm{margin-bottom:5px !important}
+.mrg_l_sm{margin-left:5px !important}
+.mrg_h_sm{margin-left:5px !important;margin-right:5px !important}
+.mrg_v_sm{margin-top:5px !important;margin-bottom:5px !important}
+.mrg{margin:10px !important}
+.mrg_t{margin-top:10px !important}
+.mrg_r{margin-right:10px !important}
+.mrg_b{margin-bottom:10px !important}
+.mrg_l{margin-left:10px !important}
+.mrg_h{margin-left:10px !important;margin-right:10px !important}
+.mrg_v{margin-top:10px !important;margin-bottom:10px !important}
+.mrg_lg{margin:20px !important}
+.mrg_t_lg{margin-top:20px !important}
+.mrg_r_lg{margin-right:20px !important}
+.mrg_b_lg{margin-bottom:20px !important}
+.mrg_l_lg{margin-left:20px !important}
+.mrg_h_lg{margin-left:20px !important;margin-right:20px !important}
+.mrg_v_lg{margin-top:20px !important;margin-bottom:20px !important}
+.mrg_xlg{margin:50px !important}
+.mrg_t_xlg{margin-top:50px !important}
+.mrg_r_xlg{margin-right:50px !important}
+.mrg_b_xlg{margin-bottom:50px !important}
+.mrg_b_50{margin-bottom:50px !important}
+.mrg_l_xlg{margin-left:50px !important}
+.mrg_h_xlg{margin-left:50px !important;margin-right:50px !important}
+.mrg_v_xlg{margin-top:50px !important;margin-bottom:50px !important}
+/* -- margins pour blocs -- */
+.mrg_b_shadw_big{margin-bottom:11px !important}/*blocs arbo*/
+.mrg_b_shadw_sm{margin-bottom:15px !important}/*blocs avec petite ombre*/
+.mrg_b_shadw_no{margin-bottom:25px !important}/*blocs sans ombre*/
+
+/**************  classes de mise en page***************/
+.txt_l{text-align:left !important;} /* lot2 :update */
+.txt_c{text-align:center !important;} /* lot2 :update */
+.txt_r{text-align:right !important;} /* lot2 :update */
+.txt_t{vertical-align:top !important;} /* lot2 :update */
+.txt_m{vertical-align:middle !important;} /* lot2 :update */
+.txt_b{vertical-align:bottom !important;} /* lot2 :update */
+.floatl{float:left} /* lot2 */
+.floatr{float:right} /* lot2 */
+.center{margin-left:auto !important; margin-right:auto !important;} /* lot2 */
+.img_m img, .img_m .inputImg{vertical-align:middle !important;} /* lot2 :update */
+
+/**************  gestion de background ***************/
+.no_bg{background:none !important;}
+.no_bg_color{background-color:transparent !important;}
+.no_bg_img{background-image:none !important;}
+.bg_blanc{background-color:#FFF !important;}
+.bg_gristresclair{background-color:#F3F3F3 !important;}
+.bg_gris_f7{background-color:#F7F7F7 !important;}
+.bg_gris{background-color:#828282 !important;}
+.bg_gris_eb{background-color:#EBEBEB !important;}
+.bg_grisfonce{background-color:#666 !important;}
+.bg_noir{background-color:#000 !important;}
+.bg_moutarde{background-color:#DE9C00 !important;}
+.bg_rouge{background-color:#DD0000 !important;}
+/* background image */
+.bg_no_rpt{background-repeat:no-repeat !important}
+.bg_rpt_y{background-repeat:repeat-y!important}
+.bg_rpt_x{background-repeat:repeat-x!important}
+.bg_rpt{background-repeat:repeat!important}
+.bg_l{background-position:left center!important}
+.bg_tl{background-position:left top!important}
+.bg_t{background-position:center top!important}
+.bg_tr{background-position:right top!important}
+.bg_r{background-position:right center!important}
+.bg_rb{background-position:right bottom!important}
+.bg_b{background-position:center bottom!important}
+.bg_bl{background-position:left bottom!important}
+.bg_c{background-position:center center!important}
+/* image des background generalises */
+.fondTriangleGris{background-image:url(img/triangleGris.png)!important}
+/**************  gestion de bordure ***************/
+.no_brd{border:none !important;}
+.no_brd_t{border-top:none !important;}
+.no_brd_r{border-right:none !important;}
+.no_brd_b{border-bottom:none !important;}
+.no_brd_l{border-left:none !important;}
+.brd_gris{border:1px solid #CCC !important;}
+.brd_t_gris{border-top:1px solid #CCC !important;}
+.brd_r_gris{border-right:1px solid #CCC !important;}
+.brd_b_gris{border-bottom:1px solid #CCC !important;}
+.brd_l_gris{border-left:1px solid #CCC !important;}
+/************** Liste DL sans marge generique **********/
+dl.generique dd{padding:0;margin:0;}
+dl.generique dt{padding:0;margin:0;}
+/* supression force de overflow */
+.noverflow{overflow:visible !important;}
+/************** classes de dimensions en % **********/
+.width30{width:30%}
+.width40{width:40%}
+.width50{width:50%} /* lot2 */
+.width60{width:60%}
+.width65{width:65%}
+.width70{width:70%} /* lot2 */
+.width75{width:75%} /* lot2 */
+.width80{width:80%} /* lot2 */
+/************** layout **********/
+.dispeblock{display:block!important}
+.table{display:table!important}
+.inline{display:inline!important}
+.posrel{position:relative!important}
+/************** context de formatage **********/
+.context {overflow:hidden;	_overflow:visible;zoom:1;}
+/************** z-index **********/
+.zIndex0{z-index:0;}
+.zIndex10{z-index:10;}
+.zIndex20{z-index:20;}
+.zIndex30{z-index:30;}
+.zIndex40{z-index:40;}
+
+/************** color **********/
+.bleu_MP {color:#1a3fa7 !important}
+/************** soulignement **********/
+.souligne {text-decoration:underline!important;}
+
+
+.mrg_15{margin:15px !important}
+.mrg_t_15{margin-top:15px !important}
+.mrg_r_15{margin-right:15px !important}
+.mrg_b_15{margin-bottom:15px !important}
+.mrg_l_15{margin-left:15px !important}
+.mrg_h_15{margin-left:15px !important;margin-right:15px !important}
+.mrg_v_15{margin-top:15px !important;margin-bottom:15px !important}
+
+.mrg_30{margin:30px !important}
+.mrg_t_30{margin-top:30px !important}
+.mrg_r_30{margin-right:30px !important}
+.mrg_b_30{margin-bottom:30px !important}
+.mrg_l_30{margin-left:30px !important}
+.mrg_h_30{margin-left:30px !important;margin-right:30px !important}
+.mrg_v_30{margin-top:30px !important;margin-bottom:30px !important}
+
+.pdg_15{padding:15px !important}
+.pdg_t_15{padding-top:15px !important}
+.pdg_r_15{padding-right:15px !important}
+.pdg_b_15{padding-bottom:15px !important}
+.pdg_l_15{padding-left:15px !important}
+.pdg_h_15{padding-left:15px !important;padding-right:15px !important}
+.pdg_v_15{padding-top:15px !important;padding-bottom:15px !important}
+
+.pdg_30{padding:30px !important}
+.pdg_t_30{padding-top:30px !important}
+.pdg_r_30{padding-right:30px !important}
+.pdg_b_30{padding-bottom:30px !important}
+.pdg_l_30{padding-left:30px !important}
+.pdg_h_30{padding-left:30px !important;padding-right:30px !important}
+.pdg_v_30{padding-top:30px !important;padding-bottom:30px !important}
+
+.mrg_40{margin:40px !important}
+.mrg_t_40{margin-top:40px !important}
+.mrg_r_40{margin-right:40px !important}
+.mrg_b_40{margin-bottom:40px !important}
+.mrg_l_40{margin-left:40px !important}
+.mrg_h_40{margin-left:40px !important;margin-right:40px !important}
+.mrg_v_40{margin-top:40px !important;margin-bottom:40px !important}

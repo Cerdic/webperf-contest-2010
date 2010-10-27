@@ -1,0 +1,113 @@
+
+/*************
+* affiliation
+*************/
+
+
+.block_affilies{
+  background-color:#E3B22F;
+  padding:0;
+  margin:0;
+}
+.block_affilies .top-menu{
+  background:url(img/affiliates-top-menu.png) no-repeat top left;
+  padding:10px 0 0 0;
+}
+.block_affilies .bottom-menu{
+  background:url(img/affiliates-bottom-menu.png) no-repeat bottom left;
+  padding:0 0 10px 0;
+}
+.block_affilies li{
+  padding:0;
+  margin:0;
+  line-height:1.5em;
+  list-style:none;
+  font-size:0.9em;
+}
+.block_affilies a:hover{
+  text-decoration:underline;
+}
+.block_affilies ul{
+  padding:0 10px 0 10px;
+  margin:0 0 12px 0;
+  border-left:1px solid #D99800;
+  border-right:1px solid #D99800;
+}
+.block_affilies h2{
+  padding:0 10px 0 10px;
+  border-left:1px solid #D99800;
+  border-right:1px solid #D99800;
+  font-size:0.9em;
+}
+.sep-gris-clair{
+  border-top:1px solid #e5e5e5;
+  clear:left;
+  height:0;
+  margin:10px 0;
+}
+.sep-gris-clair hr{
+  visibility:hidden;
+  display:none;
+}
+.affiliates-program-menu{
+  float:left;
+  list-style:none;
+  margin:0 20px 0 0;
+  padding:0;
+}
+.affiliates-program-menu li{
+  margin:0 0 4px 0;
+}
+.bordure-jaune{
+  border-collapse:collapse;
+}
+.bordure-jaune td{
+  border:2px solid #D99800;
+  padding:5px;
+}
+
+
+/* ====== Refonte affiliation ===== */
+
+#affiliation h2 {font-size:0px;}
+#affiliation h3 {
+	color:#000000;
+	background:url(img/doublefleche.png) no-repeat 0 4px;
+	padding:0px 0px 0px 15px;
+	margin:20px 0px 0px 0px;
+}
+#affiliation h4 {
+	color:#DE9C00;
+	padding:0px;
+	margin:10px 0px 0px 0px;
+}
+#affiliation p {color:#000000;}
+#affiliation ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+#affiliation ul li {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	color:#000000;
+}
+#affiliation .ligne_affiliation {
+	text-align:center;
+	background:url(img/fondlignedeco.png) repeat-x 0 0;
+	height:17px;
+	margin:10px 0;
+}
+#affiliation .ligne_affiliation img {margin:0 auto;}
+#affiliation table {
+	border-top:1px solid #DE9C00;
+	border-left:1px solid #DE9C00;
+	color:black;
+}
+#affiliation table td{
+	border-bottom:1px solid #DE9C00;
+	border-right:1px solid #DE9C00;
+	padding:10px;
+}
+

@@ -1,0 +1,839 @@
+/*****************
+* contenus g�n�riques
+******************/
+
+/* ======== produit et contact ========= */
+/* on affiche un produit avec une image sur la gauche et la description sur la droite. Le contact se pr�sente exactement pareil et le code est identique.
+Afin de ne pas faire de  redondance de code, les s�lecteurs seront simplement d�doubl�s.
+ /* lot2 */
+.produit .number, .produit .img, .contact .number, .contact .img{
+  float:left;
+}
+.produit, .produit .desc, .contact, .contact .desc, .avis, .avis .desc{
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+/*contexte formatage */
+.produit .number, .produit .number span, .contact .number, .contact .number span{
+  display:block;
+  background:url(img/block_gris_number_corners.png) no-repeat left bottom;
+}
+.produit .number span, .contact .number span{
+			padding: 1em 0 1em 0;
+			width: 1.1em;
+  text-align:center;
+  font-size:1.8em;
+}
+.produit .number, .contact .number{
+  background-position:left top;
+  padding:5px 0 0 0;
+  margin:0 1px 0 0;
+}
+.produit .img, .contact .img{
+  margin-right:10px;
+}
+.contact .img{
+  padding-right:10px;
+  border-right:1px solid #000;
+}
+.produit .img img, .contact .img img{
+  display:block;
+}
+.produit .desc .img{ /* lorsque l'image est dans la description, cas de mise en avant, on supprime les propri�t�s d�clar�es pr�c�demment */
+  float:none;
+  margin:8px 0;
+  text-align:center;
+}
+.produit .desc .img img{
+  margin:0 auto;
+}
+.produit dt, .contact dt{
+  /*line-height:0.9em;*/
+  font-weight:bold;
+  font-size:1.1em;
+}
+.produit dt, .produit dt a{
+  color:#666; /* gris fonc� */
+/*  text-decoration:none; TOUSSI */
+}
+.contact dt, .contact dt a{
+  color:#DE9C00; /* moutarde */
+/*  text-decoration:none; TOUSSI */
+}
+.produit *, .contact *{
+  margin:0;
+  padding:0;
+}
+.produit .details, .produit .resume,.produit .details a{
+  color:#666; /* gris */
+}
+.contact .details{
+  color:#000;
+}
+.contact .details strong{ /* les d�tails important sont en couleur moutarde */
+  color:#DE9C00;
+}
+.produit .resume{
+  margin:8px 0;
+}
+.produit .pictoProduitSmall{
+  margin:3px 0;
+}
+.produit .pictoProduitNormal{
+  margin:3px 0;
+}
+.produit .pictoProduitBig{
+  margin:3px 0;
+}
+#col_droite .produit .prix{
+  margin:0;
+}
+
+/* gestion background des prix + couleurs dans les differentes declinaisons de tailles */
+
+#col_droite .produit dd.pictoProduitSmall{
+  padding-left:20px;
+  background-position:0;
+}
+#col_droite .produit dd.pictoProduitNormal{
+  padding-left:20px;
+  background-position:0;
+}
+#col_droite .produit dd.pictoProduitBig{
+  padding-left:20px;
+  background-position:0;
+}
+#page .produit dd.pictoProduitSmall{ /* soucis d heritage sous IE6 */
+  padding-left:28px;
+}
+#page .produit dd.pictoProduitBig{ /* soucis d heritage sous IE6 */
+  padding-left:28px;
+}
+
+.produit dd.pictoProduitSmall{
+  background-position:10px 0;
+  background-repeat:no-repeat;
+}
+.produit dd.pictoProduitNormal{
+  background-position:10px 0;
+  background-repeat:no-repeat;
+}
+.produit dd.pictoProduitBig{
+  background-position:10px 0;
+  background-repeat:no-repeat;
+}
+.listeproduits .produit dd, .listeproduits .produit dt{
+  padding-left:0;
+  padding-right:0;
+}
+.produit dd.pictoProduitSmall{
+  padding-left:18px;
+}
+.produit dd.pictoProduitNormal{
+  padding-left:38px;
+}
+.line_3cols .produit dd.pictoProduitSmall, .line_3cols_mea .produit dd.pictoProduitSmall{
+  padding-left:28px;
+}
+.line_3cols .produit dd.pictoProduitNormal, .line_3cols_mea .produit dd.pictoProduitNormal{
+  padding-left:38px;
+}
+.line_2cols .produit dd.pictoProduitSmall, .line_2cols_mea .produit dd.pictoProduitSmall{
+  padding-left:18px;
+}
+.line_2cols .produit dd.pictoProduitNormal, .line_2cols_mea .produit dd.pictoProduitNormal{
+  padding-left:28px;
+}
+/*inutilise*/.produit dd.pictoProduitBig{
+  padding-left:38px;
+}
+.listeproduits .produit dd.pictoProduitSmall{
+  background-position:0 0;
+}
+.listeproduits .produit dd.pictoProduitNormal{
+  background-position:0 0;
+}
+.listeproduits .produit dd.pictoProduitBig{
+  background-position:0 3px;
+}
+.produit dd.pictoPrixAdhSmall{
+  background-image:url(img/offre-adherents-small.png);
+}
+.produit dd.pictoPrixAdhNormal{
+  background-image:url(img/spt-pictos.png);background-position: 0px -193px;
+}
+.produit dd.pictoPrixAdhBig{
+  background-image:url(img/spt-pictos.png);background-position: 0px -193px;
+}
+.produit dd.pictoPrixVertSmall{
+  background-image:url(img/prix-vert-small.gif);
+}
+.produit dd.pictoPrixVertNormal{
+  background-image:url(img/minipictovert.gif);
+}
+.produit dd.pictoCoupDeCoeur{
+  background-image:url(img/coup-de-coeur.gif);
+}
+.produit dd.pictoAffaireFnac{
+  background-image:url(img/minipictoaffaire.gif);
+}
+.produit dd.pictoPrixVertBig{
+  background-image:url(img/prix-vert.gif);
+}
+.produit dd.pictoPrixRougeSmall{
+  background-image:url(img/bonne-affaire-small.gif);
+}
+.produit dd.pictoPrixRougeNormal{
+  background-image:url(img/minipictoaffaire.gif);
+}
+.produit dd.pictoPremierPrix {
+  background-image:url(img/mini1erprix.gif);
+}
+.produit dd.pictoPrixRougeBig{
+  background-image:url(img/bonne-affaire.gif);
+}
+.produit dd.pictoSoldesNormal{
+  background-image:url(img/soldes24.png);
+}
+
+.produit dd.pictoAdutalent {background:url(img/star.gif) 10px 0px no-repeat ;}
+.produit dd span.pictomp3{background:url(img/mp3.gif) right no-repeat;padding:0 34px 0 0;}
+.produit dd.pictoMp3 {background:url(img/mp3.gif) 60px 3px no-repeat;}
+.produit dd.pictoMp3block {background:url(img/mp3.gif) 10px 0px no-repeat;margin:10px 0 -5px 0px;}
+*+html .produit dd.pictoMp3block {margin:10px 0 8px 0px;}
+*html .produit dd.pictoMp3block {margin:10px 0 12px 0px;}
+.produit dd.pictoCameraTexteBleu {background:url(img/camera.gif) 10px 0px no-repeat ;color:#006699;font-weight:bold;font-size:12px;height:16px;}
+.produit dd.pictoCameraTexteBleu  strong{margin:0 0 0 25px;}
+.produit dd.pictoDiamond{background:url(img/diamond.gif) 0px 0px no-repeat;}
+.produit dd.pictostar{background-image:url(img/star.gif);}
+.produit dd.pictoGaming{background-image:url(img/picto_occaz-gaming_sur_gris_22x22.png);}
+
+/*import ancienne feuille de style*/
+.produit dd.pictocoeur{
+  background-image:url(img/spt-pictos.png);background-position: 0px -235px;
+}
+/*
+404
+.produit dd.picto20pourcent{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipicto20pourcent.gif);
+}
+.produit dd.picto38pourcent{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipicto38pourcent.gif);
+}
+.produit dd.pictopremier{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipictopremier.gif);
+}
+*/
+.produit dd.pictoadh{
+  background-image:url(img/minipictoadh.gif);
+}
+/* 404
+.produit dd.pictoadh6{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/minipictoadh6.gif);
+}
+*/
+.produit dd.pictotalent{
+  background-image:url(img/minipictotalent.gif);
+}
+.produit dd.pictoLivreSmall{
+  background-image:url(img/livre-small.gif);
+}
+.produit dd.pictoLivre{
+  background-image:url(img/livre.gif);
+}
+.produit dd.picto10Ans {
+  background-image:url(img/10ans.gif);
+}
+.produit dd.pictoSourisSmall{
+  background-image:url(img/souris-small.gif);
+}
+.produit dd.pictoSouris{
+  background-image:url(img/souris.gif);
+}
+.produit dd.pictopanier{
+  background-image:url(img/ACC_pictopanier.gif);
+}
+.produit dd.pictotelecharger{
+  background-image:url(img/LIVtelecharger_jaune.gif)
+}
+.produit dd.pictoCadeauSmall{
+  background-image:url(img/cadeau-small.png);
+}
+.produit dd.pictoCadeau{
+  background-image:url(img/noel_picto.png);
+}
+dd.pictoCadeauFnacmusic{background:url(img/gift.gif)  0px 0px no-repeat;padding:4px;}
+dd.pictoCadeauFnacmusic{margin:0;}
+dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
+
+.produit dd.pictoexcluadh{
+  background-image:url(img/minipictoexcluadh.png);
+}
+/* 404
+.produit dd.pictoideecadeau{
+  background-image:url(http://www.fnac.com/Img/v2/pictos/pictoideecadeau.png);
+}
+*/
+
+.produit dd .delStylePrice{
+  font-weight:normal;
+  font-size:.65em;
+  font-style:normal;
+  color:#000;
+}
+
+/* contact */ /* lot2 */
+.contact_presentation .img{
+  float:none;
+  border:none !important;
+  margin:5px 0;
+}
+.contact_presentation .desc dt{
+  font-size:1.6em;
+  margin:10px 0;
+}
+
+/* liste produits */
+.listeproduits, .listeproduits li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.listeproduits li, .block .listeproduits li{ /* lot2 :update */
+  border-bottom:1px solid #ccc; /* gris clair */
+  padding:8px 0;
+}
+.flatproduit li, .block .flatproduit li{ /* maquette seb */
+  border-bottom:none; /* suppression bordure */
+}
+.slim_block .listeproduits li, .slim_block .block .listeproduits li{ /* lot2 :update */
+  padding:2px 0;
+  _zoom:1;
+}
+.listeproduits .produit dd, .listeproduits .produit dt{ /* pour eviter de generaliser le padding */
+/*   padding-left:0;
+  padding-right:0; */
+}
+#col_gauche .listeproduits li, #col_droite .listeproduits li{
+  padding:4px 0;
+}
+.listeproduits li.last, .block .listeproduits li.last{
+  border:none;
+}
+.lst_nobrd li{
+  border:none !important;
+}
+
+/* liste de produits en 2 colonnes avec une liste de produits (ul) par colonne */
+.listeprod_2cols{
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1
+}
+.listeprod_2cols ul{
+  float:left;
+  width:48%;
+}
+.listeprod_2cols ul.last{
+  float:right;
+}
+
+/* liste de produits en 2 colonnes :avec une seule liste qui constitue la colonne, chaque LI est flott� gauche (float:left), des bordures sont rajout�es selon le block conteneur */
+ul.liste_2cols{ /* lot2 */
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+ul.liste_2cols li{ /* lot2 */
+  clear:left;
+  float:left;
+  width:47%;
+  margin:5px 0;
+}
+
+ul.liste_2cols li.even{ /* lot2 */
+  clear:right;
+  float:right;
+}
+
+ul.liste_2cols_Vseparator li{
+  border:0 !important;
+}
+ul.liste_2cols_Vseparator li.even{
+  border-left:1px solid #CCC !important; /* gris */
+  padding-left:10px;
+}
+
+/* liste de produits conseill�s :liste en ligne pr�sent�e par 3 produits (largeur 30%) avec bordure s�paratrice.*/
+.produits_conseilles,.produits_conseilles li{ /* lot2 */
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.produits_conseilles{
+  /* contexte formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.produits_conseilles li{ /* on d�finit les styles du LI */  /* lot2 */
+  float:left;
+  border-right:1px solid #FFF; /* blanc */
+  padding:0 10px;
+  width:30%;
+}
+.produits_conseilles li.last{  /* lot2 */
+  border:0;
+}
+.produits_conseilles li li{ /* il faut supprimer les styles des sous li */ /* lot2 */
+  float:none;
+  border:0;
+  padding:0;
+  width:auto;
+}
+/* liste de produits align�s sur une ligne */
+ul.liste_inline{ /* lot2 */
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+ul.liste_inline li{ /* lot2 */
+  float:left;
+  width:23.3%;
+  margin-right:10px;
+}
+ul.liste_inline li.last{ /* lot2 */
+  margin-right:0;
+}
+ul.liste_inline .contact, ul.liste_inline .desc{ /* le contexte de formatage bug sous FF avec un overflow :hidden, alors on passe au display:table; */
+  overflow:visible;
+  display:table;
+}
+
+/* evaluations */
+ul.liste_evaluations li{
+  /* context formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+ul.liste_evaluations .produit{
+  float:left;
+  width:50%;
+}
+ul.liste_evaluations .evaluation{
+  color:#000;
+  border-left:1px solid #B2B2B2; /* gris */
+  padding-top:5px;
+  float:right;
+  width:17.27em;
+}
+ul.liste_evaluations .evaluation .pred, ul.liste_evaluations .evaluation .eval{
+  margin:0;
+  padding:5px;
+  /* contexte de formatage */
+  _overflow:hidden;
+  overflow:visible;
+  zoom:1;
+}
+ul.liste_evaluations .evaluation .eval{
+  background:#EDEDED; /* gris */
+}
+ul.liste_evaluations .evaluation strong{
+  float:left;
+  width:9.55em; /* 105px par calcul */
+}
+ul.liste_evaluations .evaluation .eval strong{
+  color:#DE9C00; /* moutarde */
+}
+ul.liste_evaluations .evaluation .link{
+  margin:2px 0 0 0;
+  padding-right:10px;
+  text-align:right;
+}
+ul.liste_evaluations .evaluation a{
+  text-decoration:none;
+  color:#000; /* noir */
+}
+
+/* liste_contact :liste de contact, elle se comporte comme une liste de produits */
+.listecontacts, .listecontacts li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+ul.liste_3cols li{ /* on ne veut que 3 �l�ments */
+  width:30%;
+  padding-right:20px;
+  margin-right:10px;
+}
+ul.liste_3cols li.last{
+  margin:0;
+  padding:0;
+}
+
+/* avis :Avis sur un produit. Pr�sent� presque � l'identique */
+.avis{
+  margin-top:5px;
+}
+.avis .note{
+  float:left;
+  margin-right:10px;
+  width:47px; /* largeur d'une mini image */
+}
+.avis .desc dd{
+  margin:0;
+}
+.avis .desc dt{
+  font-weight:bold;
+}
+/* =========== separator ============ */
+.sep{
+  border-bottom:1px solid #000; /* noir */
+  margin:0;
+}
+.blk_content .sep{
+  margin:10px 0
+}
+
+/* ========== prix ========== */
+.prix{
+  font-weight:bold;
+  font-size:1.6em;
+  color:#000; /* noir */
+}
+.prixSeul{
+  padding-bottom:7px;
+}
+.prixBarre{
+  color:#666666;
+  font-weight:normal;
+  font-size:.65em;
+  text-decoration:line-through;
+}
+.prix strong{
+  font-size:1.16em;
+}
+.prix img{
+  vertical-align:middle;
+}
+.infosprice{
+  font-weight:normal;
+  color:#000; /* noir */
+  font-style:normal;
+  display:block;
+}
+/* ========= pagination ======== */
+.pagination, .pagination li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.pagination{
+  text-align:center;
+}
+.pagination li{
+  display:inline;
+  margin:0 2px;
+}
+.pagination li, .pagination li a{
+  color:#666666; /* gris */
+}
+.pagination li a{
+  text-decoration:underline;
+}
+.pagination li.current{
+  color:#E19A04; /* moutardeF6 */
+}
+.pagination li.before a, .pagination li.after a{
+  text-decoration:none;
+}
+/* ======== lists of links ========*/
+/*links_mea :conteneur de groups de liens avec une image sur la gauche */
+.links_mea, .links_mea li{
+  list-style:none;
+  margin:0;
+  padding:0;
+
+}
+.links_mea{
+  border-bottom:1px solid #000; /* noir */
+  font-size:0.9em;
+}
+.links_mea li{
+  border-top:1px solid #000; /* noir */
+  padding:2px 3px;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.links_mea li img{
+  float:left;
+  margin-right:5px;
+}
+.links_mea ul{ /* lot2 */
+  margin:0;
+  padding:0;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.links_mea ul, .links_mea ul li{
+  border:0;
+}
+
+/* links */
+.links, .links li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+/* links in block footer */
+.blk_footer .links li{
+  border-top:solid 1px white;
+  padding:2px 10px;
+  zoom:1;
+}
+
+.block_noir .blk_footer .links li{
+  border-top-color:#FFFFFF;
+}
+.blk_footer .links li.first{
+  border-top:none;
+  _zoom:1;
+}
+.blk_footer .links li.last_blanc {
+  color:#fff;
+}
+.links{
+  color:#DE9C00; /* moutarde */
+}
+.links a, .adherents .links a{ /* lot2 :update */
+  color:#DE9C00; /* moutarde */
+  text-decoration:none;
+}
+.links span.type2, .links span.type2 a{
+  color:#666 !important; /* gris fonc� */
+}
+.links a:hover{
+  text-decoration:underline;
+}
+.blk_footer .links, .blk_footer .links a{
+  color:#666; /* gris fonc� */
+}
+/* links_lines */
+.links_lines, .links_lines li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.links_lines li{
+  display:block;
+  background:#ccc; /* gris clair */
+  padding:2px 0 2px 15px;
+  _height:0; /* haslayout IE */
+  color:#000; /* noir */
+  text-decoration:none;
+}
+.links_lines a{
+  color:#000; /* noir */
+  text-decoration:none;
+}
+.links_lines a:hover{
+  text-decoration:underline;
+}
+#col_gauche .links_lines li{
+  padding-left:10px; /* ne pas mettre padding, car 1 seule valeur est remplac� car on a un cas sp�cifique et seul le left doit etre changer, sans alt�rer les autres padding */
+}
+.links_lines li{
+  margin-top:1px; /* ne pas changer */
+}
+.links_lines li.first{
+  margin-top:0;
+}
+/* ==== contenus ==== */
+.listeimages, .listeimages li{
+  padding:0;
+  margin:0;
+  text-align:center;
+  list-style:none
+}
+.listeimages li{
+  margin:2px 0;
+  _height:1%; /* haslyout IE */
+  text-align:center;
+}
+.listeimages li a{
+  display:block; /* le block doit faire la largeur de son contenu pour que celui-ci soit centr� horizontalement, donc width:1% pour IE et display:table pour les autres */
+  display:table;
+  _width:1%;
+  margin:0 auto;
+  text-decoration:none;
+}
+.listeimages li a img{
+  display:block;
+}
+/* ======= tags ======== */
+.tags{
+  font-size:0.8em;
+  font-family:Arial, Verdana
+}
+.tags a{
+  color:#666; /* gris */
+  font-weight:bold;
+  text-decoration:none
+}
+.tags a:hover{
+  text-decoration:underline
+}
+/* ====== topbuttons ====== */
+ul.topbuttons, ul.topbuttons li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+ul.topbuttons li{
+margin-bottom:15px;
+}
+
+/*************  contenus customs ************/
+.gradient_bottom{
+  padding-bottom:8px !important;
+  background:url(img/gradient_bottom.gif) repeat-x left bottom;
+}
+
+/* ===== Couleurs de texte g�n�rales ===== */
+.pictoPrixVertSmall, .pictoPrixVertNormal, .pictoPrixVertBig, .vert{
+  color:#00AA30 !important;
+}
+.blanc{
+  color:#FFF !important;
+}
+.rouge, .pictoPrixRougeBig, .pictoPrixRougeNormal, .pictoPrixRougeSmall,
+.pictoPrixAdhBig, .pictoPrixAdhNormal, .pictoPrixAdhSmall,
+.pictoSourisSmall, .pictoSouris{
+  color:#DD0000 !important;
+}
+.jaune{
+  color:#F9D500 !important;
+}
+.bleu{
+  color:#09C !important;
+}
+.bleuMP{
+  color:#1a3fa7 !important;
+}
+.orange{
+  color:#FE7403 !important;
+}
+.noir{
+  color:#000 !important;
+}
+.gris{
+  color:#828282 !important;
+}
+.grisfonce{
+  color:#666 !important;
+}
+
+.grisclair{
+  color:#CCCCCC !important;
+}
+
+.orangeadh{
+  color:#F89C21 !important;
+}
+
+.moutarde, .moutarde-lk, .moutarde-lk a{
+  color:#DE9C00 !important;
+}
+.vert{
+  color:#008C7C !important;
+}
+.vertclair{
+	color:#A0C51D !important;
+}
+.vert2{
+	color:#44b716 !important;
+}
+.jauneAdh{
+  color:#F9D500 !important;
+}
+.marron{
+color:#DA9914 !important;
+}
+
+/* ===== texte ===== */
+.font0-8{
+	font-size:0.8em !important;
+}
+
+.fontnormal{
+  font-weight:normal !important;
+}
+.fontsmaller{
+  font-size:0.9em !important;
+}
+.fontsizenormal{
+  font-size:1em !important;
+}
+.fontbigger{
+  font-size:1.1em !important;
+}
+.fontbiggerplus{
+  font-size:1.5em !important;
+}
+
+
+
+/****************
+* Boutons
+****************/
+.button, .button span{
+  background:url(img/bouton_noir_background.png) no-repeat left top;
+  display:-moz-inline-box;
+  display:inline-block;
+  /* propri�t�s particuli�res du display qui donne au block une
+     consistance de block mais un comportement inline, la premiere
+     propriete est pour Firefox, la seconde pour tous les autres
+     navigateurs
+  */
+}
+.buttonNoirMiddle, .buttonNoirMiddle span{
+  background-image:url(img/bouton_noirmiddle_background.png);
+}
+.button{
+  padding-left:15px;
+  cursor:pointer;
+  text-decoration:none;
+  border:none;
+}
+.button:hover{
+  text-decoration:none;
+}
+.button span{
+  padding:4px 15px 0 0;
+  height:24px;
+  display:block;
+  font-weight:bold;
+  background-position:right top;
+  color:#FFF; /* blanc */
+  !width:1%;
+  !white-space:nowrap;
+}
+.button span.img{
+  padding-top:1px;
+}
+
+.fullwidth, .fullwidth span{
+  display:block;
+  width:auto;
+}

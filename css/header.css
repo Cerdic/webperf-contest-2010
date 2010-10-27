@@ -1,0 +1,257 @@
+/* ======********====================
+          HEADER
+ ========********===================*/
+
+#HEADER{
+	/* initialement sur #page */
+		  margin:0 auto 0;
+		  min-width:996px;
+		  width:83em;
+	/* === */
+  position:relative;
+  z-index:55;
+  font-family:Arial,Helvetica,Verdana,sans-serif;
+}
+#HEADER *{/*cursor:default;*/margin:0;padding:0}
+#HEADER ul{list-style:none;}
+#HEADER a, #HEADER a *{cursor:pointer;}
+
+
+  /* ======* TOP *==================*/
+  #TOP{height:91px}
+	/*-----*/
+    #topLEFT{float:left;width:147px;margin:0;}
+      #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(img/logo-fnac-png24.png) no-repeat 0 0}
+      * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6*/
+    /*-----*/
+	#topRIGHT{margin-left:148px}
+	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(img/background-chaines.png) no-repeat top right}
+	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/sprite-chaines.png) no-repeat -820px 0;}
+	    #CHAINES li.first{background:none}
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(img/sprite-chaines.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
+	      #CHAINES li a:active{outline:none}
+	      #ch-Myfnac a{width:82px; background-position:0 0 }
+		  #ch-Actu a{width:97px; background-position:-83px 0 }
+		  #ch-Telech a{width:137px; background-position:-181px 0 }
+		  #ch-Passion a{width:137px; background-position:-319px 0 }
+		  #ch-Labo a{width:100px; background-position:-457px 0 }
+		  #ch-Magasins a{width:126px; background-position:-558px 0 }
+		  #ch-Adherents a{width:128px; background-position:-685px 0 }
+	  /*-*/
+	  #SEARCH{float:left;width:64.5%;padding-top:18px;}
+
+	  /*-*/
+	  #MONCOIN{float:left;width:35%;padding-top:18px;}
+	    #monCompte{float:left;width:33%;padding-top:4px}
+	      #monCompte img{vertical-align:-15%;padding-right:5px}
+	      #monCompte a{color:#000;background:url(img/spt-pictos.png) no-repeat -10px -117px;padding-left:17px;text-decoration:underline}
+	      #monCompte a:hover{text-decoration:none;}
+	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
+	    * html HeaderBasket{width:15.7em;}
+		  #monPanier #cartouche{position:relative;z-index:9999;height:23px;padding-left:6px}
+		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(img/background-panier.png) no-repeat left bottom;}
+			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
+			* html #monPanier #cartouche p{width:176px}
+				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(img/spt-pictos.png) no-repeat -10px -152px;}
+				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none;}
+				#monPanier .recapPanier a:hover {text-decoration:underline}
+				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
+				#monPanier .totArticles a {color:#FFF;text-decoration:none}
+				#monPanier .totArticles a:hover {text-decoration:underline}
+				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(img/spt-pictos.png) no-repeat -10px -51px;cursor:pointer}
+			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
+				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
+				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
+				#monPanier #detailPanier a{color:#FFF}
+				#monPanier #detailPanier dt {width:8.5em;float:left;font-weight:normal;margin:0}
+				#monPanier #detailPanier dd {width:5.5em;float:left;margin:0}
+				#monPanier .poignee{text-align:center;margin:0}
+				#monPanier .poignee img{display:block;margin:0 auto}
+		  #monPanier .basketInfo{color:#000;margin:0;padding:0 0 0 10px}
+    /*-----*/
+
+  /* ======* MENU *=================*/
+  #MENU{clear:both;position:relative;height:42px;}
+  * html #MENU{zoom:1}/*ie6*/
+  #MENU, #MENU *{margin:0;padding:0;}
+    #MENU #onglets{padding-left:5px}
+
+      #MENU #onglets li{
+		  float:left;
+		  position:relative;
+		  margin-right:2px;
+		  padding-bottom:9px;
+		  background:url(img/reflet-onglets-png24.png) repeat-x 0 34px;
+      }
+      #MENU #onglets li.current,
+      * html #MENU #onglets li{
+      	background-image:none
+      }
+		  #onglets .ongLink{
+			  display:block;
+			  height:36px;
+			  text-indent:-5000px;
+			  background-image:url(img/sprite-onglets-png24.png) ;
+			  background-repeat:no-repeat;
+			  position:relative;
+			  z-index:101;/* 1 couche de plus que les megaMenu */
+		  }
+		  #onglets .ongLink:active{outline:none}
+		  #onglets .current .ongLink{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
+		  #onglets .current .hover, #onglets .current .ongLink:hover{position:relative}/* SAUF si le megaMenu est depli� */
+
+		/* -- positionnement de l'image des onglets -- */
+		  #ong-Livres .ongLink{width:47px; background-position:0 0 }
+		  #ong-Livres.current .ongLink{background-position:0 -100px }
+		  #ong-Livres .hover,
+		  #ong-Livres.current .hover,
+		  #ong-Livres .ongLink:hover{background-position:0 -50px }
+
+		  #ong-Musique .ongLink{width:86px; background-position:-49px 0 }
+		  #ong-Musique.current .ongLink{background-position:-49px -100px }
+		  #ong-Musique .hover,
+		  #ong-Musique.current .hover,
+		  #ong-Musique .ongLink:hover{background-position:-49px -50px }
+
+		  #ong-DVD .ongLink{width:50px; background-position:-137px 0 }
+		  #ong-DVD.current .ongLink{background-position:-137px -100px }
+		  #ong-DVD .hover,
+		  #ong-DVD.current .hover,
+		  #ong-DVD .ongLink:hover{background-position:-137px -50px }
+
+		  #ong-JeuxVideo .ongLink{width:71px; background-position:-189px 0 }
+		  #ong-JeuxVideo.current .ongLink{background-position:-189px -100px }
+		  #ong-JeuxVideo .hover,
+		  #ong-JeuxVideo.current .hover,
+		  #ong-JeuxVideo .ongLink:hover{background-position:-189px -50px }
+
+		  #ong-Jouets .ongLink{width:48px; background-position:-262px 0 }
+		  #ong-Jouets.current .ongLink{background-position:-262px -100px }
+		  #ong-Jouets .hover,
+		  #ong-Jouets.current .hover,
+		  #ong-Jouets .ongLink:hover{background-position:-262px -50px }
+
+		  #ong-Informatique.current .ongLink{background-position:-312px -100px }
+		  #ong-Informatique .ongLink{width:81px; background-position:-312px 0 }
+		  #ong-Informatique .hover,
+		  #ong-Informatique.current .hover,
+		  #ong-Informatique .ongLink:hover{background-position:-312px -50px }
+
+		  #ong-Photo .ongLink{width:67px; background-position:-395px 0 }
+		  #ong-Photo.current .ongLink{background-position:-395px -100px }
+		  #ong-Photo .hover,
+		  #ong-Photo.current .hover,
+		  #ong-Photo .ongLink:hover{background-position:-395px -50px }
+
+		  #ong-TV .ongLink{width:73px; background-position:-464px 0 }
+		  #ong-TV.current .ongLink{background-position:-464px -100px }
+		  #ong-TV .hover,
+		  #ong-TV.current .hover,
+		  #ong-TV .ongLink:hover{background-position:-464px -50px }
+
+		  #ong-Son .ongLink{width:71px; background-position:-539px 0 }
+		  #ong-Son.current .ongLink{background-position:-539px -100px }
+		  #ong-Son .hover,
+		  #ong-Son.current .hover,
+		  #ong-Son .ongLink:hover{background-position:-539px -50px }
+
+		  #ong-GPS .ongLink{width:63px; background-position:-612px 0 }
+		  #ong-GPS.current .ongLink{background-position:-612px -100px }
+		  #ong-GPS .hover,
+		  #ong-GPS.current .hover,
+		  #ong-GPS .ongLink:hover{background-position:-612px -50px }
+
+		  #ong-Gadgets .ongLink{width:57px; background-position:-677px 0 }
+		  #ong-Gadgets.current .ongLink{background-position:-677px -100px }
+		  #ong-Gadgets .hover,
+		  #ong-Gadgets.current .hover,
+		  #ong-Gadgets .ongLink:hover{background-position:-677px -50px }
+
+		  #ong-TiragesPhoto .ongLink{width:52px; background-position:-736px 0 }
+		  #ong-TiragesPhoto.current .ongLink{background-position:-736px -100px }
+		  #ong-TiragesPhoto .hover,
+		  #ong-TiragesPhoto.current .hover,
+		  #ong-TiragesPhoto .ongLink:hover{background-position:-736px -50px }
+
+		  #ong-Evenement .ongLink{width:65px; background-position:-790px 0 }
+		  #ong-Evenement.current .ongLink{background-position:-790px -100px }
+		  #ong-Evenement .hover,
+		  #ong-Evenement.current .hover,
+		  #ong-Evenement .ongLink:hover{background-position:-790px -50px }
+
+		  #ong-Spectacles .ongLink{width:69px; background-position:-857px 0 }
+		  #ong-Spectacles.current .ongLink{background-position:-857px -100px }
+		  #ong-Spectacles .hover,
+		  #ong-Spectacles.current .hover,
+		  #ong-Spectacles .ongLink:hover{background-position:-857px -50px }
+
+		  #ong-Vendre .ongLink{width:50px; background-position:-928px 0 }
+		  #ong-Vendre.current .ongLink{background-position:-928px -100px }
+		  #ong-Vendre .hover,
+		  #ong-Vendre.current .hover,
+		  #ong-Vendre .ongLink:hover{background-position:-928px -50px }
+
+	/* -- les megaMenus -- */
+      #onglets li .megaMenu{
+		  width:514px;
+		  padding:10px;
+		  border:1px solid #727171;
+		  border-bottom-left-radius:5px;
+		  -moz-border-radius-bottomleft:5px;
+		  -webkit-border-bottom-left-radius:5px;
+		  border-bottom-right-radius:5px;
+		  -moz-border-radius-bottomright:5px;
+		  -webkit-border-bottom-right-radius:5px;
+		  background:#FFF url(img/background-megaMenu.png) repeat-x 0 0;
+		  position:absolute;
+		  top:35px;
+		  z-index:100;/* doit reste une couche de moins que le lien des onglets .ongLink */
+		  display:none;
+      }
+	  .posL{left:0}
+	  .posM{left:-200px}
+	  .posR{right:0}
+
+	  #onglets .megaMenu .mainCol,
+	  #onglets .megaMenu .rightCol{
+	  	background-color:white;
+	    border-top-left-radius:5px;
+	    -moz-border-radius-topleft:5px;
+	    -webkit-border-top-left-radius:5px;
+	    border-top-right-radius:5px;
+	    -moz-border-radius-topright:5px;
+	    -webkit-border-top-right-radius:5px;
+	  }
+	  #onglets .megaMenu .mainCol{
+		padding:10px;
+	  	min-height:250px;
+	  	height: auto !important;
+	  	height: 250px;
+	  }
+	  #onglets .megaMenu .rightCol{
+		position:relative;
+		padding:10px 10px 0 10px;
+	  	min-height:21em;
+	  	height: auto !important;
+	  	height: 21em;
+	  }
+	  #onglets .megaMenu .mainCol{width:60%;float:left;}
+	    #onglets .megaMenu .mainColLeft{width:48%;float:left}
+	    #onglets .megaMenu .mainColRight{width:48%;float:right;position:relative;min-height:21em;height:auto !important;height:21em}
+	    #onglets .megaMenu .allProd {position:absolute;bottom:0;font-weight:bold;padding:0}
+	      #onglets .megaMenu .allLink {font-weight:bold;color:#000;}
+	  #onglets .megaMenu .rightCol{width:30%;float:right;}
+		  #onglets .megaMenu dl{margin:0;padding-bottom:7px}
+		    #onglets .megaMenu dt, #onglets .megaMenu dt a{color:#DE9C00;font-weight:bold;margin-bottom:3px}
+		    #onglets .megaMenu dt a{text-decoration:underline}
+		    #onglets .megaMenu dt a:hover{text-decoration:none}
+		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(img/spt-pictos.png) no-repeat -10px -334px;}
+		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
+		      #onglets .megaMenu dd a:hover{text-decoration:underline}
+ 		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
+			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/spt-pictos.png) no-repeat right -309px;}
+
+
+/* ======**** fin header ****====================*/
