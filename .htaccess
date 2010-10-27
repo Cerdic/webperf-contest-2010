@@ -1,2 +1,7 @@
 # [EN] perhaps you should use this file.. :)
-# [FR] vous devriez peut être utiliser ce fichier!
+# [FR] vous devriez peut etre utiliser ce fichier!
+
+<FilesMatch "index.html$">
+	Options +Includes
+	SetOutputFilter INCLUDES
+</FilesMatch>

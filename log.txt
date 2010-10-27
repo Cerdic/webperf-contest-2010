@@ -1,0 +1,147 @@
+commit 0dad80e22984186b6615e0f06679d610087bc83b
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 12:18:18 2010 +0200
+
+    un sprite pour les pictos
+
+commit 1ac6910795e2dd1e04ab94cc80a7e21643c99809
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 11:47:40 2010 +0200
+
+    un sprite pour l'univers hero des enfants
+
+commit 61268b1e2f1de922ba46ebecf48f30f3f0c2992f
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 11:11:56 2010 +0200
+
+    deplacer les images de banniere en background image tout en ameliorant l'accessibilite par rapport a l'origine
+
+commit 18185e5cca9de27b119dc23bf15ab13aa1733cad
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 11:00:23 2010 +0200
+
+    un alt sur les bannieres, c'est un minimum !
+
+commit 559c6891315e04a3896123677bdad99b0d0eb90e
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 10:58:12 2010 +0200
+
+    ces images dans un lien separe (heros) n'apportent aucune information et doublent les lien.
+    Les integrer dans un background, dans le meme lien que le texte ameliore l'accessibilite (pas de doublon de lien identique), l'experience utilisateur (texte et image forme une zone reactive complete) et ouvre la porte aux sprites
+
+commit d3de3f0e24ba90f4ab73d48e7d1586981380dcdf
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 10:38:15 2010 +0200
+
+    ce picto a toute sa place en decoration css (et amelioration de l'ui : lorsqu'on survole le panier, le lien texte change aussi d'etat et offre un retour visuel)
+
+commit c9a1218a412cfe89498853f3115b884145df4d3a
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 10:21:57 2010 +0200
+
+    semantiquement, ce picto a toute sa place en decoration css
+
+commit 6644102e995f7620818162ad87cc4945def99600
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 10:15:57 2010 +0200
+
+    styles inutiles (doublonne footer.css)
+
+commit 44dc0216cedc83d725d4740b0c20be13f43d3161
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 10:13:01 2010 +0200
+
+    rationnaliser les js de popups (qui ne servent pas ici au demeurant...)
+    On les garde pour jouer le jeu, mais on pourrait commenter tout ce code pour le faire disparaitre a la compression
+
+commit dc4b070cf7b316d2fdea557361672a3cfaed48c1
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 09:56:05 2010 +0200
+
+    inutile de charger l'image d'attente a chaque hit. On deporte le html concerne dans une fonction js pour l'injecter quand necessaire (mais pas utilise sur cette page)
+
+commit f7c7b490c59796b2703c06b83a780246dfe49250
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 09:52:45 2010 +0200
+
+    scripts separes pour :
+    - recuperer les prix des articles en json
+    - gerer le player 30s qui n'est pas utilise sur cette page
+
+commit e89504fec8866dd902a890e15382c3acdc52fea1
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 09:51:42 2010 +0200
+
+    j'ai oublie de commit ces fichiers en reintegrant le footer dans index.html
+
+commit c052ab8e5bbdf3704767996d3ceb57eb48fe5285
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 09:51:23 2010 +0200
+
+    j'ai oublie de commit ces fichiers en reintegrant le footer dans index.html
+
+commit a20ba73fbad7a4006d036439d45188df8df6de9d
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 22:57:39 2010 +0200
+
+    ordre des js, et reoptimisation du chargement async des prix et dispo
+
+commit 83920379b5aa7f4c23093d5f65b2d33b3e927eff
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 22:09:47 2010 +0200
+
+    changer l'ordre des js, en cours
+
+commit 4504daa49da123974dbfd88cd088d1b4f17bff3e
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 21:55:48 2010 +0200
+
+    pas besoin d'iframe pour ce footer, une inclusion dans la page est tellement plus simple !
+
+commit 442100611830a64874df782476dbcc4585f1a8a8
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 21:40:05 2010 +0200
+
+    optimisation du js des references produits et dispo
+
+commit 04163f5993029e5573be2fc54e2575b46cf0a0b7
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 21:32:15 2010 +0200
+
+    Nettoyer le js inutile, regrouper les declarations de fonction et le code a executer sur document ready. Lander les requetes json en premier
+
+commit 604fcd62184423f7f4b0fc3e0ffac165057deba7
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 21:16:29 2010 +0200
+
+    Deplacer le js inline dans un script externe (2eme partie)
+
+commit e774330c1875e5fa6e824e06ba1b4e71e7493d49
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 20:46:22 2010 +0200
+
+    Deplacer le js inline dans un script externe (1ere partie)
+
+commit 0b5bb2ce800a692543a15a273ef4df9548ae44c4
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 20:32:07 2010 +0200
+
+    pas besoin de bgiframe sur cette page
+
+commit 3dca30feda006a0f11e6d44557e55ed265cea09c
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 20:17:41 2010 +0200
+
+    Modification des references aux fichiers suite au rangement
+
+commit ad62cf88abdf8ce633ce5ceff469b2344b88731b
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 20:16:49 2010 +0200
+
+    Rangement en dossiers, et stockage dans unused/ de ce qui n'est pas utile ici
+
+commit 1f364b23a1a5ec3409555024408e1756e6a80f33
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Oct 26 19:16:17 2010 +0200
+
+    Import initial

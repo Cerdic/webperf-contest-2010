@@ -1,0 +1,110 @@
+/* Fausse AIDE */
+/**************/
+/* correction pour les pages dans /help/ mais qui ne sont pas des pages d'aide */
+
+.fausseAide a{
+  font-size:.9em;
+  text-decoration:underline;
+  color:#666;
+}
+.fausseAide a:hover{
+  text-decoration:none;
+}
+
+.fausseAide h1{
+  margin:0px;
+  padding:0px;
+  color:#DE9C00;
+  font-size:1.5em;
+}
+
+
+/* =Pages simples plan et marques= */
+.plan #content{color:#000}
+.plan #content .titleh1{color:#000;font-size:1em;margin:0}
+.plan #content h2, .plan #content h2 a{color:#DE9C00;font-size:1.2em;}
+.plan #content .marques h2{font-size:1.4em;font-weight:bold;padding-left:5px}
+.plan #content h2{border-bottom:1px solid #DE9C00;}
+.plan #content h3, .plan #content h3 a{color:#333;font-size:1.1em}
+.plan #content ul, .plan #content li{margin:0;padding:0}
+.plan #content li{list-style-type:none;padding:1px 0;color:#666;}
+.plan #content li a{color:#000;}
+.plan #content h2{margin:15px 0 5px 0}
+.plan #content h2{margin-bottom:5px}
+.plan #content h3{margin-bottom:3px}
+.plan #content .col5{float:left;width:18%;}
+.plan #content .col4{float:left;width:23%;}
+.plan #content .col3{float:left;width:31%;}
+.plan #content div{overflow:hidden}
+
+
+/* page magazine contact */
+.mag_contact{
+  margin:0;
+}
+.mag_contact dt{
+  padding:1em 0 0 0;
+  color:#DE9C00;
+  font-size:1.3em;
+  font-weight:bold;
+}
+.mag_contact dd{
+  margin:0;
+  padding:3px 0;
+}
+
+
+/* Petites definitions supplementaires dans les blocks */
+
+.listeEspaceBord li{
+  padding:6px 0;
+  border-bottom:solid 1px;
+}
+.block_moutarde .listeEspaceBord li{
+  border-color:#eecd80;
+}
+.listeEspaceBord li.last{
+  border-bottom:none;
+}
+.bigPlus{
+  font-size:2em;
+  vertical-align:middle;
+}
+
+/* liste fleche */
+/* (exemple  en home entreprise pour liste comuniques et dossiers)*/
+.listeflech dl{
+  border-bottom:1px solid #ccc; /* gris clair */
+  padding: 10px 0;
+  margin:0;
+}
+.listeflech dt, .listeflech dd{
+  padding-left: 20px;
+}
+.listeflech dt{
+  font-weight: bold;
+  color: #DE9C00;
+}
+.listeflech dd{
+  margin-left:0;
+}
+.listeflech dd.flech{
+  background: url(img/fleche_bottom_right.png) no-repeat 0 0.2em;
+}
+
+
+
+
+/* ===================
+ Conseils Persos
+=====================*/
+.conseilperso {background-image:url(img/conseil_perso_ul_bg.jpg);background-repeat:no-repeat;background-position:left top;padding:0;margin:0}
+.conseilperso li {padding:8px;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;border-bottom:solid 1px #cccccc;background-image:url(img/conseil_perso_li_bg.jpg);background-repeat:no-repeat;background-position:left bottom;}
+.conseilperso li.last {background:none;border:none;padding-bottom:0}
+.conseilperso .produit .img {margin-right:2px;}
+.conseilperso .produit dt,.conseilperso .produit dd {padding-left:8px}
+.conseilperso .produit dt,.conseilperso .produit dt	a {color:#000}
+.cperso_btm {background-image:url(img/myfnac_logo.jpg);background-repeat:no-repeat;background-position:right 0;height:50px;margin:0;padding:20px 0 0 0}
+.cperso_btm ul {padding:0;margin:0}
+.cperso_btm li {padding:0;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;}
+/* *** */
