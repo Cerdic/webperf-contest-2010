@@ -54,6 +54,7 @@ background-position: right top;
 /****************
 * inside_block :block � l'int�rieure d'un block
 *******************/
+/* vu */
 .inside_block{ /* lot2 */
   position:relative;
   zoom:1; /* ie bug fix */

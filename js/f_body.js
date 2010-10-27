@@ -45,7 +45,7 @@ function SonDiapo(u) {window.open(u,'diaporama','top=0,left=0');}
 function EteFnac(u,l,h) {window.name = 'ete_fnac';PopUpBase(u,'EteFnac',l,h,true,false);}
 function PopupLibre(u,l,h) {PopUpBase(u,'diaporama',l,h,true);return false;}
 function PopupNoLibre(u,l,h) {PopUpBase(u,'diaporama',l,h,true);return false;}
-
+/*
 function switcherBandeau(id){
  m = document.getElementById("bandeauTournantImages");
  l = m.getElementsByTagName("img");
@@ -58,7 +58,7 @@ function switcherBandeau(id){
 	 }
  }
 }
-
+*/
 //-------
 
 var nbBanner = 3;

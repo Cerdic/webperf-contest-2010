@@ -13,7 +13,7 @@
 #navigation, .navigation, body.enfants #navigation {
   font-size:0.9em;
 }
-#navigation, #navigation *, .navigation, .navigation *, body.enfants #navigation, body.enfants #navigation * {
+#navigation dl,#navigation dt, #navigation dd {
   margin:0;
   padding:0;
 }
@@ -21,7 +21,7 @@
 #navigation {
   margin-top:7px;
 }
-/* on pose le cas o� la vignette livraison pr�c�de directement le menu gauche */
+/* on pose le cas ou la vignette livraison precede directement le menu gauche */
 #col_gauche_header + #navigation * {
   padding:0 !important;
   margin:0 !important;
@@ -31,117 +31,32 @@
   margin:0 !important;
 }
 #titres + #navigation {
-  padding:0 !important;
+  padding-top:0 !important;
   margin-top:0 !important;
 }
 
-#navigation .header h1,.navigation .header h1,#navigation .header, #navigation .header h2, #navigation .bottom, #navigation .bottom div, .navigation .header, .navigation .header h2, .navigation .bottom, .navigation .bottom div
-{
-  background:url(img/navn2_background.png) no-repeat left top;
-}
-/*body.enfants #navigation .header .topleft, body.enfants #navigation .header, body.enfants #navigation .header h2, body.enfants #navigation .bottom, body.enfants #navigation .bottom div
-{
- background:url(/Img/v2/skin/navn3_background.png) no-repeat left top;
-}*/
-#navigation .header, #navigation .bottom , .navigation .header, .navigation .bottom, body.enfants #navigation .header, body.enfants #navigation .bottom{
-  padding:0 0 0 14px;
+#navigation {
+	padding-bottom:12px;
+	background: #ffffff url(img/box-bot-reflet-186.png) no-repeat bottom left;
 }
 
-#navigation .header h1, .navigation .header h1, body.enfants #navigation .header .topleft, #navigation .header h2, #navigation .bottom div, .navigation .header h2, .navigation .bottom div, body.enfants #navigation .header h2, body.enfants #navigation .bottom div{
-  padding:0 6px 0 0;
-  min-height:6px;
-  _height:6px;
+#navigation .box-border {
+	border:1px solid #999;
+	-moz-border-radius : 10px;
+	-wekbit-border-radius : 10px;
+	border-radius : 10px;
+	padding:5px 0;
 }
-#navigation .header h2,.navigation .header h2, body.enfants #navigation .header h2,
-#navigation .header h1,.navigation .header h1, body.enfants #navigation .header .topleft,
-#navigation .header .topleft{
-  background-position:right top;
-  padding:0;
-  color:#DE9C00; /* moutarde */
-  font-size:1em;
-  font-weight:normal
-}
-#navigation .header h2 img,.navigation .header h2 img, body.enfants #navigation .header h2 img,
-#navigation .header h1 img,.navigation .header h1 img, body.enfants #navigation .header .topleft img  {
-  display:block;
-  padding:12px 0 8px 0;
-}
-#navigation .bottom, .navigation .bottom {
-  background-position:0 -150px;
-}
-/*body.enfants #navigation .bottom { background-position:0 -152px; }*/
-#navigation .bottom div,.navigation .bottom div, body.enfants #navigation .bottom div {
-  background-position:right -150px;
-  padding:25px 0 0 0;
-  min-height:0;
-  height:auto;
-  font-size:1px;
-}
+
 #navigation dl,#navigation ul, .navigation dl, .navigation ul {
   background:#FFF; /* blanc */
-  border:1px solid #999; /* gris */
-  border-width:0 1px;
   padding:0 12px; /*lot2 :update */
   color:#000; /* noir */
 }
 #navigation .arboListe{
-  border:1px solid #999; /* gris */
-  border-width:0 1px;
-  padding-top:5px;
-}
-/*body.enfants #navigation .arboListe{
-  border:none;
-}
-body.enfants #navigation .arboListe .moutarde{
-  color:#FFF!important;
-}*/
-
-
-#navigation .arboActu dl, #navigation .arboListe dl, #navigation .arboActu ul, #navigation .arboListe ul {
-  padding-bottom:1em;
-  border:0;
-}
-#navigation .arboActu {
-  position:relative;
-}
-#navigation .arboActu dl {
-  background:#f3f3f3;
-}
-#navigation .arboActu span {
-  width:10px;
-  height:10px;
-  display:block;
-  position:absolute;
-}
-#navigation .arboActu span.tl {
-  background-color:#f00;
-  top:0;
-  left:12px;
-  _left:0;
-}
-#navigation .arboActu span.tr {
-  background-color:#f00;
-  top:0;
-  right:12px;
-}
-#navigation .arboActu span.bl {
-  background-color:#f00;
-  bottom:0;
-  left:12px;
-  _left:0;
-}
-#navigation .arboActu span.br {
-   background-color:#f00;
-  bottom:0;
-  right:12px;
-  _right:0;
+  padding:5px 0;
 }
 
-body.enfants #navigation dl, body.enfants #navigation ul{
-  /*background-color:#d545ff; /* mauve */
-  padding:0 12px; /*lot2 :update */
-  /*color:#fff; /* blanc */
-}
 #navigation ul,.navigation ul{
   list-style-type:none;
 }
@@ -159,7 +74,7 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
 }
 #navigation dl dt,.navigation dl dt{
   font-weight:bold;
-  padding: 7px 0 3px 0;
+  padding: 5px 0 6px 0;
   font-size:1.1em;
 }
 #navigation dl dd, #navigation ul li, .navigation dl dd, .navigation ul li{
@@ -170,7 +85,13 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
   padding: 5px 0 3px 5px;
   font-size:1em;}
 
-#navigation .blkGris .inside_block, #navigation .blkOcre .inside_block, .navigation .blkGris .inside_block {
+#navigation .blkGris, #navigation .blkOcre{
+}
+
+#navigation .blkGris .inside_block, #navigation .blkOcre .inside_block {
+	-moz-border-radius : 7px;
+	-wekbit-border-radius : 7px;
+	border-radius : 7px;
 	padding: 5px 0;
   margin: 0 5px;
 }
@@ -179,13 +100,11 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
 	background-color:Transparent;
 	padding:0 5px 0 6px;
 }
-#navigation .blkGris, #navigation .blkOcre, .navigation .blkGris {
-	border-left:1px solid #999;
-	border-right:1px solid #999;
+
+#navigation .blkGris .inside_block {
+			background-color:#EAEAEA;
 }
-#navigation .blkGris dl dt, #navigation .blkOcre dl dt {
-	padding: 0;
-}
+
 #navigation .blkOcre .inside_block {
 			background-color:#FAF1DF;
 }
@@ -196,105 +115,3 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
 #lkActus a, #lkBonPlans a, #lkPrefs a{color:#666 !important;}
 #lkActus .rouge, #lkBonPlans .rouge, #lkPrefs .rouge,
 #lkActus .rouge a, #lkBonPlans .rouge a, #lkPrefs .rouge a{color:#DE0000 !important;}
-
-/* placement de la vignette */
-
-.vignette{
-  display:block;
-  position:relative;
-  top:0;
-  left:-3px;
-  margin-bottom:10px;
-}
-
-/* Bandeau tournant de la home g�n�ral */
-
-#bandeauTournantImages img{
- display:block;
-}
-#bandeauTournantTextes{
-  padding:0;
-  margin:0;
-}
-#bandeauTournantTextes li{
-  padding:0;
-  margin:0;
-  list-style:none;
-}
-#bandeauTournantTextes p{
-  margin:0;
-  padding:0;
-}
-#bandeauTournantTextes p a{
-  display:block;
-  padding:2px 9px;
-  color:#666;
-  background:#F3F3F3;
-  border:solid 1px white;
-  border-color:white #F3F3F3 #F3F3F3 #F3F3F3;
-}
-#bandeauTournantTextes p a:hover{
-  color:#666666;
-  background:#F0F0F0;
-  text-decoration:none;
-  border:solid 1px #DDD;
-}
-#bandeauTournantTextes .activ p a{
-  color:#DE9C00;
-}
-#bandeauTournantTextes .prixBandeau{
-  float:right;
-  font-weight:bold;
-}
-#bandeauTournantTextes .titre{
-  font-weight:bold;
-}
-
-
-#navigation .header .topleft{
-	font-size:1px;
-	height:7px;
-}
-
-#navigation.menumoutarde .header, #navigation.menumoutarde .header .topleft, #navigation.menumoutarde .header h2, #navigation.menumoutarde .bottom, #navigation.menumoutarde .bottom div{
-  background-image:url(img/navn2_background_menumoutarde.png);
-}
-#navigation.menumoutarde dl{
-  background:#e5b033; /* moutarde clair*/
-  color:#000; /* noir */
-  border:1px solid #DE9C00; /* moutarde */
-  border-width:0 1px;
-  padding:0 12px; /*lot2 :update */
-}
-#navigation.menuframboise .header, #navigation.menuframboise .header .topleft, #navigation.menuframboise .header h2, #navigation.menuframboise .bottom, #navigation.menuframboise .bottom div{
-  background-image:url(img/navn2_background_menuframboise.png); /*menu gauche voyages*/
-}
-#navigation.menuframboise dl{
-  background:#EFBECE; /* framboise delavee*/
-  color:#000; /* noir */
-  border:1px solid #B12C55; /* framboise */
-  border-width:0 1px;
-  padding:0 12px;
-}
-#navigation.menumoutarde .topleft, #navigation.menuframboise .topleft, #navigation.menumoutarde h2, #navigation.menuframboise h2{
-  padding:0px
-}
-#navigation.menumoutarde dl dt, #navigation.menuframboise dl dt, body.enfants #navigation dl dt{
-  font-weight:bold;
-  padding:5px 0 2px 0;
-}
-#navigation.menumoutarde dl dd, #navigation.menuframboise dl dd,  body.enfants #navigation dl dd{
-  padding:2px 0;
-}
-#navigation.menumoutarde dl a, #navigation.menuframboise dl a{
-  color:#000 /* noir */
-}
-
-
-#navigation.menugris .header, #navigation.menugris .header .topleft, #navigation.menugris .header h2, #navigation.menugris .bottom, #navigation.menugris .bottom div{background-image:url(img/navn2_background_menugris.png);}
-#navigation.menugris dl{background:#a9a9a9;color:#FFF;border:1px solid #939393;border-width:0 1px;padding:0 10px;}
-#navigation.menugris .topleft, #navigation.menugris h2{padding:0px;}
-#navigation.menugris dl dt, body.enfants #navigation dl dt{font-weight:bold;padding:5px 0 6px 0;}
-#navigation.menugris dl dd, body.enfants #navigation dl dd{padding:2px 0;}
-#navigation.menugris dl a{color:#FFF;}
-
