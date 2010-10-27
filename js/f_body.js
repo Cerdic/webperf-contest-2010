@@ -124,10 +124,10 @@ $(function () {
 	// au passage de la souris sur le lien de l'onglet
 	$("#onglets li a").mouseenter(function(){
 			//on affiche son megaMenu
-            $(this).siblings(".megaMenu").css("display","block");
+            $(this).siblings(".megaMenu").addClass('menu_actif').css("display","block");
 	}).mouseleave(function(){
 			//on cache son megaMenu
-            $(this).siblings(".megaMenu").css("display","none");
+            $(this).siblings(".megaMenu").removeClass('menu_actif').css("display","none");
 	});
 	//tant que la souris se trouve sur le megaMenu
 	$(".megaMenu").mouseenter(function(){
