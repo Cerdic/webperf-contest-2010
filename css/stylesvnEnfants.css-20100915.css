@@ -17,12 +17,14 @@
 	#univ_heros li.last {float:right;margin-right:0}
 	
 	/* rollover - opacit� */
-	#univ_heros a.heros_img:hover img {
+	#univ_heros a.heros_desc:hover b {
 	-moz-opacity:0.5;
 	filter:alpha(opacity=50);
 	opacity:0.5;
 }
-	a.heros_desc {display:block;color:#777777;cursor:pointer;margin-top:.2em;font-size:.8em}
+	a.heros_desc {display:block;color:#777777;cursor:pointer;font-size:.8em;width:101px;text-align: center;}
+	/* image en background */
+	a.heros_desc b {display: block;height:55px;background-repeat: no-repeat;background-position: top left;margin-bottom:.5em;}
 	/* /bloc "leurs h�ros pr�f�r�s..." */
 	
 	/* bloc "Et Aussi..." */
