@@ -850,7 +850,8 @@ body.adherents #subfooter a{
 		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(img/chevron-raquo.png) no-repeat 0 5px}
 		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
 		      #onglets .megaMenu dd a:hover{text-decoration:underline}
- 		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}		      
+ 		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
+			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/picto-coeur.png) no-repeat top right;}
      
 
 /* ======**** fin header ****====================*/
