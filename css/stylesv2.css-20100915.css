@@ -653,9 +653,8 @@ body.adherents #subfooter a{
 		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(img/background-panier.png) no-repeat left bottom;}
 			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
 			* html #monPanier #cartouche p{width:176px}
-				#monPanier img.panier{display:block;float:left;padding-right:5px;}
-				#monPanier .recapPanier{display:block;float:left;width:5.5em;height:23px;}
-				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none}
+				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(img/ico-panier.png) no-repeat top left;}
+				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none;}
 				#monPanier .recapPanier a:hover {text-decoration:underline}
 				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
 				#monPanier .totArticles a {color:#FFF;text-decoration:none}
