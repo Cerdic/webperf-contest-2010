@@ -231,6 +231,8 @@ body.adherents #subfooter a{
   font-weight:bold
   }
 
+#stat {display:none;}
+
 /* === Top Recherche === */
 
 #topRecherche{margin-top:20px}
