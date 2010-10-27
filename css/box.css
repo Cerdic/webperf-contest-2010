@@ -1218,18 +1218,3 @@ background-image:url(img/block_cadre_prod_noir_corner.png);
   width:30px;
   cursor:pointer;
 }
-
-/* page magazine contact */
-.mag_contact{
-  margin:0;
-}
-.mag_contact dt{
-  padding:1em 0 0 0;
-  color:#DE9C00;
-  font-size:1.3em;
-  font-weight:bold;
-}
-.mag_contact dd{
-  margin:0;
-  padding:3px 0;
-}

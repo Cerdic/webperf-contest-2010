@@ -149,3 +149,38 @@ body.popUpCredit #content{
   font-size:1px;/* pour IE */
 }
 
+
+/* Message d'attente */
+#waitingMsg { position:absolute; width:300px; zoom:1; border:1px solid black; background:#fff; padding:20px 10px; font-size:20px; display:none;  z-index:1000 }
+#waitingMsg img {float:left;}
+#waitingMsg p {zoom:1; overflow:hidden;text-align:center; margin:0; margin-left:10px; padding:0; line-height:1.2em;}
+#shadowLayer {background:black; -moz-opacity:0.2; filter:alpha(opacity=20); opacity:0.2; position:absolute; width:100%; top:0; left:0; z-index:999}
+
+/* Popin ajout au panier */
+.basket_popin_big{width:261px;height:187px;text-align:center;background:transparent url(img/bg_pop_ajoutpanier_bleu.png) no-repeat center bottom;color:#000;}
+
+
+/* pop ins  */
+
+div#event1{
+  top: 200px;
+}
+div.event{
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #A3A3A3;
+  width: 210px;
+  z-index: 2000;
+  background-color: #A3A3A3;
+  layer-background-color: #A3A3A3;
+}
+.toggle{
+  float: right;
+  clear: left;
+  padding: 5px;
+}
+.toggle a {
+  color:#FFF !important;
+}
+
