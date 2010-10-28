@@ -122,24 +122,24 @@ $(function () {
 	//-----
 
 	// au passage de la souris sur le lien de l'onglet
-	$("#onglets li a").mouseenter(function(){
+	$("#onglets> li> a").mouseenter(function(){
 			//on affiche son megaMenu
-            $(this).siblings(".megaMenu").addClass('menu_actif').css("display","block");
+            $(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
 	}).mouseleave(function(){
 			//on cache son megaMenu
-            $(this).siblings(".megaMenu").removeClass('menu_actif').css("display","none");
+            $(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
 	});
 	//tant que la souris se trouve sur le megaMenu
 	$(".megaMenu").mouseenter(function(){
 			// il reste affiché
-			$(this).css("display","block");
+			$(this).addClass('menu_actif');
 			// et on applique la classe .hover a son lien
-			$(this).siblings("a.ongLink").addClass("hover");
+			$(this).siblings("a").addClass("hover");
 	}).mouseleave(function(){
 			// il se cache
-			$(this).css("display","none");
+			$(this).removeClass('menu_actif');
 			// et on retire la classe .hover a son lien
-			$(this).siblings("a.ongLink").removeClass("hover");
+			$(this).siblings("a").removeClass("hover");
 	});
 
 	

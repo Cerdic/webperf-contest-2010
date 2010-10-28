@@ -89,109 +89,121 @@
       * html #MENU #onglets li{
       	background-image:none
       }
-		  #onglets .ongLink{
+		  #onglets >li>a{
 			  display:block;
+				padding:3px;
+				height:24px;
+				overflow: hidden;
+			  z-index:100;/* 1 couche de plus que les megaMenu */
+		  }
+			#onglets >li > a > b {
+				position:absolute;
+				top:0;
+				left:0;
+				height:36px;
+				display:block;
 			  height:36px;
-			  text-indent:-5000px;
 			  background-image:url(img/sprite-onglets-png24.png) ;
 			  background-repeat:no-repeat;
-			  position:relative;
 			  z-index:101;/* 1 couche de plus que les megaMenu */
-		  }
-		  #onglets .ongLink:active{outline:none}
-		  #onglets .current .ongLink{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
-		  #onglets .current .hover, #onglets .current .ongLink:hover{position:relative}/* SAUF si le megaMenu est depli� */
+			}
+			#onglets >li>a:active{outline:none}
+		  /*#onglets .current >a>b{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
+		  /*#onglets .current >a.hover>b{position:relative}/* SAUF si le megaMenu est depli� */
+
+			#onglets .megaMenu {display:none;}
+			#onglets .megaMenu.menu_actif {display:block;}
 
 		/* -- positionnement de l'image des onglets -- */
-		  #ong-Livres .ongLink{width:47px; background-position:0 0 }
-		  #ong-Livres.current .ongLink{background-position:0 -100px }
-		  #ong-Livres .hover,
-		  #ong-Livres.current .hover,
-		  #ong-Livres .ongLink:hover{background-position:0 -50px }
+			#ong-Livres {width:47px;}
+		  #ong-Livres >a>b {width:47px; background-position:0 0 }
+		  #ong-Livres.current >a>b{background-position:0 -100px }
+		  #ong-Livres >a.hover>b,
+		  #ong-Livres.current >a.hover>b {background-position:0 -50px }
 
-		  #ong-Musique .ongLink{width:86px; background-position:-49px 0 }
-		  #ong-Musique.current .ongLink{background-position:-49px -100px }
-		  #ong-Musique .hover,
-		  #ong-Musique.current .hover,
-		  #ong-Musique .ongLink:hover{background-position:-49px -50px }
+		  #ong-Musique {width:86px;}
+			#ong-Musique >a>b {width:86px; background-position:-49px 0 }
+		  #ong-Musique.current >a>b{background-position:-49px -100px }
+		  #ong-Musique >a.hover>b,
+		  #ong-Musique.current >a.hover>b {background-position:-49px -50px }
 
-		  #ong-DVD .ongLink{width:50px; background-position:-137px 0 }
-		  #ong-DVD.current .ongLink{background-position:-137px -100px }
-		  #ong-DVD .hover,
-		  #ong-DVD.current .hover,
-		  #ong-DVD .ongLink:hover{background-position:-137px -50px }
+		  #ong-DVD {width:50px;}
+			#ong-DVD >a>b {width:50px; background-position:-137px 0 }
+		  #ong-DVD.current >a>b{background-position:-137px -100px }
+		  #ong-DVD >a.hover>b,
+		  #ong-DVD.current >a.hover>b {background-position:-137px -50px }
 
-		  #ong-JeuxVideo .ongLink{width:71px; background-position:-189px 0 }
-		  #ong-JeuxVideo.current .ongLink{background-position:-189px -100px }
-		  #ong-JeuxVideo .hover,
-		  #ong-JeuxVideo.current .hover,
-		  #ong-JeuxVideo .ongLink:hover{background-position:-189px -50px }
+		  #ong-JeuxVideo {width:71px;}
+			#ong-JeuxVideo >a>b {width:71px; background-position:-189px 0 }
+		  #ong-JeuxVideo.current >a>b{background-position:-189px -100px }
+		  #ong-JeuxVideo >a.hover>b,
+		  #ong-JeuxVideo.current >a.hover>b {background-position:-189px -50px }
 
-		  #ong-Jouets .ongLink{width:48px; background-position:-262px 0 }
-		  #ong-Jouets.current .ongLink{background-position:-262px -100px }
-		  #ong-Jouets .hover,
-		  #ong-Jouets.current .hover,
-		  #ong-Jouets .ongLink:hover{background-position:-262px -50px }
+		  #ong-Jouets {width:48px;}
+			#ong-Jouets >a>b {width:48px; background-position:-262px 0 }
+		  #ong-Jouets.current >a>b{background-position:-262px -100px }
+		  #ong-Jouets >a.hover>b,
+		  #ong-Jouets.current >a.hover>b {background-position:-262px -50px }
 
-		  #ong-Informatique.current .ongLink{background-position:-312px -100px }
-		  #ong-Informatique .ongLink{width:81px; background-position:-312px 0 }
-		  #ong-Informatique .hover,
-		  #ong-Informatique.current .hover,
-		  #ong-Informatique .ongLink:hover{background-position:-312px -50px }
+		  #ong-Informatique.current >a>b{background-position:-312px -100px }
+		  #ong-Informatique {width:81px;}
+			#ong-Informatique >a>b {width:81px; background-position:-312px 0 }
+		  #ong-Informatique >a.hover>b,
+		  #ong-Informatique.current >a.hover>b {background-position:-312px -50px }
 
-		  #ong-Photo .ongLink{width:67px; background-position:-395px 0 }
-		  #ong-Photo.current .ongLink{background-position:-395px -100px }
-		  #ong-Photo .hover,
-		  #ong-Photo.current .hover,
-		  #ong-Photo .ongLink:hover{background-position:-395px -50px }
+		  #ong-Photo {width:67px;}
+			#ong-Photo >a>b {width:67px; background-position:-395px 0 }
+		  #ong-Photo.current >a>b{background-position:-395px -100px }
+		  #ong-Photo >a.hover>b,
+		  #ong-Photo.current >a.hover>b {background-position:-395px -50px }
 
-		  #ong-TV .ongLink{width:73px; background-position:-464px 0 }
-		  #ong-TV.current .ongLink{background-position:-464px -100px }
-		  #ong-TV .hover,
-		  #ong-TV.current .hover,
-		  #ong-TV .ongLink:hover{background-position:-464px -50px }
+		  #ong-TV {width:73px;}
+			#ong-TV >a>b {width:73px; background-position:-464px 0 }
+		  #ong-TV.current >a>b{background-position:-464px -100px }
+		  #ong-TV >a.hover>b,
+		  #ong-TV.current >a.hover>b {background-position:-464px -50px }
 
-		  #ong-Son .ongLink{width:71px; background-position:-539px 0 }
-		  #ong-Son.current .ongLink{background-position:-539px -100px }
-		  #ong-Son .hover,
-		  #ong-Son.current .hover,
-		  #ong-Son .ongLink:hover{background-position:-539px -50px }
+		  #ong-Son {width:71px;}
+			#ong-Son >a>b {width:71px; background-position:-539px 0 }
+		  #ong-Son.current >a>b{background-position:-539px -100px }
+		  #ong-Son >a.hover>b,
+		  #ong-Son.current >a.hover>b {background-position:-539px -50px }
 
-		  #ong-GPS .ongLink{width:63px; background-position:-612px 0 }
-		  #ong-GPS.current .ongLink{background-position:-612px -100px }
-		  #ong-GPS .hover,
-		  #ong-GPS.current .hover,
-		  #ong-GPS .ongLink:hover{background-position:-612px -50px }
+		  #ong-GPS {width:63px;}
+			#ong-GPS >a>b {width:63px; background-position:-612px 0 }
+		  #ong-GPS.current >a>b{background-position:-612px -100px }
+		  #ong-GPS >a.hover>b,
+		  #ong-GPS.current >a.hover>b {background-position:-612px -50px }
 
-		  #ong-Gadgets .ongLink{width:57px; background-position:-677px 0 }
-		  #ong-Gadgets.current .ongLink{background-position:-677px -100px }
-		  #ong-Gadgets .hover,
-		  #ong-Gadgets.current .hover,
-		  #ong-Gadgets .ongLink:hover{background-position:-677px -50px }
+		  #ong-Gadgets {width:57px;}
+			#ong-Gadgets >a>b {width:57px; background-position:-677px 0 }
+		  #ong-Gadgets.current >a>b{background-position:-677px -100px }
+		  #ong-Gadgets >a.hover>b,
+		  #ong-Gadgets.current >a.hover>b {background-position:-677px -50px }
 
-		  #ong-TiragesPhoto .ongLink{width:52px; background-position:-736px 0 }
-		  #ong-TiragesPhoto.current .ongLink{background-position:-736px -100px }
-		  #ong-TiragesPhoto .hover,
-		  #ong-TiragesPhoto.current .hover,
-		  #ong-TiragesPhoto .ongLink:hover{background-position:-736px -50px }
+		  #ong-TiragesPhoto {width:52px;}
+			#ong-TiragesPhoto >a>b {width:52px; background-position:-736px 0 }
+		  #ong-TiragesPhoto.current >a>b{background-position:-736px -100px }
+		  #ong-TiragesPhoto >a.hover>b,
+		  #ong-TiragesPhoto.current >a.hover>b {background-position:-736px -50px }
 
-		  #ong-Evenement .ongLink{width:65px; background-position:-790px 0 }
-		  #ong-Evenement.current .ongLink{background-position:-790px -100px }
-		  #ong-Evenement .hover,
-		  #ong-Evenement.current .hover,
-		  #ong-Evenement .ongLink:hover{background-position:-790px -50px }
+		  #ong-Evenement {width:65px;}
+			#ong-Evenement >a>b {width:65px; background-position:-790px 0 }
+		  #ong-Evenement.current >a>b{background-position:-790px -100px }
+		  #ong-Evenement >a.hover>b,
+		  #ong-Evenement.current >a.hover>b {background-position:-790px -50px }
 
-		  #ong-Spectacles .ongLink{width:69px; background-position:-857px 0 }
-		  #ong-Spectacles.current .ongLink{background-position:-857px -100px }
-		  #ong-Spectacles .hover,
-		  #ong-Spectacles.current .hover,
-		  #ong-Spectacles .ongLink:hover{background-position:-857px -50px }
+		  #ong-Spectacles {width:69px;}
+			#ong-Spectacles >a>b {width:69px; background-position:-857px 0 }
+		  #ong-Spectacles.current >a>b{background-position:-857px -100px }
+		  #ong-Spectacles >a.hover>b,
+		  #ong-Spectacles.current >a.hover>b {background-position:-857px -50px }
 
-		  #ong-Vendre .ongLink{width:50px; background-position:-928px 0 }
-		  #ong-Vendre.current .ongLink{background-position:-928px -100px }
-		  #ong-Vendre .hover,
-		  #ong-Vendre.current .hover,
-		  #ong-Vendre .ongLink:hover{background-position:-928px -50px }
+		  #ong-Vendre {width:50px;}
+			#ong-Vendre >a>b {width:50px; background-position:-928px 0 }
+		  #ong-Vendre.current >a>b{background-position:-928px -100px }
+		  #ong-Vendre >a.hover>b,
+		  #ong-Vendre.current >a.hover>b {background-position:-928px -50px }
 
 	/* -- les megaMenus -- */
       #onglets li .megaMenu{
@@ -251,7 +263,7 @@
 		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
 		      #onglets .megaMenu dd a:hover{text-decoration:underline}
  		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
-			#onglets .menu_actif .vignet b {display:block;width:150px;height:80px;position:absolute;bottom:0;background-repeat:none;}
+			#onglets .menu_actif .vignet b {display:block;width:150px;height:80px;position:absolute;bottom:0;background-image:url(img/spt-onglets-illus.jpg);background-repeat:none;}
 			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/spt-pictos.png) no-repeat right -309px;}
 
 
