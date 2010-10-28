@@ -145,6 +145,12 @@ $(function () {
 	
 	demarreRotation();
 
+	var sid = "SID=e85f0b48%2Dae1d%2Da5f5%2Daa15%2Dfbffdc4e1c1a&UID=0e3649c79%2D3afd%2D18b8%2D7817%2Dfa868bc99668&Origin=FnacAff&OrderInSession=0&TTL=241020101133";
+	$('a,area').each(function(){
+		var href=$(this).attr('href');
+		$(this).attr('href',href+(href.indexOf('?')?'&':'?')+sid);
+	});
+
 	$("#SCat").change( function() {
 				$("#Fnac_Search").flushCache();
 		 var ComboVal = $("#SCat").val();
