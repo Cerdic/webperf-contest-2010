@@ -69,31 +69,28 @@ function demarreRotation() {
 	afficheBanner("visu_banner_0","rotationOk");
 	for(var x=0;x<nbBanner;x++){
 		$("#puce_"+x).click(function(e){
-			e.preventDefault();
-			var index = $(e.target).attr("id");
-			index = index.substring(5);
-			clearTimeout(monTimer);
-			afficheBanner('visu_banner_'+index,'rotationOk');
+			afficheBanner($(e.target).attr('href').replace(/^#/,''),'rotationOk');
+			return false;
 		});
 	}
 }
 
 function afficheBanner(idSolde,rotationSolde) {
+	clearTimeout(monTimer);
 	var divImgCible;
 	puce = parseInt(idSolde.substring(12));
 	idSuivant = puce + 1;
 	if(idSuivant >= nbBanner) idSuivant = 0;
-	var spanPuceCible = document.getElementById("puce_"+puce);
-	for (var i=0;i<nbBanner;i++) {
-		var allDivs = document.getElementById("visu_banner_"+i);
-		allDivs.style.display = "none";
-		divImgCible = document.getElementById(idSolde);
-		divImgCible.style.display = "block";
-		var allPuces = document.getElementById("puce_"+i);
-		allPuces.className = allPuces.className.replace(/active/,"");
-		if(!/active/.test(spanPuceCible.className))
-			spanPuceCible.className += " active";
+	var me = $('#'+idSolde);
+	// poser les images background au premier passage
+	if ($('a',me).attr('rel').length){
+		var url = $('a',me).attr('rel');
+		$('a>b',me).css('background-image','url('+url+')');
+		$('a',me).attr('rel','');
 	}
+	me.show().siblings('.banner').hide();
+	$('#'+"puce_"+puce).addClass('active').siblings().removeClass('active');
+
 	if (rotationSolde == "rotationOk") {
 		monTimer = setTimeout("afficheBanner('visu_banner_'+idSuivant,'rotationOk')",3500); // 2000
 	}
@@ -148,7 +145,8 @@ $(function () {
 	var sid = "SID=e85f0b48%2Dae1d%2Da5f5%2Daa15%2Dfbffdc4e1c1a&UID=0e3649c79%2D3afd%2D18b8%2D7817%2Dfa868bc99668&Origin=FnacAff&OrderInSession=0&TTL=241020101133";
 	$('a,area').each(function(){
 		var href=$(this).attr('href');
-		$(this).attr('href',href+(href.indexOf('?')?'&':'?')+sid);
+		if (href.indexOf('#')==-1)
+			$(this).attr('href',href+(href.indexOf('?')==-1?'?':'&')+sid);
 	});
 
 	$("#SCat").change( function() {
