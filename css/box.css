@@ -312,7 +312,11 @@ border-bottom-right-radius:8px;
 .cadre_produit{
   float:left;
   position:relative;
-  margin-right:5px;
+  margin-right:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:5px;
+  border:solid 1px;
 }
 
 /*2009-04-27*/
@@ -323,6 +327,9 @@ border-bottom-right-radius:8px;
   margin-right:0;
 }
 .cadre_produit .img{
+	-moz-border-radius:0 8px 8px 0;
+	-webkit-border-radius:0 8px 8px 0;
+	border-radius:0 8px 8px 0;
   /*height:80px;*/
   margin:-5px 0pt 0pt;
   overflow:hidden;
@@ -335,7 +342,6 @@ border-bottom-right-radius:8px;
   /*height:47px;provisoire*/
 }
 .cadre_produit .number{
-  border:solid 1px;
   margin-right:0;
 }
 .produit .img img, .contact .img img {
@@ -550,22 +556,19 @@ border-bottom-right-radius:8px;
 .block_bleu .produit dt, .block_bleu .produit dt a{
   color:#0099CC; /* bleu clair  */
 }
-.block_bleu .cadre_produit .tl, .block_bleu .cadre_produit .tr, .block_bleu .cadre_produit .bl, .block_bleu .cadre_produit .br{
-  background-image:url(img/block_cadre_prod_bleu_corner.png);
-}
-.block_bleu .cadre_produit .number{
+.block_bleu .cadre_produit {
   border-color:#47B5DA; /* bleu clair */
+	background:#43B4D9;
 }
 .block_bleu .cadre_produit .img{
   background:#FFF; /* blanc */
 }
 .block_bleu .produit .number, .block_bleu .produit .number span{
-  background-image:url(img/block_bleu_number_corners.png);
   color:#FFF; /* blanc */
 }
 .block_bleu .cadre_produit .number, .block_bleu .cadre_produit .number span{
   background-image:none;
-  background:#43B4D9;
+  
   color:#FFF; /* blanc */
 }
 .block_bleu .blk_footer .links, .block_bleu .blk_footer .links a{
