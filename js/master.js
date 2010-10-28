@@ -15,43 +15,6 @@ function addEvent( obj, type, fn ){
 	}
 }
 
-/* fixCorners :
- * Cette fonction  est appelee lorsque l'on doit fixer tous les coins d'une page ou d'un block.
- * ex :
- * 	fixCorners ();  //Lance la fonction pour fixer tous les blocks, il faut lancer la fonction une fois la page chargee.
- * 	fixCorners(block); //en passant un element en parametre, le traitement ne se fera que sur le bloc et non sur toute la page.
- */
-function fixCorners(block){
-    if (IS_IE) {
-        for (i = CSSBottomCorners.length - 1; i > -1; --i) {
-            CSSBottomCorners[i].style.bottom = "";
-        }
-    }
-    else {
-        if (IS_Webkit || /Gecko\/200[56]|Opera 8.5/i.test(navigator.userAgent)) 
-            fixCornersOnBlocks(block);
-    }
-}
-
-/* fixCornersOnBlocks :
- *  Ajoute une classe CSS hidecorners afin de cacher les coins puis les reafficher.
- *  Cette fonction n'est lancee que pour Safari, Le moteur Gecko 2005 (FF1.0) et Opera 8.5), car lorsqu'on agrandit un block en Javascript, les coins en absolu positionnes en bas restent a leur place. Cette fonction corrige le probleme.
- */
-function fixCornersOnBlocks(block){
-    currentBlockToFixCorners = block || document.body;
-    currentBlockToFixCorners.className += " hidecorners";
-    setTimeout("fixCornersOnBlocksShowCorners()", 5);
-}
-
-/* fixCornersOnBlocksShowCorners :
- *  Fonction associee a fixCornersOnBlocks(), cette fonction retire la classe hidecorners qui a ete appliquee a currentBlockToFixCorners
- */
-function fixCornersOnBlocksShowCorners(){
-    if (currentBlockToFixCorners) 
-        currentBlockToFixCorners.className = currentBlockToFixCorners.className.replace(/\bhidecorners\b/g, "");
-    currentBlockToFixCorners = null;
-}
-
 
 /* Alignement en hauteur
  *  Les fonctions qui suivent alignent les blocs et les contenus en hauteur
@@ -147,7 +110,7 @@ function getAllBlocks(){
  *	Aligne les contenus des blocks de mise en avant quand ceux-ci sont dans un conteneur ligne.
  */
 function fixMiseEnAvant(){
-
+return;
     for (var i = 0; i < arrLineOfMiseEnAvant.length; i++) {
     
         var line = arrLineOfMiseEnAvant[i];
@@ -593,7 +556,6 @@ function onloadFunctions(){
     fixListeInline(); //aligne les items des listes en ligne
     fixListe2cols(); //aligne les items des listes en 2 colonnes
     fixBlocksHeight(); //alignement des blocs
-    fixCorners(); //correction des coins (seulement pour IE et si besoin pour anciennes version des autres navigateurs)
     fixAddressBlock();
 	
 }
