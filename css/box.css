@@ -313,37 +313,44 @@ border-bottom-right-radius:8px;
   float:left;
   position:relative;
   margin-right:8px;
+  border:solid 1px;
+}
+.cadre_produit,.cadre_produit .number,.cadre_produit .img{
 	-moz-border-radius:8px;
 	-webkit-border-radius:8px;
-	border-radius:5px;
-  border:solid 1px;
+	border-radius:8px;
 }
 
 /*2009-04-27*/
-.cadre_produit .number span{
+.cadre_produit span{
   float:left;
   width:18px;
   padding-top:0;
   margin-right:0;
 }
 .cadre_produit .img{
-	-moz-border-radius:0 8px 8px 0;
-	-webkit-border-radius:0 8px 8px 0;
-	border-radius:0 8px 8px 0;
   /*height:80px;*/
   margin:-5px 0pt 0pt;
   overflow:hidden;
   width:63px;
 }
+.cadre_produit span+.img{
+	-moz-border-radius:0 8px 8px 0;
+	-webkit-border-radius:0 8px 8px 0;
+	border-radius:0 8px 8px 0;
+}
+
 .cadre_produit .img img{
   margin:0 auto;
   padding:8px 0;
   width:47px;/*provisoire*/
   /*height:47px;provisoire*/
 }
+
 .cadre_produit .number{
   margin-right:0;
 }
+
 .produit .img img, .contact .img img {
   display:block;
 }

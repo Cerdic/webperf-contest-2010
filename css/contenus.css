@@ -18,16 +18,14 @@ Afin de ne pas faire de  redondance de code, les s�lecteurs seront simplement 
 /*contexte formatage */
 .produit .number, .produit .number span, .contact .number, .contact .number span{
   display:block;
-  background:url(img/block_gris_number_corners.png) no-repeat left bottom;
 }
 .produit .number span, .contact .number span{
-			padding: 1em 0 1em 0;
-			width: 1.1em;
+	padding: 1em 0 1em 0;
+	width: 1.1em;
   text-align:center;
   font-size:1.8em;
 }
 .produit .number, .contact .number{
-  background-position:left top;
   padding:5px 0 0 0;
   margin:0 1px 0 0;
 }
