@@ -82,7 +82,7 @@
 		  float:left;
 		  position:relative;
 		  margin-right:2px;
-		  padding-bottom:9px;
+		  padding-bottom:12px;
 		  background:url(img/reflet-onglets-png24.png) repeat-x 0 34px;
       }
       #MENU #onglets li.current,
@@ -263,7 +263,7 @@
 		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
 		      #onglets .megaMenu dd a:hover{text-decoration:underline}
  		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
-			#onglets .menu_actif .vignet b {display:block;width:150px;height:80px;position:absolute;bottom:0;background-image:url(img/spt-onglets-illus.jpg);background-repeat:none;}
+			#onglets .megaMenu .vignet b {display:block;width:150px;height:80px;position:absolute;bottom:0;background-repeat:none;}
 			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/spt-pictos.png) no-repeat right -309px;}
 
 
