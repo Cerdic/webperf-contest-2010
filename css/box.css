@@ -212,30 +212,11 @@ border-bottom-right-radius:8px;
   padding:5px 10px;
 }
 /* ombre de fin de block */
-.btmshadow, .btmshadow b{
-  display:block;
-  background:url(img/bottom_shadow.png) repeat-x left top;
+.btmshadow {
+	padding-bottom:13px;
+  background:url("img/box-bot-reflet-186.png") no-repeat left bottom;
 }
-.btmshadow2, .btmshadow2 b{
-  display:block;
-  background:url(img/bottom_shadow2.png) repeat-x left top;
-}
-.btmshadow, .btmshadow2{
-  padding-left:10px;
-}
-.btmshadow2{
-  margin-bottom:10px;
-}
-.btmshadow b{
-  background-position:right top;
-  height:10px;
-  font-size:1%
-}
-.btmshadow2 b{
-  background-position:right top;
-  height:20px;
-  font-size:1%
-}
+
 /*********************
 *  blocks
 **********************/
