@@ -102,7 +102,7 @@ border-bottom-right-radius:8px;
   font-size:1em; /* permet de gommer le soucis d'indentation de class .block */
 }
 /* ent�te de block (header) */
-.block .blk_header,.block .blk_header span, .block .blk_header a,.block .blk_header b {
+.block .blk_header,.block .blk_header >span, .block .blk_header >a,.block .blk_header >b {
   display:block;
   margin:0;
   padding:0;
@@ -116,7 +116,7 @@ border-bottom-right-radius:8px;
 .block .blk_header{ font-size:1.3em;}
 
 .block .blk_header span, .block .blk_header a{
-  padding:5px 6px 2px 1px;
+  padding:5px 0 2px 0;
   min-height:20px;
   _height:20px;
   /* contexte formatage */
@@ -124,7 +124,21 @@ border-bottom-right-radius:8px;
   _overflow:visible;
   zoom:1;
 }
-.block .blk_header b {
+.block .blk_header a.illustre-bottom{
+	padding-bottom:0;
+}
+.block .blk_header a.illustre-bottom b{
+	display:block;
+	margin-top:2px;
+	display:block;
+	height:110px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+
+.block .blk_header >b {
 	position:absolute; top:0;left:0;
 	height:15px;
 	width:100%;
@@ -670,7 +684,7 @@ border-bottom-right-radius:8px;
   border:1px solid #000; /* noir  */
 }
 .block_noir .blk_content{
-  border-top:solid 1px #333333; /* gris tres fonce */
+  
 }
 /* 2009-04-27 */
 .block_noir .cadre_produit .number, .block_noir .cadre_produit .number span {
