@@ -1,0 +1,136 @@
+
+/* ======= block_espace-fg (fnac gaming: violet - mauve) =======*/
+
+.block_espace-fg .blk_header, .block_espace-fg .blk_header span{
+  background-color:#543E7F;
+  color:#FFF; /* blanc */
+  font-size:12px;
+  text-align:left;
+}
+.block_espace-fg .blk_header span{padding:0}
+.block_espace-fg .tl, .block_espace-fg .tr, .block_espace-fg .bl, .block_espace-fg .br{
+  background-image:url(img/block_gris_corners.png);
+}
+.block_espace-fg .blk_inside{border:1px solid #CCC;}
+.block_espace-fg .blk_postHeader{background-color:#543E7F;color:#B2A5C9}
+.block_espace-fg .blk_postHeader a{color:#B2A5C9}
+.block_espace-fg .blk_postHeader p{margin:0}
+.block_espace-fg .filled{background-color:#EFE6FF;color:#755d99}
+.block_espace-fg .filled a{color:#755d99}
+.block_espace-fg .blk_content .chevron{display:block;width:16px;height:8px;margin:0 auto;background:url(img/chevron-violet-fg.png) no-repeat 0 0 }
+.block_espace-fg .links{background-color:#FFF;}
+.block_espace-fg .links a{color:#000;}
+.block_espace-fg .blk_content p{margin:5px 0 0 0}
+
+
+/* ======= block_intervenant =======*/
+.block_intervenant .links, .block_intervenant .links a {color:#9dbe3b}
+.block_intervenant .blk_footer .links, .block_intervenant .blk_footer .links a {color:#666666;}
+/* style de bloc avec footer reduit+ombre block_moutarde gris seulement */
+
+.block_nicefoot{
+
+}
+.block_nicefoot .block_header{font-size:1.3em;}
+.block_nicefoot .blk_content{background:gray;}
+.block_nicefoot .blk_inside{background:none;}
+.block_nicefoot .blk_footer{background:grey;position:relative;margin:0 20px;}
+
+
+/****************** blocks particuliers ******************/
+/* ======== bloc recherche ===== */
+.block_search{
+  margin:0;
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.block_search label, .block_search input, .block_search select, .block_search .submit, #HEADER .block_search input, #HEADER  .block_search select{
+  float:left;
+  margin-right:10px;
+}
+.block_search label{
+  overflow:hidden;
+  width:79px;
+  margin:3px 10px 0 0;
+  height:13px;
+  text-indent:-5000px;
+  background:url(img/rechercher.png) no-repeat left top;
+}
+.block_search_new label{
+  background:url(img/label_rechercher.png) no-repeat left top!important;
+  height:23px;
+}
+.block_search .text, #HEADER .block_search .text {
+	width: 16.5em;
+	font-size:1.1em;
+	padding:1px;
+	border-color:#000;
+	color:#000;
+}
+
+
+.block_search select, #HEADER .block_search select{
+	 width:14em;
+	 font-size:1.1em;
+	 height:1.60em;
+	 border-color:#000;
+	 font-weight:bold;
+	 color:#000;
+}
+
+.searchPT .block_search .text{
+	width:11em;
+}
+.searchPT .block_search select{
+	width:13.8em;
+}
+.block_search .submit{
+  float:left;
+  position:relative;
+  margin:0;
+  border:none;
+  background: url(img/spt-pictos.png) no-repeat -10px -10px;
+}
+.block_search .submit input{
+  position:absolute;
+  overflow:hidden;
+  text-indent:5000px;
+  border:none;
+  -moz-opacity:0;
+  -khtml-opacity:0;
+  filter:alpha(opacity=0);
+  opacity:0;
+}
+.block_search .submit, .block_search .submit  input, #HEADER .block_search .submit, #HEADER .block_search .submit  input {
+  overflow:hidden;
+  cursor:pointer;
+  padding:0;
+  width: 75px;
+  height: 21px;
+}
+
+.block_search .submitnew {
+  float:left;
+  position:relative;
+  margin:0;
+  border:none;
+  background: url(img/Qsearch_OK.png) no-repeat left top;
+  height:20px;
+  width:30px;
+  margin:2px 0 0;
+}
+.block_search .submitnew input{
+  position:absolute;
+  overflow:hidden;
+  text-indent:5000px;
+  border:none;
+  -moz-opacity:0;
+  -khtml-opacity:0;
+  filter:alpha(opacity=0);
+  opacity:0;
+  height:20px;
+  width:30px;
+  cursor:pointer;
+}

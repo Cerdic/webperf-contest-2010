@@ -120,11 +120,16 @@ $(function () {
 
 	// au passage de la souris sur le lien de l'onglet
 	$("#onglets> li> a").mouseenter(function(){
-			//on affiche son megaMenu
-            $(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
+		// initialiser la deco au survol !
+		if (megamenu_sprite){
+			$('#onglets .megaMenu .vignet b').css('background-image','url('+megamenu_sprite+')');
+			megamenu_sprite=null;
+		}
+		//on affiche son megaMenu
+		$(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
 	}).mouseleave(function(){
-			//on cache son megaMenu
-            $(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
+		//on cache son megaMenu
+		$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
 	});
 	//tant que la souris se trouve sur le megaMenu
 	$(".megaMenu").mouseenter(function(){
