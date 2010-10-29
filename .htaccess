@@ -24,3 +24,7 @@
     SetOutputFilter DEFLATE
   </FilesMatch>
 </IfModule>
+
+
+RewriteEngine  on
+RewriteRule    MarketPlace/([0-9].*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
