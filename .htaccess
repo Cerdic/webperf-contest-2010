@@ -11,6 +11,11 @@
 	SetOutputFilter INCLUDES
 </FilesMatch>
 
+<FilesMatch "market.html">
+	Options +Includes
+	SetOutputFilter INCLUDES
+</FilesMatch>
+
 
 # gzip compression.
 <IfModule mod_deflate.c>
@@ -28,3 +33,5 @@
 
 RewriteEngine  on
 RewriteRule    MarketPlace/([0-9].*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
+#RewriteRule    MarketPlace/([0-9]*).html$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
+#RewriteRule    MarketPlace/([0-9]*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
