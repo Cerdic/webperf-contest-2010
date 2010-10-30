@@ -63,7 +63,7 @@ body{
   _font-size:0.75em;
   zoom:1;
   color:#666; /* gris */
-  background:#FFF url(img/body-background-standard.png) repeat-x center top;
+  background:#FFF url(img/spt-backgrounds.png) repeat-x left -730px;
 }
 a{
   text-decoration:none;

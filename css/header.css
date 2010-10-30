@@ -24,8 +24,8 @@
       #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(img/logo-fnac-png24.png) no-repeat 0 0}
       * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6*/
     /*-----*/
-	#topRIGHT{margin-left:148px}
-	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(img/background-chaines.png) no-repeat top right}
+	#topRIGHT{margin-left:148px;background:url(img/spt-backgrounds.png) repeat-x top left;}
+	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(img/spt-pictos.png) no-repeat -35px -60px;}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
 	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/sprite-chaines.png) no-repeat -820px 0;}
 	    #CHAINES li.first{background:none}
@@ -50,9 +50,13 @@
 	      #monCompte a:hover{text-decoration:none;}
 	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
 	    * html HeaderBasket{width:15.7em;}
-		  #monPanier #cartouche{position:relative;z-index:9999;height:23px;padding-left:6px}
-		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(img/background-panier.png) no-repeat left bottom;}
-			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
+		  #monPanier #cartouche{
+				position:relative;z-index:9999;height:23px;padding-left:6px;background:transparent url(img/spt-backgrounds.png) repeat-x left -100px;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				border-radius:5px;
+			}
+			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;}
 			* html #monPanier #cartouche p{width:176px}
 				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(img/spt-pictos.png) no-repeat -10px -152px;}
 				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none;}
@@ -83,7 +87,7 @@
 		  position:relative;
 		  margin-right:2px;
 		  padding-bottom:12px;
-		  background:url(img/reflet-onglets-png24.png) repeat-x 0 34px;
+		  background:url(img/spt-backgrounds.png) repeat-x left -36px;
       }
       #MENU #onglets li.current,
       * html #MENU #onglets li{
@@ -216,7 +220,7 @@
 		  border-bottom-right-radius:5px;
 		  -moz-border-radius-bottomright:5px;
 		  -webkit-border-bottom-right-radius:5px;
-		  background:#FFF url(img/background-megaMenu.png) repeat-x 0 0;
+		  background:#FFF url(img/spt-backgrounds.png) repeat-x left -150px;
 		  position:absolute;
 		  top:35px;
 		  z-index:100;/* doit reste une couche de moins que le lien des onglets .ongLink */
