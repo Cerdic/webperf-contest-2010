@@ -29,16 +29,16 @@
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
 	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/sprite-chaines.png) no-repeat -820px 0;}
 	    #CHAINES li.first{background:none}
-	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(img/sprite-chaines.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(img/spt-onglets-chaines-png8.png) ;background-repeat:no-repeat  }
 	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
 	      #CHAINES li a:active{outline:none}
-	      #ch-Myfnac a{width:82px; background-position:0 0 }
-		  #ch-Actu a{width:97px; background-position:-83px 0 }
-		  #ch-Telech a{width:137px; background-position:-181px 0 }
-		  #ch-Passion a{width:137px; background-position:-319px 0 }
-		  #ch-Labo a{width:100px; background-position:-457px 0 }
-		  #ch-Magasins a{width:126px; background-position:-558px 0 }
-		  #ch-Adherents a{width:128px; background-position:-685px 0 }
+	      #ch-Myfnac a{width:82px; background-position:0 -10px }
+		  #ch-Actu a{width:97px; background-position:-83px -10px }
+		  #ch-Telech a{width:137px; background-position:-181px -10px }
+		  #ch-Passion a{width:137px; background-position:-319px -10px }
+		  #ch-Labo a{width:100px; background-position:-457px -10px }
+		  #ch-Magasins a{width:126px; background-position:-558px -10px }
+		  #ch-Adherents a{width:128px; background-position:-685px -10px }
 	  /*-*/
 	  #SEARCH{float:left;width:64.5%;padding-top:18px;}
 
@@ -107,7 +107,7 @@
 				height:36px;
 				display:block;
 			  height:36px;
-			  background-image:url(img/sprite-onglets-png8.png) ;
+			  background-image:url(img/spt-onglets-chaines-png8.png) ;
 			  background-repeat:no-repeat;
 			  z-index:101;/* 1 couche de plus que les megaMenu */
 			}
@@ -120,94 +120,94 @@
 
 		/* -- positionnement de l'image des onglets -- */
 			#ong-Livres {width:47px;}
-		  #ong-Livres >a>b {width:47px; background-position:0 0 }
-		  #ong-Livres.current >a>b{background-position:0 -100px }
+		  #ong-Livres >a>b {width:47px; background-position:0 -50px }
+		  #ong-Livres.current >a>b{background-position:0 -150px }
 		  #ong-Livres >a.hover>b,
-		  #ong-Livres.current >a.hover>b {background-position:0 -50px }
+		  #ong-Livres.current >a.hover>b {background-position:0 -100px }
 
 		  #ong-Musique {width:86px;}
-			#ong-Musique >a>b {width:86px; background-position:-49px 0 }
-		  #ong-Musique.current >a>b{background-position:-49px -100px }
+			#ong-Musique >a>b {width:86px; background-position:-49px -50px }
+		  #ong-Musique.current >a>b{background-position:-49px -150px }
 		  #ong-Musique >a.hover>b,
-		  #ong-Musique.current >a.hover>b {background-position:-49px -50px }
+		  #ong-Musique.current >a.hover>b {background-position:-49px -100px }
 
 		  #ong-DVD {width:50px;}
-			#ong-DVD >a>b {width:50px; background-position:-137px 0 }
-		  #ong-DVD.current >a>b{background-position:-137px -100px }
+			#ong-DVD >a>b {width:50px; background-position:-137px -50px }
+		  #ong-DVD.current >a>b{background-position:-137px -150px }
 		  #ong-DVD >a.hover>b,
-		  #ong-DVD.current >a.hover>b {background-position:-137px -50px }
+		  #ong-DVD.current >a.hover>b {background-position:-137px -100px }
 
 		  #ong-JeuxVideo {width:71px;}
-			#ong-JeuxVideo >a>b {width:71px; background-position:-189px 0 }
-		  #ong-JeuxVideo.current >a>b{background-position:-189px -100px }
+			#ong-JeuxVideo >a>b {width:71px; background-position:-189px -50px }
+		  #ong-JeuxVideo.current >a>b{background-position:-189px -150px }
 		  #ong-JeuxVideo >a.hover>b,
-		  #ong-JeuxVideo.current >a.hover>b {background-position:-189px -50px }
+		  #ong-JeuxVideo.current >a.hover>b {background-position:-189px -100px }
 
 		  #ong-Jouets {width:48px;}
-			#ong-Jouets >a>b {width:48px; background-position:-262px 0 }
-		  #ong-Jouets.current >a>b{background-position:-262px -100px }
+			#ong-Jouets >a>b {width:48px; background-position:-262px -50px }
+		  #ong-Jouets.current >a>b{background-position:-262px -150px }
 		  #ong-Jouets >a.hover>b,
-		  #ong-Jouets.current >a.hover>b {background-position:-262px -50px }
+		  #ong-Jouets.current >a.hover>b {background-position:-262px -100px }
 
-		  #ong-Informatique.current >a>b{background-position:-312px -100px }
+		  #ong-Informatique.current >a>b{background-position:-312px -150px }
 		  #ong-Informatique {width:81px;}
-			#ong-Informatique >a>b {width:81px; background-position:-312px 0 }
+			#ong-Informatique >a>b {width:81px; background-position:-312px -50px }
 		  #ong-Informatique >a.hover>b,
-		  #ong-Informatique.current >a.hover>b {background-position:-312px -50px }
+		  #ong-Informatique.current >a.hover>b {background-position:-312px -100px }
 
 		  #ong-Photo {width:67px;}
-			#ong-Photo >a>b {width:67px; background-position:-395px 0 }
-		  #ong-Photo.current >a>b{background-position:-395px -100px }
+			#ong-Photo >a>b {width:67px; background-position:-395px -50px }
+		  #ong-Photo.current >a>b{background-position:-395px -150px }
 		  #ong-Photo >a.hover>b,
-		  #ong-Photo.current >a.hover>b {background-position:-395px -50px }
+		  #ong-Photo.current >a.hover>b {background-position:-395px -100px }
 
 		  #ong-TV {width:73px;}
-			#ong-TV >a>b {width:73px; background-position:-464px 0 }
-		  #ong-TV.current >a>b{background-position:-464px -100px }
+			#ong-TV >a>b {width:73px; background-position:-464px -50px }
+		  #ong-TV.current >a>b{background-position:-464px -150px }
 		  #ong-TV >a.hover>b,
-		  #ong-TV.current >a.hover>b {background-position:-464px -50px }
+		  #ong-TV.current >a.hover>b {background-position:-464px -100px }
 
 		  #ong-Son {width:71px;}
-			#ong-Son >a>b {width:71px; background-position:-539px 0 }
-		  #ong-Son.current >a>b{background-position:-539px -100px }
+			#ong-Son >a>b {width:71px; background-position:-539px -50px }
+		  #ong-Son.current >a>b{background-position:-539px -150px }
 		  #ong-Son >a.hover>b,
-		  #ong-Son.current >a.hover>b {background-position:-539px -50px }
+		  #ong-Son.current >a.hover>b {background-position:-539px -100px }
 
 		  #ong-GPS {width:63px;}
-			#ong-GPS >a>b {width:63px; background-position:-612px 0 }
-		  #ong-GPS.current >a>b{background-position:-612px -100px }
+			#ong-GPS >a>b {width:63px; background-position:-612px -50px }
+		  #ong-GPS.current >a>b{background-position:-612px -150px }
 		  #ong-GPS >a.hover>b,
-		  #ong-GPS.current >a.hover>b {background-position:-612px -50px }
+		  #ong-GPS.current >a.hover>b {background-position:-612px -100px }
 
 		  #ong-Gadgets {width:57px;}
-			#ong-Gadgets >a>b {width:57px; background-position:-677px 0 }
-		  #ong-Gadgets.current >a>b{background-position:-677px -100px }
+			#ong-Gadgets >a>b {width:57px; background-position:-677px -50px }
+		  #ong-Gadgets.current >a>b{background-position:-677px -150px }
 		  #ong-Gadgets >a.hover>b,
-		  #ong-Gadgets.current >a.hover>b {background-position:-677px -50px }
+		  #ong-Gadgets.current >a.hover>b {background-position:-677px -100px }
 
 		  #ong-TiragesPhoto {width:52px;}
-			#ong-TiragesPhoto >a>b {width:52px; background-position:-736px 0 }
-		  #ong-TiragesPhoto.current >a>b{background-position:-736px -100px }
+			#ong-TiragesPhoto >a>b {width:52px; background-position:-736px -50px }
+		  #ong-TiragesPhoto.current >a>b{background-position:-736px -150px }
 		  #ong-TiragesPhoto >a.hover>b,
-		  #ong-TiragesPhoto.current >a.hover>b {background-position:-736px -50px }
+		  #ong-TiragesPhoto.current >a.hover>b {background-position:-736px -100px }
 
 		  #ong-Evenement {width:65px;}
-			#ong-Evenement >a>b {width:65px; background-position:-790px 0 }
-		  #ong-Evenement.current >a>b{background-position:-790px -100px }
+			#ong-Evenement >a>b {width:65px; background-position:-790px -50px }
+		  #ong-Evenement.current >a>b{background-position:-790px -150px }
 		  #ong-Evenement >a.hover>b,
-		  #ong-Evenement.current >a.hover>b {background-position:-790px -50px }
+		  #ong-Evenement.current >a.hover>b {background-position:-790px -100px }
 
 		  #ong-Spectacles {width:69px;}
-			#ong-Spectacles >a>b {width:69px; background-position:-857px 0 }
-		  #ong-Spectacles.current >a>b{background-position:-857px -100px }
+			#ong-Spectacles >a>b {width:69px; background-position:-857px -50px }
+		  #ong-Spectacles.current >a>b{background-position:-857px -150px }
 		  #ong-Spectacles >a.hover>b,
-		  #ong-Spectacles.current >a.hover>b {background-position:-857px -50px }
+		  #ong-Spectacles.current >a.hover>b {background-position:-857px -100px }
 
 		  #ong-Vendre {width:50px;}
-			#ong-Vendre >a>b {width:50px; background-position:-928px 0 }
-		  #ong-Vendre.current >a>b{background-position:-928px -100px }
+			#ong-Vendre >a>b {width:50px; background-position:-928px -50px }
+		  #ong-Vendre.current >a>b{background-position:-928px -150px }
 		  #ong-Vendre >a.hover>b,
-		  #ong-Vendre.current >a.hover>b {background-position:-928px -50px }
+		  #ong-Vendre.current >a.hover>b {background-position:-928px -100px }
 
 	/* -- les megaMenus -- */
       #onglets li .megaMenu{
