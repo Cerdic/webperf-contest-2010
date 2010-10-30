@@ -1,10 +1,12 @@
-function upMarket(prid,node){
-	$.getJSON("MarketPlace/"+prid+"&format=json&jsoncallback=?",
+var hosts = ['http://entries.webperf-contest.com/4cc80752a91cc/wpo/', 'http://s1.webperf-contest.com/4cc80752a91cc/wpo/', 'http://s2.webperf-contest.com/4cc80752a91cc/wpo/', 'http://s3.webperf-contest.com/4cc80752a91cc/wpo/']
+function upMarket(prid,node,host){
+	$.getJSON(host+"MarketPlace/"+prid+"&format=json&jsoncallback=?",
 	 function(data){ $(function(){ $(node).html(data.MarketPlaceSummary);}); }
 	);
 }
 var m;
+var h=0;
 while(m=MarketPlaceOffers.pop()){
 	m = m.split('|');
-	upMarket(m[1],'#'+m[0]);
+	upMarket(m[1],'#'+m[0],hosts[h++%4]);
 }
