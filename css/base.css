@@ -63,7 +63,7 @@ body{
   _font-size:0.75em;
   zoom:1;
   color:#666; /* gris */
-  background:#FFF url(img/spt-backgrounds.png) repeat-x left -730px;
+  background:#FFF url(http://s3.webperf-contest.com/4cc80752a91cc/css/img/spt-backgrounds.png) repeat-x left -730px;
 }
 a{
   text-decoration:none;
