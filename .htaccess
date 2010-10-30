@@ -32,9 +32,10 @@
 
 
 RewriteEngine  on
-RewriteRule    MarketPlace/([0-9].*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
+#RewriteRule    MarketPlace/([0-9].*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*).html$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
+RewriteRule    MarketPlace/(.*)$  http://yterium.net/wpo/proxy.php$1  [P]
 
 
 # Expiration des pages :

@@ -21,7 +21,7 @@ for (h=0;h<MarketPlaceOffers.length;h++){
 	prid.push(m[1]);
 }
 
-$.getJSON("http://yterium.net/wpo/proxy.php?jsoncallback=?",
+$.getJSON("MarketPlace/?jsoncallback=?",
 	{prid:prid},
 	function(data){$(function(){
 		var m;
