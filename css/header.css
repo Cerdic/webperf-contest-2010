@@ -24,8 +24,8 @@
       #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(img/logo-fnac-png24.png) no-repeat 0 0}
       * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6*/
     /*-----*/
-	#topRIGHT{margin-left:148px;background:url(img/spt-backgrounds.png) repeat-x top left;}
-	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(img/spt-pictos.png) no-repeat -35px -60px;}
+	#topRIGHT{margin-left:148px;background:url(http://s3.webperf-contest.com/4cc80752a91cc/img/spt-backgrounds.png) repeat-x top left;}
+	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/img/spt-pictos.png) no-repeat -35px -60px;}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
 	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/sprite-chaines.png) no-repeat -820px 0;}
 	    #CHAINES li.first{background:none}
@@ -46,25 +46,25 @@
 	  #MONCOIN{float:left;width:35%;padding-top:18px;}
 	    #monCompte{float:left;width:33%;padding-top:4px}
 	      #monCompte img{vertical-align:-15%;padding-right:5px}
-	      #monCompte a{color:#000;background:url(img/spt-pictos.png) no-repeat -10px -117px;padding-left:17px;text-decoration:underline}
+	      #monCompte a{color:#000;background:url(http://s2.webperf-contest.com/4cc80752a91cc/img/spt-pictos.png) no-repeat -10px -117px;padding-left:17px;text-decoration:underline}
 	      #monCompte a:hover{text-decoration:none;}
 	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
 	    * html HeaderBasket{width:15.7em;}
 		  #monPanier #cartouche{
-				position:relative;z-index:9999;height:23px;padding-left:6px;background:transparent url(img/spt-backgrounds.png) repeat-x left -100px;
+				position:relative;z-index:9999;height:23px;padding-left:6px;background:transparent url(http://s3.webperf-contest.com/4cc80752a91cc/img/spt-backgrounds.png) repeat-x left -100px;
 				-moz-border-radius:5px;
 				-webkit-border-radius:5px;
 				border-radius:5px;
 			}
 			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;}
 			* html #monPanier #cartouche p{width:176px}
-				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(img/spt-pictos.png) no-repeat -10px -152px;}
+				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/img/spt-pictos.png) no-repeat -10px -152px;}
 				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none;}
 				#monPanier .recapPanier a:hover {text-decoration:underline}
 				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
 				#monPanier .totArticles a {color:#FFF;text-decoration:none}
 				#monPanier .totArticles a:hover {text-decoration:underline}
-				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(img/spt-pictos.png) no-repeat -10px -51px;cursor:pointer}
+				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/img/spt-pictos.png) no-repeat -10px -51px;cursor:pointer}
 			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
 				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
 				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
@@ -87,7 +87,7 @@
 		  position:relative;
 		  margin-right:2px;
 		  padding-bottom:12px;
-		  background:url(img/spt-backgrounds.png) repeat-x left -36px;
+		  background:url(http://s3.webperf-contest.com/4cc80752a91cc/img/spt-backgrounds.png) repeat-x left -36px;
       }
       #MENU #onglets li.current,
       * html #MENU #onglets li{
@@ -220,7 +220,7 @@
 		  border-bottom-right-radius:5px;
 		  -moz-border-radius-bottomright:5px;
 		  -webkit-border-bottom-right-radius:5px;
-		  background:#FFF url(img/spt-backgrounds.png) repeat-x left -150px;
+		  background:#FFF url(http://s3.webperf-contest.com/4cc80752a91cc/img/spt-backgrounds.png) repeat-x left -150px;
 		  position:absolute;
 		  top:35px;
 		  z-index:100;/* doit reste une couche de moins que le lien des onglets .ongLink */
@@ -263,12 +263,12 @@
 		    #onglets .megaMenu dt, #onglets .megaMenu dt a{color:#DE9C00;font-weight:bold;margin-bottom:3px}
 		    #onglets .megaMenu dt a{text-decoration:underline}
 		    #onglets .megaMenu dt a:hover{text-decoration:none}
-		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(img/spt-pictos.png) no-repeat -10px -334px;}
+		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(http://s2.webperf-contest.com/4cc80752a91cc/img/spt-pictos.png) no-repeat -10px -334px;}
 		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
 		      #onglets .megaMenu dd a:hover{text-decoration:underline}
  		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
 			#onglets .megaMenu .vignet b {display:block;width:150px;height:80px;position:absolute;bottom:0;background-repeat:none;}
-			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(img/spt-pictos.png) no-repeat right -309px;}
+			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/img/spt-pictos.png) no-repeat right -309px;}
 
 
 /* ======**** fin header ****====================*/
