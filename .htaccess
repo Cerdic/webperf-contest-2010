@@ -35,3 +35,16 @@ RewriteEngine  on
 RewriteRule    MarketPlace/([0-9].*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*).html$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
+
+
+# Expiration des pages :
+#<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/gif A2600000
+ExpiresByType image/png A2600000
+ExpiresByType image/jpeg A2600000
+ExpiresByType application/x-javascript A2600000
+ExpiresByType text/css A2600000
+ExpiresByType text/html A14400
+ExpiresByType application/x-httpd-php A14400
+#</IfModule>
