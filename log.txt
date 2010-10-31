@@ -1,3 +1,245 @@
+commit 0471f429e412e25ca14bd4ea4527f6ebadc1ffd5
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Oct 31 15:12:48 2010 +0100
+
+    un sprite commun pour gagner un hit / il restait une reference a l'ancienne image, pour les separateurs
+
+commit 2509c5702cd676ddb20c778ddc4102aa62dc25ca
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 20:31:00 2010 +0200
+
+    un sprite commun pour gagner un hit
+
+commit b0bf7983cf00dc4d9dde8311209608f8e1382aab
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 19:02:04 2010 +0200
+
+    repartir les hits sur s1/s2/s3
+
+commit 318c70059debfe3d8a3e3cb758270d32acb6b211
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 18:54:32 2010 +0200
+
+    repartir les hits
+
+commit 5d246016c2868f919c13a7a8df72b439c599c3fd
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 18:53:09 2010 +0200
+
+    repartir les hits sur s1/s2/s3
+
+commit b667fe5dce2f13e683d3730a6cb368e44b26b68f
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 18:23:42 2010 +0200
+
+    repartir les hits sur s1/s2/s3
+
+commit 20402ecfbc8c1e02e2aef57f26a5b59736b7e4c0
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 17:09:08 2010 +0200
+
+    url locale et reecriture pour la requete ajax
+
+commit 3e47306e40bfeec183dfd93cd17313d026f5f76c
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 17:03:42 2010 +0200
+
+    Optimisation des jpg qualite 50
+
+commit a55cbe98d656fadac6c7e543dd56ae13a0ea24de
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 17:03:09 2010 +0200
+
+    optipng sur les PNG
+
+commit 1f97c8cf7f8e3775dbe615bea2a5dbe1a26f8a06
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 16:49:53 2010 +0200
+
+    cache des images
+
+commit f1635e6dcad1a97ae19f826721c33ffe068da051
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 16:49:37 2010 +0200
+
+    correction css, mais est-ce compatible ie7 ?
+
+commit a0f454f100cb94ea74436e0af7d4d647c8a35ee4
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 16:45:25 2010 +0200
+
+    regroupement de background repeat-x en sprites. Pour le degrade gauche de la barre du haut, on utilise une superposition de 2 fonds, dont le bout degrade est dans spt-pictos
+
+commit 9718c14a3415904eea53bb8c120c5e468a29821f
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 11:38:11 2010 +0200
+
+    utiliser un proxy json qui regroupe les requetes
+
+commit d66b9726739dab973a1e7ba037f1bb420d4c245c
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 10:31:56 2010 +0200
+
+    repartir les requetes json sur 4 domaines
+
+commit c89015505b817ecd8c32569f8688a34d78e01f95
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 10:30:16 2010 +0200
+
+    compression des images
+
+commit 55d73b83693ba42d3e9a66d8d2be7778eb266795
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 10:29:29 2010 +0200
+
+    compression des images
+
+commit c52804a9d53e1479bcf8cc903138d712abbea467
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Oct 30 10:28:13 2010 +0200
+
+    compression des images
+
+commit 86d0cdf267a0aab8f0f21e1527b7ad3bdd801c3a
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Oct 29 18:47:44 2010 +0200
+
+    un rewriterule pour les requetes json vers MarketPlace
+
+commit a9bd3c79952422e1c93ed747f17c446e66d10cae
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Oct 29 18:11:19 2010 +0200
+
+    ces illustrations en image sans alt dans un lien redondant sont peu pertinentes et ne vehiculent pas d'information. On les integre dans le lien du h2 juste au dessus, sous forme de background attache a un <b>. Cela ameliore l'accessibilite.
+
+commit 10db1b9c2df970442c967b45e29af84f6d21f499
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Oct 29 17:30:06 2010 +0200
+
+    homogeneisation des blocs de la colonne droite avec ceux de la colonne centrale
+
+commit 29cf618d048712c1acbb6383149d64c770baf531
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Oct 29 17:09:51 2010 +0200
+
+    charger le sprite d'illustration dans le menu deroulant au premier affichage
+
+commit b815a8bd4310e62d664d798cecc4bd497a4d6d7d
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Oct 29 17:07:51 2010 +0200
+
+    charger le sprite d'illustration dans le menu deroulant au premier affichage
+
+commit a25fabd6fdfd138b5a53def0d18155cb3c19aaa6
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Oct 29 16:43:52 2010 +0200
+
+    refactoring de la colonne centrale sans image de background
+
+commit 890b2d3592cd705f1a37983f31dc9459bbcef52d
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 19:27:26 2010 +0200
+
+    coins arrondis sur les cadre_produit dans les blocs bleus
+
+commit 3407ac82a09b6468844c87964acac2528ff89b39
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 19:08:31 2010 +0200
+
+    suppression des images de background pour les header au profit de css pur.
+    Les coins arrondis se degradent en coins droits dans IE<9
+
+commit 783f9a453c63942e504dc5de64a92212fa0be30f
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 17:26:21 2010 +0200
+
+    des UTF qui trainent
+
+commit 64ca1b49345b7e969bb684310296cf60ed1d3a7e
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 16:25:59 2010 +0200
+
+    menu : deplacer le sprite dans les css et une entite erronee dans le texte alternatif
+
+commit 82a0e60ba8d474fc1d8b4def368487871609a94a
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 16:23:54 2010 +0200
+
+    - js optimise sur le carrousel de home, avec chargement asynchrone des images via js, au premier affichage (script)
+
+commit 106a466945236dacaa56df2f2ed0f56408377538
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 16:23:29 2010 +0200
+
+    - inutile de repeter 500 fois la meme chaine de get dans le html. On le pose en js a chargement + corrections de liens et suppression de parametre d'url vide &bl=
+    - js optimise sur le carrousel de home, avec chargement asynchrone des images via js, au premier affichage
+
+commit 403ae169b56ac3e490598ee7c2c351b12f291056
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 15:50:05 2010 +0200
+
+    inutile de repeter 500 fois la meme chaine de get dans le html. On le pose en js a chargement.
+
+commit 49789076566c7a014a8302984bbab8b3e6b68c0f
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Oct 28 15:32:14 2010 +0200
+
+    accessibilite du menu : le rendre utilisable sans image ni css
+
+commit 732d2ef5338d35fd26b3dc89f855f28f25b39115
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 17:50:27 2010 +0200
+
+    nettoyage css et html de la colonne de gauche navigation
+
+commit c3d7bc5f78f2b9dd819272c02e8780ef07d55eea
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 17:05:31 2010 +0200
+
+    sprite sur les illustrations d'onglet
+
+commit b73e898e18aeb04291230b130e6b6d2527483f53
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 16:12:57 2010 +0200
+
+    utiliser un chargement asynchrone des images de menu via background. Donner une alternative texte en attendant le chargement...
+
+commit 641cee7762afcb2f83e1958cd060c3a018348835
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 15:48:08 2010 +0200
+
+    combiner css et js via htaccess
+
+commit 79e75552802c70b61887bf333c76daaf59515e2f
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 15:35:13 2010 +0200
+
+    supprimer le layout en table puisque un layout tout css est deja prevu !
+
+commit 142892b1db0f23daf36a188205d3fb68295a5499
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 15:27:27 2010 +0200
+
+    remonter le layout dans index.html
+
+commit 6bc1c6672956723fae3f809b053ee6ce7496ba61
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 15:22:29 2010 +0200
+
+    decouper la page html en blocs pour plus de confort et de visibilite du layout (en table!)
+
+commit 10724d095e1dc6386839605db0bcf1816e748718
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 14:53:39 2010 +0200
+
+    nettoyer les css inutiles
+
+commit 70ac65e4b0b2bcd7e0edcfa40e8a6d970ce1c2cc
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Oct 27 13:27:47 2010 +0200
+
+    decouper la grosse css pour y voir plus clair. Il faut savoir s'eloigner de l'objectif pour mieux y revenir !
+
 commit 0dad80e22984186b6615e0f06679d610087bc83b
 Author: Cerdic <cedric@yterium.com>
 Date:   Wed Oct 27 12:18:18 2010 +0200

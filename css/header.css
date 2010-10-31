@@ -21,15 +21,16 @@
   #TOP{height:91px}
 	/*-----*/
     #topLEFT{float:left;width:147px;margin:0;}
+		/*
       #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(img/logo-fnac-png24.png) no-repeat 0 0}
-      * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6*/
+      * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6* /
     /*-----*/
 	#topRIGHT{margin-left:148px;background:url(http://s3.webperf-contest.com/4cc80752a91cc/css/img/spt-backgrounds.png) repeat-x top left;}
 	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos.png) no-repeat -35px -60px;}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
-	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/spt-onglets-chaines-png8.png) no-repeat -820px -10px;}
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) no-repeat -820px -10px;}
 	    #CHAINES li.first{background:none}
-	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(img/spt-onglets-chaines-png8.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) ;background-repeat:no-repeat  }
 	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
 	      #CHAINES li a:active{outline:none}
 	      #ch-Myfnac a{width:82px; background-position:0 -10px }
@@ -107,7 +108,7 @@
 				height:36px;
 				display:block;
 			  height:36px;
-			  background-image:url(img/spt-onglets-chaines-png8.png) ;
+			  background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) ;
 			  background-repeat:no-repeat;
 			  z-index:101;/* 1 couche de plus que les megaMenu */
 			}

@@ -193,7 +193,7 @@ border-bottom-right-radius:8px;
 .flat .blk_header{
   margin:0 !important /* le block d'ent�te ne doit pas avoir de marges quand il n'a pas de bordure */
 }
-
+/*
 .block .gradient{
   background:url(img/fond_gradient.png) repeat-x left top
 }
@@ -201,6 +201,7 @@ border-bottom-right-radius:8px;
   background:url(img/fond_gradient.png) repeat-x left top;
   background-color:#FFF;
 }
+*/
 .block .filled_black{
   background-color:#000; /* noir */
   color:#FFF; /* blanc */
@@ -228,7 +229,7 @@ border-bottom-right-radius:8px;
 /* ombre de fin de block */
 .btmshadow {
 	padding-bottom:13px;
-  background:url("img/box-bot-reflet-186.png") no-repeat left bottom;
+  background:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) no-repeat right bottom;
 }
 
 /*********************
@@ -748,6 +749,7 @@ border-bottom-right-radius:8px;
 .block_noir .listeproduits .links, .block_noir .listeproduits .links a{
   color:#DE9C00; /* moutarde */
 }
+/*
 .block_noir .fluXml .blk_content{
   background:url(img/flux-xml.png) no-repeat 9px 12px;
 }
@@ -760,7 +762,7 @@ border-bottom-right-radius:8px;
   padding-left:40px;
   margin-bottom:0;
 }
-
+*/
 /* ======= block_gris ======= */
 .block_gris .blk_header {
   background-color:#808080; /* gris fonc�*/
@@ -802,12 +804,14 @@ border-bottom-right-radius:8px;
 }
 /*  background-image:url(img/block_gris_inside_corners.gif);
 }invalide*/
+/*
 .block_gris .gradient_bottom{
   background-image:url(img/gradient_bottom_block_gris.gif);
 }
 .block_gris .button, .block_gris .button span{
   background-image:url(img/bouton_gris_background.png);
 }
+*/
 /* ======= block_moutarde ======= */
 .block_moutarde .blk_header {
   background-color:#DE9C00; /* moutarde */
@@ -836,16 +840,17 @@ border-bottom-right-radius:8px;
   color:#666; /* gris */
 }
 /*classe tetiere directe pour tableaux*/
-.tl_moutarde{ /*placer ds th de gauche*/
+/*
+.tl_moutarde{ /*placer ds th de gauche* /
   background:#DE9C00 url(img/block_moutarde_flat_header_gris.png) no-repeat left top;
 }
-.tc_moutarde{ /*placer ds tr*/
+.tc_moutarde{ /*placer ds tr* /
   background:#DE9C00 url(img/block_moutarde_flat_header_gris.png) no-repeat -20px 0;
 }
-.tr_moutarde{ /*placer ds th de droite*/
+.tr_moutarde{ /*placer ds th de droite* /
   background:#DE9C00 url(img/block_moutarde_flat_header_gris.png) no-repeat right top;
 }
-
+*/
 /* ======= block_blanc ======= */
 .block_blanc .blk_header {
   background-color:#FFF; /* blanc */
