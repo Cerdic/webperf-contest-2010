@@ -27,7 +27,7 @@
 	#topRIGHT{margin-left:148px;background:url(http://s3.webperf-contest.com/4cc80752a91cc/css/img/spt-backgrounds.png) repeat-x top left;}
 	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos.png) no-repeat -35px -60px;}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
-	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/sprite-chaines.png) no-repeat -820px 0;}
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(img/spt-onglets-chaines-png8.png) no-repeat -820px -10px;}
 	    #CHAINES li.first{background:none}
 	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(img/spt-onglets-chaines-png8.png) ;background-repeat:no-repeat  }
 	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
