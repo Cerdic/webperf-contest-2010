@@ -118,6 +118,9 @@ $(function () {
 
 	//-----
 
+	$("#onglets").html($("#onglets-full").html());
+	$("#onglets-full").detach();
+	
 	// au passage de la souris sur le lien de l'onglet
 	$("#onglets> li> a").mouseenter(function(){
 		// initialiser la deco au survol !

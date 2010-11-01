@@ -1,7 +1,7 @@
 /****************** Structure ******************/
 /* ========= page ========= */
 #page, #page_2cols, #page_1col, #enfants {
-  margin:0 auto 0;
+  margin:0 auto;
   padding:0 0 20px 0;
   min-width:996px;
   width:83em;
@@ -10,30 +10,25 @@
 /* ========== Content ========== */
 #content{ /* lot2 :update */
   clear:both;
-  padding:10px 10px 0 10px;
-  /* contexte de formatage */
-  overflow:auto;/* contexte de formatage optimise, sous navigateur w3c les blocs parents de float ne font pas 0 de hauteur */
-  _overflow:visible; /*special ie6 qui balance des scrolls, le zoom dessous permet de faire le haslayout et donc le modele de boite est correcte */
-  zoom:1;
+	float:left;
+	width:100%;
 }
 /* ========== Colonnes ==========*/
+#col_centre{
+	margin: 0 18.7em;
+	padding-top:1em;
+}
 #col_gauche{
   float:left;
-  margin:0 2.4em 0 0;
-  min-width:186px;
   width:15.5em;
-  min-height:10px;
-}
-#col_centre{
-  float:left;
-  min-width:546px;
-  width:45.5em;
+	margin-left:-82.1em;
+	padding-top:1em;
 }
 #col_droite{
-  float:right;
-  min-width:186px;
+  float:left;
   width:15.5em;
-  min-height:10px
+	margin-left:-16.4em;
+	padding-top:1em;
 }
 #col_gauche_header, #col_center_header{
   position:relative;

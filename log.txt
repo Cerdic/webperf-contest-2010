@@ -1,3 +1,16 @@
+commit 33612c801fdf08ba18da2f936961b005d38d968c
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Oct 31 18:06:33 2010 +0100
+
+    integrons le style inline, cela permet d'aller plus vite vers le rendu et de passer sous les 2.5s
+    http://www.webpagetest.org/result/101031_64843600f060d6cb982e8d5769a921bf/1/details/
+
+commit f6947dadc45ba6f738aab0f1c1237d114d052975
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Oct 31 18:04:25 2010 +0100
+
+    Optimisation des images
+
 commit 0471f429e412e25ca14bd4ea4527f6ebadc1ffd5
 Author: Cerdic <cedric@yterium.com>
 Date:   Sun Oct 31 15:12:48 2010 +0100
