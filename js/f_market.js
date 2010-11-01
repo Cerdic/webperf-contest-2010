@@ -13,22 +13,23 @@ while(m=MarketPlaceOffers.pop()){
 }
 */
 
-var m;
-var h=0;
-var prid=[];
-for (h=0;h<MarketPlaceOffers.length;h++){
-	m = MarketPlaceOffers[h].split('|');
-	prid.push(m[1]);
+function updateMarketPlaceOffers(){
+	var m;
+	var h=0;
+	var prid=[];
+	for (h=0;h<MarketPlaceOffers.length;h++){
+		m = MarketPlaceOffers[h].split('|');
+		prid.push(m[1]);
+	}
+
+	$.getJSON("MarketPlace/?jsoncallback=?",
+		{prid:prid},
+		function(data){$(function(){
+			var m;
+			while(m=MarketPlaceOffers.pop()){
+				m = m.split('|');
+				$('#'+m[0]).html(data['id'+m[1]].MarketPlaceSummary);
+			}
+		});}
+	);
 }
-
-$.getJSON("MarketPlace/?jsoncallback=?",
-	{prid:prid},
-	function(data){$(function(){
-		var m;
-		while(m=MarketPlaceOffers.pop()){
-			m = m.split('|');
-			$('#'+m[0]).html(data['id'+m[1]].MarketPlaceSummary);
-		}
-	});}
-);
-

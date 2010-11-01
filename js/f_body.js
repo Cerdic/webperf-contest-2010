@@ -114,6 +114,9 @@ function displayWaiting(){
 	$('#waitingMsg').show('fast');
 }
 
+if (typeof(window.boot_js)!='undefined')
+	boot_js();
+
 $(function () {
 
 	//-----
@@ -209,4 +212,3 @@ $(function () {
 
 
 });
-var s_account="fnaccomprod";
