@@ -1,3 +1,74 @@
+commit 5a8842485f5244372be02ec0770b102411e92cc0
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 14:38:50 2010 +0100
+
+    minification apres modif.
+    Cela clos l'optimisation pour IE7/WebPageTest
+    http://www.webpagetest.org/result/101102_d442f6418799098816d4b4ce1d0aa505/
+
+commit f0095ef73a6cc67f19d6d562c064a7ea7699279b
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 14:29:03 2010 +0100
+
+    minifier le html
+
+commit 9674565f45b397491fd73ef0b07ef7571f0924b3
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 14:28:03 2010 +0100
+
+    minifier le html ici aussi
+
+commit 1c40aeb400fbd455b0b5a64a06f51f8b299819ba
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 14:27:45 2010 +0100
+
+    expire sur le js
+
+commit c77a00281fa2f7be175c0a7c5ce0e6127021d02e
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 14:27:28 2010 +0100
+
+    un selecteur optimise
+
+commit 2a13cfd0eb28679c8b1f597023d79bee0a05457c
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 12:48:01 2010 +0100
+
+    Optimisation fine du chargement des ressources images :
+    - le gif anime est remplace par un png8 statique dans le html, et le gif anime est injecte apres que le document soit complet (l'animation demarre a peu pres comme avant)
+    - on change quelques urls pour repartir la charge au mieux sur les 8 processus de dl de IE7 et tout finir en meme temps.
+
+commit b9e1d64bd4d28abec60941940ec16b6177053291
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 12:11:48 2010 +0100
+
+    nettoyage des js inutiles et minification par le closure compiler
+
+commit 4f6b57ca0eafbe5e33dd792705ea2a9273ce9f53
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 10:18:59 2010 +0100
+
+    optimiser le temps de chargement global en chargeant le menu_full en ajax asynchrone (le menu n'est de toute facon pas fonctionnel en l'absence de javascript, donc pas de degradation de l'accessibilite).
+    Cela allege le document html de moitie, ce qui permet  d'avoir un rendu plus rapide et un document complet plus tot.
+
+commit ee04c74efef8b20bd61b2dfa3368b78d3d380bb5
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 1 19:12:26 2010 +0100
+
+    retarder l'appel au maruquer de stat apres que le doc soit ready
+
+commit b69b7e663253df49b3b24d995eb754990201c8d7
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 1 18:53:58 2010 +0100
+
+    retablir le marqueur de stat metrics.fnac.com
+
+commit 196cda8ffa99cbc114eee22e671ca22c06f2456e
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 1 18:27:01 2010 +0100
+
+    envoyer le contenu principal et ses images le plus haut possible dans le html
+
 commit 33612c801fdf08ba18da2f936961b005d38d968c
 Author: Cerdic <cedric@yterium.com>
 Date:   Sun Oct 31 18:06:33 2010 +0100
