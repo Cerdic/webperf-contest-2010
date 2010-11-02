@@ -114,40 +114,39 @@ function displayWaiting(){
 	$('#waitingMsg').show('fast');
 }
 
-if (typeof(window.boot_js)!='undefined')
-	boot_js();
-
 $(function () {
 
 	//-----
 
-	$("#onglets").html($("#onglets-full").html());
-	$("#onglets-full").detach();
-	
-	// au passage de la souris sur le lien de l'onglet
-	$("#onglets> li> a").mouseenter(function(){
-		// initialiser la deco au survol !
-		if (megamenu_sprite){
-			$('#onglets .megaMenu .vignet b').css('background-image','url('+megamenu_sprite+')');
-			megamenu_sprite=null;
-		}
-		//on affiche son megaMenu
-		$(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
-	}).mouseleave(function(){
-		//on cache son megaMenu
-		$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
-	});
-	//tant que la souris se trouve sur le megaMenu
-	$(".megaMenu").mouseenter(function(){
-			// il reste affiché
-			$(this).addClass('menu_actif');
-			// et on applique la classe .hover a son lien
-			$(this).siblings("a").addClass("hover");
-	}).mouseleave(function(){
-			// il se cache
-			$(this).removeClass('menu_actif');
-			// et on retire la classe .hover a son lien
-			$(this).siblings("a").removeClass("hover");
+	$.get('menu_full.html', function(data) {
+		var recu = jQuery('<div><\/div>').html(data);
+		$("#onglets").html($('ul',recu).eq(0).html());
+
+		// au passage de la souris sur le lien de l'onglet
+		$("#onglets> li> a").mouseenter(function(){
+			// initialiser la deco au survol !
+			if (megamenu_sprite){
+				$('#onglets .megaMenu .vignet b').css('background-image','url('+megamenu_sprite+')');
+				megamenu_sprite=null;
+			}
+			//on affiche son megaMenu
+			$(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
+		}).mouseleave(function(){
+			//on cache son megaMenu
+			$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
+		});
+		//tant que la souris se trouve sur le megaMenu
+		$(".megaMenu").mouseenter(function(){
+				// il reste affiché
+				$(this).addClass('menu_actif');
+				// et on applique la classe .hover a son lien
+				$(this).siblings("a").addClass("hover");
+		}).mouseleave(function(){
+				// il se cache
+				$(this).removeClass('menu_actif');
+				// et on retire la classe .hover a son lien
+				$(this).siblings("a").removeClass("hover");
+		});
 	});
 
 	
@@ -212,3 +211,6 @@ $(function () {
 
 
 });
+
+if (typeof(window.boot_js)!='undefined')
+	boot_js();
