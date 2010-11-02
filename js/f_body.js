@@ -136,7 +136,7 @@ $(function () {
 			$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
 		});
 		//tant que la souris se trouve sur le megaMenu
-		$(".megaMenu").mouseenter(function(){
+		$("#onglets .megaMenu").mouseenter(function(){
 				// il reste affiché
 				$(this).addClass('menu_actif');
 				// et on applique la classe .hover a son lien
