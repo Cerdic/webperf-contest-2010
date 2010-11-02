@@ -44,6 +44,8 @@ ExpiresActive On
 ExpiresByType image/gif A2600000
 ExpiresByType image/png A2600000
 ExpiresByType image/jpeg A2600000
+ExpiresByType text/javascript A2600000
+ExpiresByType application/javascript A2600000
 ExpiresByType application/x-javascript A2600000
 ExpiresByType text/css A2600000
 ExpiresByType text/html A14400
