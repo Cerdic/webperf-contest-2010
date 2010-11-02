@@ -209,7 +209,6 @@ $(function () {
 
 	});
 
-
 });
 
 if (typeof(window.boot_js)!='undefined')

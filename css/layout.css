@@ -59,23 +59,8 @@
 #col_gauche, #col_droite{
   color:#333; /* gris fonc� */
 }
-/* ====== Colonnes Template 2 cols ====== */
-#page_2cols #col_centre{
-  min-width:747px;/* permet d'etaller en largeur */
-  width:61em;
-  /* contexte de formatage */
-  overflow:visible;
-  zoom:1;
-}
-/* cas problematique sur la page telechargement col centre et col droite uniquement */
-.IS_IE #page_2cols #col_centre{
-  width:62.25em;
-}
-/* seulement si nous sommes dans un page encore en tableau */
-.IS_IE #page_2cols table #col_centre{
-  width:747px;/* permet d'etaller en largeur */
-  float:none;
-}
+
+
 /* ======== Chemin de fer ====== */
 #cheminfer, #cheminfer *{
   margin:0;

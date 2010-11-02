@@ -4,6 +4,7 @@
 	ex : addEvent(window, "load", mafonction)
 	ne Jamais mettre de parentheses a la fonction passee en parametres
 */
+/*
 function addEvent( obj, type, fn ){
 	if (obj.addEventListener)
 		obj.addEventListener( type, fn, false );
@@ -14,7 +15,7 @@ function addEvent( obj, type, fn ){
 		obj.attachEvent( "on"+type, obj[type+fn] );
 	}
 }
-
+*/
 
 /* Alignement en hauteur
  *  Les fonctions qui suivent alignent les blocs et les contenus en hauteur
@@ -109,12 +110,12 @@ function getAllBlocks(){
 /*  fixMiseEnAvant :
  *	Aligne les contenus des blocks de mise en avant quand ceux-ci sont dans un conteneur ligne.
  */
+
 function fixMiseEnAvant(){
-return;
     for (var i = 0; i < arrLineOfMiseEnAvant.length; i++) {
     
         var line = arrLineOfMiseEnAvant[i];
-        /* on cherche d'abord l'ensemble des elements qui devronts etre alignes */
+        // on cherche d'abord l'ensemble des elements qui devronts etre alignes
         var imgs = [];
 		var resume = [];
 		var links = [];
@@ -146,8 +147,8 @@ return;
 			var o=div[d];
 			if (o.className.match(/\bblk_footer\b/)) footer.push(o);
 		}
-        /* on traite les img a part
-         /* aligner les elements */
+        // on traite les img a part
+        // aligner les elements
         var arrOfArrElements = [h3, imgs, resume, prix, links, market, footer];//attention a l'ordre
         var maxImgHeight = 0;
         var maxH3Height = 0;
@@ -475,18 +476,20 @@ function fixListe2cols(){
  * - Soit pendant le chargement de la page (mais le DOM est construit)
  * - Soit une fois que la page est construite
  */
+/*
 var domLoaded = false;
 var domMustLaunch = false;
 var domLoadFunctionLaunched = false;
 var domLoadTimer = null;
 var domLoadArrFunctions = [];
 var onloadArrFunctions = [];
-
+*/
 /*
  *	domLoad() :
  *	Appartient a un ensemble de fonctions qui sont lancees pendant le chargement de la page, une fois le DOM construit
  *	Cette fonction attend que le dom soit totalement construit
  */
+/*
 function domLoad(){
     if (document.getElementById("footer")) {
         domLoadCaller();
@@ -497,13 +500,14 @@ function domLoad(){
 }
 
 domLoad();
-
+*/
 /*
  *	domLoadCaller() :
  *	Appartient a un ensemble de fonctions qui sont lancees pendant le chargement de la page, une fois le DOM construit
  *	Cette fonction gere le lancement de la fonction finale domLoadFunctions();
  *	domLoadCaller() lances les fonctions contenues dans un array de fonctions et gere le fait que domLoad doit etre lance avant le onload
  */
+/*
 function domLoadCaller(){
     domLoadFunctionLaunched = true;
     for (var i = 0; i < domLoadArrFunctions.length; i++) {
@@ -515,12 +519,13 @@ function domLoadCaller(){
         onloadCaller();
     }
 }
-
+*/
 /*
  *	onloadCaller() : // ne pas modifier cette fonction
  *	Cette fonction gere le lancement de la fonction finale onLoadFunctions();
  *	onLoadCaller() est executee une fois que la page est chargee.
  */
+/*
 function onloadCaller(){
     clearTimeout(domLoadTimer);
     if (!domLoadFunctionLaunched) {
@@ -535,13 +540,14 @@ function onloadCaller(){
     }
     onloadFunctions();
 }
-
+*/
 /*
  * Executions des fonctions au chargement de la page
  */
 /* domLoadFunctions() :
  *  Cette fonction est lancée pendant le chargement de la page, une fois que le DOM est completement construit
  */
+/*
 function domLoadFunctions(){
     getAllBlocks(); //parsing de tous les blocks et mise ne place dans des hashmaps
     fixAligneProduits(); //alignement des contenus de produits
@@ -551,6 +557,7 @@ function domLoadFunctions(){
 /* onloadFunctions():
  *	cette fonction est lancee une fois que la page est totalement chargee (images, flash, fichiers associes)
  */
+/*
 function onloadFunctions(){
     fixMiseEnAvant(); //alignement des contenus de mise en avant
     fixListeInline(); //aligne les items des listes en ligne
@@ -559,6 +566,7 @@ function onloadFunctions(){
     fixAddressBlock();
 	
 }
+/*
 var fnacFlag = 0;
 var fnacTimer;
 
@@ -578,16 +586,24 @@ function timerFix() {
 		clearTimeout(fnacTimer);
 	}
 }
-timerFix();
+//timerFix();
+*/
 
 
 //on lance la fonction onloadCaller une fois la page chargee.
 
-addEvent(window, "load", onloadCaller);
-/*
+//addEvent(window, "load", onloadCaller);
+
 $(document).ready(function(){
-    onloadCaller();
+    getAllBlocks(); //parsing de tous les blocks et mise ne place dans des hashmaps
+    fixAligneProduits(); //alignement des contenus de produits
+    getAllLists(); // parsing de toutes les listes produits ou contacts
+    fixMiseEnAvant(); //alignement des contenus de mise en avant
+    //fixListeInline(); //aligne les items des listes en ligne
+    //fixListe2cols(); //aligne les items des listes en 2 colonnes
+    fixBlocksHeight(); //alignement des blocs
+    fixAddressBlock();
 })
-*/
+
 
 

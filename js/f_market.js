@@ -30,6 +30,7 @@ function updateMarketPlaceOffers(){
 				m = m.split('|');
 				$('#'+m[0]).html(data['id'+m[1]].MarketPlaceSummary);
 			}
+			fixBlocksHeight();
 		});}
 	);
 }

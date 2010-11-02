@@ -1,23 +1,24 @@
 
 
-
 var IS_IE = document.all && window.print && !window.opera && /MSIE [56]/.test(navigator.userAgent);
+var heightPropertyToUse = IS_IE ? "height" : "minHeight";
+/*
 var IS_IE7 = document.all && window.print && !window.opera && /MSIE [78]/.test(navigator.userAgent);
 var IS_IE_ALL = document.all && window.print && !window.opera && /MSIE/.test(navigator.userAgent);
 var IE_W3C = IS_IE && /MSIE [789]/.test(navigator.userAgent);
 var IS_Webkit = /Konqueror|Safari|KHTML/.test(navigator.userAgent);
-var heightPropertyToUse = IS_IE ? "height" : "minHeight";
+*/
 
 /* ecrit les classes dans le tag HTML, pas besoin d'attendre le chargement du body */
-document.documentElement.className += " hasJS"; //cette classe rajoute une classe CSS qui permet des actions afin de cacher ou afficher des elements seulement pour les visiteurs qui ont le Javascript active sur leur navigateur. (exemple le hidesubmit)
-if (IS_IE) 
-	document.documentElement.className+=" IS_IE"; //cette classe permet d'utiliser des hacks CSS/JS seulement pour IE6 et versions inferieures.
-else if (IS_IE7)
-	document.documentElement.className+=" IS_IE7"; //cette classe permet d'utiliser des hacks CSS/JS seulement pour IE7
+//document.documentElement.className += " hasJS"; //cette classe rajoute une classe CSS qui permet des actions afin de cacher ou afficher des elements seulement pour les visiteurs qui ont le Javascript active sur leur navigateur. (exemple le hidesubmit)
+//if (IS_IE)
+//	document.documentElement.className+=" IS_IE"; //cette classe permet d'utiliser des hacks CSS/JS seulement pour IE6 et versions inferieures.
+//else if (IS_IE7)
+//	document.documentElement.className+=" IS_IE7"; //cette classe permet d'utiliser des hacks CSS/JS seulement pour IE7
 /*
  * Fonctions globales
  */
-
+/*
 function getElementsByClassName(oElm, sTagName, sClassName)
 {
   var aElements = (sTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(sTagName);
@@ -33,9 +34,11 @@ function getElementsByClassName(oElm, sTagName, sClassName)
   }
   return aReturnElements
 }
+*/
 /*****
   menu deroulant - simulation du hover facon F6
 *****/
+/*
 function sousMenuAddHover(elm, position) {
   elm.style.behavior = " ";
   var menu = elm.getElementsByTagName("ul");
@@ -52,7 +55,7 @@ function sousMenuAddHover(elm, position) {
     }
   }
 }
-
+*/
 function findPos(obj){
     var curleft = curtop = 0;
     if (obj.offsetParent) {
@@ -77,6 +80,7 @@ function intStyleJ(obj,cssProperty){
 
 
 /* getMouse :  */
+/*
 function getMouse(e){
     var x, y;
     var elt = (navigator.userAgent.indexOf("MSIE 5") != -1) ? document.body : document.documentElement;
@@ -92,11 +96,12 @@ function getMouse(e){
     window.mouseX = x;
     window.mouseY = y;
 }
-
+*/
 /* 
  * ifrlayer :
  * genere une iframe pour faire passer les divs par dessus des selects sous IE
  */
+/*
 var ifrlayer = {
     make: function(obj){
         if (!obj) 
@@ -151,11 +156,12 @@ var ifrlayer = {
         }
     }
 }
-
+*/
 /*
  * Fonction Resize : redimensionne un element avec un effet
  * size ( element, actionsWidth:object, heightWidth:object, timer:int, pitch:int);
  */
+/*
 function resize(obj, actionWidth, actionHeight, timer, pitch, funcWhile, funcAfter, inBoucle){
     var endWidth = false;
     var endHeight = false;
@@ -202,12 +208,13 @@ function resize(obj, actionWidth, actionHeight, timer, pitch, funcWhile, funcAft
         } : null, timer, pitch, funcWhile, funcAfter, true)
     }, timer);
 }
-
+*/
 /*
  * POPIN
  * Creation de popin en récuperant un élément HTML déjà écrit dans la page,
  * puis on l'affiche en popin
  */
+/*
 function popinIt(obj, id, tag, className, noeuxParent, popinClassName, onOff){
     if (onOff == "on") {
         //ici on supprime tout popup deja affiche pour eviter qu ils se montent les uns sur les autres, mais a voir a passer en variable
@@ -242,10 +249,11 @@ function popinIt(obj, id, tag, className, noeuxParent, popinClassName, onOff){
         del.parentNode.removeChild(del);
     }
 }
-
+*/
 /*
  * Cookies
  */
+/*
 function GetCookie(name){
     var startIndex = document.cookie.indexOf(name);
     if (startIndex != -1) {
@@ -258,7 +266,7 @@ function GetCookie(name){
         return null;
     }
 }
-
+*/
 /*  addHover :
  *	Cette fonction ajoute le fonctionnement de la pseudo classe hover en CSS, et seulement pour IE
  *	Elle se base sur les evenement propres a IE qui sont les evenements qui ont le comportement le plus proche du :hover en CSS.
@@ -268,6 +276,7 @@ function GetCookie(name){
  *		Afin de ne pas prendre en compte IE7 en mode strict il suffit de placer la classe .IS_IE avant, cette classe est ajoute pendant le chargement de la page.
  *		.IS_IE #menu ul li {behavior:expression(addHover(this))}
  */
+/*
 function addHover(elm){
     elm.style.behavior = " ";
     elm.onmouseenter = function(){
@@ -277,13 +286,15 @@ function addHover(elm){
         this.className = this.className.replace(/\bhover\b/, "");
     }
 }
-
+*/
 /*************
 * Fonctions pour fixer les coins sous IE
 * Une fonctions est prevue aussi pour Safari 2.0, Opera 8.5 et FF 1.0 pour certains cas
 **************/
+/*
 var CSSBottomCorners=[]; //array pouvant contenir les coins absolu positionnes en bottom
 var currentBlockToFixCorners=null; //variable gloable utilisee lorsqu'on veux fixer les coins sur un seul bloc
+*/
 /*  cssRight :
 	fixe les coins positionnes en absolu a droite
 	ex :
@@ -292,10 +303,11 @@ var currentBlockToFixCorners=null; //variable gloable utilisee lorsqu'on veux fi
 		ex : .tr {height:5px;  width:5px; right:0}
 		Afin de ne pas prendre en compte IE7 en mode strict il suffit de placer la classe .IS_IE avant, cette classe est ajoutee pendant le chargement de la page et n'est ajoutee que pour IE5.x ou 6.
 */
+/*
 function cssRight(elm) {
 	elm.style.right=(parseInt(elm.currentStyle.right)-(elm.parentNode.offsetWidth%2))+"px";
 }
-
+*/
 /*  cssBottom :  (comme CSS right avec un parametre supplementaire)
 	fixe les coins positionnes en absolu a droite
 	ex :
@@ -307,6 +319,7 @@ function cssRight(elm) {
 	ex :
 		body.IS_IE .br {bottom:expression(addHover(this, true))}
 */
+/*
 function cssBottom(elm, pushElement) {
 	if (pushElement && !elm.CSSBottomAlreadyCSS) {
 		CSSBottomCorners.push(elm);
@@ -314,10 +327,10 @@ function cssBottom(elm, pushElement) {
 	}
 	elm.style.bottom=(parseInt(elm.currentStyle.bottom)-(elm.parentNode.offsetHeight%2))+"px";
 }
+*/
 
 
-
-
+/*
 function getTaille(Elem) {
 
 
@@ -329,12 +342,13 @@ function getTaille(Elem) {
    window.wPos = elem.offsetWidth;
    window.hPos = elem.offsetHeight;
 }
-
+*/
 /*******
   ici on switch d'onglet en onglet dans une page adherent,
   la fonction reste assez souple et en la modifiant un
   peu elle pourrait etre adaptable partout
 *******/
+/*
 function switchAvantageAdherent(id, idOnglet){
   var lastViewed = idOnglet;
   SetCookie('lastOnglet',lastViewed,10);
@@ -377,8 +391,11 @@ function switchAvantageAdherent(id, idOnglet){
     document.getElementById("m_adh_facilite_paiement").className="";
   }
 }
+*/
+/*
 function SetCookie(name, value, days) {
      var expire = new Date ();
      expire.setTime (expire.getTime() + (24 * 60 * 60 * 1000) * days);
      document.cookie = name + "=" + escape(value) + "; expires=" +expire.toGMTString();
 }
+*/
