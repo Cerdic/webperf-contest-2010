@@ -120,7 +120,10 @@ $(function () {
 
 	$.get('menu_full.html', function(data) {
 		var recu = jQuery('<div><\/div>').html(data);
-		$("#onglets").html($('ul',recu).eq(0).html());
+		$('#onglets-full >li',recu).each(function(){
+			var c=$(this).attr('class');
+			$("#onglets li."+c).html($(this).html());
+		});
 
 		// au passage de la souris sur le lien de l'onglet
 		$("#onglets> li> a").mouseenter(function(){
