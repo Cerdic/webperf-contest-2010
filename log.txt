@@ -1,3 +1,15 @@
+commit d1f9de9cad5ea4244ad719c64b9bc4c38e8f32f1
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 16:34:33 2010 +0100
+
+    width et height sur toutes les images, c'est un basique qui manquait !
+
+commit 9613eeb00cb3c8bb4fcb629908178556e67ec322
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 2 14:42:22 2010 +0100
+
+    log pour le gist
+
 commit 5a8842485f5244372be02ec0770b102411e92cc0
 Author: Cerdic <cedric@yterium.com>
 Date:   Tue Nov 2 14:38:50 2010 +0100
