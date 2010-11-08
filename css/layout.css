@@ -1,6 +1,9 @@
 /****************** Structure ******************/
 /* ========= page ========= */
 #page, #page_2cols, #page_1col, #enfants {
+	/* annuler l'opacite a zero du head
+  (qui masque le rendu casse en attendant la css) */
+	filter:alpha(opacity=100)!important;opacity:1.0!important;
   margin:0 auto;
   padding:0 0 20px 0;
   min-width:996px;
