@@ -67,7 +67,17 @@ var s_code=s.t();
 /*	$(function () {
 if(s_code) $('body').append(s_code);
 });*/
+
+setTimeout(setIframeSrc, 1000);
 }
+function setIframeSrc() {
+	iframe1 = document.getElementById('iFrameFooterLoad');
+	if ( -1 == navigator.userAgent.indexOf("MSIE") )
+		iframe1.src = "iframe-footer/engagements.html";
+	else
+		iframe1.location = "iframe-footer/engagements.html";
+}
+
 if (window.jQuery) boot_js();
 //--></script>
 </div>
