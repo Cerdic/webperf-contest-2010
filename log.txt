@@ -1,3 +1,47 @@
+commit e46f93e8d495c2e710c53f1a850afa395d1f902b
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 8 10:18:31 2010 +0100
+
+    la chargement de la css dans le head bloque le telechargement des ressources images et retarde le start render.
+    On deplace donc la reference a la css apres le contenu principal, ce qui permet d'avoir lance le dl de (presque) toutes les <img> avant le chargement de la css.
+    Toutefois, cela provoque un flash pendant lequel on apercoit la page html brute (avant le dl de la css), ce qui est peu qualitatif.
+    On y remedie par une simple directive opacity:0.01 dans le <head>, ce qui permet de masquer ce flash, et la css retablit une opacite 1.0 lorsqu'elle est chargee.
+    Le rendu de la page avec opacite reduite semble legerement plus lent, mais au final on y gagne largement sur le onload
+    (et sur la mesure du start-render, meme si du coup la valeur est un peu artificielle puisque le render est en fait masque jusqu'a chargement de la css).
+
+commit 9ca90ab88782705e8df2507672b3f095a193b8d9
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 8 09:52:25 2010 +0100
+
+    inutile d'avoir des images en 150 de haut pour tous les produits si seule une petite partie est utile. Le js aligne toutes les zones images de toute facon.
+    + optimisation de la taille des images produit
+    + realocation sur les domaines pour paralleliser au mieux le dl
+    On remonte la css en debut de head, mais sans effet significatif sur le start render
+
+commit a1bbb0a36693ab8ced0dd8d379bb421646442c5c
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 5 13:29:46 2010 +0100
+
+    image optimisee dans fond
+
+commit 8bb82a02e780c1d91c4214d784381568ce07c8b4
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 5 13:28:56 2010 +0100
+
+    image optimisee
+
+commit 50f265e682c15be90ec50f278209bbf842efa768
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 5 13:28:29 2010 +0100
+
+    le html du menu charge en async est generique : il ne depend pas de l'onglet actif
+
+commit 2b771bcc9e465e274e9dc67190cd19723b50a782
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 5 11:13:37 2010 +0100
+
+    optimisation d'image, encore un peu mieux
+
 commit d1f9de9cad5ea4244ad719c64b9bc4c38e8f32f1
 Author: Cerdic <cedric@yterium.com>
 Date:   Tue Nov 2 16:34:33 2010 +0100

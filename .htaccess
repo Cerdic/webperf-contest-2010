@@ -1,7 +1,7 @@
 # [EN] perhaps you should use this file.. :)
 # [FR] vous devriez peut etre utiliser ce fichier!
 
-<FilesMatch "index.html$">
+<FilesMatch "(index|engagements).html$">
 	Options +Includes
 	SetOutputFilter INCLUDES
 </FilesMatch>

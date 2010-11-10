@@ -116,7 +116,13 @@ function displayWaiting(){
 
 $(function () {
 
-	//-----
+/*
+	var footer;
+	footer="<"+'iframe width="993" height="315" frameborder="0" scrolling="no" name="footer" marginheight="0" marginwidth="0">';
+	footer = footer + $('#iFrameFooter').html();
+	footer = footer + "<"+"/iframe>";
+	$('#iFrameFooter').html(footer).find('iframe').attr('src',$('#iFrameFooter').attr('rel'));
+*/
 
 	$.get('menu_full.html', function(data) {
 		var recu = jQuery('<div><\/div>').html(data);

@@ -161,16 +161,15 @@ body.adherents #footer .inside{ background-image:url(img/bg_footer_adh.png);}
 	text-decoration:underline;
 }*/
 /* ======iFrameFooter ======= */
-/*
 #iFrameFooter{
+height:315px;
 margin:20px auto 10px auto;
 min-width:965px;
 text-align:center;
 clear:both;
 border:0;
 overflow:hidden;
-
-}*/
+}
 
 /* ====== subfooter ======= */
 #subfooter{
