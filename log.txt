@@ -1,3 +1,48 @@
+commit 29a1ee48324c179e5543b56eec0c1f37ddf99392
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 11 18:27:43 2010 +0100
+
+    Lazy-Loading
+    - pour l'autocomplete, que l'on ne declenche qu'au focus sur l'input, avec chargement du js a ce moment
+    - pour le marqueur de stats : on le charge de facon asynchrone pour ne pas retarder le onload
+    - reparation du lazyload de l'iframe dans ie
+    tout cela permet d'alleger le script.minified.js principal et de declencher plus tot
+    
+    http://www.webpagetest.org/result/101111_f5e94ee44ed3540879c49cc0725c1d60/
+
+commit ad6b03dfa178ad7e9e3069dcc86106c1a9490467
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 11 16:37:35 2010 +0100
+
+    regrouper les 2 sprites spt-pictos et spt-backgrounds en une seule spt-picots-bg car le sprite du background est tres leger et consomme un hit pour moins d'1Ko
+
+commit 1b652ab882a3085759cbd10047f3d07608f3e536
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 11 15:35:47 2010 +0100
+
+    Optimiser le sprite des onglets : on factorise le texte noir utilise pour .current et .hover, et on place le fond des boutons en background avec systeme de coulisse. Les onglets "normaux" sont inchanges a cause des exceptions "spectacles" et "vendre"
+
+commit 6b03cb1b1824bdf961b5d124326f6842d45d5334
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Nov 10 20:19:52 2010 +0100
+
+    chargement asynchrone de l'iframe.
+    On met un delai d'1s pour bien voir ce qui se passe. Est-elle bien chargee dans IE ?
+
+commit b6df2099a609e839b839a9ea92dc4c94b2f1c39e
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Nov 10 20:19:09 2010 +0100
+
+    oups, erreur d'url sur l'image
+
+commit 4ee73dafc60a4a32eab70515c95d8d19bafa5d98
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Nov 10 20:04:21 2010 +0100
+
+    Retour de l'iframe en pied de page.
+    On commence par une version simple, inline, qui embarque son css en inline egalement.
+    On perd 0.4s environ sur le onload dans l'affaire, a optimiser
+
 commit e46f93e8d495c2e710c53f1a850afa395d1f902b
 Author: Cerdic <cedric@yterium.com>
 Date:   Mon Nov 8 10:18:31 2010 +0100
