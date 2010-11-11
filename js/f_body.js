@@ -128,7 +128,8 @@ $(function () {
 		var recu = jQuery('<div><\/div>').html(data);
 		$('#onglets-full >li',recu).each(function(){
 			var c=$(this).attr('class');
-			$("#onglets li."+c).html($(this).html());
+			$("a:first",this).remove();
+			$("#onglets li."+c).append($(this).html());
 		});
 
 		// au passage de la souris sur le lien de l'onglet

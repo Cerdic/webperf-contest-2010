@@ -28,9 +28,9 @@
 	#topRIGHT{margin-left:148px;background:url(http://s3.webperf-contest.com/4cc80752a91cc/css/img/spt-backgrounds.png) repeat-x top left;}
 	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos.png) no-repeat -35px -60px;}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
-	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) no-repeat -820px -10px;}
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png) no-repeat -1000px -50px;}
 	    #CHAINES li.first{background:none}
-	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png) ;background-repeat:no-repeat  }
 	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
 	      #CHAINES li a:active{outline:none}
 	      #ch-Myfnac a{width:82px; background-position:0 -10px }
@@ -101,17 +101,24 @@
 				overflow: hidden;
 			  z-index:100;/* 1 couche de plus que les megaMenu */
 		  }
-			#onglets >li > a > b {
+			#onglets >li > a b {
 				position:absolute;
 				top:0;
-				left:0;
 				height:36px;
 				display:block;
 			  height:36px;
-			  background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-onglets-chaines-o-png8.png) ;
+				background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png);
 			  background-repeat:no-repeat;
-			  z-index:101;/* 1 couche de plus que les megaMenu */
 			}
+			#onglets >li > a > b {z-index:103;left:0;}
+			#onglets >li > a > b >b {z-index:101;left:0;}
+			#onglets >li > a > b >b>b {z-index:102;width:3px;right:0;background-position:top right;}
+			
+			#onglets >li.current > a >b {background-position:-920px 0;}
+			#onglets >li.current > a>b>b>b {background-position:-1007px 0;}
+			#onglets >li > a.hover>b {background-position:-830px 0;}
+			#onglets >li > a.hover>b>b>b {background-position:-917px 0;}
+
 			#onglets >li>a:active{outline:none}
 		  /*#onglets .current >a>b{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
 		  /*#onglets .current >a.hover>b{position:relative}/* SAUF si le megaMenu est depli� */
@@ -121,94 +128,79 @@
 
 		/* -- positionnement de l'image des onglets -- */
 			.ong-Livres {width:47px;}
-		  .ong-Livres >a>b {width:47px; background-position:0 -50px }
-		  .ong-Livres.current >a>b{background-position:0 -150px }
-		  .ong-Livres >a.hover>b,
-		  .ong-Livres.current >a.hover>b {background-position:0 -100px }
+		  .ong-Livres >a b {width:47px; background-position:0 -40px }
+		  .ong-Livres.current >a b,
+		  .ong-Livres >a.hover b	 {background-position:0 -75px }
 
 		  .ong-Musique {width:86px;}
-			.ong-Musique >a>b {width:86px; background-position:-49px -50px }
-		  .ong-Musique.current >a>b{background-position:-49px -150px }
-		  .ong-Musique >a.hover>b,
-		  .ong-Musique.current >a.hover>b {background-position:-49px -100px }
+			.ong-Musique >a b {width:86px; background-position:-49px -40px }
+		  .ong-Musique.current >a b,
+		  .ong-Musique >a.hover b {background-position:-49px -75px }
 
 		  .ong-DVD {width:50px;}
-			.ong-DVD >a>b {width:50px; background-position:-137px -50px }
-		  .ong-DVD.current >a>b{background-position:-137px -150px }
-		  .ong-DVD >a.hover>b,
-		  .ong-DVD.current >a.hover>b {background-position:-137px -100px }
+			.ong-DVD >a b {width:50px; background-position:-137px -40px }
+		  .ong-DVD.current >a b,
+		  .ong-DVD >a.hover b {background-position:-137px -75px }
 
 		  .ong-JeuxVideo {width:71px;}
-			.ong-JeuxVideo >a>b {width:71px; background-position:-189px -50px }
-		  .ong-JeuxVideo.current >a>b{background-position:-189px -150px }
-		  .ong-JeuxVideo >a.hover>b,
-		  .ong-JeuxVideo.current >a.hover>b {background-position:-189px -100px }
+			.ong-JeuxVideo >a b {width:71px; background-position:-189px -40px }
+		  .ong-JeuxVideo.current >a b,
+		  .ong-JeuxVideo >a.hover b {background-position:-189px -75px }
 
 		  .ong-Jouets {width:48px;}
-			.ong-Jouets >a>b {width:48px; background-position:-262px -50px }
-		  .ong-Jouets.current >a>b{background-position:-262px -150px }
-		  .ong-Jouets >a.hover>b,
-		  .ong-Jouets.current >a.hover>b {background-position:-262px -100px }
+			.ong-Jouets >a b {width:48px; background-position:-262px -40px }
+		  .ong-Jouets.current >a b,
+		  .ong-Jouets >a.hover b {background-position:-262px -75px }
 
-		  .ong-Informatique.current >a>b{background-position:-312px -150px }
 		  .ong-Informatique {width:81px;}
-			.ong-Informatique >a>b {width:81px; background-position:-312px -50px }
-		  .ong-Informatique >a.hover>b,
-		  .ong-Informatique.current >a.hover>b {background-position:-312px -100px }
+			.ong-Informatique >a b {width:81px; background-position:-312px -40px }
+		  .ong-Informatique.current >a b,
+		  .ong-Informatique >a.hover b {background-position:-312px -75px }
 
 		  .ong-Photo {width:67px;}
-			.ong-Photo >a>b {width:67px; background-position:-395px -50px }
-		  .ong-Photo.current >a>b{background-position:-395px -150px }
-		  .ong-Photo >a.hover>b,
-		  .ong-Photo.current >a.hover>b {background-position:-395px -100px }
+			.ong-Photo >a b {width:67px; background-position:-395px -40px }
+		  .ong-Photo.current >a b,
+		  .ong-Photo >a.hover b {background-position:-395px -75px }
 
 		  .ong-TV {width:73px;}
-			.ong-TV >a>b {width:73px; background-position:-464px -50px }
-		  .ong-TV.current >a>b{background-position:-464px -150px }
-		  .ong-TV >a.hover>b,
-		  .ong-TV.current >a.hover>b {background-position:-464px -100px }
+			.ong-TV >a b {width:73px; background-position:-464px -40px }
+		  .ong-TV.current >a b,
+		  .ong-TV >a.hover b {background-position:-464px -75px }
 
 		  .ong-Son {width:71px;}
-			.ong-Son >a>b {width:71px; background-position:-539px -50px }
-		  .ong-Son.current >a>b{background-position:-539px -150px }
-		  .ong-Son >a.hover>b,
-		  .ong-Son.current >a.hover>b {background-position:-539px -100px }
+			.ong-Son >a b {width:71px; background-position:-539px -40px }
+		  .ong-Son.current >a b,
+		  .ong-Son >a.hover b {background-position:-539px -75px }
 
 		  .ong-GPS {width:63px;}
-			.ong-GPS >a>b {width:63px; background-position:-612px -50px }
-		  .ong-GPS.current >a>b{background-position:-612px -150px }
-		  .ong-GPS >a.hover>b,
-		  .ong-GPS.current >a.hover>b {background-position:-612px -100px }
+			.ong-GPS >a b {width:63px; background-position:-612px -40px }
+		  .ong-GPS.current >a b,
+		  .ong-GPS >a.hover b {background-position:-612px -75px }
 
 		  .ong-Gadgets {width:57px;}
-			.ong-Gadgets >a>b {width:57px; background-position:-677px -50px }
-		  .ong-Gadgets.current >a>b{background-position:-677px -150px }
-		  .ong-Gadgets >a.hover>b,
-		  .ong-Gadgets.current >a.hover>b {background-position:-677px -100px }
+			.ong-Gadgets >a b {width:57px; background-position:-677px -40px }
+		  .ong-Gadgets.current >a b,
+		  .ong-Gadgets >a.hover b {background-position:-677px -75px }
 
 		  .ong-TiragesPhoto {width:52px;}
-			.ong-TiragesPhoto >a>b {width:52px; background-position:-736px -50px }
-		  .ong-TiragesPhoto.current >a>b{background-position:-736px -150px }
-		  .ong-TiragesPhoto >a.hover>b,
-		  .ong-TiragesPhoto.current >a.hover>b {background-position:-736px -100px }
+			.ong-TiragesPhoto >a b {width:52px; background-position:-736px -40px }
+		  .ong-TiragesPhoto.current >a b,
+		  .ong-TiragesPhoto >a.hover b {background-position:-736px -75px }
 
 		  .ong-Evenement {width:65px;}
-			.ong-Evenement >a>b {width:65px; background-position:-790px -50px }
-		  .ong-Evenement.current >a>b{background-position:-790px -150px }
-		  .ong-Evenement >a.hover>b,
-		  .ong-Evenement.current >a.hover>b {background-position:-790px -100px }
+			.ong-Evenement >a b {width:65px; background-position:-790px -40px }
+		  .ong-Evenement.current >a b,
+		  .ong-Evenement >a.hover b {background-position:-790px -75px }
 
 		  .ong-Spectacles {width:69px;}
-			.ong-Spectacles >a>b {width:69px; background-position:-857px -50px }
-		  .ong-Spectacles.current >a>b{background-position:-857px -150px }
-		  .ong-Spectacles >a.hover>b,
-		  .ong-Spectacles.current >a.hover>b {background-position:-857px -100px }
+			.ong-Spectacles >a b {width:69px; background-position:-857px -40px }
+		  .ong-Spectacles.current >a b,
+		  .ong-Spectacles >a.hover b {background-position:-857px -75px }
 
 		  .ong-Vendre {width:50px;}
-			.ong-Vendre >a>b {width:50px; background-position:-928px -50px }
-		  .ong-Vendre.current >a>b{background-position:-928px -150px }
-		  .ong-Vendre >a.hover>b,
-		  .ong-Vendre.current >a.hover>b {background-position:-928px -100px }
+			.ong-Vendre >a b {width:50px; background-position:-928px -40px }
+		  .ong-Vendre.current >a b,
+		  .ong-Vendre >a.hover b {background-position:-928px -75px }
 
 	/* -- les megaMenus -- */
       #onglets li .megaMenu{
