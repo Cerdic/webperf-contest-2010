@@ -178,45 +178,49 @@ $(function () {
 		 }
 	});
 
-	$("#Fnac_Search").autocomplete("http://autocompletion.fnac.com/search-autocomplete/autocomplete?method=GetCommonSuggest", {
+	$('#Fnac_Search').one('focus',function(){
+		$.getScript('js/autocomplete.minified.js', function() {
+			$("#Fnac_Search").autocomplete("http://autocompletion.fnac.com/search-autocomplete/autocomplete?method=GetCommonSuggest", {
 
-		width: 260,
-		selectFirst: false,
-		max: 10,
-		scrollHeight: 200,
-		cacheLength: 0,
-		delay: 150,
-		dataType: "jsonp",
-		highlight: function(value, term) {
-			return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term.replace(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, "\\$1") + ")(?![^<>]*>)(?![^&;]+;)", "i"), "<strong>$1</strong>");
-		},
-		extraParams: {
-					"text":function() { return $("#Fnac_Search").val(); },
-					"category": function() {
-							var rex = new RegExp("!1$");
-							var cat = $("#SCat").val().replace(rex,'');
-							return cat; },
-					"encoding": "UTF-8"
-		},
-		parse: function(data) {
-				return $.map(data, function(row) {
-					return {
-						data: row,
-						value: row.sentence,
-						result: row.sentence
-					}
-				});
-		},
-		formatItem: function(itemResult) {
-			return itemResult.sentence;
-		}
+				width: 260,
+				selectFirst: false,
+				max: 10,
+				scrollHeight: 200,
+				cacheLength: 0,
+				delay: 150,
+				dataType: "jsonp",
+				highlight: function(value, term) {
+					return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term.replace(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, "\\$1") + ")(?![^<>]*>)(?![^&;]+;)", "i"), "<strong>$1</strong>");
+				},
+				extraParams: {
+							"text":function() { return $("#Fnac_Search").val(); },
+							"category": function() {
+									var rex = new RegExp("!1$");
+									var cat = $("#SCat").val().replace(rex,'');
+									return cat; },
+							"encoding": "UTF-8"
+				},
+				parse: function(data) {
+						return $.map(data, function(row) {
+							return {
+								data: row,
+								value: row.sentence,
+								result: row.sentence
+							}
+						});
+				},
+				formatItem: function(itemResult) {
+					return itemResult.sentence;
+				}
 
-	});
+			});
 
-	$("#Fnac_Search").result(function(event, data, formatted) {
-		if (data)
-			findValueCallback(event, data, formatted);
+			$("#Fnac_Search").result(function(event, data, formatted) {
+				if (data)
+					findValueCallback(event, data, formatted);
 
+			});
+		});
 	});
 
 	// demarrer le gif anime

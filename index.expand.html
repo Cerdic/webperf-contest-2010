@@ -48,41 +48,49 @@
 		</div>
 
 		<div id="stat">
-		<script type="text/javascript"><!--
-			function boot_js(){
-				updateMarketPlaceOffers();
-				/* You may give each page an identifying name, server, and channel on
-				the next lines. */
-				s.pageName="Home enfants"
-				s.server=""
-				s.channel="Produits"
-				s.pageType=""
-				s.prop1="enfants"
-				s.prop2=""
-				s.prop3=""
-				s.prop4=""
-				s.prop5=""
-				s.prop20="Non-Adherent"
-				s.prop21=""
-				/* Conversion Variables */
-				s.campaign=""
-				s.state=""
-				s.zip=""
-				s.events=""
-				s.products=""
-				s.purchaseID=""
-				s.eVar1=""
-				s.eVar2="browse"
-				s.eVar3=""
-				s.eVar4=""
-				s.eVar5=""
-				var s_code=s.t();
-			/*	$(function () {
-					if(s_code) $('body').append(s_code);
-				});*/
-			}
-			if (window.jQuery) boot_js();
-		//--></script>
+			<script type="text/javascript"><!--
+				function boot_js(){
+					updateMarketPlaceOffers();
+					setTimeout(lazyLoad, 5);
+				}
+				function lazyLoad() {
+					$("#iFrameFooterLoad").attr('src',"iframe-footer/engagements.html");
+					// lazy-load sur le sprite univers dans la colonne extra
+					$("b.spt-univers").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
+					$.getScript('js/s_code.js-h.14.20090227.js',function(){
+						/* You may give each page an identifying name, server, and channel on
+						the next lines. */
+						s.pageName="Home enfants"
+						s.server=""
+						s.channel="Produits"
+						s.pageType=""
+						s.prop1="enfants"
+						s.prop2=""
+						s.prop3=""
+						s.prop4=""
+						s.prop5=""
+						s.prop20="Non-Adherent"
+						s.prop21=""
+						/* Conversion Variables */
+						s.campaign=""
+						s.state=""
+						s.zip=""
+						s.events=""
+						s.products=""
+						s.purchaseID=""
+						s.eVar1=""
+						s.eVar2="browse"
+						s.eVar3=""
+						s.eVar4=""
+						s.eVar5=""
+						var s_code=s.t();
+						/*	$(function () {
+						if(s_code) $('body').append(s_code);
+						});*/
+					});
+				}
+				if (window.jQuery) boot_js();
+			//--></script>
 		</div>
 		<!--#include file="footer.html" -->
 	</div><!-- /page -->
