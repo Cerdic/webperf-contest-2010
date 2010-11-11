@@ -1,3 +1,11 @@
+commit 11ea59f901dec939e2b312aab66194abf2ce42aa
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 11 19:46:17 2010 +0100
+
+    decoupage des css en deux blocs :
+    core insere inline dans le head pour amorcer un rendu acceptable a minima
+    style reference en externe
+
 commit 29a1ee48324c179e5543b56eec0c1f37ddf99392
 Author: Cerdic <cedric@yterium.com>
 Date:   Thu Nov 11 18:27:43 2010 +0100
