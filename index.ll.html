@@ -42,27 +42,29 @@
 <div id="col_droite" rel="extra.mini.ll.html" class="lazyblock">
 	<div style="background-color: #eee;height:1000px;"></div>
 </div>
+<div id="bottom" rel="footer.mini.ll.html" class="lazyblock">
+</div>
 <div id="stat">
 <script type="text/javascript"><!--
 function boot_js(){
 }
 function boot_jQ(){
 	if (typeof window.jQuery=="undefined"){
-		setTimeout(boot_jQ, 100);
+		setTimeout(boot_jQ, 50);
 	}
 	else {
-		$.getScript('js/script.ll.minified.js',function(){
-			$("img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
-			updateMarketPlaceOffers();
-			setTimeout(lazyLoad, 5);
-		});
 		$('div.lazyblock').each(function(){
 			var src=$(this).attr('rel');
 			$(this).load(src);
-		})
+		});
+		setTimeout(lazyLoad, 150);
 	}
 }
 function lazyLoad() {
+$.getScript('js/script.ll.minified.js',function(){
+	$("img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
+	updateMarketPlaceOffers();
+});
 $("#iFrameFooterLoad").attr('src',"iframe-footer/engagements.html");
 // lazy-load sur le sprite univers dans la colonne extra
 $("b.spt-univers").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
@@ -100,8 +102,6 @@ if(s_code) $('body').append(s_code);
 }
 boot_jQ();
 //--></script>
-</div>
-<div id="bottom" rel="footer.mini.ll.html" class="lazyblock">
 </div>
 </div>
 </body>
