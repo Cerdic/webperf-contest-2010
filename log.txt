@@ -1,3 +1,19 @@
+commit 39c8901ad7c8d48b9455d9a1e88c436e90e9f7e1
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 11 20:20:20 2010 +0100
+
+    Referencer le js un peu plus tot est favorable pour le onload
+    
+    http://www.webpagetest.org/result/101111_1542cfbee57408f1eba0f1fbb6691573/
+
+commit a4889f257490cb0b71cb3d027ef0ab4181b9af67
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 11 20:12:11 2010 +0100
+
+    Optimisation de la repartition du dl sur les connections
+    
+    http://www.webpagetest.org/result/101111_03cb56060b4d91dce1098ff985a2a814/
+
 commit 11ea59f901dec939e2b312aab66194abf2ce42aa
 Author: Cerdic <cedric@yterium.com>
 Date:   Thu Nov 11 19:46:17 2010 +0100
