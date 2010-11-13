@@ -55,7 +55,7 @@ function boot_jQ(){
 	else {
 		$('div.lazyblock').each(function(){
 			var src=$(this).attr('rel');
-			$(this).load(src);
+			$(this).load(src,function(){if (typeof(window.setLinks)!='undefined') setLinks($(this));});
 		});
 		setTimeout(lazyLoad, 150);
 	}
