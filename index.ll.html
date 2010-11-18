@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Jeux et jouets - achat/vente de jeux et jouets à la Fnac</title>
-<script type="text/javascript" src="js/jquery-1.4.4.min.js" defer="defer"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js" defer="defer"></script>
 <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "webmaster@fnac.com" for "http://www.fnac.com/" on "1997.06.30T14:21-0500" r (n 0 s 0 v 0 l 0))'>
 <meta name="ms.locale" content="FR">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -46,29 +46,28 @@
 </div>
 <div id="stat">
 <script type="text/javascript"><!--
-function boot_js(){
-}
 function boot_jQ(){
 	if (typeof window.jQuery=="undefined"){
 		setTimeout(boot_jQ, 50);
 	}
 	else {
-		$('div.lazyblock').each(function(){
-			var src=$(this).attr('rel');
-			$(this).load(src,function(){if (typeof(window.setLinks)!='undefined') setLinks($(this));});
+		$(function(){
+			$('div.lazyblock').each(function(){
+				var src=$(this).attr('rel');
+				$(this).load(src,function(){if (typeof(window.setLinks)!='undefined') setLinks($(this));});
+			});
+			setTimeout(lazyLoad, 15);
 		});
-		setTimeout(lazyLoad, 150);
 	}
 }
 function lazyLoad() {
-$.getScript('js/script.ll.minified.js',function(){
+$.getScript('http://s1.webperf-contest.com/4cc80752a91cc/js/script.ll.combined.js',function(){
 	$("img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
 	updateMarketPlaceOffers();
 });
 $("#iFrameFooterLoad").attr('src',"iframe-footer/engagements.html");
 // lazy-load sur le sprite univers dans la colonne extra
-$("b.spt-univers").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
-$.getScript('js/s_code.js-h.14.20090227.js',function(){
+$.getScript('http://s2.webperf-contest.com/4cc80752a91cc/js/s_code.js-h.14.20090227.js',function(){
 /* You may give each page an identifying name, server, and channel on
 the next lines. */
 s.pageName="Home enfants"

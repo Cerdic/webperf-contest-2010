@@ -20,7 +20,7 @@
 # gzip compression.
 <IfModule mod_deflate.c>
 # html, txt, css, js, json, xml, htc:
-  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+  AddOutputFilterByType DEFLATE text/plain text/css application/json
   AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
   AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
 
@@ -35,7 +35,8 @@ RewriteEngine  on
 #RewriteRule    MarketPlace/([0-9].*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*).html$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
-RewriteRule    MarketPlace/(.*)$  http://yterium.net/wpo/proxy.php$1  [P]
+#RewriteRule    MarketPlace/(.*)$  http://yterium.net/wpo/proxy.php$1  [P]
+RewriteRule    MarketPlace/(.*)$  http://entries.webperf-contest.com/4cc80752a91cc/marketplace.js  [P]
 
 
 # Expiration des pages :

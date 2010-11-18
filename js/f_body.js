@@ -133,7 +133,7 @@ $(function () {
 	$('#iFrameFooter').html(footer).find('iframe').attr('src',$('#iFrameFooter').attr('rel'));
 */
 
-	$.get('menu_full.html', function(data) {
+	$.get('http://s1.webperf-contest.com/4cc80752a91cc/menu_full.html', function(data) {
 		var recu = jQuery('<div><\/div>').html(data);
 		$('#onglets-full >li',recu).each(function(){
 			var c=$(this).attr('class');
@@ -226,7 +226,8 @@ $(function () {
 	});
 
 	// demarrer le gif anime
-	setTimeout("$('#banner186756').attr('src','http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')",2000);
+	if ($('#banner186756').attr('src')!=='http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')
+		setTimeout("$('#banner186756').attr('src','http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')",2000);
 });
 
 if (typeof(window.boot_js)!='undefined')
