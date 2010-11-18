@@ -133,7 +133,7 @@ $(function () {
 	$('#iFrameFooter').html(footer).find('iframe').attr('src',$('#iFrameFooter').attr('rel'));
 */
 
-	$.get('http://s1.webperf-contest.com/4cc80752a91cc/menu_full.html', function(data) {
+	$.get('menu_full.html', function(data) {
 		var recu = jQuery('<div><\/div>').html(data);
 		$('#onglets-full >li',recu).each(function(){
 			var c=$(this).attr('class');

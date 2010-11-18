@@ -29,15 +29,15 @@
 <!--#include file="menu_level1.mini.html" -->
 </div>
 </div>
-<script type="text/javascript">var MarketPlaceOffers=new Array();var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";</script>
+<script type="text/javascript">var lazyblocks=Array();var MarketPlaceOffers=new Array();var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";</script>
 <div id="content">
 <div id="col_centre">
 <!--#include file="content.mini.ll.html" -->
 </div>
 <link rel="stylesheet" type="text/css" media="all" href="css/style.minified.ll.css">
 </div>
-<div id="col_gauche" rel="nav-sec.mini.html" class="lazyblock">
-	<div style="background-color: #eee;height:1000px;margin-top:62px;"></div>
+<div id="col_gauche" rel="nav-sec.mini.html">
+	<!--#include file="nav-sec.mini.html" -->
 </div>
 <div id="col_droite" rel="extra.mini.ll.html" class="lazyblock">
 	<div style="background-color: #eee;height:1000px;margin-top:62px;"></div>
@@ -51,22 +51,24 @@ function boot_jQ(){
 		setTimeout(boot_jQ, 50);
 	}
 	else {
+		setTimeout(lazyLoad, 5);
 		$(function(){
 			$('div.lazyblock').each(function(){
 				var src=$(this).attr('rel');
-				$(this).load(src,function(){if (typeof(window.setLinks)!='undefined') setLinks($(this));});
+				$(this).load(src,function(){
+					if (typeof(window.setLinks)!='undefined') setLinks($(this));
+					if ($("#iFrameFooterLoad",this).length)
+						setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');",100);
+				});
 			});
-			setTimeout(lazyLoad, 15);
 		});
 	}
 }
 function lazyLoad() {
 $.getScript('http://s1.webperf-contest.com/4cc80752a91cc/js/script.ll.combined.js',function(){
-	$("img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
 	updateMarketPlaceOffers();
+	$("#col_centre img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
 });
-$("#iFrameFooterLoad").attr('src',"iframe-footer/engagements.html");
-// lazy-load sur le sprite univers dans la colonne extra
 $.getScript('http://s2.webperf-contest.com/4cc80752a91cc/js/s_code.js-h.14.20090227.js',function(){
 /* You may give each page an identifying name, server, and channel on
 the next lines. */
