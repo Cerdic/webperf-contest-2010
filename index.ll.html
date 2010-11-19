@@ -36,42 +36,40 @@
 </div>
 <link rel="stylesheet" type="text/css" media="all" href="css/style.minified.ll.css">
 </div>
-<div id="col_gauche" rel="nav-sec.mini.html">
-	<!--#include file="nav-sec.mini.html" -->
-</div>
-<div id="col_droite" rel="extra.mini.ll.html" class="lazyblock">
-	<div style="background-color: #eee;height:1000px;margin-top:62px;"></div>
-</div>
-<div id="bottom" rel="footer.mini.ll.html" class="lazyblock">
-</div>
+<div id="col_gauche"><div style="background-color: #eee;height:1000px;margin-top:62px;"></div></div>
+<script type="text/javascript">lazyblocks.push(["#col_gauche","nav-sec.mini.html"]);</script>
+<div id="col_droite"><div style="background-color: #eee;height:1000px;margin-top:62px;"></div></div>
+<script type="text/javascript">lazyblocks.push(["#col_droite","extra.mini.ll.html"]);</script>
+<div id="bottom" rel="footer.mini.ll.html"></div>
+<script type="text/javascript">lazyblocks.push(["#bottom","footer.mini.ll.html"]);</script>
 <div id="stat">
 <script type="text/javascript"><!--
 function boot_jQ(){
-	if (typeof window.jQuery=="undefined"){
-		setTimeout(boot_jQ, 50);
-	}
-	else {
-		setTimeout(lazyLoad, 5);
-		$(function(){
-			$('div.lazyblock').each(function(){
-				var src=$(this).attr('rel');
-				$(this).load(src,function(){
-					if (typeof(window.setLinks)!='undefined') setLinks($(this));
-					if ($("#iFrameFooterLoad",this).length)
-						setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');",100);
-				});
-			});
-		});
-	}
+if (typeof window.jQuery=="undefined"){
+setTimeout(boot_jQ, 50);
+return;
+}
+setTimeout(lazyLoad, 5);
+while(m=lazyblocks.pop())
+loadBlock(m[0],m[1]);
+}
+function loadBlock(node,src){
+$.get(src,
+function(data){ $(function(){
+$(node).html(data);
+if (typeof(window.setLinks)!='undefined') setLinks($("#col_gauche"));
+if ($('#iFrameFooterLoad',data).length)
+setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');",10);
+$("b.spt-univers",$(node)).css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
+});
+});
 }
 function lazyLoad() {
-$.getScript('http://s1.webperf-contest.com/4cc80752a91cc/js/script.ll.combined.js',function(){
-	updateMarketPlaceOffers();
-	$("#col_centre img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
+$.getScript('http://s1.webperf-contest.com/4cc80752a91cc/js/script.ll.minified.js',function(){
+updateMarketPlaceOffers();
+$("#col_centre img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
 });
 $.getScript('http://s2.webperf-contest.com/4cc80752a91cc/js/s_code.js-h.14.20090227.js',function(){
-/* You may give each page an identifying name, server, and channel on
-the next lines. */
 s.pageName="Home enfants"
 s.server=""
 s.channel="Produits"
@@ -83,7 +81,6 @@ s.prop4=""
 s.prop5=""
 s.prop20="Non-Adherent"
 s.prop21=""
-/* Conversion Variables */
 s.campaign=""
 s.state=""
 s.zip=""
@@ -96,9 +93,7 @@ s.eVar3=""
 s.eVar4=""
 s.eVar5=""
 var s_code=s.t();
-/*	$(function () {
-if(s_code) $('body').append(s_code);
-});*/
+$(function () {if(s_code) $('body').append(s_code);});
 });
 }
 boot_jQ();
