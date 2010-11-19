@@ -1,7 +1,7 @@
 # [EN] perhaps you should use this file.. :)
 # [FR] vous devriez peut etre utiliser ce fichier!
 
-<FilesMatch "(index|engagements|index.ll).html$">
+<FilesMatch "(index|engagements|index.ll|index.st).html$">
 	Options +Includes
 	SetOutputFilter INCLUDES
 </FilesMatch>
@@ -10,12 +10,6 @@
 	Options +Includes
 	SetOutputFilter INCLUDES
 </FilesMatch>
-
-<FilesMatch "market.html">
-	Options +Includes
-	SetOutputFilter INCLUDES
-</FilesMatch>
-
 
 # gzip compression.
 <IfModule mod_deflate.c>
@@ -49,6 +43,6 @@ ExpiresByType text/javascript A2600000
 ExpiresByType application/javascript A2600000
 ExpiresByType application/x-javascript A2600000
 ExpiresByType text/css A2600000
-ExpiresByType text/html A14400
+#ExpiresByType text/html A14400
 ExpiresByType application/x-httpd-php A14400
 #</IfModule>
