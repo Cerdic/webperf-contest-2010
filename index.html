@@ -2,7 +2,11 @@
 <html>
 <head>
 <title>Jeux et jouets - achat/vente de jeux et jouets à la Fnac</title>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js" defer="defer"></script>
+<script type="text/javascript"><!--
+var script = document.createElement('script');
+script.src = "http://code.jquery.com/jquery-1.4.4.min.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+//--></script>
 <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "webmaster@fnac.com" for "http://www.fnac.com/" on "1997.06.30T14:21-0500" r (n 0 s 0 v 0 l 0))'>
 <meta name="ms.locale" content="FR">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -30,6 +34,11 @@
 </div>
 </div>
 <script type="text/javascript">var lazyblocks=Array();var MarketPlaceOffers=new Array();var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";</script>
+<script type="text/javascript"><!--
+var script = document.createElement('script');
+script.src = "http://s3.webperf-contest.com/4cc80752a91cc/js/script.ll.minified.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+//--></script>
 <div id="content">
 <div id="col_centre">
 <!--#include file="content.mini.ll.html" -->
@@ -49,9 +58,9 @@ if (typeof window.jQuery=="undefined"){
 setTimeout(boot_jQ, 50);
 return;
 }
-setTimeout(lazyLoad, 5);
-while(m=lazyblocks.pop())
-loadBlock(m[0],m[1]);
+for (var i=0;i<lazyblocks.length;i++)
+loadBlock(lazyblocks[i][0],lazyblocks[i][1]);
+boot_js();
 }
 function loadBlock(node,src){
 $.get(src,
@@ -64,11 +73,16 @@ $("b.spt-univers",$(node)).css('background-image','url(http://s2.webperf-contest
 });
 });
 }
+var booted=false;
+function boot_js(){
+if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;
+booted=true;
+setTimeout(lazyLoad,100);
+}
 function lazyLoad() {
-$.getScript('http://s1.webperf-contest.com/4cc80752a91cc/js/script.ll.minified.js',function(){
+initPage();
+loadMenu();
 updateMarketPlaceOffers();
-$("#col_centre img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
-});
 $.getScript('http://s2.webperf-contest.com/4cc80752a91cc/js/s_code.js-h.14.20090227.js',function(){
 s.pageName="Home enfants"
 s.server=""

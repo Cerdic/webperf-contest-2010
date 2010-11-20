@@ -123,50 +123,56 @@ function setLinks(node){
 	});
 }
 
+function loadMenu(){
+	// si le menu complet deja dans la page (charge avec le footer)
+	if ($('#onglets-full').length)
+		initMenu($('#onglets-full').parent());
+	// sinon charger dynamiquement
+	else
+		$.get('menu_full.html', function(data) {
+			var recu = jQuery('<div><\/div>').html(data);
+			initMenu(recu);
+		});
+}
+function initMenu(source){
+	$('#onglets-full >li',source).each(function(){
+		var c=$(this).attr('class');
+		$("a:first",this).remove();
+		$("#onglets li."+c).append($(this).html());
+	});
+
+	// au passage de la souris sur le lien de l'onglet
+	$("#onglets> li> a").mouseenter(function(){
+		// initialiser la deco au survol !
+		if (megamenu_sprite){
+			$('#onglets .megaMenu .vignet b').css('background-image','url('+megamenu_sprite+')');
+			megamenu_sprite=null;
+		}
+		//on affiche son megaMenu
+		$(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
+	}).mouseleave(function(){
+		//on cache son megaMenu
+		$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
+	});
+	//tant que la souris se trouve sur le megaMenu
+	$("#onglets .megaMenu").mouseenter(function(){
+			// il reste affiché
+			$(this).addClass('menu_actif');
+			// et on applique la classe .hover a son lien
+			$(this).siblings("a").addClass("hover");
+	}).mouseleave(function(){
+			// il se cache
+			$(this).removeClass('menu_actif');
+			// et on retire la classe .hover a son lien
+			$(this).siblings("a").removeClass("hover");
+	});
+}
+
+function initPage(){
 $(function () {
 
-/*
-	var footer;
-	footer="<"+'iframe width="993" height="315" frameborder="0" scrolling="no" name="footer" marginheight="0" marginwidth="0">';
-	footer = footer + $('#iFrameFooter').html();
-	footer = footer + "<"+"/iframe>";
-	$('#iFrameFooter').html(footer).find('iframe').attr('src',$('#iFrameFooter').attr('rel'));
-*/
-
-	$.get('menu_full.html', function(data) {
-		var recu = jQuery('<div><\/div>').html(data);
-		$('#onglets-full >li',recu).each(function(){
-			var c=$(this).attr('class');
-			$("a:first",this).remove();
-			$("#onglets li."+c).append($(this).html());
-		});
-
-		// au passage de la souris sur le lien de l'onglet
-		$("#onglets> li> a").mouseenter(function(){
-			// initialiser la deco au survol !
-			if (megamenu_sprite){
-				$('#onglets .megaMenu .vignet b').css('background-image','url('+megamenu_sprite+')');
-				megamenu_sprite=null;
-			}
-			//on affiche son megaMenu
-			$(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
-		}).mouseleave(function(){
-			//on cache son megaMenu
-			$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
-		});
-		//tant que la souris se trouve sur le megaMenu
-		$("#onglets .megaMenu").mouseenter(function(){
-				// il reste affiché
-				$(this).addClass('menu_actif');
-				// et on applique la classe .hover a son lien
-				$(this).siblings("a").addClass("hover");
-		}).mouseleave(function(){
-				// il se cache
-				$(this).removeClass('menu_actif');
-				// et on retire la classe .hover a son lien
-				$(this).siblings("a").removeClass("hover");
-		});
-	});
+	if (typeof jQuery.fn.lazyload!="undefined")
+		$("#col_centre img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
 
 	
 	demarreRotation();
@@ -229,6 +235,7 @@ $(function () {
 	if ($('#banner186756').attr('src')!=='http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')
 		setTimeout("$('#banner186756').attr('src','http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')",2000);
 });
+}
 
 if (typeof(window.boot_js)!='undefined')
 	boot_js();
