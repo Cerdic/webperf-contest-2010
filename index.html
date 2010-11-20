@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Jeux et jouets - achat/vente de jeux et jouets à la Fnac</title>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js" defer="defer"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" defer="defer"></script>
 <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "webmaster@fnac.com" for "http://www.fnac.com/" on "1997.06.30T14:21-0500" r (n 0 s 0 v 0 l 0))'>
 <meta name="ms.locale" content="FR">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -30,6 +30,11 @@
 </div>
 </div>
 <script type="text/javascript">var lazyblocks=Array();var MarketPlaceOffers=new Array();var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";</script>
+<div id="content">
+<div id="col_centre">
+<!--#include file="content.mini.ll.html" -->
+</div>
+<link rel="stylesheet" type="text/css" media="all" href="css/style.minified.ll.css">
 <script type="text/javascript">
 function runscript(txt){var se = document.createElement('script');document.getElementsByTagName('head')[0].appendChild(se);se.text = txt;}
 var jQscripts = Array();
@@ -46,11 +51,6 @@ for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[
 finally {return xhrObj;}
 }
 loadxhrscript("js/script.ll.minified.js",runJQscript);</script>
-<div id="content">
-<div id="col_centre">
-<!--#include file="content.mini.ll.html" -->
-</div>
-<link rel="stylesheet" type="text/css" media="all" href="css/style.minified.ll.css">
 </div>
 <div id="col_gauche"><div style="background-color: #eee;height:1000px;margin-top:62px;"></div></div>
 <script type="text/javascript">lazyblocks.push(["#col_gauche","nav-sec.mini.html"]);</script>
@@ -72,8 +72,9 @@ function(data){ $(function(){
 $(node).html(data);
 if (typeof(window.setLinks)!='undefined') setLinks($("#col_gauche"));
 if ($('#iFrameFooterLoad',data).length)
-setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');",10);
+setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');",1);
 $("b.spt-univers",$(node)).css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
+if ($('#onglets-full',data).length) loadMenu();
 });
 });
 }
@@ -85,9 +86,7 @@ setTimeout(lazyLoad,100);
 }
 function lazyLoad() {
 initPage();
-loadMenu();
 updateMarketPlaceOffers();
-$.getScript('http://s2.webperf-contest.com/4cc80752a91cc/js/s_code.js-h.14.20090227.js',function(){
 s.pageName="Home enfants"
 s.server=""
 s.channel="Produits"
@@ -112,7 +111,6 @@ s.eVar4=""
 s.eVar5=""
 var s_code=s.t();
 $(function () {if(s_code) $('body').append(s_code);});
-});
 }
 boot_jQ();
 //--></script>
