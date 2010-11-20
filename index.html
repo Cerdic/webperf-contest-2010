@@ -72,7 +72,7 @@ function(data){ $(function(){
 $(node).html(data);
 if (typeof(window.setLinks)!='undefined') setLinks($("#col_gauche"));
 if ($('#iFrameFooterLoad',data).length)
-$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');
+setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html')",5);
 $("b.spt-univers",$(node)).css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
 if ($('#onglets-full',data).length) loadMenu();
 });
@@ -84,7 +84,7 @@ if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || 
 booted=true;
 initPage();
 updateMarketPlaceOffers();
-setTimeout(lazyLoad,100);
+setTimeout(lazyLoad,10);
 }
 function lazyLoad() {
 s.pageName="Home enfants"
