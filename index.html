@@ -22,6 +22,7 @@
 	<meta http-equiv="refresh" content="1;url=index.st.html">
 	<a href="index.html">Votre navigateur ne supporte pas javascript, cliquez ici pour continuer</a>
 </noscript>
+<link rel="stylesheet" type="text/css" media="all" href="css/style.minified.ll.css">
 <div id="page">
 <div id="HEADER">
 <!--#include file="top.mini.ll.html" -->
@@ -34,7 +35,6 @@
 <div id="col_centre">
 <!--#include file="content.mini.ll.html" -->
 </div>
-<link rel="stylesheet" type="text/css" media="all" href="css/style.minified.ll.css">
 <script type="text/javascript">
 function runscript(txt){var se = document.createElement('script');document.getElementsByTagName('head')[0].appendChild(se);se.text = txt;}
 var jQscripts = Array();
@@ -72,7 +72,7 @@ function(data){ $(function(){
 $(node).html(data);
 if (typeof(window.setLinks)!='undefined') setLinks($("#col_gauche"));
 if ($('#iFrameFooterLoad',data).length)
-setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');",1);
+$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');
 $("b.spt-univers",$(node)).css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
 if ($('#onglets-full',data).length) loadMenu();
 });
@@ -82,11 +82,11 @@ var booted=false;
 function boot_js(){
 if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;
 booted=true;
+initPage();
+updateMarketPlaceOffers();
 setTimeout(lazyLoad,100);
 }
 function lazyLoad() {
-initPage();
-updateMarketPlaceOffers();
 s.pageName="Home enfants"
 s.server=""
 s.channel="Produits"
