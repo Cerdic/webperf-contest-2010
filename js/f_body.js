@@ -140,6 +140,7 @@ function initMenu(source){
 		$("a:first",this).remove();
 		$("#onglets li."+c).append($(this).html());
 	});
+	$('#onglets-full',source).remove();
 
 	// au passage de la souris sur le lien de l'onglet
 	$("#onglets> li> a").mouseenter(function(){

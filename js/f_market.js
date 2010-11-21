@@ -22,9 +22,10 @@ function updateMarketPlaceOffers(){
 		prid.push(m[1]);
 	}
 
+	var d=new Date;
 	// for real JSON request
 	//$.getJSON("MarketPlace/?jsoncallback=?",
-	$.getJSON("MarketPlace/?market=0",
+	$.getJSON("MarketPlace/?t="+d.getTime(),
 		{prid:prid},
 		function(data){$(function(){
 			var m;
