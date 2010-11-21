@@ -1,7 +1,7 @@
 # [EN] perhaps you should use this file.. :)
 # [FR] vous devriez peut etre utiliser ce fichier!
 
-<FilesMatch "(index|engagements|index.ll|index.st|footer.mini.ll).html$">
+<FilesMatch "(index|engagements|index.ll|index.st|index_ie|footer.mini.ll).html$">
 	Options +Includes
 	SetOutputFilter INCLUDES
 </FilesMatch>
@@ -11,9 +11,39 @@
 	SetOutputFilter INCLUDES
 </FilesMatch>
 
+# Add Proper MIME-Type for Favicon
+AddType image/x-icon .ico
+AddType text/html .html
+AddType text/html .mini.html
+AddType text/html .mini.ll.html
+AddType text/javascript .js
+AddType text/javascript .minified.js
+AddType text/javascript ll.minified.js
+
+# Insert filter
+SetOutputFilter DEFLATE
+
+# Netscape 4.x has some problems...
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+# Netscape 4.06-4.08 have some more problems
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+
+# MSIE masquerades as Netscape, but it is fine
+# BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# NOTE: Due to a bug in mod_setenvif up to Apache 2.0.48
+# the above regex won't work. You can use the following
+# workaround to get the desired effect:
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+# Don't compress images
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+
 # gzip compression.
 <IfModule mod_deflate.c>
 # html, txt, css, js, json, xml, htc:
+  AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/plain text/css application/json
   AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
   AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
@@ -42,7 +72,21 @@ ExpiresByType image/jpeg A2600000
 ExpiresByType text/javascript A2600000
 ExpiresByType application/javascript A2600000
 ExpiresByType application/x-javascript A2600000
+ExpiresByType image/ico A2600000
+ExpiresByType image/icon A2600000
+ExpiresByType image/x-icon A2600000
 ExpiresByType text/css A2600000
-#ExpiresByType text/html A14400
 ExpiresByType application/x-httpd-php A14400
+ExpiresByType text/html "modification plus 1 seconds"
 #</IfModule>
+
+
+#Header unset Cookie
+#Header unset Set-Cookie
+#RequestHeader unset Cookie
+
+<FilesMatch "\.(ico|gif|jpg|jpeg|png|flv|pdf|mp3|wav|js|css|kml|xml)$">
+Header always unset Set-Cookie
+Header unset ETag
+FileETag None
+</FilesMatch>
