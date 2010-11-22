@@ -3,10 +3,7 @@
 <head>
 <title>Jeux et jouets - achat/vente de jeux et jouets à la Fnac</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" defer="defer"></script>
-<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "webmaster@fnac.com" for "http://www.fnac.com/" on "1997.06.30T14:21-0500" r (n 0 s 0 v 0 l 0))'>
-<meta name="ms.locale" content="FR">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta name="category" content="home page">
 <meta name="description" content="achat et vente de jouets, jeux de société, poupée, figurines, jeux de construction et bien plus dans l’univers enfant de la Fnac">
 <link rel="canonical" href="enfants.asp.html">
@@ -23,9 +20,8 @@ load_css('css/style.minified.ll.css');
 </script>
 <img class="preload" style="display:none;" src="http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png" />
 <img class="preload" style="display:none;" src="http://s3.webperf-contest.com/4cc80752a91cc/img/univ_heros_titre.png" />
-<noscript>
-	<meta http-equiv="refresh" content="1;url=index.st.html">
-	<a href="index.html">Votre navigateur ne supporte pas javascript, cliquez ici pour continuer</a>
+<noscript><meta http-equiv="refresh" content="1;url=index.st.html">
+<a href="index.html">Votre navigateur ne supporte pas javascript, cliquez ici pour continuer</a>
 </noscript>
 <div id="page">
 <div id="HEADER">
@@ -34,90 +30,54 @@ load_css('css/style.minified.ll.css');
 <!--#include file="menu_level1.mini.html" -->
 </div>
 </div>
-<script type="text/javascript">var lazyblocks=Array();var MarketPlaceOffers=new Array();var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";</script>
+<div id="content"><div id="col_centre"><!--#include file="content.mini.ll.html" --></div></div>
+<div id="col_gauche"><div style="background-color:#eee;height:999px;margin-top:62px;"></div></div>
+<div id="col_droite"><div style="background-color:#eee;height:999px;margin-top:62px;"></div></div>
+<div id="bottom" rel="footer.mini.ll.html"></div>
+<div id="stat">
 <script type="text/javascript">
+var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";
 function runscript(txt){var se = document.createElement('script');document.getElementsByTagName('head')[0].appendChild(se);se.text = txt;}
 var jQscripts = Array();
 function runJQscript(txt){if (txt) jQscripts.push(txt);if (typeof window.jQuery=="undefined"){setTimeout("runJQscript(null)", 50);return;}for (var i=0;i<jQscripts.length;i++) runscript(jQscripts[i]);}
-function loadxhrscript(src,callback) {
-var xhrObj_elem1;xhrObj_elem1 = getXHRObject();xhrObj_elem1.onreadystatechange = function() { if ( xhrObj_elem1.readyState != 4 || 200 != xhrObj_elem1.status ) return; callback(xhrObj_elem1.responseText); };
-try {xhrObj_elem1.open('GET', src, true);xhrObj_elem1.send('');} catch(e) {}
-}
-function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}
-catch(e){
-var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];
-for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[i]);}catch(e){continue;}break;}
-}
-finally {return xhrObj;}
-}
-</script>
-<script type="text/javascript">loadxhrscript("js/script.ll.minified.js",runJQscript);</script>
-<div id="content">
-<div id="col_centre">
-<!--#include file="content.mini.ll.html" -->
-</div>
-</div>
-<div id="col_gauche"><div style="background-color: #eee;height:1000px;margin-top:62px;"></div></div>
-<script type="text/javascript">lazyblocks.push(["#col_gauche","nav-sec.mini.html"]);</script>
-<div id="col_droite"><div style="background-color: #eee;height:1000px;margin-top:62px;"></div></div>
-<script type="text/javascript">lazyblocks.push(["#col_droite","extra.mini.ll.html"]);</script>
-<div id="bottom" rel="footer.mini.ll.html"></div>
-<script type="text/javascript">lazyblocks.push(["#bottom","footer.mini.ll.html"]);</script>
-<div id="stat">
-<script type="text/javascript"><!--
+function loadxhrscript(src,callback) {var xhrObj_elem1;xhrObj_elem1 = getXHRObject();xhrObj_elem1.onreadystatechange = function() { if ( xhrObj_elem1.readyState != 4 || 200 != xhrObj_elem1.status ) return; callback(xhrObj_elem1.responseText); };try {xhrObj_elem1.open('GET', src, true);xhrObj_elem1.send('');} catch(e) {}}
+function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}catch(e){var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[i]);}catch(e){continue;}break;}}finally {return xhrObj;}}
+loadxhrscript("js/script.ll.minified.js",runJQscript);
+var lazyblocks=Array();
+lazyblocks.push(["#col_gauche","nav-sec.mini.html"]);
+lazyblocks.push(["#col_droite","extra.mini.ll.html"]);
+lazyblocks.push(["#bottom","footer.mini.ll.html"]);
 var now=null;
 function boot_jQ(){
 if (!now) {now=new Date;now="?t="+now.getTime();}
 if (typeof window.jQuery=="undefined"){setTimeout(boot_jQ, 25);return;}
 for (var i=0;i<lazyblocks.length;i++)loadBlock(lazyblocks[i][0],lazyblocks[i][1]);
-boot_js();
-}
+boot_js();}
 function loadBlock(node,src){
-$.get(src+now,
-function(data){ $(function(){
+$.get(src+now,function(data){ $(function(){
 $(node).html(data);
 if (typeof(window.setLinks)!='undefined') setLinks($("#col_gauche"));
 if ($('#iFrameFooterLoad',data).length)
 setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html')",5);
 $("b.spt-univers",$(node)).css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
 if ($('#onglets-full',data).length) loadMenu();
-});
-});
-}
+});});}
 var booted=false;
 function boot_js(){
 if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;
-booted=true;
-updateMarketPlaceOffers();
-setTimeout(lazyLoad,10);
+booted=true;setTimeout(lazyLoad,90);
 }
 function lazyLoad() {
+updateMarketPlaceOffers();
 initPage();
 s.pageName="Home enfants"
-s.server=""
 s.channel="Produits"
-s.pageType=""
 s.prop1="enfants"
-s.prop2=""
-s.prop3=""
-s.prop4=""
-s.prop5=""
 s.prop20="Non-Adherent"
-s.prop21=""
-s.campaign=""
-s.state=""
-s.zip=""
-s.events=""
-s.products=""
-s.purchaseID=""
-s.eVar1=""
 s.eVar2="browse"
-s.eVar3=""
-s.eVar4=""
-s.eVar5=""
-s.c_gd = function() {return s.wd.location.hostname;}
+s.c_gd=function() {return s.wd.location.hostname;}
 var s_code=s.t();
-$(function () {if(s_code) $('body').append(s_code);});
+if(s_code)$(function(){$('body').append(s_code);});
 }
 setTimeout(boot_jQ, 5);
 //--></script>

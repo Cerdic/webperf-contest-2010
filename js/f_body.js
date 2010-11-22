@@ -172,12 +172,11 @@ function initMenu(source){
 function initPage(){
 $(function () {
 
+	demarreRotation();
+	setLinks($('#page'));
 	if (typeof jQuery.fn.lazyload!="undefined")
 		$("#col_centre img.lazyload").lazyload({ threshold : 100 }).removeClass('lazyload');
 
-	
-	demarreRotation();
-	setLinks($('#page'));
 
 	$('#Fnac_Search').one('focus',function(){
 		$.getScript('js/autocomplete.minified.js', function() {
