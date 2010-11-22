@@ -65,15 +65,15 @@ finally {return xhrObj;}
 <script type="text/javascript">lazyblocks.push(["#bottom","footer.mini.ll.html"]);</script>
 <div id="stat">
 <script type="text/javascript"><!--
+var now=null;
 function boot_jQ(){
-if (typeof window.jQuery=="undefined"){setTimeout(boot_jQ, 50);return;}
-for (var i=0;i<lazyblocks.length;i++)
-loadBlock(lazyblocks[i][0],lazyblocks[i][1]);
+if (!now) {now=new Date;now="?t="+now.getTime();}
+if (typeof window.jQuery=="undefined"){setTimeout(boot_jQ, 25);return;}
+for (var i=0;i<lazyblocks.length;i++)loadBlock(lazyblocks[i][0],lazyblocks[i][1]);
 boot_js();
 }
 function loadBlock(node,src){
-var d=new Date;src = src + (src.indexOf('?')>0?'&':'?') + "t="+d.getTime();
-$.get(src,
+$.get(src+now,
 function(data){ $(function(){
 $(node).html(data);
 if (typeof(window.setLinks)!='undefined') setLinks($("#col_gauche"));
@@ -119,7 +119,7 @@ s.c_gd = function() {return s.wd.location.hostname;}
 var s_code=s.t();
 $(function () {if(s_code) $('body').append(s_code);});
 }
-boot_jQ();
+setTimeout(boot_jQ, 5);
 //--></script>
 </div>
 </div>
