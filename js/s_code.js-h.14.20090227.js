@@ -386,3 +386,12 @@ w.s_ft=new Function("c","c+='';var s,e,o,a,d,q,f,h,x;s=c.indexOf('=function(');w
 c=s_d(c);if(e>0){a=parseInt(i=v.substring(e+5));if(a>3)a=parseFloat(i)}else if(m>0)a=parseFloat(u.substring(m+10));else a=parseFloat(v);if(a>=5&&v.indexOf('Opera')<0&&u.indexOf('Opera')<0){w.s_c=new Function("un","pg","ss","var s=this;"+c);return new s_c(un,pg,ss)}else s=new Function("un","pg","ss","var s=new Object;"+s_ft(c)+";return s");return s(un,pg,ss)}
 
 
+function callStat() {
+s.pageName=$("#pageName").html()
+s.channel=$("#channel").html()
+s.prop1=$("#prop1").html()
+s.prop20=$("#prop20").html()
+s.eVar2=$("#eVar2").html()
+s.c_gd=function(){return s.wd.location.hostname;}
+var s_code=s.t();if(s_code)$(function(){$('body').append(s_code);});
+}

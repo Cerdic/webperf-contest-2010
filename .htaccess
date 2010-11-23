@@ -90,3 +90,18 @@ Header always unset Set-Cookie
 Header unset ETag
 FileETag None
 </FilesMatch>
+
+Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=webperf-contest.com"
+Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=entries.webperf-contest.com"
+Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.entries.webperf-contest.com"
+Header set Set-Cookie "s_sq=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "campaign=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "s_cc=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "TTL=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "SID=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "UID=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "accept=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "OrderInSession=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "TEST=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
+Header set Set-Cookie "s_cpc=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
