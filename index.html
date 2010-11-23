@@ -11,9 +11,9 @@
 <style type="text/css">#page{filter:alpha(opacity=1);opacity:0.01;</style>
 </head>
 <body class="enfants">
-<img class="preload" style="display:none;" src="http://s1.webperf-contest.com/4cc80752a91cc/img/coups-coeur-jouet_545.png" />
 <img class="preload" style="display:none;" src="http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png" />
 <img class="preload" style="display:none;" src="http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-enfants-heros.jpg" />
+<img class="preload" style="display:none;" src="http://s1.webperf-contest.com/4cc80752a91cc/img/coups-coeur-jouet_545.jpg" />
 <script type="text/javascript">
 function load_css(href) {var elem1 = document.createElement('link');elem1.rel = 'stylesheet';elem1.type = 'text/css';elem1.href = href;document.getElementsByTagName('head')[0].appendChild(elem1);}
 load_css('css/style.minified.ll.css');
@@ -48,31 +48,29 @@ var now=new Date;now="?t="+now.getTime();
 lazyblocks.push(["col_gauche","nav-sec.mini.html"+now]);
 lazyblocks.push(["col_droite","extra.mini.ll.html"+now]);
 lazyblocks.push(["bottom","footer.mini.ll.html"+now]);
-function loadBlock(src,txt){ for (var i=0;i<lazyblocks.length;i++) if (lazyblocks[i][1]==src){var b=document.getElementById(lazyblocks[i][0]);b.innerHTML = txt;}}
-for (var i=0;i<lazyblocks.length;i++)loadxhrscript(lazyblocks[i][1],loadBlock);
-function boot_jQ(){
-if (typeof window.jQuery=="undefined"){setTimeout(boot_jQ, 25);return;}
-setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html')",5);
-$("b.spt-univers").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
-boot_js();
+function completeBlocks(node){if (typeof window.jQuery=="undefined") return;$(function(){node=$(node);
+if ($('#onglets-full',node).length)loadMenu();
+if ($('#iFrameFooterLoad',node).length)setTimeout("$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html')",5);
+$("b.spt-univers",node).css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
+})}
+function loadBlock(src,txt){ for (var i=0;i<lazyblocks.length;i++) if (lazyblocks[i][1]==src){loaded.push(["#"+lazyblocks[i][0],txt]);document.getElementById(lazyblocks[i][0]).innerHTML = txt;completeBlocks('#'+lazyblocks[i][0]);}}
+function loadBlocks(){for (var i=0;i<lazyblocks.length;i++)loadxhrscript(lazyblocks[i][1],loadBlock);}
+setTimeout(loadBlocks,100);
+function boot_jQ(){if (typeof window.jQuery=="undefined"){setTimeout(boot_jQ, 25);return;}
+completeBlocks('body');boot_js();
 }
 var booted=false;
-function boot_js(){
-if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;
-if ($('#onglets-full').length) loadMenu();
-booted=true;setTimeout(lazyLoad,90);
-}
-function lazyLoad() {
-updateMarketPlaceOffers();
-initPage();
+function boot_js(){if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;booted=true;
+$(function(){setTimeout(fixBlocks,150);})
+updateMarketPlaceOffers();initPage();setTimeout(callStat,150);}
+function callStat() {
 s.pageName="Home enfants"
 s.channel="Produits"
 s.prop1="enfants"
 s.prop20="Non-Adherent"
 s.eVar2="browse"
-s.c_gd=function() {return s.wd.location.hostname;}
-var s_code=s.t();
-if(s_code)$(function(){$('body').append(s_code);});
+s.c_gd=function(){return s.wd.location.hostname;}
+var s_code=s.t();if(s_code)$(function(){$('body').append(s_code);});
 }
 setTimeout(boot_jQ, 5);
 //--></script>

@@ -593,17 +593,19 @@ function timerFix() {
 //on lance la fonction onloadCaller une fois la page chargee.
 
 //addEvent(window, "load", onloadCaller);
+function fixBlocks(){
+	getAllBlocks(); //parsing de tous les blocks et mise ne place dans des hashmaps
+	fixAligneProduits(); //alignement des contenus de produits
+	getAllLists(); // parsing de toutes les listes produits ou contacts
+	fixMiseEnAvant(); //alignement des contenus de mise en avant
+	//fixListeInline(); //aligne les items des listes en ligne
+	//fixListe2cols(); //aligne les items des listes en 2 colonnes
+	fixBlocksHeight(); //alignement des blocs
+	fixAddressBlock();
+}
 
-$(document).ready(function(){
-    getAllBlocks(); //parsing de tous les blocks et mise ne place dans des hashmaps
-    fixAligneProduits(); //alignement des contenus de produits
-    getAllLists(); // parsing de toutes les listes produits ou contacts
-    fixMiseEnAvant(); //alignement des contenus de mise en avant
-    //fixListeInline(); //aligne les items des listes en ligne
-    //fixListe2cols(); //aligne les items des listes en 2 colonnes
-    fixBlocksHeight(); //alignement des blocs
-    fixAddressBlock();
-})
+//$(document).ready(function(){
+//})
 
 
 
