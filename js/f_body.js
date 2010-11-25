@@ -123,54 +123,60 @@ function setLinks(node){
 	});
 }
 
+var menublock = null;
 function loadMenu(){
 	// si le menu complet deja dans la page (charge avec le footer)
-	if ($('#onglets-full').length)
-		initMenu($('#onglets-full').parent());
+	if ($('#onglets-full').length){
+		menublock = $('#onglets-full').parent().detach();
+	}
 	// sinon charger dynamiquement
 	else
 		$.get('menu_full.html', function(data) {
-			var recu = jQuery('<div><\/div>').html(data);
-			initMenu(recu);
+			menublock = jQuery('<div><\/div>').html(data);
 		});
 }
-function initMenu(source){
-	$('#onglets-full >li',source).each(function(){
-		var c=$(this).attr('class');
-		$("a:first",this).remove();
-		$("#onglets li."+c).append($(this).html());
-	});
-	$('#onglets-full',source).remove();
+function initMenuitem(li){
+	// initialiser la deco au survol !
+	if (megamenu_sprite){
+		$('#onglets-full .megaMenu .vignet b',menublock).css('background-image','url('+megamenu_sprite+')');
+		megamenu_sprite=null;
+	}
+	if (!li.is('.loaded')){
+		var c=li.attr('class');
+		c = $("li."+c,menublock);
+		$("a:first",c).remove();
+		li.append(c.html()).addClass('loaded');
+		c.remove(); // liberer
 
+		//tant que la souris se trouve sur le megaMenu
+		$(".megaMenu",li).mouseenter(function(){
+				// il reste affiché
+				$(this).addClass('menu_actif');
+				// et on applique la classe .hover a son lien
+				$(this).siblings("a").addClass("hover");
+		}).mouseleave(function(){
+				// il se cache
+				$(this).removeClass('menu_actif');
+				// et on retire la classe .hover a son lien
+				$(this).siblings("a").removeClass("hover");
+		});
+	}
+}
+function initMenu(){
 	// au passage de la souris sur le lien de l'onglet
 	$("#onglets> li> a").mouseenter(function(){
-		// initialiser la deco au survol !
-		if (megamenu_sprite){
-			$('#onglets .megaMenu .vignet b').css('background-image','url('+megamenu_sprite+')');
-			megamenu_sprite=null;
-		}
+		initMenuitem($(this).parent());
 		//on affiche son megaMenu
 		$(this).addClass('hover').siblings(".megaMenu").addClass('menu_actif');
 	}).mouseleave(function(){
 		//on cache son megaMenu
 		$(this).removeClass('hover').siblings(".megaMenu").removeClass('menu_actif');
 	});
-	//tant que la souris se trouve sur le megaMenu
-	$("#onglets .megaMenu").mouseenter(function(){
-			// il reste affiché
-			$(this).addClass('menu_actif');
-			// et on applique la classe .hover a son lien
-			$(this).siblings("a").addClass("hover");
-	}).mouseleave(function(){
-			// il se cache
-			$(this).removeClass('menu_actif');
-			// et on retire la classe .hover a son lien
-			$(this).siblings("a").removeClass("hover");
-	});
 }
 
 function initPage(){
 $(function () {
+	initMenu();
 
 	demarreRotation();
 	setLinks($('#page'));

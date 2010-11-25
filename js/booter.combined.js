@@ -5,7 +5,7 @@ var jQscripts = Array();
 function runJQscript(src,txt){if (txt) jQscripts.push(txt);if (typeof window.jQuery=="undefined"){setTimeout("runJQscript(null)", 50);return;}for (var i=0;i<jQscripts.length;i++) runscript('',jQscripts[i]);}
 function loadxhrscript(src,callback) {var xhrObj_elem1;xhrObj_elem1 = getXHRObject();xhrObj_elem1.onreadystatechange = function() { if ( xhrObj_elem1.readyState != 4 || 200 != xhrObj_elem1.status ) return; callback(src,xhrObj_elem1.responseText); };try {xhrObj_elem1.open('GET', src, true);xhrObj_elem1.send('');} catch(e) {}}
 function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}catch(e){var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[i]);}catch(e){continue;}break;}}finally {return xhrObj;}}
-loadscript("js/script.ll.minified.js",runJQscript);
+//loadscript("js/script.ll.minified.js",runJQscript);
 var lazyblocks=Array();var loaded=Array();
 var now=new Date;now="?t="+now.getTime();
 lazyblocks.push(["col_gauche","nav-sec.mini.html"+now]);
@@ -41,3 +41,4 @@ $(function(){setTimeout(fixBlocks,150);})
 updateMarketPlaceOffers();initPage();
 }
 setTimeout(boot_jQ, 5);
+<!--#include file="script.ll.minified.js" -->
