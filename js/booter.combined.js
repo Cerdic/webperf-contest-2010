@@ -8,8 +8,8 @@ function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}c
 //loadscript("js/script.ll.minified.js",runJQscript);
 var lazyblocks=Array();var loaded=Array();
 var now=new Date;now="?t="+now.getTime();
-lazyblocks.push(["col_gauche","nav-sec.mini.html"+now]);
-lazyblocks.push(["col_droite","extra.mini.ll.html"+now]);
+//lazyblocks.push(["col_gauche","nav-sec.mini.html"+now]);
+//lazyblocks.push(["col_droite","extra.mini.ll.html"+now]);
 lazyblocks.push(["bottom","footer.mini.ll.html"+now]);
 function onScroll(node){
 	var e = $('#iFrameFooterLoad.lazy',node);
@@ -38,7 +38,8 @@ function boot_js(){if (typeof window.jQuery=="undefined" || typeof window.initPa
 onScroll($('body'));
 $(window).scroll(function(){onScroll($('body'));});
 $(function(){setTimeout(fixBlocks,150);})
-updateMarketPlaceOffers();initPage();
+//updateMarketPlaceOffers();
+//initPage();
 }
 setTimeout(boot_jQ, 5);
 <!--#include file="script.ll.minified.js" -->

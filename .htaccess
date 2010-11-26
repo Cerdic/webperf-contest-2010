@@ -1,7 +1,7 @@
 # [EN] perhaps you should use this file.. :)
 # [FR] vous devriez peut etre utiliser ce fichier!
 
-<FilesMatch "(index.*|engagements|index.ll|index.st|index_ie|footer.mini.ll).html$">
+<FilesMatch "(indexx.*|engagements|index.ll|index.st|index_ie|footer.mini.ll).html$">
 	Options +Includes
 	SetOutputFilter INCLUDES
 </FilesMatch>
@@ -83,10 +83,10 @@ ExpiresByType text/html "modification plus 1 seconds"
 
 #Header unset Cookie
 #Header unset Set-Cookie
-#RequestHeader unset Cookie
 
 <FilesMatch "\.(ico|gif|jpg|jpeg|png|flv|pdf|mp3|wav|js|css|kml|xml)$">
 Header always unset Set-Cookie
+RequestHeader unset Cookie
 Header unset ETag
 FileETag None
 </FilesMatch>

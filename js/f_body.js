@@ -240,9 +240,6 @@ $(function () {
 	// demarrer le gif anime
 	if ($('#banner186756').attr('src')!=='http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')
 		setTimeout("$('#banner186756').attr('src','http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')",2000);
-
-	// lancer le marqueur de stats
-	setTimeout(callStat,150);
 });
 }
 
