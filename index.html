@@ -2,10 +2,19 @@
 <html>
 <head>
 <title>Jeux et jouets - achat/vente de jeux et jouets à la Fnac</title>
-<script type="text/javascript" src="http://s3.webperf-contest.com/4cc80752a91cc/js/jquery-1.4.4.min.js" defer="defer"></script>
+<script type="text/javascript" src="http://s3.webperf-contest.com/4cc80752a91cc/js/jquery-1.4.2.min.js" defer="defer"></script>
 <script type="text/javascript">
 function load_css(href) {var elem1 = document.createElement('link');elem1.rel = 'stylesheet';elem1.type = 'text/css';elem1.href = href;document.getElementsByTagName('head')[0].appendChild(elem1);}
 load_css('css/style.minified.ll.css');
+var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";
+function loadscript(src){var se = document.createElement('script');se.src = src;document.getElementsByTagName('head')[0].appendChild(se);}
+function runscript(src,txt){var se = document.createElement('script');document.getElementsByTagName('head')[0].appendChild(se);se.text = txt;}
+var jQscripts = Array();
+function runJQscript(src,txt){if (txt) jQscripts.push(txt);if (typeof window.jQuery=="undefined"){setTimeout("runJQscript(null)", 50);return;}for (var i=0;i<jQscripts.length;i++) runscript('',jQscripts[i]);}
+function loadxhrscript(src,callback) {var xhrObj_elem1;xhrObj_elem1 = getXHRObject();xhrObj_elem1.onreadystatechange = function() { if ( xhrObj_elem1.readyState != 4 || 200 != xhrObj_elem1.status ) return; callback(src,xhrObj_elem1.responseText); };try {xhrObj_elem1.open('GET', src, true);xhrObj_elem1.send('');} catch(e) {}}
+function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}catch(e){var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[i]);}catch(e){continue;}break;}}finally {return xhrObj;}}
+//loadxhrscript("js/script.ll.minified.js",runJQscript);
+loadxhrscript("http://entries.webperf-contest.com/4cc80752a91cc/js/script.ll.minified.js",runJQscript);
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="category" content="home page">
@@ -21,7 +30,6 @@ load_css('css/style.minified.ll.css');
 <img class="preload" style="display:none;" src="http://s3.webperf-contest.com/4cc80752a91cc/img/univ_heros_titre.png" />
 <img class="preload" style="display:none;" src="http://s3.webperf-contest.com/4cc80752a91cc/img/186x756_25082010_stat.png">
 <img class="preload" style="display:none;" src="http://s2.webperf-contest.com/4cc80752a91cc/img/vignette_enfants.png" />
-<script type="text/javascript" src="http://entries.webperf-contest.com/4cc80752a91cc/js/script.ll.minified.js" defer="defer"></script>
 <img class="preload" style="display:none;" src="http://s1.webperf-contest.com/4cc80752a91cc/img/eveiletjeux4.png">
 <noscript><meta http-equiv="refresh" content="1;url=index.st.html">
 <a href="index.html">Votre navigateur ne supporte pas javascript, cliquez ici pour continuer</a>
@@ -105,14 +113,6 @@ framboise, la cannelle, la cerise...
 </div>
 </div>
 <script type="text/javascript">
-var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";
-function loadscript(src){var se = document.createElement('script');se.src = src;document.getElementsByTagName('head')[0].appendChild(se);}
-function runscript(src,txt){var se = document.createElement('script');document.getElementsByTagName('head')[0].appendChild(se);se.text = txt;}
-var jQscripts = Array();
-function runJQscript(src,txt){if (txt) jQscripts.push(txt);if (typeof window.jQuery=="undefined"){setTimeout("runJQscript(null)", 50);return;}for (var i=0;i<jQscripts.length;i++) runscript('',jQscripts[i]);}
-function loadxhrscript(src,callback) {var xhrObj_elem1;xhrObj_elem1 = getXHRObject();xhrObj_elem1.onreadystatechange = function() { if ( xhrObj_elem1.readyState != 4 || 200 != xhrObj_elem1.status ) return; callback(src,xhrObj_elem1.responseText); };try {xhrObj_elem1.open('GET', src, true);xhrObj_elem1.send('');} catch(e) {}}
-function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}catch(e){var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[i]);}catch(e){continue;}break;}}finally {return xhrObj;}}
-//loadxhrscript("js/script.ll.minified.js",runJQscript);
 var lazyblocks=Array();var loaded=Array();
 var now=new Date;now="?t="+now.getTime();
 lazyblocks.push(["col_gauche","nav-sec.mini.html"+now]);
@@ -126,8 +126,8 @@ function onScroll(node){
 	if (e.length && !$.belowthefold(e.eq(0), {threshold : 100}))
 		e.removeClass("lazy").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
 }
-function completeBlocks(node){if (typeof window.jQuery=="undefined") return;$(function(){node=$(node);
-if ($('#onglets-full',node).length)loadMenu();
+function completeBlocks(node){if (typeof window.$=="undefined") return;$(function(){node=$(node);
+if ($('#onglets-full',node).length) loadMenu();
 $("b.spt-univers",node).addClass("lazy");
 $('#iFrameFooterLoad',node).addClass("lazy");
 if (typeof $.fn.lazyload!=="undefined") onScroll(node);
@@ -142,10 +142,11 @@ boot_js();
 }
 var booted=false;
 function boot_js(){if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;booted=true;
+
 updateMarketPlaceOffers();
 onScroll($('body'));
 $(window).scroll(function(){onScroll($('body'));});
-$(function(){$('img.preload').remove();setTimeout(fixBlocks,150);})
+$(function(){$('img.preload').remove();setTimeout(fixBlocks,150);setTimeout("callStat",150);})
 initPage();
 }
 setTimeout(boot_jQ, 5);

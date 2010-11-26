@@ -242,6 +242,5 @@ $(function () {
 		setTimeout("$('#banner186756').attr('src','http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')",2000);
 });
 }
-
-if (typeof(window.boot_js)!='undefined')
+if (typeof window.boot_js!='undefined')
 	boot_js();

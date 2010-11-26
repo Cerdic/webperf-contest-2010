@@ -6,7 +6,7 @@ http://www.omniture.com */
 */
 
 
-var s=s_gi(s_account)
+var s=s_gi(s_account);
 
 /************************** CONFIG SECTION **************************/
 /* You may add or alter any code config here. */
@@ -386,18 +386,19 @@ w.s_ft=new Function("c","c+='';var s,e,o,a,d,q,f,h,x;s=c.indexOf('=function(');w
 c=s_d(c);if(e>0){a=parseInt(i=v.substring(e+5));if(a>3)a=parseFloat(i)}else if(m>0)a=parseFloat(u.substring(m+10));else a=parseFloat(v);if(a>=5&&v.indexOf('Opera')<0&&u.indexOf('Opera')<0){w.s_c=new Function("un","pg","ss","var s=this;"+c);return new s_c(un,pg,ss)}else s=new Function("un","pg","ss","var s=new Object;"+s_ft(c)+";return s");return s(un,pg,ss)}
 
 
-function callStat(n) {
-	if (!document.getElementById('pageName')) {
-		if (n++<100) setTimeout("callStat(n)",50);
+var statdone = false;
+function callStat() {
+	if (statdone || !document.getElementById('pageName')){
 		return;
 	}
-s.pageName=document.getElementById('pageName').innerHTML;
-s.channel=document.getElementById('channel').innerHTML;
-s.prop1=document.getElementById('prop1').innerHTML;
-s.prop20=document.getElementById('prop20').innerHTML;
-s.eVar2=document.getElementById('eVar2').innerHTML;
-s.c_gd=function(){return s.wd.location.hostname;}
-var s_code=s.t();
-if(s_code)$(function(){$('body').append(s_code);});
+	statdone = true;
+	s.pageName=document.getElementById('pageName').innerHTML;
+	s.channel=document.getElementById('channel').innerHTML;
+	s.prop1=document.getElementById('prop1').innerHTML;
+	s.prop20=document.getElementById('prop20').innerHTML;
+	s.eVar2=document.getElementById('eVar2').innerHTML;
+	s.c_gd=function(){return s.wd.location.hostname;}
+	var s_code=s.t();
+	if(s_code)$(function(){$('body').append(s_code);});
 }
-callStat(0);
+callStat(); // un appel direct pour les navs modernes qui ont deja charge le dom

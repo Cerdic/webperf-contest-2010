@@ -19,7 +19,7 @@ function updateMarketPlaceOffers(){
 			var m;
 			while(m=MarketPlaceOffers.pop())
 				document.getElementById(m[0]).innerHTML = data['id'+m[1]].MarketPlaceSummary;
-			fixBlocksHeight();
+			//fixBlocksHeight();
 		}
 	);
 }
