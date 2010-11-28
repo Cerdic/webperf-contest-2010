@@ -132,22 +132,20 @@ if (typeof $.fn.lazyload!=="undefined") onScroll(node);
 })}
 function loadBlock(src,txt){ for (var i=0;i<lazyblocks.length;i++) if (lazyblocks[i][1]==src){loaded.push(["#"+lazyblocks[i][0],txt]);document.getElementById(lazyblocks[i][0]).innerHTML = txt;completeBlocks('#'+lazyblocks[i][0]);}}
 function loadBlocks(){for (var i=0;i<lazyblocks.length;i++)loadxhrscript(lazyblocks[i][1],loadBlock);}
+function boot_jQ(){if (typeof window.jQuery=="undefined") return; clearInterval(tboot);tboot=null;
 loadBlocks();
-function boot_jQ(){if (typeof window.jQuery=="undefined"){setTimeout(boot_jQ, 25);return;}
-//for (var i=0;i<lazyblocks.length;i++) $("#"+lazyblocks[i][0]).load(lazyblocks[i][1],"completeBlocks("+lazyblocks[i][0]+")");
 completeBlocks('body');
 boot_js();
 }
 var booted=false;
-function boot_js(){if (typeof window.jQuery=="undefined" || typeof window.initPage=="undefined" || booted) return;booted=true;
-
-setTimeout(updateMarketPlaceOffers,50);
+function boot_js(){if (tboot || typeof window.initPage=="undefined" || booted) return;booted=true;
+updateMarketPlaceOffers();
 onScroll($('body'));
 $(window).scroll(function(){onScroll($('body'));});
-$(function(){$('img.preload').remove();fixBlocks();setTimeOut(callStat,100);})
+$(function(){$('img.preload').remove();fixBlocks();})
 initPage();
 }
-boot_jQ();
+var tboot = setInterval(boot_jQ,25);
 </script>
 </body>
 </html>
