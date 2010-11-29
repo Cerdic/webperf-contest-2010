@@ -1,3 +1,446 @@
+Parti-pris :
+Le rendu est identique à l'origine dans les navigateurs modernes.
+Les coins ronds ne sont pas rendus dans les navigateurs ne supportant pas border-radius,
+mais le reste du rendu est identique. Pour tous les header de boite, j'ai remplacé le système
+d'images de background par un jeu d'aplat en pur CSS, ce qui ne nécessite aucune ressource externe.
+
+Les images de la page ne véhiculant pas d'information et utilisées comme illustration sont toutes
+referencées en image de background et spritees par groupes logiques cohérents :
+- illustrations dans le menu déroulant, enrichies d'une alternative texte lorsqu'aucune image
+n'est chargee
+- illustrations des heros préférés, avec suppression du lien double identique qui complique
+la navigation avec revue d'écran
+- illustrations des univers en colonne de droite
+
+En revanche, les images des produits constituent une information essentielle de la page
+et nécessaire à la vente (au même titre que le nom du produit ou son prix).
+Il m'a donc semblé inacceptable que ces images disparaissent en l'absence de style ou de javascript
+et qu'elles devaient absolument figurer dans le html source de la page sous peine de dégrader
+l'accessibilité.
+
+J'ai nettoyé le layout de la page initialement en table, puis remplacté par le layout tiré de
+http://blog.html.it/layoutgala/ qui permet d'envoyer le contenu principal avant les colonnes
+latérales (les id de blocs de la page ont été conservés).
+
+Le menu déroulant à onglets n'étant navigable qu'en présence de javascript, j'ai prix le parti de
+n'insérer dans le HTML du document statique les onglets visibles. L'ensemble des parties déroulantes
+est chargé de manière asynchrone par une requête ajax.
+
+L'auto-complétion sur le champ de recherche n'est activée qu'au focus sur le champ, ce qui permet
+d'économiser le chargement de ce script la plupart du temps.
+
+Le diaporama central était constitué d'images sans alternatives. J'ai remplacé cette image par un
+texte+une image de background en superposition. Seule la première image est référencée au chargement
+de la page, les autres images ne le sont que lors de leur affichage (via js), ce qui permet un
+chargement différé.
+
+Dans la colonne de droite, le gif animé utilisé en bannière publicitaire interne est lourd à charger.
+Pour ne pas retarder le rendu complet de la page, il est remplacé par un png statique qui ne reprend
+que la première image. Il est ensuite remplacé dynamiquement en js par le gif animé pour lancer
+l'animation lorsque la page est achevée de charger. Ceci permet une disponibilité de la page complète
+plus rapide. Une alternative plus légère serait sans doute de refaire l'animation en canvas+js, avec
+cependant des problèmes de support multi navigateur.
+
+Les illustrations de chaque cadre sont en sprite. Comme ces boites sont en general sous la ligne de
+flottaison et non visible au chargement de la page, la directive background-image est inserree en js
+asynchrone pour ne pas retarder le onload.
+
+En pied de page, l'iframe est conservée, conformement au règlement, mais son src est inséré
+dynamiquement en js pour ne pas retarder le onload. L'iframe est donc chargée de manière aysnchrone.
+
+Le compteur de stat constitué d'un script est chargé en asynchrone également.
+
+D'un point de vue technique :
+- la feuille de style principale a été découpée en unités logiques, chacune dans une feuille, et
+seules les feuilles utiles à la page ont été inclues. En revanche, il n'a pas été procédé à un
+nettoyage exhaustif de tous les sélecteurs css inutiles. Exemple : dans box.css on a gardé le système
+de box complet par soucis de représentativité, même si seule une partie des boites sont utiles sur
+cette page.
+Les feuilles sont réparties en deux lots :
+- core.combined.css qui regroupe le minimum pour avoir un rendu ressemblant (base.css, layout.css et
+header.css). Elle est insérée minifiée (via CSSTidy) dans le head en inline pour permettre au
+navigateur de démarrer le rendu au plus vite. Cela représente une pénalité de 5ko(gzip) envoyé à
+chaque page et non mis en cache côté client.
+- style.combined.css qui regroupe l'ensemble des autres styles, et est chargée de manière externe
+(minifiée elle aussi) donc mise en cache. Elle est référencée après le contenu de la page mais avant
+les colonnes latérales et le pied.
+
+Cette répartition permet d'avoir à la fois un rendu effectif qui démarre tôt, avec une apparence qui
+fait illusion (le bandeau haut est stylé, les colonnes sont en place), et une mise en cache d'une
+grande partie de la CSS.
+On peut démarrer le rendu plus vite sans styles dans le head (et en chargement des styles après le
+contenu) mais avec une apparence de page cassée qui est peu qualitative,
+et on peut avoir tous les styles en cache, mais au prix d'un début de rendu retardé
+d'une demi seconde environ
+
+- les js inline ont été déportés dans des js externes, par fonctionnalité principale. Seuls les js
+utiles à la page ont été conservés. Dans les fonctions d'alignement de bloc, seules celles utiles sur
+la page ont été conservées. Les js ont été minifiés par le google closure compiler. Le placement du
+js dans la page a été optimisé pour le waterfall. Il intervient après les éléments essentiels de la
+page (navigation et contenu), mais avant les éléments accessoires (extra de droite et footer).Il est
+doté d'un attribut "defer" qui permet de ne pas bloquer la suite du chargement.
+
+- requête ajax asynchrone de recherche des prix et disponibilité :
+la source d'information externe a été changée pour utiliser une source proxy qui multiplexe les
+demandes pour remplacer les 16 requêtes ajax initiales par une requête ajax unique. Cette liberté
+semble permise par le règlement sur la foi des 2 assertions :
+  - la page doit conserver la fonctionnalité "Les indications "x produits trouvés" qui sont
+récupérées en ajax"
+  - La règle principale est : agissez comme s'il s'agissait de votre site
+combinées au fait qu'il n'est pas précisé que la ressource externe utilisée pour les requêtes ajax
+doit être inchangée.
+  A ce titre, multiplexer les 16 requêtes est une amélioration évidente, parmi les premières choses
+que je ferai en situation réelle.
+La ressource utilisée est un simple proxy qui réalise systématiquement les 16 requêtes sans mise en
+cache, mais en bénéficiant d'une connexion serveur à serveur plus rapide. En situation réelle, c'est
+évidemment le script originel qui sert les requêtes qui serait modifié pour plus de rapidité, ou à
+défaut un script complémentaire sur le même serveur pour épargner le temps cumulé des 16 aller-retour
+entre serveurs.
+
+le html a été minifié par suppression des espaces redondants et commentaires.
+Tout le processus d'optimisation a été versionné (cf git log ci dessous)
+
+
+
+
+commit 323f5a68f37f7bdf4d36880a976cda16fb46c853
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 15:00:31 2010 +0100
+
+    rangement pour livraison
+
+commit 6b7563b0265ace96eb003f9e038609d1ba28d6b4
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 13:22:37 2010 +0100
+
+    rangement pour livraison
+
+commit 8d7677917850dae40689fa140cd9df1c6fe8e00a
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 13:10:16 2010 +0100
+
+    rangement pour livraison
+
+commit e089f94ea4b50d686e7885980fddf562603b81b4
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 13:09:12 2010 +0100
+
+    rangement pour livraison
+
+commit dafbd1fc69e9a3b53980aaf5007fdfabbdaacb3d
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 13:08:54 2010 +0100
+
+    rangement pour livraison
+
+commit 1816d0e84aa02130d705e4037c827f209048bf48
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 12:46:16 2010 +0100
+
+    on utilise de nouveau jquery 1.4.4
+
+commit 0c6fdb1aeb20a49dc1965fc6116252dd54e64815
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 12:45:59 2010 +0100
+
+    version debugue de lazyload
+
+commit 344dd6db3429355ae4f612ff2ed77c2e0d374518
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 12:39:16 2010 +0100
+
+    appel retarde du marqueur de stat pour ne pas bloquer les autres chargement dans IE
+
+commit 53b7e2965309d523d4784577ddec3af3c537b47d
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 29 12:38:22 2010 +0100
+
+    Debug de lazyload au chargement dans IE : il faut charger les src des images deja visibles
+
+commit 726abd37cb34feeaf8e07e1d1987aaaeb3a76753
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 28 22:35:54 2010 +0100
+
+    retarder le chargement asynch des blocs pour laisser a ie le temps de faire un rendering intermediaire
+
+commit 04a554b6465b432688b6ee6fa0fec40f263a381c
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 28 21:59:44 2010 +0100
+
+    timing ajuste entre le dl des morceaux en asynch et le marqueur de stat+marketplace
+    afin de laisser le temps au nav de faire le rendering entre les deux
+
+commit 3dee7f61dab35ac75c3351c3beeb05afe31f81c8
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 28 21:58:46 2010 +0100
+
+    reparer la version statique de secours en cas de js absent sur la version principale
+
+commit 0cc01178c7bc31641f7eb3149efa8afb0b5c958f
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 28 20:13:36 2010 +0100
+
+    on rechange encore la repartition des chargements sur les differents sous domaine
+
+commit 15a020c468618c6abaa0cfee810636c2f0d4bdea
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 28 19:44:17 2010 +0100
+
+    chargement traditionnel de la css, c'est tout aussi efficace
+
+commit 5bed9795104e76d1451e3869ec963ec12a29e0c7
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 26 16:18:40 2010 +0100
+
+    Debug dans IE7 : il ne faut pas lancer script.ll.combined.js avant jQuery
+
+commit 9d145d05d41aa8ce11fa4cdc21497f8aad78601f
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 26 11:03:17 2010 +0100
+
+    reoptimisation des repartitions entries/s1/s2/s3 pour IE
+    chargement de la css par dom injection car sinon cela bloque IE sur le chargement du second script
+
+commit 9ee1c18aea21ae9bf9f9cf9aff4b173c9ded64d2
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 26 10:14:37 2010 +0100
+
+    Version re-optimisee en repartant du html brut sans composant et en rajoutant les composants css puis js un par un.
+    Chargement du json de marketplace sans attendre document.ready
+    Lancement du marqueur de stat sans attendre document.ready
+
+commit 9d4bc6b907c939dd1f7c8ad77d3f724b5aa3db3b
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 25 16:53:59 2010 +0100
+
+    Une version traditionnelle avec
+    - appel script et css externe,
+    - load async de des blocs extra, nav, footer
+    charge bien dans FF mais moyen dans IE
+    On a aussi modifie le menu pour ne plus injecter dans le dom tout le html tant qu'on survole pas un onglet. Permet d'avoir un dom plus light
+
+commit 8362875492b5607795ec01b9a6076cab15cd2eae
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 25 10:23:38 2010 +0100
+
+    Commit sans modif, hormis le chmod
+
+commit b623a92835d249b1730c7d54bef4195fe1eff080
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 25 09:54:35 2010 +0100
+
+    Variante avec css et js externe uniquement, pour voir (htaccess qui va avec)
+
+commit d51fb6f301ef6304552ab142c0af93d711e070cf
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 25 09:52:40 2010 +0100
+
+    Variante avec css et js externe uniquement, pour voir
+
+commit cff010a0c5f0b2292b519b313b77f1c329180518
+Author: Cerdic <cedric@yterium.com>
+Date:   Wed Nov 24 22:25:27 2010 +0100
+
+    essai chargement js des images en preload
+
+commit d72d7d17b685213900dbd9ef05cd127d34e04ec2
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 23 23:07:15 2010 +0100
+
+    lazyload sur le src de l'iframe et sur le background univers qui ne sont pas visibles par defaut
+    deport de tous les scripts de stat dans le js externe
+
+commit 46e94e9b80dde09eaba2b9f15d72dab065d781dd
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 23 23:06:01 2010 +0100
+
+    Une version jpg degradee du premier visuel du diaporama, pour illusionner l'oeil pendant que la version de bonne qualite se charge
+
+commit a4f13ec6cc2a8bb16afc5e3bc606ae860e1b2cab
+Author: Cerdic <cedric@yterium.com>
+Date:   Tue Nov 23 09:39:57 2010 +0100
+
+    optimiser le timing de chargement. Selon le navigateur le xhr sur les blocs arrive avant ou apres le document.ready de jQuery, gerer les deux cas pour que l'init soit toujours complete.
+    Retarder le fixblock qui bug si il arrive trop tot sur certains navigateurs
+
+commit 0d46bdd0c2edbf7ee18a91fca4f9bb2e193e55f9
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 22 23:36:28 2010 +0100
+
+    charger les blocks ajax sans jquery, cela permet de les injecter plus tot dans la page !
+
+commit 69163ca603c0445d2bfb07c88b107a524ef8e961
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 22 22:54:39 2010 +0100
+
+    reduire le nombre de script inline :
+    - on utilise les infos du dom pour le chargement des infos de disponibilites ajax
+    - on regroupe les scripts de l'index
+
+commit b57e506ce75faf53220052863288e8d0d713c6d5
+Author: Cerdic <cedric@yterium.com>
+Date:   Mon Nov 22 18:52:17 2010 +0100
+
+    optimisation legere
+
+commit 7a6cb59dcd11f2074034e08ddd16f5f0fbe020f2
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 21 20:57:28 2010 +0100
+
+    etre plus agressif sur DEFLATE, pas de cache sur le html, et pas de cookie sur les images
+
+commit 264f800f922fd3da04c5a43c9d0126ee6aa0f46d
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 21 20:45:34 2010 +0100
+
+    limiter la validite des cookie de stats a entries.webperf-contest.com pour garder les sous domaines s1,s2,s3 sans cookie
+    injecter la css principale juste en sortant du head, dans le DOM, par js, pour la charger au plus tot sans bloquer le reste du chargement
+    preloader 2 images de plus qui sont dans la css, sans attendre sa lecture complete
+
+commit 31ed28c0974a97c85ea7d7b11c6baefe850ebe5b
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 21 20:41:45 2010 +0100
+
+    reintegrer tous les styles dans la css
+
+commit 27ff0e0196bc1bde04f3f453af595483891e683a
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 21 20:41:18 2010 +0100
+
+    pas de src vide sur l'iframe, cela declenche une requete inutile dans ie
+
+commit 3f42e20bf2abbf6eab5788fbdd5b016e0166299b
+Author: Cerdic <cedric@yterium.com>
+Date:   Sun Nov 21 20:40:16 2010 +0100
+
+    ajouter un timestamp sur l'ajax html pour ne pas cacher, et supprimer le menu du pied quand il est reinjecte dans le haut
+
+commit 26091aef62f2850dec980956c0ef5617bcfac26c
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 22:21:53 2010 +0100
+
+    garder le chargement asynchrone de l'iframe
+
+commit 48966ec5d3474ef48ea9e25fe5a2a8f45ee2ac84
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 17:34:31 2010 +0100
+
+    Charger plus tot les css, et charger le src de l'iframe sans passer par setTimeout
+    
+    http://www.webpagetest.org/result/101120_7685492b776deb335d0b003dd9f87ea1/
+
+commit cdcfd65668cddccd287f1d9821a69f999513c75a
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 16:39:57 2010 +0100
+
+    Reintegrer le script de stat dans script.ll.minified.js car on a le temps de le charger entierement avant
+    que jQuery ne soit charge (une requete en moins)
+    Integrer le html du menu dans le footer (une requete en moins)
+    Redescendre le chargement de script.ll.minified apres les css pour ne pas retarder le rendu
+    (Erreur sur l'url de jquery, c'est bien le cdn google qu'on veut utiliser)
+
+commit ea43ff1070fac8f822bb4b2d7c66ee26daca38a0
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 15:50:30 2010 +0100
+
+    charger en parallelle jQuery et script.ll.minified avec la technique XHR Injection
+    http://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/
+
+commit d9ff8c5ca38e833dcaaa7de54dd0fbc33f8bcace
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 12:49:22 2010 +0100
+
+    optimisation du chargement parallele des deux js separes (jquery venant de google, et script.ll.minified.js)
+
+commit a48eb5a9a8b06673463f978d4b0ff85f0249d1a4
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 10:39:27 2010 +0100
+
+    indentation inutile
+
+commit b8cdef58bfd9fa1a89640f7ebe9a30dbbaecd3c9
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 10:38:58 2010 +0100
+
+    indentation inutile
+
+commit 7aaa55b98355466ecf0129ab54847aa4f5256f9d
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 20 10:37:52 2010 +0100
+
+    indentation inutile
+
+commit 10f58613872992faf4e5d9da25bf70975bc90837
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 19 23:27:10 2010 +0100
+
+    La version lazyload devient la page par defaut, et on fallback sur index.st.html si pas de javascript (contenu envoye direct sans LL)
+
+commit d8b3dae0a717adac6cafaf55bd0a15a4d11ac68a
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 19 23:21:51 2010 +0100
+
+    Optimisation du chagement :
+    on peut charger les blocs APL sans attendre document.ready. Seul l'injection dans le DOM doit attendre
+    on reinjecte spt-univers par le js et non directement au chargement du html
+
+commit df3a3a3482e6ae0e9e24c9c49be5cc47fb4c7804
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 19 22:02:43 2010 +0100
+
+    optimisation du pied : utiliser des ul/li plutot que les dl/dt, cela evite de recourir a une image background pour faire les puces carrees
+
+commit fcc8cda5b9021bc544641f7e6b194e3d8ff3c947
+Author: Cerdic <cedric@yterium.com>
+Date:   Fri Nov 19 00:01:37 2010 +0100
+
+    synchro entre les parties LL, on reintegre le bloc navigation dans le html envoye
+
+commit ef416e79c565f1daae262c0f72870484cdf7b4ae
+Author: Cerdic <cedric@yterium.com>
+Date:   Thu Nov 18 22:37:06 2010 +0100
+
+    cache statique sur la requete json concatenee
+    optimisation du chargement de la page ll :
+    repartition entre host
+    utilisation de jquery sur cdn google
+
+commit 1fdb71266d0d954f9a4b5c657c289e41eff1f49c
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 13 21:31:04 2010 +0100
+
+    deplacer les blocs gris a l'emplacement ou viendront ensuite les blocs de navigation et le gif anime ameliore grandement l'illusion que c'est deja arrive.
+    On applique donc un margin-top:62px sur ces deux blocs !
+    ---
+    http://www.webpagetest.org/result/101113_749e27e23a2fe01e6449874ea08d9a51/
+
+commit 548fd9535a54bba92069c3f70f09d33e8062a1ac
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 13 16:24:32 2010 +0100
+
+    gerer l'UID des liens lorsque les blocs sont charges dynamiquement
+
+commit 0d8bae54a02d4abf77413cee61d5dd5fb0d5cd07
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 13 14:39:44 2010 +0100
+
+    correction d'un bug de rendu dans webkit qui semble lie a un pb de timing
+
+commit 3b9c88252d2131a1488be3576512ef77cc8447f9
+Author: Cerdic <cedric@yterium.com>
+Date:   Sat Nov 13 14:21:04 2010 +0100
+
+    variante lazyload agressif :
+    - seul le top et le contenu sont envoyes directement, les colonnes laterales et le pied sont charges en asynchrone par le js
+    - seul jQuery est charge, le reste des script est charge en async par $.getScript
+    - le src des images n'est pas reference dans le html, on utilise lazyload pour charger les images visibles en asynch
+    - pour grapiller des centiemes de seconde, on utilise des img.preload en debut de <body> pour charger tout de suite les 3 plus grosses
+    
+    Pour preserver l'accessibilite aux utilisateur sans js, on place un meta refresh dans une balise <noscript> en debut de <body>. C'est non-valide mais fonctionnel. Dans le monde reel, on en profiterait pour poser un cookie 'nojs' et envoyer le site sans lazyload par la suite pour ces utilisateurs.
+    
+    Tout cela permet d'arriver a un onload de 0.998s sur le meilleur tir.
+    http://www.webpagetest.org/result/101113_9674dde8f478062f0167d38becf8eee0/
+
 commit 39c8901ad7c8d48b9455d9a1e88c436e90e9f7e1
 Author: Cerdic <cedric@yterium.com>
 Date:   Thu Nov 11 20:20:20 2010 +0100
