@@ -9,7 +9,7 @@
 }
 .block_espace-fg .blk_header span{padding:0}
 .block_espace-fg .tl, .block_espace-fg .tr, .block_espace-fg .bl, .block_espace-fg .br{
-  background-image:url(img/block_gris_corners.png);
+  background-image:url(../img/block_gris_corners.png);
 }
 .block_espace-fg .blk_inside{border:1px solid #CCC;}
 .block_espace-fg .blk_postHeader{background-color:#543E7F;color:#B2A5C9}

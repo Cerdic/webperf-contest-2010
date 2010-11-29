@@ -7,5 +7,5 @@ body.sideDecoration{
   background:#e3dabd url(img/body-background-cdc.jpg) no-repeat top center;
 }
 .sideDecoration #page{
-  background:#FFF url(img/body-background-standard.png) repeat-x center top;
+  background:#FFF url(../img/body-background-standard.png) repeat-x center top;
 }

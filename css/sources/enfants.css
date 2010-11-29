@@ -16,7 +16,7 @@
 	#univ_heros li * {text-align:center}
 	#univ_heros li.last {float:right;margin-right:0}
 
-	#univ_heros a b {background:url(img/spt-enfants-heros.jpg) no-repeat -10px -10px;}
+	#univ_heros a b {background:url(../img/spt-enfants-heros.jpg) no-repeat -10px -10px;}
 	/* rollover - opacit� */
 	#univ_heros a.heros_desc:hover b {
 	-moz-opacity:0.5;

@@ -1,0 +1,186 @@
+
+/* popup du site */
+
+body.popUpCredit{
+  max-width:800px;
+  /*background-position:0px -66px; suite refonte adh*/
+  background:none;
+}
+body.popUpCredit p, body.popUpCredit li, body.popUpCredit h2, body.popUpCredit a, body.popUpCredit h3{
+  color:#666;
+}
+body.popUpCredit a{
+  text-decoration:underline;
+}
+body.popUpCredit a:hover{
+  text-decoration:none;
+}
+body.popUpCredit h1{
+  height:65px; /* suite redonte adh */
+  overflow:hidden;
+  padding:0;
+  margin:0;
+}
+body.popUpCredit h1 img{
+  margin:-4px 0 0 0;
+}
+body.popUpCredit h2{
+  font-size:1.5em;
+  padding:0;
+}
+body.popUpCredit h3{
+  font-size:1.25em;
+}
+body.popUpCredit #content{
+  margin-top:0px; /* suite redonte adh */
+  background:#fff; /* suite redonte adh */
+}
+.listeFacilitePaiement{
+  position:relative;
+  min-width:460px;
+  margin-left:20px;
+}
+.listeFacilitePaiement li{
+  border-bottom:solid 1px #EEE;
+  padding-right:75px;
+}
+.listeFacilitePaiement li a{
+  position:absolute;
+  right:0;
+  margin-top:-5px;
+  vertical-align:top;
+}
+.listeFacilitePaiement li a img{
+  vertical-align:top;
+}
+
+/* popin */
+
+.popin{
+  position:absolute;
+  display:none;
+  cursor:help;
+  z-index:99;
+}
+.popin span.poptl{
+  top:0;
+  left:0;
+}
+.popin span.poptr{
+  top:0;
+  right:0;
+}
+.popin span.popbr{
+  bottom:0;
+  right:0;
+}
+.popin span.popbl{
+  bottom:0;
+  left:0;
+}
+.popin p{
+  text-align:justify;
+}
+.popin h3{
+  font-size:1.2em;
+}
+/* gris */
+.popin .popin_grise{
+  background:#EBEBEB;
+  color:#666;
+  border:solid 1px #999;
+}
+.popin_grise .close a{
+  color:#000;
+}
+/* noir */
+.popin .popin_noir{
+  background:#000;
+  color:#666;
+  border:solid 1px #666;
+}
+.popin_noir .close a{
+  color:#FFF;
+}
+/* blanc */
+.popin .popin_blanc{
+  background:#FFF;
+  color:#000;
+  border:solid 1px #000;
+}
+.popin_blanc .close a{
+  color:#000;
+}
+/* a defenir plus tard */
+.popin_bleu{
+  background:#999;
+}
+.popin_moutarde{
+  background:#999;
+}
+.popin_rouge{
+  background:#999;
+}
+.popin_vert{
+  background:#999;
+}
+/* placement de popin */
+/* Statut des commandes */
+
+.popinCommandeStatut{
+  width:250px;
+  margin-left:-250px;
+  margin-top:18px;
+}
+.popInDerouleDroite{
+  margin-right:-250px;
+  margin-left:auto;
+}
+.popinCommandeStatut .close{
+  text-align:right;
+}
+/* permet une mise en valeur du coin a viser par la popin */
+.popinCommandeStatut span{
+  position:absolute;
+  display:block;
+  width:5px;
+  height:5px;
+  background:black;
+  font-size:1px;/* pour IE */
+}
+
+
+/* Message d'attente */
+#waitingMsg { position:absolute; width:300px; zoom:1; border:1px solid black; background:#fff; padding:20px 10px; font-size:20px; display:none;  z-index:1000 }
+#waitingMsg img {float:left;}
+#waitingMsg p {zoom:1; overflow:hidden;text-align:center; margin:0; margin-left:10px; padding:0; line-height:1.2em;}
+#shadowLayer {background:black; -moz-opacity:0.2; filter:alpha(opacity=20); opacity:0.2; position:absolute; width:100%; top:0; left:0; z-index:999}
+
+/* Popin ajout au panier */
+.basket_popin_big{width:261px;height:187px;text-align:center;background:transparent url(img/bg_pop_ajoutpanier_bleu.png) no-repeat center bottom;color:#000;}
+
+
+/* pop ins  */
+
+div#event1{
+  top: 200px;
+}
+div.event{
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #A3A3A3;
+  width: 210px;
+  z-index: 2000;
+  background-color: #A3A3A3;
+  layer-background-color: #A3A3A3;
+}
+.toggle{
+  float: right;
+  clear: left;
+  padding: 5px;
+}
+.toggle a {
+  color:#FFF !important;
+}
+
