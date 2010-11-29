@@ -401,4 +401,4 @@ function callStat() {
 	var s_code=s.t();
 	if(s_code)$(function(){$('body').append(s_code);});
 }
-callStat(); // un appel direct pour les navs modernes qui ont deja charge le dom
+setTimeout(callStat,100); // un appel via timeout pour que cela ne passe pas en priorite
