@@ -5,14 +5,8 @@
 <script type="text/javascript" src="js/jquery-1.4.4.min.js" defer="defer"></script>
 <script type="text/javascript">
 var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";
-function loadscript(src){var se = document.createElement('script');se.src = src;document.getElementsByTagName('head')[0].appendChild(se);}
-function runscript(src,txt){var se = document.createElement('script');document.getElementsByTagName('head')[0].appendChild(se);se.text = txt;}
-var jQscripts = Array();
-function runJQscript(src,txt){if (txt) jQscripts.push(txt);if (typeof window.jQuery=="undefined"){setTimeout("runJQscript(null)", 50);return;}for (var i=0;i<jQscripts.length;i++) runscript('',jQscripts[i]);}
-function loadxhrscript(src,callback) {var xhrObj_elem1;xhrObj_elem1 = getXHRObject();xhrObj_elem1.onreadystatechange = function() { if ( xhrObj_elem1.readyState != 4 || 200 != xhrObj_elem1.status ) return; callback(src,xhrObj_elem1.responseText); };try {xhrObj_elem1.open('GET', src, true);xhrObj_elem1.send('');} catch(e) {}}
-function getXHRObject(){var xhrObj = false;try {xhrObj = new XMLHttpRequest();}catch(e){var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];for ( var i=0; i < progid.length; ++i ) {try {xhrObj = new ActiveXObject(progid[i]);}catch(e){continue;}break;}}finally {return xhrObj;}}
-//loadxhrscript("js/script.ll.minified.js",runJQscript);
-loadxhrscript("js/script.ll.minified.js",runJQscript);
+/* jQuery loader js/sources/jQl.js 700b gz */
+var jQl={q:[],dq:[],ready:function(a){typeof a=="function"&&jQl.q.push(a);return jQl},unq:function(){for(var a=0;a<jQl.q.length;a++)jQl.q[a]();jQl.q=[]},bId:null,boot:function(a){if(typeof window.jQuery.fn=="undefined"){if(!jQl.bId)jQl.bId=setInterval(function(){jQl.boot(a)},25)}else{jQl.bId&&clearInterval(jQl.bId);jQl.bId=0;jQl.unqjQdep();$(jQl.unq());typeof a=="function"&&a()}},booted:function(){return jQl.bId===0},loadjQ:function(a){setTimeout(function(){var c=document.createElement("script"); c.src=a;document.getElementsByTagName("head")[0].appendChild(c)},1);jQl.boot()},loadjQdep:function(a){jQl.loadxhr(a,jQl.qdep)},qdep:function(a){if(a)typeof window.jQuery.fn!=="undefined"&&!jQl.dq.length?jQl.rs(a):jQl.dq.push(a)},unqjQdep:function(){if(typeof window.jQuery.fn=="undefined")setTimeout(jQl.unqjQdep,50);else{for(var a=0;a<jQl.dq.length;a++)jQl.rs(jQl.dq[a]);jQl.dq=[]}},rs:function(a){var c=document.createElement("script");document.getElementsByTagName("head")[0].appendChild(c);c.text= a},loadxhr:function(a,c){var b;b=jQl.getxo();b.onreadystatechange=function(){b.readyState!=4||200!=b.status||c(b.responseText,a)};try{b.open("GET",a,true);b.send("")}catch(d){}},getxo:function(){var a=false;try{a=new XMLHttpRequest}catch(c){for(var b=["MSXML2.XMLHTTP.5.0","MSXML2.XMLHTTP.4.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],d=0;d<b.length;++d){try{a=new ActiveXObject(b[d])}catch(e){continue}break}}finally{return a}}},$=jQl.ready,jQuery=$;jQl.loadjQdep("js/script.ll.minified.js");
 </script>
 <link href="http://s3.webperf-contest.com/4cc80752a91cc/css/style.minified.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -112,43 +106,8 @@ framboise, la cannelle, la cerise...
 </div>
 </div>
 <script type="text/javascript">
-var lazyblocks=Array();var loaded=Array();
-var now=new Date;now="?t="+now.getTime();
-//lazyblocks.push(["col_gauche","nav-sec.mini.html"+now]);
-lazyblocks.push(["col_droite","extra.mini.ll.html"+now]);
-lazyblocks.push(["bottom","footer.mini.ll.html"+now]);
-function onScroll(node){
-	var e = $('#iFrameFooterLoad.lazy',node);
-	if (e.length && !$.belowthefold(e, {threshold : 100}))
-		{e.removeClass('lazy');$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');}
-	e = $("#col_droite b.spt-univers.lazy",node);
-	if (e.length && !$.belowthefold(e.eq(0), {threshold : 100}))
-		e.removeClass("lazy").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
-}
-function completeBlocks(node){if (typeof window.$=="undefined") return;$(function(){node=$(node);
-if ($('#onglets-full',node).length) loadMenu();
-$("b.spt-univers",node).addClass("lazy");
-$('#iFrameFooterLoad',node).addClass("lazy");
-if (typeof $.fn.lazyload!=="undefined") onScroll(node);
-})}
-function loadBlock(src,txt){ for (var i=0;i<lazyblocks.length;i++) if (lazyblocks[i][1]==src){loaded.push(["#"+lazyblocks[i][0],txt]);document.getElementById(lazyblocks[i][0]).innerHTML = txt;completeBlocks('#'+lazyblocks[i][0]);}}
-function loadBlocks(){for (var i=0;i<lazyblocks.length;i++)loadxhrscript(lazyblocks[i][1],loadBlock);}
-var ld = (document.all && window.print && !window.opera && /MSIE [567]/.test(navigator.userAgent));
-if (ld!=true) loadBlocks();
-function boot_jQ(){if (typeof window.jQuery=="undefined") return; clearInterval(tboot);tboot=null;
-if (ld==true) loadBlocks();
-completeBlocks('body');
-boot_js();
-}
-var booted=false;
-function boot_js(){if (tboot || typeof window.initPage=="undefined" || booted) return;booted=true;
-updateMarketPlaceOffers();
-onScroll($('body'));
-$(window).scroll(function(){onScroll($('body'));});
-$(function(){$('img.preload').remove();fixBlocks();})
-initPage();
-}
-var tboot = setInterval(boot_jQ,25);
+/* js/sources/booter.js 776b gz */
+var now=new Date;now="?t="+now.getTime();var lazyblocks=[];lazyblocks.push(["col_droite","extra.mini.ll.html"+now]);lazyblocks.push(["bottom","footer.mini.ll.html"+now]); function onScroll(a){var b=$("#iFrameFooterLoad.lazy",a);if(b.length&&!$.belowthefold(b,{threshold:100})){b.removeClass("lazy");$("#iFrameFooterLoad").attr("src","iframe-footer/engagements.html")}b=$("#col_droite b.spt-univers.lazy",a);b.length&&!$.belowthefold(b.eq(0),{threshold:100})&&b.removeClass("lazy").css("background-image","url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)")} function completeBlocks(a){typeof window.$!="undefined"&&$(function(){a=$(a);$("#onglets-full",a).length&&loadMenu();$("b.spt-univers",a).addClass("lazy");$("#iFrameFooterLoad",a).addClass("lazy");typeof $.fn.lazyload!=="undefined"&&onScroll(a)})}function dispBlock(a,b){for(var c=0;c<lazyblocks.length;c++)if(lazyblocks[c][1]==b){document.getElementById(lazyblocks[c][0]).innerHTML=a;completeBlocks("#"+lazyblocks[c][0])}} function loadBlocks(){for(var a=0;a<lazyblocks.length;a++)jQl.loadxhr(lazyblocks[a][1],dispBlock)}var ld=document.all&&window.print&&!window.opera&&/MSIE [567]/.test(navigator.userAgent);ld!=true&&loadBlocks();function boot_jQ(){ld==true&&loadBlocks();completeBlocks("body");boot_js()}var booted=false; function boot_js(){if(!(!jQl.booted()||typeof window.initPage=="undefined"||booted)){booted=true;updateMarketPlaceOffers();onScroll($("body"));$(window).scroll(function(){onScroll($("body"))});$(function(){$("img.preload").remove();fixBlocks()});initPage()}}jQl.boot(boot_jQ);
 </script>
 </body>
 </html>
