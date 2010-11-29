@@ -77,7 +77,10 @@
                 }
                 self.loaded = false;
             } else {
-                self.loaded = true;
+								self.loaded = true;
+								if (undefined == $(self).attr("src") || !$(self).attr("src")) {
+										$(self).attr("src", $(self).attr("original"));
+								}
             }
 
             /* When appear is triggered load original image. */
