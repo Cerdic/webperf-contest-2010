@@ -1,1041 +1,220 @@
-Parti-pris :
-Le rendu est identique ‡ l'origine dans les navigateurs modernes.
-Les coins ronds ne sont pas rendus dans les navigateurs ne supportant pas border-radius,
-mais le reste du rendu est identique. Pour tous les header de boite, j'ai remplacÈ le systËme
-d'images de background par un jeu d'aplat en pur CSS, ce qui ne nÈcessite aucune ressource externe.
+= Parti-pris de mon optimisation.
 
-Les images de la page ne vÈhiculant pas d'information et utilisÈes comme illustration sont toutes
-referencÈes en image de background et spritees par groupes logiques cohÈrents :
-- illustrations dans le menu dÈroulant, enrichies d'une alternative texte lorsqu'aucune image
-n'est chargee
-- illustrations des heros prÈfÈrÈs, avec suppression du lien double identique qui complique
-la navigation avec revue d'Ècran
+Le rendu est identique √† l'origine dans les navigateurs modernes hormis :
+- les coins ronds ne sont pas rendus dans les navigateurs ne supportant pas border-radius,
+et se degradent en coins carr√©s
+- les header des boites de la colonne de droite qui sont homog√©n√©is√©es
+avec les boites en colonne centrale
+
+Pour tous les header de boite, j'ai remplac√© le syst√®me
+d'images de background par un jeu d'aplat en pur CSS, ce qui ne n√©cessite aucune ressource externe.
+
+J'ai nettoy√© le layout de la page initialement en table, puis remplac√© par le layout tir√© de
+http://blog.html.it/layoutgala/ qui permet d'envoyer le contenu principal avant les colonnes
+lat√©rales (les id de blocs de la page ont √©t√© conserv√©s).
+
+== Header de la page
+L'auto-compl√©tion sur le champ de recherche n'est activ√©e qu'au focus sur le champ, ce qui permet
+d'√©conomiser le chargement de ce script la plupart du temps.
+
+Le menu d√©roulant √† onglets n'√©tant navigable qu'en pr√©sence de javascript, j'ai prix le parti de
+n'ins√©rer dans le HTML du document statique les onglets visibles. L'ensemble des parties d√©roulantes
+est charg√© de mani√®re asynchrone par une requ√™te ajax, et n'est inject√© dans le DOM par morceau
+que lorsque cela est n√©cessaire.
+
+Pour l'affichage des onglets, j'ai gard√© des images car c'est la seule solution industrielle
+pour respecter la police et √™tre robuste vis a vis de l'agrandissement du texte dans le navigateur.
+En revanche j'ai mutualis√© l'affichage survol/actif qui utilisent tous deux du texte noir (le rendu n'est
+ici pas parfait car il aurait fallu r√©g√©n√©rer les textes sans background, ce que je n'ai pu faire en me contentant
+de d√©couper les textes dans les images disponibles).
+
+Les images d'illustration dans le megamenu d√©pliant sont rassembl√©es en un sprite unique qui n'est charg√©
+qu'au premier affichage, par positionnement de la directive css par le javascript.
+
+== Contenu central
+Le diaporama central √©tait constitu√© d'images sans alternatives. J'ai remplac√© cette image par un
+texte+une image de background en superposition. Seule la premi√®re image est r√©f√©renc√©e au chargement
+de la page, les autres images ne le sont que lors de leur affichage (via js), ce qui permet un
+chargement diff√©r√©. Pour acc√©l√©rer le rendu initial, la premi√®re image affich√©e est initialement un jpg
+de basse qualit√© remplac√© ensuite par l'image de qualit√© initiale (png dans le cas pr√©sent) lorsque le
+reste de la page est charg√©.
+
+Les images de la page ne v√©hiculant pas d'information et utilis√©es comme illustration sont toutes
+referenc√©es en image de background et regroup√©es en sprintes par ensemble logique coh√©rent
+(automatisable en production):
+- illustrations dans le menu d√©roulant, enrichies d'une alternative texte lorsqu'aucune image
+n'est charg√©e
+- illustrations des h√©ros pr√©f√©r√©s, avec suppression du lien double identique qui complique
+la navigation avec revue d'√©cran
 - illustrations des univers en colonne de droite
 
 En revanche, les images des produits constituent une information essentielle de la page
-et nÈcessaire ‡ la vente (au mÍme titre que le nom du produit ou son prix).
-Il m'a donc semblÈ inacceptable que ces images disparaissent en l'absence de style ou de javascript
-et qu'elles devaient absolument figurer dans le html source de la page sous peine de dÈgrader
-l'accessibilitÈ.
+et n√©cessaire √† la vente (au m√™me titre que le nom du produit ou son prix).
+Il m'a donc sembl√© essentiel que ces images soient pr√©sentes aussi bien en l'absence de styles
+que de javascript. J'ai donc choisi de les conserver en image inline, mais j'ai utilis√© du
+lazy-loading dessus (cf plus bas).
 
-J'ai nettoyÈ le layout de la page initialement en table, puis remplactÈ par le layout tirÈ de
-http://blog.html.it/layoutgala/ qui permet d'envoyer le contenu principal avant les colonnes
-latÈrales (les id de blocs de la page ont ÈtÈ conservÈs).
-
-Le menu dÈroulant ‡ onglets n'Ètant navigable qu'en prÈsence de javascript, j'ai prix le parti de
-n'insÈrer dans le HTML du document statique les onglets visibles. L'ensemble des parties dÈroulantes
-est chargÈ de maniËre asynchrone par une requÍte ajax.
-
-L'auto-complÈtion sur le champ de recherche n'est activÈe qu'au focus sur le champ, ce qui permet
-d'Èconomiser le chargement de ce script la plupart du temps.
-
-Le diaporama central Ètait constituÈ d'images sans alternatives. J'ai remplacÈ cette image par un
-texte+une image de background en superposition. Seule la premiËre image est rÈfÈrencÈe au chargement
-de la page, les autres images ne le sont que lors de leur affichage (via js), ce qui permet un
-chargement diffÈrÈ.
-
-Dans la colonne de droite, le gif animÈ utilisÈ en banniËre publicitaire interne est lourd ‡ charger.
-Pour ne pas retarder le rendu complet de la page, il est remplacÈ par un png statique qui ne reprend
-que la premiËre image. Il est ensuite remplacÈ dynamiquement en js par le gif animÈ pour lancer
-l'animation lorsque la page est achevÈe de charger. Ceci permet une disponibilitÈ de la page complËte
-plus rapide. Une alternative plus lÈgËre serait sans doute de refaire l'animation en canvas+js, avec
-cependant des problËmes de support multi navigateur.
+== Colonne de droite
+La colonne de droite est charg√©e par une requ√™te asynchrone. Au chargement de la page, elle est visuellement
+remplac√©e par un cadre bloc l√©g√®rement gris√© visible en cas de rendu lent (IE7 ou connexion lente)
+Le gif anim√© utilis√© en banni√®re publicitaire interne est lourd √† charger.
+Pour ne pas retarder le rendu complet de la page, il est remplac√© par un png statique qui ne reprend
+que la premi√®re image. Il est ensuite remplac√© dynamiquement en js par le gif anim√© pour lancer
+l'animation lorsque la page est achev√©e de charger.
 
 Les illustrations de chaque cadre sont en sprite. Comme ces boites sont en general sous la ligne de
 flottaison et non visible au chargement de la page, la directive background-image est inserree en js
-asynchrone pour ne pas retarder le onload.
+asynchrone pour ne pas retarder le onload, uniquement lorsque le premier bloc est au dessus de la ligne
+de flottaison (utilisation de js/sources/jquery.lazyload.js)
 
-En pied de page, l'iframe est conservÈe, conformement au rËglement, mais son src est insÈrÈ
-dynamiquement en js pour ne pas retarder le onload. L'iframe est donc chargÈe de maniËre aysnchrone.
+== Pied de page
+Le pied de page non initialement visible en g√©n√©ral est charg√© par une requ√™te asynchrone.
 
-Le compteur de stat constituÈ d'un script est chargÈ en asynchrone Ègalement.
+Liframe est conserv√©e, conformement au r√®glement, mais son src est initialement vide.
+L'iframe est charg√©e de mani√®re aysnchrone par injection du src en js lorsque le pied de page devient visible (lazy loading)
 
-D'un point de vue technique :
-- la feuille de style principale a ÈtÈ dÈcoupÈe en unitÈs logiques, chacune dans une feuille, et
-seules les feuilles utiles ‡ la page ont ÈtÈ inclues. En revanche, il n'a pas ÈtÈ procÈdÈ ‡ un
-nettoyage exhaustif de tous les sÈlecteurs css inutiles. Exemple : dans box.css on a gardÈ le systËme
-de box complet par soucis de reprÈsentativitÈ, mÍme si seule une partie des boites sont utiles sur
-cette page.
-Les feuilles sont rÈparties en deux lots :
-- core.combined.css qui regroupe le minimum pour avoir un rendu ressemblant (base.css, layout.css et
-header.css). Elle est insÈrÈe minifiÈe (via CSSTidy) dans le head en inline pour permettre au
-navigateur de dÈmarrer le rendu au plus vite. Cela reprÈsente une pÈnalitÈ de 5ko(gzip) envoyÈ ‡
-chaque page et non mis en cache cÙtÈ client.
-- style.combined.css qui regroupe l'ensemble des autres styles, et est chargÈe de maniËre externe
-(minifiÈe elle aussi) donc mise en cache. Elle est rÈfÈrencÈe aprËs le contenu de la page mais avant
-les colonnes latÈrales et le pied.
 
-Cette rÈpartition permet d'avoir ‡ la fois un rendu effectif qui dÈmarre tÙt, avec une apparence qui
-fait illusion (le bandeau haut est stylÈ, les colonnes sont en place), et une mise en cache d'une
+== Techniques utilis√©es
+
+=== Chargement asynchrone de blocs de page
+J'utilise une technique inspir√©e des BigPipe de Facebook
+http://www.facebook.com/notes/facebook-engineering/bigpipe-pipelining-web-pages-for-high-performance/389414033919
+et d√©j√† automatis√©e dans le cadre de SPIP
+http://www.yterium.net/Ajax-Parallel-Loading-accelerer-un
+
+Certains blocs de la page sont assembl√©s en js par le client au lieu d'√™tre assembl√© c√¥t√© serveur.
+Le chargement asynchrone se fait par une requ√™te xhr lanc√©e en js aussit√¥t que possible.
+Le html est inject√© dans la page lorsqu'il arrive. Ici le html ne contient pas de script inline, et on fait tout cela
+en js natif sans jQuery
+
+Ici, IE7 √©tant une cible a prendre en compte, j'ai limit√© au nombre de 2 les blocs charg√©s en asynchrone
+car ceux ci doivent √™tre charg√©s sur le m√™me domaine que index.html, et IE7 ne peut faire que deux connexions
+par domaine.
+
+L'accessibilit√© au contenu en l'absence de js se fait par une directive noscript avec un meta refresh qui redirige
+le visiteur sans js vers une version de la page assembl√©e c√¥t√© serveur. Dans un contexte industriel, on
+pose un cookie au visiteur la premi√®re fois que cela arrive, et on ne lui sert plus que des pages compl√®tes.
+De m√™me, les robots connus sont rep√©r√©s c√¥t√© serveur par leur user-agent et sont directement servis
+par la version compl√®te. Les robots non connus suivent en principe le meta refresh. Au pire, il leur manque ici
+les deux blocs (colonne de droite et pied de page) qui ne sont pas cruciaux pour le r√©f√©rencement.
+
+Dans cette approche, seul l'ossature de la page change de forme entre les deux versions (techniquement c'est
+le m√©canisme d'inclusion qui est traduit de deux fa√ßons diff√©rentes possibles)
+
+Ici, la redirection se fait sur index.st.html, qui est une version compl√®te sans js (c'est une version moins avanc√©e
+de l'optimisation, et elle est √©galement fonctionnelle avec js)
+
+=== Lazy Loading
+A partir du moment ou les visiteurs sans js √©taient redirig√©s vers une page compl√®te, j'ai consid√©r√©
+acceptable de faire reposer l'affichage de certains contenus sur javascript dans la version optimis√©e.
+
+J'utilise donc du lazy-loading sur 3 familles d'√©l√©ments :
+
+* sur les images de produit du contenu principal de la page.
+les img de la page sont d√©pourvues d'attribut mais disposent √† la place d'un attribut original.
+le script js/sources/jquery.lazyload.js est utilis√© pour charger dynamiquement les images qui
+apparaissent dans la fen√™tre du visiteur lorsque celui-ci scrolle. Ceci se fait par recopie de
+l'attribut original sur l'attribut src.
+
+Dans la version alternative pour les utilisateurs sans js, les images sont r√©f√©renc√©es normalement
+dans la page et sont toutes charg√©es d√®s le d√©but.
+
+* sur les background de d√©coration des boites en colonne de droite
+ces d√©corations ont √©t√© pass√©es en sprite et du coup le lazy load est g√©r√© manuellement.
+L'utilisation d'une sprite n'a du coup ici que peu d'int√©r√™t en perfo dans ce cas, sauf √†
+permettre de charger toutes les 4 images d'un coup.
+
+* sur l'iframe : celle-ci √©tant en pied de page, je n'injecte son attribut src que lorsqu'elle est
+susceptible de devenir visible (toujours sur la base du script lazyload)
+
+=== CSS
+la feuille de style principale unique initiale a √©t√© d√©coup√©e en unit√©s logiques, chacune dans une feuille,
+toutes rang√©es dans le dossier css/sources/
+Ensuite, je cr√©√© une feuille SSI css/sources/style.combined.css qui n'inclue que les feuilles n√©cessaires
+√† la page.
+J'ai donc proc√©d√© par s√©lection de module fonctionnel CSS comme on pourrait le faire
+en contexte de production, mais j'ai exclu de nettoyer les css de tous les s√©lecteurs inutiles √† *la* page
+du concours.
+Par exemple, j'inclue la feuille enti√®re qui style toutes les boites du site (css/sources/box.css) m√™me
+si ici on n'en utilise que quelques variantes.
+
+J'ai test√© la s√©paration des css en deux lots core+complements dont le premier serait ins√©r√© inline
+mais cela n'am√©liore pas le d√©but de rendu dans IE7 (cela am√©liore le 'start render' apparent mesur√©,
+mais en pratique cela n'am√©liore pas le d√©but r√©el du rendu tel qu'on peut le voir avec capture vid√©o).
+
+J'en suis donc rest√© √† une css unique, minifi√©e par CSSTidy.
+
+Ce dernier n'est plus maintenu mais la derni√®re version distribu√©e contenait quelques bugs. J'ai donc
+repris le code sur https://github.com/Cerdic/CSSTidy,
+corrig√© les tickets ouverts sur sourceforge, compl√©t√© les tests etc?
+
+La feuille minifi√©e est dans css/style.minified.css et correspond a css/sources/style.combined.css
+
+Cette r√©partition permet d'avoir √† la fois un rendu effectif qui d√©marre t√¥t, avec une apparence qui
+fait illusion (le bandeau haut est styl√©, les colonnes sont en place), et une mise en cache d'une
 grande partie de la CSS.
-On peut dÈmarrer le rendu plus vite sans styles dans le head (et en chargement des styles aprËs le
-contenu) mais avec une apparence de page cassÈe qui est peu qualitative,
-et on peut avoir tous les styles en cache, mais au prix d'un dÈbut de rendu retardÈ
-d'une demi seconde environ
 
-- les js inline ont ÈtÈ dÈportÈs dans des js externes, par fonctionnalitÈ principale. Seuls les js
-utiles ‡ la page ont ÈtÈ conservÈs. Dans les fonctions d'alignement de bloc, seules celles utiles sur
-la page ont ÈtÈ conservÈes. Les js ont ÈtÈ minifiÈs par le google closure compiler. Le placement du
-js dans la page a ÈtÈ optimisÈ pour le waterfall. Il intervient aprËs les ÈlÈments essentiels de la
-page (navigation et contenu), mais avant les ÈlÈments accessoires (extra de droite et footer).Il est
-dotÈ d'un attribut "defer" qui permet de ne pas bloquer la suite du chargement.
-
-- requÍte ajax asynchrone de recherche des prix et disponibilitÈ :
-la source d'information externe a ÈtÈ changÈe pour utiliser une source proxy qui multiplexe les
-demandes pour remplacer les 16 requÍtes ajax initiales par une requÍte ajax unique. Cette libertÈ
-semble permise par le rËglement sur la foi des 2 assertions :
-  - la page doit conserver la fonctionnalitÈ "Les indications "x produits trouvÈs" qui sont
-rÈcupÈrÈes en ajax"
-  - La rËgle principale est : agissez comme s'il s'agissait de votre site
-combinÈes au fait qu'il n'est pas prÈcisÈ que la ressource externe utilisÈe pour les requÍtes ajax
-doit Ítre inchangÈe.
-  A ce titre, multiplexer les 16 requÍtes est une amÈlioration Èvidente, parmi les premiËres choses
-que je ferai en situation rÈelle.
-La ressource utilisÈe est un simple proxy qui rÈalise systÈmatiquement les 16 requÍtes sans mise en
-cache, mais en bÈnÈficiant d'une connexion serveur ‡ serveur plus rapide. En situation rÈelle, c'est
-Èvidemment le script originel qui sert les requÍtes qui serait modifiÈ pour plus de rapiditÈ, ou ‡
-dÈfaut un script complÈmentaire sur le mÍme serveur pour Èpargner le temps cumulÈ des 16 aller-retour
-entre serveurs.
-
-le html a ÈtÈ minifiÈ par suppression des espaces redondants et commentaires.
-Tout le processus d'optimisation a ÈtÈ versionnÈ (cf git log ci dessous)
-
-
-
-
-commit 323f5a68f37f7bdf4d36880a976cda16fb46c853
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 15:00:31 2010 +0100
-
-    rangement pour livraison
-
-commit 6b7563b0265ace96eb003f9e038609d1ba28d6b4
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 13:22:37 2010 +0100
-
-    rangement pour livraison
-
-commit 8d7677917850dae40689fa140cd9df1c6fe8e00a
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 13:10:16 2010 +0100
-
-    rangement pour livraison
-
-commit e089f94ea4b50d686e7885980fddf562603b81b4
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 13:09:12 2010 +0100
-
-    rangement pour livraison
-
-commit dafbd1fc69e9a3b53980aaf5007fdfabbdaacb3d
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 13:08:54 2010 +0100
-
-    rangement pour livraison
-
-commit 1816d0e84aa02130d705e4037c827f209048bf48
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 12:46:16 2010 +0100
-
-    on utilise de nouveau jquery 1.4.4
-
-commit 0c6fdb1aeb20a49dc1965fc6116252dd54e64815
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 12:45:59 2010 +0100
-
-    version debugue de lazyload
-
-commit 344dd6db3429355ae4f612ff2ed77c2e0d374518
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 12:39:16 2010 +0100
-
-    appel retarde du marqueur de stat pour ne pas bloquer les autres chargement dans IE
-
-commit 53b7e2965309d523d4784577ddec3af3c537b47d
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 29 12:38:22 2010 +0100
-
-    Debug de lazyload au chargement dans IE : il faut charger les src des images deja visibles
-
-commit 726abd37cb34feeaf8e07e1d1987aaaeb3a76753
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 28 22:35:54 2010 +0100
-
-    retarder le chargement asynch des blocs pour laisser a ie le temps de faire un rendering intermediaire
-
-commit 04a554b6465b432688b6ee6fa0fec40f263a381c
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 28 21:59:44 2010 +0100
-
-    timing ajuste entre le dl des morceaux en asynch et le marqueur de stat+marketplace
-    afin de laisser le temps au nav de faire le rendering entre les deux
-
-commit 3dee7f61dab35ac75c3351c3beeb05afe31f81c8
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 28 21:58:46 2010 +0100
-
-    reparer la version statique de secours en cas de js absent sur la version principale
-
-commit 0cc01178c7bc31641f7eb3149efa8afb0b5c958f
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 28 20:13:36 2010 +0100
-
-    on rechange encore la repartition des chargements sur les differents sous domaine
-
-commit 15a020c468618c6abaa0cfee810636c2f0d4bdea
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 28 19:44:17 2010 +0100
-
-    chargement traditionnel de la css, c'est tout aussi efficace
-
-commit 5bed9795104e76d1451e3869ec963ec12a29e0c7
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 26 16:18:40 2010 +0100
-
-    Debug dans IE7 : il ne faut pas lancer script.ll.combined.js avant jQuery
-
-commit 9d145d05d41aa8ce11fa4cdc21497f8aad78601f
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 26 11:03:17 2010 +0100
-
-    reoptimisation des repartitions entries/s1/s2/s3 pour IE
-    chargement de la css par dom injection car sinon cela bloque IE sur le chargement du second script
-
-commit 9ee1c18aea21ae9bf9f9cf9aff4b173c9ded64d2
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 26 10:14:37 2010 +0100
-
-    Version re-optimisee en repartant du html brut sans composant et en rajoutant les composants css puis js un par un.
-    Chargement du json de marketplace sans attendre document.ready
-    Lancement du marqueur de stat sans attendre document.ready
-
-commit 9d4bc6b907c939dd1f7c8ad77d3f724b5aa3db3b
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 25 16:53:59 2010 +0100
-
-    Une version traditionnelle avec
-    - appel script et css externe,
-    - load async de des blocs extra, nav, footer
-    charge bien dans FF mais moyen dans IE
-    On a aussi modifie le menu pour ne plus injecter dans le dom tout le html tant qu'on survole pas un onglet. Permet d'avoir un dom plus light
-
-commit 8362875492b5607795ec01b9a6076cab15cd2eae
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 25 10:23:38 2010 +0100
-
-    Commit sans modif, hormis le chmod
-
-commit b623a92835d249b1730c7d54bef4195fe1eff080
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 25 09:54:35 2010 +0100
-
-    Variante avec css et js externe uniquement, pour voir (htaccess qui va avec)
-
-commit d51fb6f301ef6304552ab142c0af93d711e070cf
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 25 09:52:40 2010 +0100
-
-    Variante avec css et js externe uniquement, pour voir
-
-commit cff010a0c5f0b2292b519b313b77f1c329180518
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Nov 24 22:25:27 2010 +0100
-
-    essai chargement js des images en preload
-
-commit d72d7d17b685213900dbd9ef05cd127d34e04ec2
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 23 23:07:15 2010 +0100
-
-    lazyload sur le src de l'iframe et sur le background univers qui ne sont pas visibles par defaut
-    deport de tous les scripts de stat dans le js externe
-
-commit 46e94e9b80dde09eaba2b9f15d72dab065d781dd
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 23 23:06:01 2010 +0100
-
-    Une version jpg degradee du premier visuel du diaporama, pour illusionner l'oeil pendant que la version de bonne qualite se charge
-
-commit a4f13ec6cc2a8bb16afc5e3bc606ae860e1b2cab
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 23 09:39:57 2010 +0100
-
-    optimiser le timing de chargement. Selon le navigateur le xhr sur les blocs arrive avant ou apres le document.ready de jQuery, gerer les deux cas pour que l'init soit toujours complete.
-    Retarder le fixblock qui bug si il arrive trop tot sur certains navigateurs
-
-commit 0d46bdd0c2edbf7ee18a91fca4f9bb2e193e55f9
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 22 23:36:28 2010 +0100
-
-    charger les blocks ajax sans jquery, cela permet de les injecter plus tot dans la page !
-
-commit 69163ca603c0445d2bfb07c88b107a524ef8e961
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 22 22:54:39 2010 +0100
-
-    reduire le nombre de script inline :
-    - on utilise les infos du dom pour le chargement des infos de disponibilites ajax
-    - on regroupe les scripts de l'index
-
-commit b57e506ce75faf53220052863288e8d0d713c6d5
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 22 18:52:17 2010 +0100
-
-    optimisation legere
-
-commit 7a6cb59dcd11f2074034e08ddd16f5f0fbe020f2
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 21 20:57:28 2010 +0100
-
-    etre plus agressif sur DEFLATE, pas de cache sur le html, et pas de cookie sur les images
-
-commit 264f800f922fd3da04c5a43c9d0126ee6aa0f46d
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 21 20:45:34 2010 +0100
-
-    limiter la validite des cookie de stats a entries.webperf-contest.com pour garder les sous domaines s1,s2,s3 sans cookie
-    injecter la css principale juste en sortant du head, dans le DOM, par js, pour la charger au plus tot sans bloquer le reste du chargement
-    preloader 2 images de plus qui sont dans la css, sans attendre sa lecture complete
-
-commit 31ed28c0974a97c85ea7d7b11c6baefe850ebe5b
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 21 20:41:45 2010 +0100
-
-    reintegrer tous les styles dans la css
-
-commit 27ff0e0196bc1bde04f3f453af595483891e683a
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 21 20:41:18 2010 +0100
-
-    pas de src vide sur l'iframe, cela declenche une requete inutile dans ie
-
-commit 3f42e20bf2abbf6eab5788fbdd5b016e0166299b
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Nov 21 20:40:16 2010 +0100
-
-    ajouter un timestamp sur l'ajax html pour ne pas cacher, et supprimer le menu du pied quand il est reinjecte dans le haut
-
-commit 26091aef62f2850dec980956c0ef5617bcfac26c
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 22:21:53 2010 +0100
-
-    garder le chargement asynchrone de l'iframe
-
-commit 48966ec5d3474ef48ea9e25fe5a2a8f45ee2ac84
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 17:34:31 2010 +0100
-
-    Charger plus tot les css, et charger le src de l'iframe sans passer par setTimeout
-    
-    http://www.webpagetest.org/result/101120_7685492b776deb335d0b003dd9f87ea1/
-
-commit cdcfd65668cddccd287f1d9821a69f999513c75a
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 16:39:57 2010 +0100
-
-    Reintegrer le script de stat dans script.ll.minified.js car on a le temps de le charger entierement avant
-    que jQuery ne soit charge (une requete en moins)
-    Integrer le html du menu dans le footer (une requete en moins)
-    Redescendre le chargement de script.ll.minified apres les css pour ne pas retarder le rendu
-    (Erreur sur l'url de jquery, c'est bien le cdn google qu'on veut utiliser)
-
-commit ea43ff1070fac8f822bb4b2d7c66ee26daca38a0
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 15:50:30 2010 +0100
-
-    charger en parallelle jQuery et script.ll.minified avec la technique XHR Injection
-    http://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/
-
-commit d9ff8c5ca38e833dcaaa7de54dd0fbc33f8bcace
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 12:49:22 2010 +0100
-
-    optimisation du chargement parallele des deux js separes (jquery venant de google, et script.ll.minified.js)
-
-commit a48eb5a9a8b06673463f978d4b0ff85f0249d1a4
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 10:39:27 2010 +0100
-
-    indentation inutile
-
-commit b8cdef58bfd9fa1a89640f7ebe9a30dbbaecd3c9
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 10:38:58 2010 +0100
-
-    indentation inutile
-
-commit 7aaa55b98355466ecf0129ab54847aa4f5256f9d
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 20 10:37:52 2010 +0100
-
-    indentation inutile
-
-commit 10f58613872992faf4e5d9da25bf70975bc90837
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 19 23:27:10 2010 +0100
-
-    La version lazyload devient la page par defaut, et on fallback sur index.st.html si pas de javascript (contenu envoye direct sans LL)
-
-commit d8b3dae0a717adac6cafaf55bd0a15a4d11ac68a
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 19 23:21:51 2010 +0100
-
-    Optimisation du chagement :
-    on peut charger les blocs APL sans attendre document.ready. Seul l'injection dans le DOM doit attendre
-    on reinjecte spt-univers par le js et non directement au chargement du html
-
-commit df3a3a3482e6ae0e9e24c9c49be5cc47fb4c7804
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 19 22:02:43 2010 +0100
-
-    optimisation du pied : utiliser des ul/li plutot que les dl/dt, cela evite de recourir a une image background pour faire les puces carrees
-
-commit fcc8cda5b9021bc544641f7e6b194e3d8ff3c947
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 19 00:01:37 2010 +0100
-
-    synchro entre les parties LL, on reintegre le bloc navigation dans le html envoye
-
-commit ef416e79c565f1daae262c0f72870484cdf7b4ae
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 18 22:37:06 2010 +0100
-
-    cache statique sur la requete json concatenee
-    optimisation du chargement de la page ll :
-    repartition entre host
-    utilisation de jquery sur cdn google
-
-commit 1fdb71266d0d954f9a4b5c657c289e41eff1f49c
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 13 21:31:04 2010 +0100
-
-    deplacer les blocs gris a l'emplacement ou viendront ensuite les blocs de navigation et le gif anime ameliore grandement l'illusion que c'est deja arrive.
-    On applique donc un margin-top:62px sur ces deux blocs !
-    ---
-    http://www.webpagetest.org/result/101113_749e27e23a2fe01e6449874ea08d9a51/
-
-commit 548fd9535a54bba92069c3f70f09d33e8062a1ac
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 13 16:24:32 2010 +0100
-
-    gerer l'UID des liens lorsque les blocs sont charges dynamiquement
-
-commit 0d8bae54a02d4abf77413cee61d5dd5fb0d5cd07
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 13 14:39:44 2010 +0100
-
-    correction d'un bug de rendu dans webkit qui semble lie a un pb de timing
-
-commit 3b9c88252d2131a1488be3576512ef77cc8447f9
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Nov 13 14:21:04 2010 +0100
-
-    variante lazyload agressif :
-    - seul le top et le contenu sont envoyes directement, les colonnes laterales et le pied sont charges en asynchrone par le js
-    - seul jQuery est charge, le reste des script est charge en async par $.getScript
-    - le src des images n'est pas reference dans le html, on utilise lazyload pour charger les images visibles en asynch
-    - pour grapiller des centiemes de seconde, on utilise des img.preload en debut de <body> pour charger tout de suite les 3 plus grosses
-    
-    Pour preserver l'accessibilite aux utilisateur sans js, on place un meta refresh dans une balise <noscript> en debut de <body>. C'est non-valide mais fonctionnel. Dans le monde reel, on en profiterait pour poser un cookie 'nojs' et envoyer le site sans lazyload par la suite pour ces utilisateurs.
-    
-    Tout cela permet d'arriver a un onload de 0.998s sur le meilleur tir.
-    http://www.webpagetest.org/result/101113_9674dde8f478062f0167d38becf8eee0/
-
-commit 39c8901ad7c8d48b9455d9a1e88c436e90e9f7e1
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 11 20:20:20 2010 +0100
-
-    Referencer le js un peu plus tot est favorable pour le onload
-    
-    http://www.webpagetest.org/result/101111_1542cfbee57408f1eba0f1fbb6691573/
-
-commit a4889f257490cb0b71cb3d027ef0ab4181b9af67
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 11 20:12:11 2010 +0100
-
-    Optimisation de la repartition du dl sur les connections
-    
-    http://www.webpagetest.org/result/101111_03cb56060b4d91dce1098ff985a2a814/
-
-commit 11ea59f901dec939e2b312aab66194abf2ce42aa
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 11 19:46:17 2010 +0100
-
-    decoupage des css en deux blocs :
-    core insere inline dans le head pour amorcer un rendu acceptable a minima
-    style reference en externe
-
-commit 29a1ee48324c179e5543b56eec0c1f37ddf99392
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 11 18:27:43 2010 +0100
-
-    Lazy-Loading
-    - pour l'autocomplete, que l'on ne declenche qu'au focus sur l'input, avec chargement du js a ce moment
-    - pour le marqueur de stats : on le charge de facon asynchrone pour ne pas retarder le onload
-    - reparation du lazyload de l'iframe dans ie
-    tout cela permet d'alleger le script.minified.js principal et de declencher plus tot
-    
-    http://www.webpagetest.org/result/101111_f5e94ee44ed3540879c49cc0725c1d60/
-
-commit ad6b03dfa178ad7e9e3069dcc86106c1a9490467
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 11 16:37:35 2010 +0100
-
-    regrouper les 2 sprites spt-pictos et spt-backgrounds en une seule spt-picots-bg car le sprite du background est tres leger et consomme un hit pour moins d'1Ko
-
-commit 1b652ab882a3085759cbd10047f3d07608f3e536
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Nov 11 15:35:47 2010 +0100
-
-    Optimiser le sprite des onglets : on factorise le texte noir utilise pour .current et .hover, et on place le fond des boutons en background avec systeme de coulisse. Les onglets "normaux" sont inchanges a cause des exceptions "spectacles" et "vendre"
-
-commit 6b03cb1b1824bdf961b5d124326f6842d45d5334
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Nov 10 20:19:52 2010 +0100
-
-    chargement asynchrone de l'iframe.
-    On met un delai d'1s pour bien voir ce qui se passe. Est-elle bien chargee dans IE ?
-
-commit b6df2099a609e839b839a9ea92dc4c94b2f1c39e
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Nov 10 20:19:09 2010 +0100
-
-    oups, erreur d'url sur l'image
-
-commit 4ee73dafc60a4a32eab70515c95d8d19bafa5d98
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Nov 10 20:04:21 2010 +0100
-
-    Retour de l'iframe en pied de page.
-    On commence par une version simple, inline, qui embarque son css en inline egalement.
-    On perd 0.4s environ sur le onload dans l'affaire, a optimiser
-
-commit e46f93e8d495c2e710c53f1a850afa395d1f902b
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 8 10:18:31 2010 +0100
-
-    la chargement de la css dans le head bloque le telechargement des ressources images et retarde le start render.
-    On deplace donc la reference a la css apres le contenu principal, ce qui permet d'avoir lance le dl de (presque) toutes les <img> avant le chargement de la css.
-    Toutefois, cela provoque un flash pendant lequel on apercoit la page html brute (avant le dl de la css), ce qui est peu qualitatif.
-    On y remedie par une simple directive opacity:0.01 dans le <head>, ce qui permet de masquer ce flash, et la css retablit une opacite 1.0 lorsqu'elle est chargee.
-    Le rendu de la page avec opacite reduite semble legerement plus lent, mais au final on y gagne largement sur le onload
-    (et sur la mesure du start-render, meme si du coup la valeur est un peu artificielle puisque le render est en fait masque jusqu'a chargement de la css).
-
-commit 9ca90ab88782705e8df2507672b3f095a193b8d9
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 8 09:52:25 2010 +0100
-
-    inutile d'avoir des images en 150 de haut pour tous les produits si seule une petite partie est utile. Le js aligne toutes les zones images de toute facon.
-    + optimisation de la taille des images produit
-    + realocation sur les domaines pour paralleliser au mieux le dl
-    On remonte la css en debut de head, mais sans effet significatif sur le start render
-
-commit a1bbb0a36693ab8ced0dd8d379bb421646442c5c
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 5 13:29:46 2010 +0100
-
-    image optimisee dans fond
-
-commit 8bb82a02e780c1d91c4214d784381568ce07c8b4
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 5 13:28:56 2010 +0100
-
-    image optimisee
-
-commit 50f265e682c15be90ec50f278209bbf842efa768
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 5 13:28:29 2010 +0100
-
-    le html du menu charge en async est generique : il ne depend pas de l'onglet actif
-
-commit 2b771bcc9e465e274e9dc67190cd19723b50a782
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Nov 5 11:13:37 2010 +0100
-
-    optimisation d'image, encore un peu mieux
-
-commit d1f9de9cad5ea4244ad719c64b9bc4c38e8f32f1
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 16:34:33 2010 +0100
-
-    width et height sur toutes les images, c'est un basique qui manquait !
-
-commit 9613eeb00cb3c8bb4fcb629908178556e67ec322
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 14:42:22 2010 +0100
-
-    log pour le gist
-
-commit 5a8842485f5244372be02ec0770b102411e92cc0
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 14:38:50 2010 +0100
-
-    minification apres modif.
-    Cela clos l'optimisation pour IE7/WebPageTest
-    http://www.webpagetest.org/result/101102_d442f6418799098816d4b4ce1d0aa505/
-
-commit f0095ef73a6cc67f19d6d562c064a7ea7699279b
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 14:29:03 2010 +0100
-
-    minifier le html
-
-commit 9674565f45b397491fd73ef0b07ef7571f0924b3
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 14:28:03 2010 +0100
-
-    minifier le html ici aussi
-
-commit 1c40aeb400fbd455b0b5a64a06f51f8b299819ba
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 14:27:45 2010 +0100
-
-    expire sur le js
-
-commit c77a00281fa2f7be175c0a7c5ce0e6127021d02e
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 14:27:28 2010 +0100
-
-    un selecteur optimise
-
-commit 2a13cfd0eb28679c8b1f597023d79bee0a05457c
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 12:48:01 2010 +0100
-
-    Optimisation fine du chargement des ressources images :
-    - le gif anime est remplace par un png8 statique dans le html, et le gif anime est injecte apres que le document soit complet (l'animation demarre a peu pres comme avant)
-    - on change quelques urls pour repartir la charge au mieux sur les 8 processus de dl de IE7 et tout finir en meme temps.
-
-commit b9e1d64bd4d28abec60941940ec16b6177053291
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 12:11:48 2010 +0100
-
-    nettoyage des js inutiles et minification par le closure compiler
-
-commit 4f6b57ca0eafbe5e33dd792705ea2a9273ce9f53
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Nov 2 10:18:59 2010 +0100
-
-    optimiser le temps de chargement global en chargeant le menu_full en ajax asynchrone (le menu n'est de toute facon pas fonctionnel en l'absence de javascript, donc pas de degradation de l'accessibilite).
-    Cela allege le document html de moitie, ce qui permet  d'avoir un rendu plus rapide et un document complet plus tot.
-
-commit ee04c74efef8b20bd61b2dfa3368b78d3d380bb5
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 1 19:12:26 2010 +0100
-
-    retarder l'appel au maruquer de stat apres que le doc soit ready
-
-commit b69b7e663253df49b3b24d995eb754990201c8d7
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 1 18:53:58 2010 +0100
-
-    retablir le marqueur de stat metrics.fnac.com
-
-commit 196cda8ffa99cbc114eee22e671ca22c06f2456e
-Author: Cerdic <cedric@yterium.com>
-Date:   Mon Nov 1 18:27:01 2010 +0100
-
-    envoyer le contenu principal et ses images le plus haut possible dans le html
-
-commit 33612c801fdf08ba18da2f936961b005d38d968c
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Oct 31 18:06:33 2010 +0100
-
-    integrons le style inline, cela permet d'aller plus vite vers le rendu et de passer sous les 2.5s
-    http://www.webpagetest.org/result/101031_64843600f060d6cb982e8d5769a921bf/1/details/
-
-commit f6947dadc45ba6f738aab0f1c1237d114d052975
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Oct 31 18:04:25 2010 +0100
-
-    Optimisation des images
-
-commit 0471f429e412e25ca14bd4ea4527f6ebadc1ffd5
-Author: Cerdic <cedric@yterium.com>
-Date:   Sun Oct 31 15:12:48 2010 +0100
-
-    un sprite commun pour gagner un hit / il restait une reference a l'ancienne image, pour les separateurs
-
-commit 2509c5702cd676ddb20c778ddc4102aa62dc25ca
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 20:31:00 2010 +0200
-
-    un sprite commun pour gagner un hit
-
-commit b0bf7983cf00dc4d9dde8311209608f8e1382aab
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 19:02:04 2010 +0200
-
-    repartir les hits sur s1/s2/s3
-
-commit 318c70059debfe3d8a3e3cb758270d32acb6b211
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 18:54:32 2010 +0200
-
-    repartir les hits
-
-commit 5d246016c2868f919c13a7a8df72b439c599c3fd
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 18:53:09 2010 +0200
-
-    repartir les hits sur s1/s2/s3
-
-commit b667fe5dce2f13e683d3730a6cb368e44b26b68f
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 18:23:42 2010 +0200
-
-    repartir les hits sur s1/s2/s3
-
-commit 20402ecfbc8c1e02e2aef57f26a5b59736b7e4c0
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 17:09:08 2010 +0200
-
-    url locale et reecriture pour la requete ajax
-
-commit 3e47306e40bfeec183dfd93cd17313d026f5f76c
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 17:03:42 2010 +0200
-
-    Optimisation des jpg qualite 50
-
-commit a55cbe98d656fadac6c7e543dd56ae13a0ea24de
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 17:03:09 2010 +0200
-
-    optipng sur les PNG
-
-commit 1f97c8cf7f8e3775dbe615bea2a5dbe1a26f8a06
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 16:49:53 2010 +0200
-
-    cache des images
-
-commit f1635e6dcad1a97ae19f826721c33ffe068da051
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 16:49:37 2010 +0200
-
-    correction css, mais est-ce compatible ie7 ?
-
-commit a0f454f100cb94ea74436e0af7d4d647c8a35ee4
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 16:45:25 2010 +0200
-
-    regroupement de background repeat-x en sprites. Pour le degrade gauche de la barre du haut, on utilise une superposition de 2 fonds, dont le bout degrade est dans spt-pictos
-
-commit 9718c14a3415904eea53bb8c120c5e468a29821f
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 11:38:11 2010 +0200
-
-    utiliser un proxy json qui regroupe les requetes
-
-commit d66b9726739dab973a1e7ba037f1bb420d4c245c
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 10:31:56 2010 +0200
-
-    repartir les requetes json sur 4 domaines
-
-commit c89015505b817ecd8c32569f8688a34d78e01f95
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 10:30:16 2010 +0200
-
-    compression des images
-
-commit 55d73b83693ba42d3e9a66d8d2be7778eb266795
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 10:29:29 2010 +0200
-
-    compression des images
-
-commit c52804a9d53e1479bcf8cc903138d712abbea467
-Author: Cerdic <cedric@yterium.com>
-Date:   Sat Oct 30 10:28:13 2010 +0200
-
-    compression des images
-
-commit 86d0cdf267a0aab8f0f21e1527b7ad3bdd801c3a
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Oct 29 18:47:44 2010 +0200
-
-    un rewriterule pour les requetes json vers MarketPlace
-
-commit a9bd3c79952422e1c93ed747f17c446e66d10cae
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Oct 29 18:11:19 2010 +0200
-
-    ces illustrations en image sans alt dans un lien redondant sont peu pertinentes et ne vehiculent pas d'information. On les integre dans le lien du h2 juste au dessus, sous forme de background attache a un <b>. Cela ameliore l'accessibilite.
-
-commit 10db1b9c2df970442c967b45e29af84f6d21f499
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Oct 29 17:30:06 2010 +0200
-
-    homogeneisation des blocs de la colonne droite avec ceux de la colonne centrale
-
-commit 29cf618d048712c1acbb6383149d64c770baf531
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Oct 29 17:09:51 2010 +0200
-
-    charger le sprite d'illustration dans le menu deroulant au premier affichage
-
-commit b815a8bd4310e62d664d798cecc4bd497a4d6d7d
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Oct 29 17:07:51 2010 +0200
-
-    charger le sprite d'illustration dans le menu deroulant au premier affichage
-
-commit a25fabd6fdfd138b5a53def0d18155cb3c19aaa6
-Author: Cerdic <cedric@yterium.com>
-Date:   Fri Oct 29 16:43:52 2010 +0200
-
-    refactoring de la colonne centrale sans image de background
-
-commit 890b2d3592cd705f1a37983f31dc9459bbcef52d
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 19:27:26 2010 +0200
-
-    coins arrondis sur les cadre_produit dans les blocs bleus
-
-commit 3407ac82a09b6468844c87964acac2528ff89b39
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 19:08:31 2010 +0200
-
-    suppression des images de background pour les header au profit de css pur.
-    Les coins arrondis se degradent en coins droits dans IE<9
-
-commit 783f9a453c63942e504dc5de64a92212fa0be30f
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 17:26:21 2010 +0200
-
-    des UTF qui trainent
-
-commit 64ca1b49345b7e969bb684310296cf60ed1d3a7e
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 16:25:59 2010 +0200
-
-    menu : deplacer le sprite dans les css et une entite erronee dans le texte alternatif
-
-commit 82a0e60ba8d474fc1d8b4def368487871609a94a
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 16:23:54 2010 +0200
-
-    - js optimise sur le carrousel de home, avec chargement asynchrone des images via js, au premier affichage (script)
-
-commit 106a466945236dacaa56df2f2ed0f56408377538
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 16:23:29 2010 +0200
-
-    - inutile de repeter 500 fois la meme chaine de get dans le html. On le pose en js a chargement + corrections de liens et suppression de parametre d'url vide &bl=
-    - js optimise sur le carrousel de home, avec chargement asynchrone des images via js, au premier affichage
-
-commit 403ae169b56ac3e490598ee7c2c351b12f291056
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 15:50:05 2010 +0200
-
-    inutile de repeter 500 fois la meme chaine de get dans le html. On le pose en js a chargement.
-
-commit 49789076566c7a014a8302984bbab8b3e6b68c0f
-Author: Cerdic <cedric@yterium.com>
-Date:   Thu Oct 28 15:32:14 2010 +0200
-
-    accessibilite du menu : le rendre utilisable sans image ni css
-
-commit 732d2ef5338d35fd26b3dc89f855f28f25b39115
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 17:50:27 2010 +0200
-
-    nettoyage css et html de la colonne de gauche navigation
-
-commit c3d7bc5f78f2b9dd819272c02e8780ef07d55eea
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 17:05:31 2010 +0200
-
-    sprite sur les illustrations d'onglet
-
-commit b73e898e18aeb04291230b130e6b6d2527483f53
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 16:12:57 2010 +0200
-
-    utiliser un chargement asynchrone des images de menu via background. Donner une alternative texte en attendant le chargement...
-
-commit 641cee7762afcb2f83e1958cd060c3a018348835
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 15:48:08 2010 +0200
-
-    combiner css et js via htaccess
-
-commit 79e75552802c70b61887bf333c76daaf59515e2f
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 15:35:13 2010 +0200
-
-    supprimer le layout en table puisque un layout tout css est deja prevu !
-
-commit 142892b1db0f23daf36a188205d3fb68295a5499
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 15:27:27 2010 +0200
-
-    remonter le layout dans index.html
-
-commit 6bc1c6672956723fae3f809b053ee6ce7496ba61
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 15:22:29 2010 +0200
-
-    decouper la page html en blocs pour plus de confort et de visibilite du layout (en table!)
-
-commit 10724d095e1dc6386839605db0bcf1816e748718
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 14:53:39 2010 +0200
-
-    nettoyer les css inutiles
-
-commit 70ac65e4b0b2bcd7e0edcfa40e8a6d970ce1c2cc
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 13:27:47 2010 +0200
-
-    decouper la grosse css pour y voir plus clair. Il faut savoir s'eloigner de l'objectif pour mieux y revenir !
-
-commit 0dad80e22984186b6615e0f06679d610087bc83b
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 12:18:18 2010 +0200
-
-    un sprite pour les pictos
-
-commit 1ac6910795e2dd1e04ab94cc80a7e21643c99809
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 11:47:40 2010 +0200
-
-    un sprite pour l'univers hero des enfants
-
-commit 61268b1e2f1de922ba46ebecf48f30f3f0c2992f
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 11:11:56 2010 +0200
-
-    deplacer les images de banniere en background image tout en ameliorant l'accessibilite par rapport a l'origine
-
-commit 18185e5cca9de27b119dc23bf15ab13aa1733cad
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 11:00:23 2010 +0200
-
-    un alt sur les bannieres, c'est un minimum !
-
-commit 559c6891315e04a3896123677bdad99b0d0eb90e
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 10:58:12 2010 +0200
-
-    ces images dans un lien separe (heros) n'apportent aucune information et doublent les lien.
-    Les integrer dans un background, dans le meme lien que le texte ameliore l'accessibilite (pas de doublon de lien identique), l'experience utilisateur (texte et image forme une zone reactive complete) et ouvre la porte aux sprites
-
-commit d3de3f0e24ba90f4ab73d48e7d1586981380dcdf
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 10:38:15 2010 +0200
-
-    ce picto a toute sa place en decoration css (et amelioration de l'ui : lorsqu'on survole le panier, le lien texte change aussi d'etat et offre un retour visuel)
-
-commit c9a1218a412cfe89498853f3115b884145df4d3a
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 10:21:57 2010 +0200
-
-    semantiquement, ce picto a toute sa place en decoration css
-
-commit 6644102e995f7620818162ad87cc4945def99600
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 10:15:57 2010 +0200
-
-    styles inutiles (doublonne footer.css)
-
-commit 44dc0216cedc83d725d4740b0c20be13f43d3161
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 10:13:01 2010 +0200
-
-    rationnaliser les js de popups (qui ne servent pas ici au demeurant...)
-    On les garde pour jouer le jeu, mais on pourrait commenter tout ce code pour le faire disparaitre a la compression
-
-commit dc4b070cf7b316d2fdea557361672a3cfaed48c1
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 09:56:05 2010 +0200
-
-    inutile de charger l'image d'attente a chaque hit. On deporte le html concerne dans une fonction js pour l'injecter quand necessaire (mais pas utilise sur cette page)
-
-commit f7c7b490c59796b2703c06b83a780246dfe49250
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 09:52:45 2010 +0200
-
-    scripts separes pour :
-    - recuperer les prix des articles en json
-    - gerer le player 30s qui n'est pas utilise sur cette page
-
-commit e89504fec8866dd902a890e15382c3acdc52fea1
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 09:51:42 2010 +0200
-
-    j'ai oublie de commit ces fichiers en reintegrant le footer dans index.html
-
-commit c052ab8e5bbdf3704767996d3ceb57eb48fe5285
-Author: Cerdic <cedric@yterium.com>
-Date:   Wed Oct 27 09:51:23 2010 +0200
-
-    j'ai oublie de commit ces fichiers en reintegrant le footer dans index.html
-
-commit a20ba73fbad7a4006d036439d45188df8df6de9d
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 22:57:39 2010 +0200
-
-    ordre des js, et reoptimisation du chargement async des prix et dispo
-
-commit 83920379b5aa7f4c23093d5f65b2d33b3e927eff
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 22:09:47 2010 +0200
-
-    changer l'ordre des js, en cours
-
-commit 4504daa49da123974dbfd88cd088d1b4f17bff3e
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 21:55:48 2010 +0200
-
-    pas besoin d'iframe pour ce footer, une inclusion dans la page est tellement plus simple !
-
-commit 442100611830a64874df782476dbcc4585f1a8a8
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 21:40:05 2010 +0200
-
-    optimisation du js des references produits et dispo
-
-commit 04163f5993029e5573be2fc54e2575b46cf0a0b7
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 21:32:15 2010 +0200
-
-    Nettoyer le js inutile, regrouper les declarations de fonction et le code a executer sur document ready. Lander les requetes json en premier
-
-commit 604fcd62184423f7f4b0fc3e0ffac165057deba7
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 21:16:29 2010 +0200
-
-    Deplacer le js inline dans un script externe (2eme partie)
-
-commit e774330c1875e5fa6e824e06ba1b4e71e7493d49
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 20:46:22 2010 +0200
-
-    Deplacer le js inline dans un script externe (1ere partie)
-
-commit 0b5bb2ce800a692543a15a273ef4df9548ae44c4
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 20:32:07 2010 +0200
-
-    pas besoin de bgiframe sur cette page
-
-commit 3dca30feda006a0f11e6d44557e55ed265cea09c
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 20:17:41 2010 +0200
-
-    Modification des references aux fichiers suite au rangement
-
-commit ad62cf88abdf8ce633ce5ceff469b2344b88731b
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 20:16:49 2010 +0200
-
-    Rangement en dossiers, et stockage dans unused/ de ce qui n'est pas utile ici
-
-commit 1f364b23a1a5ec3409555024408e1756e6a80f33
-Author: Cerdic <cedric@yterium.com>
-Date:   Tue Oct 26 19:16:17 2010 +0200
-
-    Import initial
+CSS et JS sont plac√©s dans la page afin d'√™tre charg√©s le plus t√¥t possible dans bloquer aucun chargement
+
+=== JS
+les js inline ont √©t√© d√©port√©s dans des js externes, par fonctionnalit√© principale.
+Dans la m√™me approche que pour les css, seuls les scripts
+utiles √† la page ont √©t√© inclus dans la page. Dans les fonctions d'alignement de bloc, seules celles utiles sur
+la page ont √©t√© conserv√©es.
+
+Les js ont √©t√© concat√©n√©s et minifi√©s par le Google Closure Compiler.
+
+J'ai travaill√© initialement avec un unique script qui chargeait tout en une fois. Mais la taille de ce js
+en a fait le chemin critique pour r√©duire encore le onload de la page, et je suis donc pass√©
+√† deux fichiers :
+js/jquery-1.4.4.min.js = js/sources/jquery-1.4.4.js+js/sources/jquery.lazyload.js
+js/script.minified.js = js/sources/script.ll.combined.js
+autocomplete.minified.js = js/sources/jquery.autocomplete.js + js/sources/jquery.ajaxQueue.js
+et l'ensemble des autres scripts
+
+Il a fallu g√©rer le chargement parall√®le et asynchrone de ces deux fichiers, et que cela fonctionne
+dans tous les navigateurs. J'ai donc d√©velopp√© un loader jQuery pour cela :
+
+==== jQuery Loader
+Dans le cadre du concours j'ai d√©velopp√© un loader jQuery js/sources/jQl.js
+et https://github.com/Cerdic/jQl
+
+Ce loader est capable de g√©rer le chargement asynchrone de jQuery,
+le chargement asynchrone parall√®le de scripts d√©pendants de jQuery par xhr
+et de capturer les references js inline du type jQuery(function(){?)) ou jQuery(document).ready(function(){?});
+pour les relancer quand jQuery est charg√©.
+Sa version minifi√©e est inclue inline dans index.html, pour un co√ªt de 700 octets gzip
+Le loader est utilis√© pour charger les deux scripts js/jquery-1.4.4.min.js et js/script.minified.js en parall√®le
+(defer pour le premier et xhr pour le second)
+
+=== JSON
+La page contenait initialement 16 requ√™tes JSON pour charger les informations de disponibilit√© et prix
+des articles.
+J'ai mutualis√© ces requ√™te en une seule, √† laquelle on passe en argument les prid recherch√©s, sous
+forme de tableau. Le script qui g√®re cela de fa√ßon r√©aliste est js/sources/f_market.js
+Le serveur d'origine de la fnac n'√©tant pas en mesure de servir cela, on mime en renvoyant le fichier
+maketplace.js qui renvoit en JSON toutes les infos demand√©es.
+
+
+=== HTML
+le html a √©t√© minifi√© par suppression des espaces redondants et commentaires.
+
+=== Cookies
+Par d√©faut, le marqueur de statistiques pose des cookies sur .webperf-contest.com et contamine les sous domaine s1/s2/s3.
+J'ai donc patch√© le marqueur de statistique pour qu'il pose ses cookies sur entries.webperf-contest.com
+
+=== Paralelisation et Cookie-free domains
+J'ai utilis√© les sous domaines s1/s2/s3 au maximum pour charger les ressources statiques (images et css)
+En revanche les js sont servis sur entries.webperf-contest.com car cela permet une meilleure paral√©lisation
+(les autres domaines sont tous book√©s) et un des scripts charg√© en xhr ne peut provenir d'un autre domaine.
+Les morceaux de page sont charg√©s aussi en xhr, et donc sur entries. Comme il s'agit de html qui pourrait √©ventuellement
+utiliser des cookie, c'est logique.
+Le Json du marketplace est aussi charg√© sur entries.
+
+=== htacess
+Le fichier htaccess est utilis√© pour
+- forcer le deflate (gzip) sur tous les contenus pertinents (html, js, css,?) mais pas sur les images.
+- forcer des expire lointains sur les fichier statiques (image, css, js). En situation de production cela s'accompagnerait
+d'un timestamp sur les urls pour les versionner et forcer la maj en cas de changement
+- bloquer les coolie sur les fichiers images (pr√©caution en g√©n√©ral inutile, mais je me suis battu sur ce point avec le yottaa
+et il s'av√®re que c'√©tait en d√©finitive un dysfonctionnement de yottaa)
