@@ -1,0 +1,123 @@
+/* ========= resultats_recherche ======== */
+.search_results_head{
+  min-width:546px;
+  width:45.5em;
+  margin:0 0 10px 0;
+  color:#000; /* noir */
+  /* contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+
+}
+.search_results_head p{
+  float:left;
+  font-weight:bold;
+  margin:0;
+}
+.search_results_head select{
+  float:right;
+}
+.search_results .blk_header *, .search_results .blk_footer *{
+  margin:0;
+  padding:0;
+}
+.search_results .blk_header, .search_results .blk_header div, .search_results .blk_footer, .search_results .blk_footer div{
+  background:url(../img/mise_en_avant_header.png) no-repeat left top;
+  color:#FFF; /* blanc  */
+  margin:0;
+}
+.search_results .blk_header, .search_results .blk_footer{
+  padding-left:7px;
+  font-size:1.3em;
+}
+.search_results .blk_header div, .search_results .blk_footer div{
+  background-position:right top;
+  padding:2px 5px 2px 15px;
+  /*contexte de formatage */
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+.search_results .blk_footer{
+  background-position:left bottom;
+}
+.search_results .blk_footer div{
+  background-position:right bottom;
+}
+.search_results .blk_header h3, .search_results .blk_footer h3, .search_results .blk_header h2, .search_results .blk_footer h2{
+  float:left;
+  font-size:1em;
+  background:none;
+}
+.search_results .blk_header ul, .search_results .blk_footer ul{
+  float:right;
+  margin:2px 15px 2px 0;
+  font-size:0.8em;
+  white-space:nowrap;
+  text-align:right;
+}
+.search_results .blk_header ul li, .search_results .blk_footer ul li{
+  display:inline;
+  margin:0 2px;
+  color:#FFF; /*  blanc */
+}
+.search_results .blk_header ul li a, .search_results .blk_footer ul li a{
+  color:#FFF; /* blanc */
+  text-decoration:underline;
+}
+.search_results .blk_header ul li.current, .search_results .blk_footer ul li.current{
+  color:#DE9C00; /* moutarde */
+}
+.search_results .blk_header ul li.before, .search_results .blk_header ul li.next, .search_results .blk_footer ul li.before, .search_results .blk_footer ul li.next{
+  margin:0 8px;
+}
+.search_results .blk_content{
+  overflow:visible;
+}
+.search_results .blk_content table{
+  width:100%;
+  border-collapse:collapse;
+}
+.search_results .blk_content table td{
+  padding:10px 0;
+  vertical-align:top;
+  border-bottom:1px solid #ebebeb; /* gris */
+}
+.search_results .blk_content table tr.last td{
+  border:none;
+}
+.search_results .blk_content table td.choix{
+  width:20%
+}
+.search_results .blk_content table td.img{
+  float:none;
+  margin:0;
+  width:1%;
+}
+.search_results .blk_content table td.img img{
+  display:inline;
+}
+.search_results .blk_content table td.desc{
+  padding-left:5px;
+  padding-right:20px
+}
+.search_results .blk_content table td.desc .picto{
+  min-height:24px;
+  _height:24px;
+}
+.search_results .blk_content table td.choix{
+  vertical-align:middle;
+  width:25%;
+  padding-right:10px;
+}
+.search_results .blk_content table td.choix dl{
+  display:table;
+  margin:0 0 0 auto;
+}
+.search_results .blk_content table td.choix .links{
+  margin-top:10px;
+}
+.search_results .blk_content .produit dt, .search_results .blk_content .produit dt a, .search_results .blk_content .produit .details{
+  color:#000; /* noIr */
+}

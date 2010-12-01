@@ -1,0 +1,75 @@
+
+
+
+
+
+/* ========== Content ========== */
+
+/* liste sans puces ni marges  */
+.puce_no, .puce_no li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+/*-----------------------------------*/
+
+.sep-gris {
+	border-bottom:1px solid #B8B8B8 !important;
+}
+
+
+
+/* lien compteur vente flash */
+#smartAff,.smartAff_lien,.smartAff_lien a {
+	color: #000;
+	font-weight: bold}
+	
+/*
+  *S&L Marketplace
+  */
+
+span.chevron {display:none;}
+.MarketPlaceOffers {padding-top: 0px; margin-top: 0 !important}
+.MarketPlaceOffers {text-align: left;}
+.MarketPlaceOffers ul {list-style-type: none;margin:0px 10px}
+.MarketPlaceOffers ul li { list-style-type:none;}
+.labelMP .MarketPlaceOffers ul li {padding-left:0 !important;margin-top:5px;}
+.labelMP .MarketPlaceOffers .sep_gris, .shomeMV .MarketPlaceOffers .sep_gris {margin-top:5px !important;}
+.shome .MarketPlaceOffers ul li {padding:5px 0 !important;}
+.shome .MarketPlaceOffers .fontS_14 {font-size:12px !important;}
+.shome .MarketPlaceOffers .fontS_12, .shomeMV .MarketPlaceOffers .fontS_12  {font-size:11px !important;}
+.shomeMV .MarketPlaceOffers  ul li { border-bottom:none !important;}
+.shome .MarketPlaceOffers ul li span.chevron {display:inline;margin-right:2px;}
+.shomeMV .MarketPlaceOffers ul li {padding-left:0 !important; padding-top:5px !important;} /* Style pour les blocs Coups de coeurs et Meilleurs vente */
+.MarketPlaceOffers .pdg_t_sm {padding-top:0 !important; margin:0 !important;}
+.MarketPlaceOffers .pdg_b_no {padding-bottom:0 !important; margin-bottom:0 !important;}
+/*.MarketPlaceOffers ul li span {font-size: 11px !important}*/
+.MarketPlaceOffers li.sellyours {display: none;} /* Code bourrin pour non affichage du Vendez Le Votre */
+.listeproduits dd.shomeMV div.MarketPlaceOffers ul li div.sep { border:none !important; padding:0 !important; margin:0 !important;}
+/* */
+
+/*intro homes */
+.introHome {color:#666;margin:0 0 10px 0}
+.introHome a {color:#666}
+.introHome dt, .introHome dd {margin:0; padding:0; display:inline}
+
+/*pubfooter */
+#pubHgFooter div.pubtitre {/* background:#dcdcdc; */color:#a5a5a5 !important;font-size:10px !important;left:-2px;height:14px;text-align:center}
+#pubHgFooter div.pubtitre span {padding-left:5px}
+
+/* bando tournant */
+.blocBanner {
+	width:545px;
+	height:147px;
+	z-index:5;
+}
+.blocBanner .banner a { display:block;position:relative;width:545px;height:147px;}
+.blocBanner .banner a b {display:block;position:absolute;top:0;left:0;width:545px;height:147px;z-index:7;background-repeat:none;background-position:top left;}
+.navIndex {position:relative;text-align:center;font-size:12px;color:#000;}
+.navIndex span {padding:0 2px;cursor:pointer;}
+.navIndex .active {font-weight:bold;color:#DE9C00;}
+
+
+
+

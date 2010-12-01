@@ -1,0 +1,267 @@
+/* ======********====================
+          HEADER
+ ========********===================*/
+
+#HEADER{
+	/* initialement sur #page */
+		  margin:0 auto 0;
+		  min-width:996px;
+		  width:83em;
+	/* === */
+  position:relative;
+  z-index:55;
+  font-family:Arial,Helvetica,Verdana,sans-serif;
+}
+#HEADER *{/*cursor:default;*/margin:0;padding:0}
+#HEADER ul{list-style:none;}
+#HEADER a, #HEADER a *{cursor:pointer;}
+
+
+  /* ======* TOP *==================*/
+  #TOP{height:91px}
+	/*-----*/
+    #topLEFT{float:left;width:147px;margin:0;}
+		/*
+      #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(img/logo-fnac-png24.png) no-repeat 0 0}
+      * html #logoFnac{background-image: url(img/logo-fnac-png8.png)} /*ie6* /
+    /*-----*/
+	#topRIGHT{margin-left:148px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) repeat-x left -355px;}
+	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) no-repeat -15px -60px;}
+	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
+	    #CHAINES li{float:left;display:inline;padding-left:1px;background:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png) no-repeat -1000px -50px;}
+	    #CHAINES li.first{background:none}
+	      #CHAINES li a{display:block;height:20px;text-indent:-5000px;background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png) ;background-repeat:no-repeat  }
+	      #CHAINES li a:hover{filter:alpha(opacity=60);	opacity:.60;}
+	      #CHAINES li a:active{outline:none}
+	      #ch-Myfnac a{width:82px; background-position:0 -10px }
+		  #ch-Actu a{width:97px; background-position:-83px -10px }
+		  #ch-Telech a{width:137px; background-position:-181px -10px }
+		  #ch-Passion a{width:137px; background-position:-319px -10px }
+		  #ch-Labo a{width:100px; background-position:-457px -10px }
+		  #ch-Magasins a{width:126px; background-position:-558px -10px }
+		  #ch-Adherents a{width:128px; background-position:-685px -10px }
+	  /*-*/
+	  #SEARCH{float:left;width:64.5%;padding-top:18px;}
+
+	  /*-*/
+	  #MONCOIN{float:left;width:35%;padding-top:18px;}
+	    #monCompte{float:left;width:33%;padding-top:4px}
+	      #monCompte img{vertical-align:-15%;padding-right:5px}
+	      #monCompte a{color:#000;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) no-repeat 0 -117px;padding-left:17px;text-decoration:underline}
+	      #monCompte a:hover{text-decoration:none;}
+	    #monPanier{float:left;width:67%;position:relative;z-index:9997;	width:15.7em;}
+	    * html HeaderBasket{width:15.7em;}
+		  #monPanier #cartouche{
+				position:relative;z-index:9999;height:23px;padding-left:6px;background:transparent url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) repeat-x left -455px;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				border-radius:5px;
+			}
+			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;}
+			* html #monPanier #cartouche p{width:176px}
+				#monPanier .recapPanier a {display:block;float:left;width:5.5em;height:23px;padding-left:26px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) no-repeat 0 -152px;}
+				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none;}
+				#monPanier .recapPanier a:hover {text-decoration:underline}
+				#monPanier .totArticles{display:block;float:left;width:6em;height:23px;color:#FFF}
+				#monPanier .totArticles a {color:#FFF;text-decoration:none}
+				#monPanier .totArticles a:hover {text-decoration:underline}
+				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-5000px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) no-repeat 0 -51px;cursor:pointer}
+			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
+				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
+				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
+				#monPanier #detailPanier a{color:#FFF}
+				#monPanier #detailPanier dt {width:8.5em;float:left;font-weight:normal;margin:0}
+				#monPanier #detailPanier dd {width:5.5em;float:left;margin:0}
+				#monPanier .poignee{text-align:center;margin:0}
+				#monPanier .poignee img{display:block;margin:0 auto}
+		  #monPanier .basketInfo{color:#000;margin:0;padding:0 0 0 10px}
+    /*-----*/
+
+  /* ======* MENU *=================*/
+  #MENU{clear:both;position:relative;height:42px;}
+  * html #MENU{zoom:1}/*ie6*/
+  #MENU, #MENU *{margin:0;padding:0;}
+    #MENU #onglets{padding-left:5px}
+
+      #MENU #onglets li{
+		  float:left;
+		  position:relative;
+		  margin-right:2px;
+		  padding-bottom:12px;
+		  background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) repeat-x left -391px;
+      }
+      #MENU #onglets li.current,
+      * html #MENU #onglets li{
+      	background-image:none
+      }
+		  #onglets >li>a{
+			  display:block;
+				padding:3px;
+				height:24px;
+				overflow: hidden;
+			  z-index:100;/* 1 couche de plus que les megaMenu */
+		  }
+			#onglets >li > a b {
+				position:absolute;
+				top:0;
+				height:36px;
+				display:block;
+			  height:36px;
+				background-image:url(http://s1.webperf-contest.com/4cc80752a91cc/css/img/spt-ong2-chaines-o-png8.png);
+			  background-repeat:no-repeat;
+			}
+			#onglets >li > a > b {z-index:103;left:0;}
+			#onglets >li > a > b >b {z-index:101;left:0;}
+			#onglets >li > a > b >b>b {z-index:102;width:3px;right:0;background-position:top right;}
+			
+			#onglets >li.current > a >b {background-position:-920px 0;}
+			#onglets >li.current > a>b>b>b {background-position:-1007px 0;}
+			#onglets >li > a.hover>b {background-position:-830px 0;}
+			#onglets >li > a.hover>b>b>b {background-position:-917px 0;}
+
+			#onglets >li>a:active{outline:none}
+		  /*#onglets .current >a>b{position:static}/* l'onglet de la page Courante ne doit pas passer au dessus des megaMenus */
+		  /*#onglets .current >a.hover>b{position:relative}/* SAUF si le megaMenu est depli� */
+
+			#onglets .megaMenu {display:none;}
+			#onglets .megaMenu.menu_actif {display:block;}
+
+		/* -- positionnement de l'image des onglets -- */
+			.ong-Livres {width:47px;}
+		  .ong-Livres >a b {width:47px; background-position:0 -40px }
+		  .ong-Livres.current >a b,
+		  .ong-Livres >a.hover b	 {background-position:0 -75px }
+
+		  .ong-Musique {width:86px;}
+			.ong-Musique >a b {width:86px; background-position:-49px -40px }
+		  .ong-Musique.current >a b,
+		  .ong-Musique >a.hover b {background-position:-49px -75px }
+
+		  .ong-DVD {width:50px;}
+			.ong-DVD >a b {width:50px; background-position:-137px -40px }
+		  .ong-DVD.current >a b,
+		  .ong-DVD >a.hover b {background-position:-137px -75px }
+
+		  .ong-JeuxVideo {width:71px;}
+			.ong-JeuxVideo >a b {width:71px; background-position:-189px -40px }
+		  .ong-JeuxVideo.current >a b,
+		  .ong-JeuxVideo >a.hover b {background-position:-189px -75px }
+
+		  .ong-Jouets {width:48px;}
+			.ong-Jouets >a b {width:48px; background-position:-262px -40px }
+		  .ong-Jouets.current >a b,
+		  .ong-Jouets >a.hover b {background-position:-262px -75px }
+
+		  .ong-Informatique {width:81px;}
+			.ong-Informatique >a b {width:81px; background-position:-312px -40px }
+		  .ong-Informatique.current >a b,
+		  .ong-Informatique >a.hover b {background-position:-312px -75px }
+
+		  .ong-Photo {width:67px;}
+			.ong-Photo >a b {width:67px; background-position:-395px -40px }
+		  .ong-Photo.current >a b,
+		  .ong-Photo >a.hover b {background-position:-395px -75px }
+
+		  .ong-TV {width:73px;}
+			.ong-TV >a b {width:73px; background-position:-464px -40px }
+		  .ong-TV.current >a b,
+		  .ong-TV >a.hover b {background-position:-464px -75px }
+
+		  .ong-Son {width:71px;}
+			.ong-Son >a b {width:71px; background-position:-539px -40px }
+		  .ong-Son.current >a b,
+		  .ong-Son >a.hover b {background-position:-539px -75px }
+
+		  .ong-GPS {width:63px;}
+			.ong-GPS >a b {width:63px; background-position:-612px -40px }
+		  .ong-GPS.current >a b,
+		  .ong-GPS >a.hover b {background-position:-612px -75px }
+
+		  .ong-Gadgets {width:57px;}
+			.ong-Gadgets >a b {width:57px; background-position:-677px -40px }
+		  .ong-Gadgets.current >a b,
+		  .ong-Gadgets >a.hover b {background-position:-677px -75px }
+
+		  .ong-TiragesPhoto {width:52px;}
+			.ong-TiragesPhoto >a b {width:52px; background-position:-736px -40px }
+		  .ong-TiragesPhoto.current >a b,
+		  .ong-TiragesPhoto >a.hover b {background-position:-736px -75px }
+
+		  .ong-Evenement {width:65px;}
+			.ong-Evenement >a b {width:65px; background-position:-790px -40px }
+		  .ong-Evenement.current >a b,
+		  .ong-Evenement >a.hover b {background-position:-790px -75px }
+
+		  .ong-Spectacles {width:69px;}
+			.ong-Spectacles >a b {width:69px; background-position:-857px -40px }
+		  .ong-Spectacles.current >a b,
+		  .ong-Spectacles >a.hover b {background-position:-857px -75px }
+
+		  .ong-Vendre {width:50px;}
+			.ong-Vendre >a b {width:50px; background-position:-928px -40px }
+		  .ong-Vendre.current >a b,
+		  .ong-Vendre >a.hover b {background-position:-928px -75px }
+
+	/* -- les megaMenus -- */
+      #onglets li .megaMenu{
+		  width:514px;
+		  padding:10px;
+		  border:1px solid #727171;
+		  border-bottom-left-radius:5px;
+		  -moz-border-radius-bottomleft:5px;
+		  -webkit-border-bottom-left-radius:5px;
+		  border-bottom-right-radius:5px;
+		  -moz-border-radius-bottomright:5px;
+		  -webkit-border-bottom-right-radius:5px;
+		  background:#FFF url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) repeat-x left -505px;
+		  position:absolute;
+		  top:35px;
+		  z-index:100;/* doit reste une couche de moins que le lien des onglets .ongLink */
+		  display:none;
+      }
+	  .posL{left:0}
+	  .posM{left:-200px}
+	  .posR{right:0}
+
+	  #onglets .megaMenu .mainCol,
+	  #onglets .megaMenu .rightCol{
+	  	background-color:white;
+	    border-top-left-radius:5px;
+	    -moz-border-radius-topleft:5px;
+	    -webkit-border-top-left-radius:5px;
+	    border-top-right-radius:5px;
+	    -moz-border-radius-topright:5px;
+	    -webkit-border-top-right-radius:5px;
+	  }
+	  #onglets .megaMenu .mainCol{
+		padding:10px;
+	  	min-height:250px;
+	  	height: auto !important;
+	  	height: 250px;
+	  }
+	  #onglets .megaMenu .rightCol{
+		position:relative;
+		padding:10px 10px 0 10px;
+	  	min-height:21em;
+	  	height: auto !important;
+	  	height: 21em;
+	  }
+	  #onglets .megaMenu .mainCol{width:60%;float:left;}
+	    #onglets .megaMenu .mainColLeft{width:48%;float:left}
+	    #onglets .megaMenu .mainColRight{width:48%;float:right;position:relative;min-height:21em;height:auto !important;height:21em}
+	    #onglets .megaMenu .allProd {position:absolute;bottom:0;font-weight:bold;padding:0}
+	      #onglets .megaMenu .allLink {font-weight:bold;color:#000;}
+	  #onglets .megaMenu .rightCol{width:30%;float:right;}
+		  #onglets .megaMenu dl{margin:0;padding-bottom:7px}
+		    #onglets .megaMenu dt, #onglets .megaMenu dt a{color:#DE9C00;font-weight:bold;margin-bottom:3px}
+		    #onglets .megaMenu dt a{text-decoration:underline}
+		    #onglets .megaMenu dt a:hover{text-decoration:none}
+		    #onglets .megaMenu dd{margin-bottom:3px;padding-left:9px;background: url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) no-repeat 0 -334px;}
+		      #onglets .megaMenu dd a{color:#000;text-decoration:none}
+		      #onglets .megaMenu dd a:hover{text-decoration:underline}
+ 		  #onglets .megaMenu .vignet{display:block;width:150px;height:80px;position:absolute;bottom:0}
+			#onglets .megaMenu .vignet b {display:block;width:150px;height:80px;position:absolute;bottom:0;background-repeat:none;}
+			#onglets .megaMenu a.coupdecoeur {padding-right:15px;background:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png) no-repeat right -309px;}
+
+
+/* ======**** fin header ****====================*/
