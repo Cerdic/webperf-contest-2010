@@ -260,5 +260,6 @@ var jQl={
  * $('document').ready(function(){...})
  * jQuery('document').ready(function(){...})
  *
+ * only if jQuery is not already loaded
  */
-var $=jQl.ready,jQuery=$;
+if (typeof window.jQuery=='undefined'){var $=jQl.ready,jQuery=$;}
