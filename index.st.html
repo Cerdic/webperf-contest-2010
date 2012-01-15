@@ -15,23 +15,807 @@
 <body class="enfants">
 <div id="page">
 <div id="HEADER">
-<!--#include file="top.mini.html" -->
+<!--# include file="top.mini.html" -->
+	<div id="TOP">
+	<p id="topLEFT">
+	<img src="http://wpo.yterium.net/contest/img/logo-fnac-cdc.png" width="142" height="87" border="0" usemap="#logoFnac" />
+	<map name="logoFnac">
+	<area shape="poly" coords="105,21,142,25,139,56,101,50" href="http://www.fnac.com/?NID=0&RNID=0" title="fnac.com">
+	<area shape="rect" coords="0,0,142,87" href="http://www.fnac.com/Guides/common/prix-coups-de-coeur/default.asp?NID=0&RNID=0" title="Coups de coeur">
+	</map>
+	</p>
+	<div id="topRIGHT">
+	<ul id="CHAINES">
+	<li id="ch-Myfnac" class="first"><a href="http://www4.fnac.com/MyFnac/default.aspx">">My Fnac</a></li>
+	<li id="ch-Actu"><a href="http://www.fnac.com/Actu-Fnac/L-ACTU-FNAC-toute-l-actualite-culturelle-et-technologique/cl31/w-4">Actu Fnac</a></li>
+	<li id="ch-Telech"><a href="http://www.fnac.com/telecharger.asp?NID=%2D69&RNID=%2D69">Téléchargements</a></li>
+	<li id="ch-Passion"><a href="http://www.fnac.com/les-espaces-passions-de-la-Fnac/w-4?NID=0&RNID=0">Espaces Passions</a></li>
+	<li id="ch-Labo"><a href="http://www4.fnac.com/labofnac/labo-fnac.aspx?NID=0&RNID=0">Labo Fnac</a></li>
+	<li id="ch-Magasins"><a href="http://www.fnac.com/localiser-magasin-fnac/w-4?NID=0&RNID=0">Magasins Fnac</a></li>
+	<li id="ch-Adherents"><a href="http://www.fnac.com/Magazine/home_adherents.asp?amp;NID=%2D60&amp;RNID=%2D60">Adhérents Fnac</a></li>
+	</ul>
+	<div id="SEARCH">
+	<form method="get" accept-charset="UTF-8"  class="block_search block_search_new" action="http://recherche.fnac.com/Search/SearchResult.aspx" name="QuickSearchForm" id="QuickSearchForm">
+	<fieldset>
+	<select name="SCat" id="SCat">
+	<option value="0!1" selected="selected">Tous produits</option>
+	<option value="2!1">Livres</option>
+	<option value="1!1">Livres en VO</option>
+	<option value="3!1">Musique</option>
+	<option value="4!1">DVD et Blu-Ray</option>
+	<option value="5!1">Jeux vidéo</option>
+	<option value="6!1">Logiciels</option>
+	<option value="7!1">Jeux et Jouets</option>
+	<option value="8!1">High-tech</option>
+	<option value="9!1">Instrument de musique</option>
+	<option value="10!1">Astronomie</option>
+	<option value="11!1">Gadget et Goodies</option>
+	<option value="12!1">Poster et décoration</option>
+	<option value="13!1">Développement Durable</option>
+	<option value="14!1">Fournitures de bureau</option>
+	<option value="20!1">Loisirs et bien-être</option>
+	<option value="15!1">Partition et Méthode</option>
+	<option value="16!1">Spectacles</option>
+	<option value="21!1">Téléchargements MP3</option>
+	<option value="22!1">Livres numériques</option>
+	</select>
+	<input type="hidden" name="SID" value="e85f0b48-ae1d-a5f5-aa15-fbffdc4e1c1a">
+	<input type="hidden" name="UID" value="0e3649c79-3afd-18b8-7817-fa868bc99668">
+	<input type="hidden" name="Origin" value="FnacAff">
+	<input type="hidden" name="TTL" value="241020101133">
+	<input type="hidden" name="OrderInSession" value="0">
+	<input type="text" class="text" id="Fnac_Search" name="Search" onkeypress="checkKey()">
+	<input type="hidden" id="ebook" name="download_ebook" />
+	<input type="hidden" name="bl" value="HGENFrera">
+	<input type="hidden" name="sft" id="sft" value="1">
+	<span class="submit">
+	<input type="submit" name="submitbtn" id="submitbtn" value="Ok" alt="Lancer la recherche" onclick="ChangeContext()">
+	</span>
+	</fieldset>
+	</form>
+	</div>
+	<div id="MONCOIN">
+	<p id="monCompte"><strong><a href="https://www.fnac.com/Account/Profil/default.asp?NID=%2D10&RNID=%2D10&bl=HGENFtopMenucompte">Mon Compte</a></strong></p>
+	<div id="HeaderBasket">
+	<div id="monPanier">
+	<div id="cartouche">
+	<p class="clearfix">
+	<span class="recapPanier">
+	<a href="enfants.asp.html#" onclick="$('div#detailPanier').slideToggle(500);return false;" rel="noFollow">Mon panier</a>
+	</span>
+	<span class="totArticles">
+	</span>
+	<span class="switch" onclick="$('#detailPanier').slideToggle(500);return false;" >
+	.
+	</span>
+	</p>
+	</div>
+	<div id="rideau">
+	<div id="detailPanier">
+	<dl class="context lienInverse">
+	<dt><a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?NID=%2D8&RNID=%2D8&bl=HGENFtopMenupanier" rel="nofollow">Fnac.com</a></dt>
+	<dd>
+	</dd>
+	</dl>
+	<dl class="context lienInverse">
+	<dt><a href="http://www.fnacmusic.com/fnactodemat/order/basket.aspx" rel="nofollow">Téléchargement musique</a></dt>
+	<dd><br />
+
+	</dd>
+	</dl>
+	</div>
+	</div>
+	<p class="basketInfo">
+	Consulter votre panier
+	</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+<!--/# include file="top.mini.html" -->
 <div id="MENU">
-<!--#include file="menu_level1.mini.html" -->
+<!--# include file="menu_level1.mini.html" -->
+<ul id="onglets"><li class="ong-Livres" ><a href="http://www.fnac.com/livre.asp?NID=%2D1&RNID=%2D1">Livres, eBooks<b><b><b></b></b></b></a></li><li class="ong-Musique" ><a href="http://www.fnac.com/musique.asp?NID=%2D2&RNID=%2D2">Musique, MP3, instruments<b><b><b></b></b></b></a></li><li class="ong-DVD" ><a href="http://www.fnac.com/video.asp?NID=%2D3&RNID=%2D3">DVD, blu-ray<b><b><b></b></b></b></a></li><li class="ong-JeuxVideo" ><a href="http://www.fnac.com/jeux-video.asp?NID=%2D51&RNID=%2D51">Jeux vidéo, consoles<b><b><b></b></b></b></a><li class="ong-Jouets current"><a href="http://www.fnac.com/enfants.asp?NID=%2D57&RNID=%2D57">Jouets, jeux<b><b><b></b></b></b></a></li><li class="ong-Informatique"><a href="http://www.fnac.com/Informatique/shi48966/w-4">Informatique, logiciels<b><b><b></b></b></b></a></li><li class="ong-Photo"><a href="http://www.fnac.com/Photo-camescope/shi56352/w-4">Photo, camescopes<b><b><b></b></b></b></a></li><li class="ong-TV"><a href="http://www.fnac.com/TV-Video-Home-cinema/shi56328/w-4">TV, Vidéo, Home cinéma<b><b><b></b></b></b></a></li><li class="ong-Son"><a href="http://www.fnac.com//shi176062/w-4">Son, hifi, lecteurs MP3<b><b><b></b></b></b></a></li><li class="ong-GPS"><a href="http://www.fnac.com/GPS-Telephones/shi56528/w-4">GPS, Téléphones<b><b><b></b></b></b></a></li><li class="ong-Gadgets"><a href="http://www.fnac.com//shi181432/w-4">Gadget tendance<b><b><b></b></b></b></a></li><li class="ong-TiragesPhoto"><a href="http://tiragesphoto.fnac.com" target="_blank">Tirages photo<b><b><b></b></b></b></a></li><li class="ong-Evenement" ><a href="http://www.fnac.com/Guides/Common/CoffretsCadeaux/default.asp?NID=0&RNID=0">Cadeaux<b><b><b></b></b></b></a></li><li class="ong-Spectacles"><a href="http://www.fnacspectacles.com">Spectacles , Voyages<b><b><b></b></b></b></a></li><li class="ong-Vendre" ><a href="http://www.fnac.com/guides/common/vente-et-revente/default.asp?NID=0&RNID=0">Vendre<b><b><b></b></b></b></a></li></ul>
+<!--/# include file="menu_level1.mini.html" -->
 </div>
 </div>
 <script type="text/javascript" src="js/script.minified.js" defer="defer"></script>
 <script type="text/javascript">var MarketPlaceOffers=new Array();var megamenu_sprite='css/img/spt-onglets-illus.jpg';var s_account="fnaccomprod";</script>
 <div id="content">
 <div id="col_centre">
-<!--#include file="content.mini.html" -->
+<!--# include file="content.mini.html" -->
+<dl class="introHome">
+<dt><strong>Tout l'univers des enfants</strong>&nbsp;:&nbsp;</dt>
+<dd>les jouets, les poupées, les peluches, les jouets en bois pour les tout petits. Et aussi des comptines, des livres, des dvd pour enfants, des jeux vidéo et des jeux de société.</dd>
+</dl>
+<div class="line object mrg_t_30 mrg_b_30">
+<div class="blocBanner mrg_b posrel">
+<div class="banner" id="visu_banner_0"><a
+href="http://www4.fnac.com/s141749/10-Jours-coups-de-coeur-sur-les-jouets?bl=HGENFban1"
+rel="http://s1-wpo.yterium.net/contest/img/coups-coeur-jouet_545.png"
+target="_self">
+<b style="background-image:url(http://s1-wpo.yterium.net/contest/img/coups-coeur-jouet_545.jpg);"></b>Coup de coeur sur les jouets</a></div>
+<div class="banner" id="visu_banner_1" style="display:none;"><a
+href="http://www4.fnac.com/a3066704/Asmodee-Jungle-Speed-Lapins-Cretins?bl=HGENFban2"
+rel="http://s1-wpo.yterium.net/contest/img/lapins-cretins-10_2010_545.jpg"
+target="_self">
+<b></b>Decouvrez le jungle Speed Lapins Cretins</a></div>
+<div class="banner" id="visu_banner_2" style="display:none;"><a
+href="http://www4.fnac.com/s135876/Bons-plans-sur-les-jouets?bl=HGENFban3"
+rel="http://s1-wpo.yterium.net/contest/img/bon-plan-jouet_09_2010_545.jpg"
+target="_self">
+<b></b>Bons plans sur les jouets</a></div>
+<div class="navIndex">
+<a id="puce_0" class="active" href="#visu_banner_0">1</a><span class="moutarde"> | </span>
+<a id="puce_1" href="#visu_banner_1">2</a><span class="moutarde"> | </span>
+<a id="puce_2" href="#visu_banner_2">3</a>
+</div>
+<div class="clearing">&nbsp;</div>
+</div>
+</div>
+<div class="clearing"></div>
+<div class="mrg_b_lg mrg_t" id="univ_heros">
+<h2><img src="http://s1-wpo.yterium.net/contest/img/univ_heros_titre.png" width="424" height="30" alt="Leurs héros et jouets préférés" /></h2>
+<ul>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s123476/Haba?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 0;"></b>Haba</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s119817/Jouets-pour-enfant/Jeux-de-construction/Lego?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -75px;"></b>Lego</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s130378/Notre-univers-Playmobil?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -150px;"></b>Playmobil</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s143068/Poupees-et-peluches/Lilliputiens?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -225px;"></b>Lilliputiens</a>
+</li>
+<li class="last">
+<a class="heros_desc" href="http://www4.fnac.com/s135708/Vtech?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -300px;"></b>Vtech</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s129715/Tous-vos-heros-favoris/Toy-Story?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -375px;"></b>Toy Story</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s129707/Tous-vos-heros-favoris/Littlest-Pet-Shop?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -450px;"></b>Littlest Petshop</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s132620/Tous-vos-heros-favoris/Twilight?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -525px;"></b>Twilight</a>
+</li>
+<li>
+<a class="heros_desc" href="http://www4.fnac.com/s129831/Tous-vos-heros-favoris/Oui-Oui?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -600px;"></b>Oui-Oui</a>
+</li>
+<li class="last">
+<a class="heros_desc" href="http://www4.fnac.com/s129822/Tous-vos-heros-favoris/Barbie?bl=HGENFban3">
+<b style="background-image: url(http://s2-wpo.yterium.net/contest/css/img/spt-enfants-heros.jpg);background-position: 0 -675px;"></b>Barbie</a>
+</li>
+</ul>
+<div class="clearing"></div>
+</div>
+<div class="line_3cols mrg_v_lg mrg_t_sm">
+<div class="block mise_en_avant">
+<div class="blk_inside flat">
+<h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s120211/Jeux-de-societe?bl=HGENFblo1">Jeux de société</a></h2>
+<div class="blk_content">
+<div class="produit">
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2913782/Asmodee-Loups-Garous-Le-Village?bl=HGENFblo1" >Loups Garous le Village</a></dt>
+<dd class="details">Asmodée</dd>
+<dd class="img">
+<a href="http://www4.fnac.com/a2913782/Asmodee-Loups-Garous-Le-Village?bl=HGENFblo1" >
+<img src="http://s2-wpo.yterium.net/contest/img/2913782_106x119.jpg" width="106" height="119" alt="Loups Garous le Village">
+</a>
+</dd>
+<dd class="resume">
+Pour les amateurs des Loups Garous de Thiercelieux, le Village propose une nouvelle extension du jeu très complète&nbsp;!
+</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>25&nbsp;&euro;
+</dd>
+<dd class="links mrg_b_sm">
+&raquo; <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2913782&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo1">Ajouter au panier</a>
+</dd>
+<dd class="shomeMV">
+<div id="Classique2_MP" class="MarketPlaceOffers" title="2913782"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique2_MP|2913782");</script>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sep mrg_h"></div>
+<div class="blk_footer pdg_v_sm">
+<ul class="links">
+<li class="first">
+&raquo; <a href="http://www4.fnac.com/s120211/Jeux-de-societe?bl=HGENFblo1">Tous les Jeux de société</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block block_jaune block_jaune_mea mise_en_avant">
+<div class="blk_inside flat">
+<h2 class="blk_header"><b></b><a href="http://recherche.fnac.com/n188843/Offres-speciales-adherents-jouets?bl=HGENFblo2">Offre adhérents Jouets</a></h2>
+<div class="blk_content">
+<div class="produit">
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2990502/Mattel-Barbie-video-girl?bl=HGENFblo2" >Barbie vidéo Girl</a></dt>
+<dd class="details">Barbie</dd>
+<dd class="img">
+<a href="http://www4.fnac.com/a2990502/Mattel-Barbie-video-girl?bl=HGENFblo2" >
+<img src="http://s3-wpo.yterium.net/contest/img/2990502_110x150.jpg" width="110" height="150" alt="Barbie vidéo Girl">
+</a>
+</dd>
+<dd class="resume">
+Barbie cache un trésor&nbsp;! on peut scénariser et enregistrer plein d'histoires grâce à la caméra cachée dans son pendentif&nbsp;!
+</dd>
+<dd class="pictoProduitNormal prix prixSeul pictoPrixAdhNormal">
+69,90&nbsp;&euro;&nbsp;<span class="prixBarre">84,90&nbsp;&euro;</span>
+</dd>
+<dd class="links mrg_b_sm">
+&raquo; <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2990502&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo2">Ajouter au panier</a>
+</dd>
+<dd class="shomeMV">
+<div id="Offre_adherents3_MP" class="MarketPlaceOffers" title="2990502"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Offre_adherents3_MP|2990502");</script>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sep mrg_h"></div>
+<div class="blk_footer pdg_v_sm">
+<ul class="links">
+<li class="first">
+&raquo; <a href="http://recherche.fnac.com/n188843/Offres-speciales-adherents-jouets?bl=HGENFblo2">Toutes les offres adhérents</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block block_last mise_en_avant">
+<div class="blk_inside flat">
+<h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s136160/5-a-8-ans/Vtech?bl=HGENFblo3">Vtech</a></h2>
+<div class="blk_content">
+<div class="produit">
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2913807/Vtech-Kidi-Pop-et-Rock-3-en-1?bl=HGENFblo3" >Vtech&nbsp;- Kidi Pop &amp; Rock 3 en 1</a></dt>
+<dd class="details">Vtech&nbsp;- Collection Kidi</dd>
+<dd class="img">
+<a href="http://www4.fnac.com/a2913807/Vtech-Kidi-Pop-et-Rock-3-en-1?bl=HGENFblo3" >
+<img src="http://s1-wpo.yterium.net/contest/img/2913807_110x85.jpg" width="110" height="85" alt="Vtech&nbsp;- Kidi Po">
+</a>
+</dd>
+<dd class="resume">
+Un piano, une batterie et une guitare regroupés en un seul instrument&nbsp;! Votre enfant sera la star du rock&nbsp;!
+</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>39,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Classique4_MP" class="MarketPlaceOffers" title="2913807"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique4_MP|2913807");</script>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sep mrg_h"></div>
+<div class="blk_footer pdg_v_sm">
+<ul class="links">
+<li class="first">
+&raquo; <a href="http://www4.fnac.com/s136160/5-a-8-ans/Vtech?bl=HGENFblo3">Tous les Vtech</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="line_3cols mrg_v_lg mrg_t_sm">
+<div class="block block_rouge block_rouge_mea mise_en_avant">
+<div class="blk_inside flat">
+<h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s135876/Bons-plans-sur-les-jouets?bl=HGENFblo4">Bons plans jouets</a></h2>
+<div class="blk_content">
+<div class="produit">
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2990541/Mattel-Je-vogue-dans-la-baignoire?bl=HGENFblo4" >Mattel&nbsp;- Je vogue dans la baignoire</a></dt>
+<dd class="details">Jouets 1er âge</dd>
+<dd class="img">
+<a href="http://www4.fnac.com/a2990541/Mattel-Je-vogue-dans-la-baignoire?bl=HGENFblo4" >
+<img src="http://s2-wpo.yterium.net/contest/img/2990541_110x89.jpg" width="110" height="89" alt="Mattel&nbsp;- Je vog">
+</a>
+</dd>
+<dd class="resume">
+Un superbe bateau pour les tout-petits pour jouer dans le bain avec 5 animaux aquatiques&nbsp;!
+</dd>
+<dd class="prix">
+24,90&nbsp;&euro; <em class="delStylePrice">au lieu de <span class="gras">29,90&nbsp;&euro;</span></em>
+</dd>
+<dd class="links mrg_b_sm">
+&raquo; <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2990541&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo4">Ajouter au panier</a>
+</dd>
+<dd class="shomeMV">
+<div id="Offre_speciale5_MP" class="MarketPlaceOffers" title="2990541"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Offre_speciale5_MP|2990541");</script>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sep mrg_h"></div>
+<div class="blk_footer pdg_v_sm">
+<ul class="links">
+<li class="first">
+&raquo; <a href="http://www4.fnac.com/s135876/Bons-plans-sur-les-jouets?bl=HGENFblo4">Tous les bons plans jouets</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block mise_en_avant">
+<div class="blk_inside flat">
+<h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s132339/Jouets-pour-garcons/Vehicules-et-Circuits?bl=HGENFblo5">Véhicules et circuits</a></h2>
+<div class="blk_content">
+<div class="produit">
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2990529/Mattel-Hot-Wheels-Playset-hot-wheels-octo-battle?bl=HGENFblo5" >Playset Hot Wheels octo battle</a></dt>
+<dd class="details">
+Mattel&nbsp;- Hot Wheels
+</dd>
+<dd class="img">
+<a href="http://www4.fnac.com/a2990529/Mattel-Hot-Wheels-Playset-hot-wheels-octo-battle?bl=HGENFblo5" >
+<img src="http://wpo.yterium.net/contest/img/2990529_110x76.jpg" width="110" height="76" alt="Playset Hot Wheels o">
+</a>
+</dd>
+<dd class="resume">
+Combats la terrible pieuvre avec ton véhicule de combat Power Creatures en chargeant la puissance de ton bolide&nbsp;!
+</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>34,90&nbsp;&euro;
+</dd>
+<dd class="links mrg_b_sm">
+&raquo; <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2990529&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo5">Ajouter au panier</a>
+</dd>
+<dd class="shomeMV">
+<div id="Classique6_MP" class="MarketPlaceOffers" title="2990529"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique6_MP|2990529");</script>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sep mrg_h"></div>
+<div class="blk_footer pdg_v_sm">
+<ul class="links">
+<li class="first">
+&raquo; <a href="http://www4.fnac.com/s132339/Jouets-pour-garcons/Vehicules-et-Circuits?bl=HGENFblo5">Tous les bons plans jouets&nbsp;!</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block block_orange block_orange_mea block_last mise_en_avant">
+<div class="blk_inside flat">
+<h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s141749/10-Jours-coups-de-coeur-sur-les-jouets?bl=HGENFblo6">10 Jours Coup de c&oelig;ur</a></h2>
+<div class="blk_content">
+<div class="produit">
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2805733/SentoSphere-Le-loto-des-saveurs?bl=HGENFblo6" >Sentosphère&nbsp;- Loto des saveurs</a></dt>
+<dd class="details">A toi de reconnaître les différentes saveurs&nbsp;!</dd>
+<dd class="img">
+<a href="http://www4.fnac.com/a2805733/SentoSphere-Le-loto-des-saveurs?bl=HGENFblo6" >
+<img src="http://s1-wpo.yterium.net/contest/img/2805733_110x118.jpg" width="110" height="118" alt="Sentosphère&nbsp;- L">
+</a>
+</dd>
+<dd class="resume">
+Reconnaître différentes saveurs avec des micro-bonbons&nbsp;! 30 différentes comme la
+framboise, la cannelle, la cerise...
+</dd>
+<dd class="pictoProduitNormal prix prixSeul prixSeul pictocoeur">
+32,90&nbsp;&euro;
+</dd>
+<dd class="links mrg_b_sm">
+&raquo; <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2805733&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo6">Ajouter au panier</a>
+</dd>
+<dd class="shomeMV">
+<div id="Coup_de_coeur7_MP" class="MarketPlaceOffers" title="2805733"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Coup_de_coeur7_MP|2805733");</script>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sep mrg_h"></div>
+<div class="blk_footer pdg_v_sm">
+<ul class="links">
+<li class="first">
+&raquo; <a href="http://www4.fnac.com/s141749/10-Jours-coups-de-coeur-sur-les-jouets?bl=HGENFblo6">Tous les jouets 10 jours coups de c&oelig;ur&nbsp;!</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="line_2cols_mea aligner_produits mrg_v_lg">
+<div class="block block_bleu">
+<div class="blk_inside filled flat">
+<h2 class="blk_header"><b></b>
+<a href="http://www4.fnac.com/s120992/Jouets-1er-age?bl=HGENFpdg">Sélection Jouets 1er âge</a>
+</h2>
+<div class="blk_content pdg_h pdg_t">
+<ul class="listeproduits">
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<span>1</span>
+<a href="http://www4.fnac.com/a2989706/Hasbro-Clipo-petit-baril?bl=HGENFpdg1" class="img"><img src="http://s2-wpo.yterium.net/contest/img/2989706_47x68.jpg" width="47" height="68" alt="Clipo petit Baril"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2989706/Hasbro-Clipo-petit-baril?bl=HGENFpdg1">Clipo petit Baril</a></dt>
+<dd class="details">Clipo&nbsp;- Playskool</dd>
+<dd class="prix">
+24,50&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Meilleures_ventes8_MP" class="MarketPlaceOffers" title="2989706"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Meilleures_ventes8_MP|2989706");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<span>2</span>
+<a href="http://www4.fnac.com/a3002564/Vilac-Baby-Gaston-le-lion?bl=HGENFpdg2" class="img"><img src="http://s3-wpo.yterium.net/contest/img/3002564_47x68.jpg" width="47" height="68" alt="Baby Gaston le lion"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a3002564/Vilac-Baby-Gaston-le-lion?bl=HGENFpdg2">Baby Gaston le lion</a></dt>
+<dd class="details">Vilac&nbsp;- Jouets à tirer</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>15,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Meilleures_ventes9_MP" class="MarketPlaceOffers" title="3002564"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Meilleures_ventes9_MP|3002564");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<span>3</span>
+<a href="http://www4.fnac.com/a2779374/Vtech-Biblio-Bebe?bl=HGENFpdg3" class="img"><img src="http://s1-wpo.yterium.net/contest/img/2779374_47x68.jpg" width="47" height="68" alt="Biblio Bébé"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2779374/Vtech-Biblio-Bebe?bl=HGENFpdg3">Biblio Bébé</a></dt>
+<dd class="details">Vtech&nbsp;- Livres d'éveil</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>49,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Meilleures_ventes10_MP" class="MarketPlaceOffers" title="2779374"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Meilleures_ventes10_MP|2779374");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<span>4</span>
+<a href="http://www4.fnac.com/a2990550/Mattel-Tapis-de-la-jungle?bl=HGENFpdg4" class="img"><img src="http://s2-wpo.yterium.net/contest/img/2990550_47x68.jpg" width="47" height="68" alt="Tapis de la jungle"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2990550/Mattel-Tapis-de-la-jungle?bl=HGENFpdg4">Tapis de la jungle</a></dt>
+<dd class="details">Mattel&nbsp;- Fisher Price</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>79,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Meilleures_ventes11_MP" class="MarketPlaceOffers" title="2990550"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Meilleures_ventes11_MP|2990550");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li class="last">
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<span>5</span>
+<a href="http://www4.fnac.com/mp2911351/BRIO-Boite-a-formes-en-bois-laque?PID=120993&bl=HGENFpdg5" class="img"><img src="http://s3-wpo.yterium.net/contest/img/mp2911351_47x68.jpg" width="47" height="68" alt="Boite à formes"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/mp2911351/BRIO-Boite-a-formes-en-bois-laque?PID=120993&bl=HGENFpdg5">Boite à formes</a></dt>
+<dd class="details">Brio&nbsp;- jouer avec les formes</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>19,66&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Meilleures_ventes12_MP" class="MarketPlaceOffers" title="2911351"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Meilleures_ventes12_MP|2911351");</script>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<div class="blk_footer pdg_ft pdg_v">
+<ul class="links">
+<li class="first">&raquo; <a href="http://www4.fnac.com/s120992/Jouets-1er-age?bl=HGENFpdd">Tous les jouets 1er âge</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block block_last block_noir">
+<div class="blk_inside filled flat">
+<h2 class="blk_header"><b></b>
+<a href="http://www4.fnac.com/s142414/Jeux-de-societe/Jeux-pour-animer-vos-soirees?bl=HGENFpdd">Animer vos soirées&nbsp;!</a>
+</h2>
+<div class="blk_content pdg_h pdg_t">
+<ul class="listeproduits">
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<a href="http://www4.fnac.com/a3101560/Mega-Bleu-Devine-tete?bl=HGENFpdd1" class="img"><img src="http://s1-wpo.yterium.net/contest/img/3101560_47x68.jpg" width="47" height="68" alt="Devine tête"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a3101560/Mega-Bleu-Devine-tete?bl=HGENFpdd1">Devine tête</a></dt>
+<dd class="details">Mega Bleu&nbsp;- Pour les Junior</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>32,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Classique13_MP" class="MarketPlaceOffers" title="3101560"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique13_MP|3101560");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<a href="http://www4.fnac.com/a2913774/Asmodee-Time-s-Up-la-Totale?bl=HGENFpdd2" class="img"><img src="http://s2-wpo.yterium.net/contest/img/2913774_47x68.jpg" width="47" height="68" alt="Time's Up&nbsp;! Le "></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2913774/Asmodee-Time-s-Up-la-Totale?bl=HGENFpdd2">Time's Up&nbsp;! Le best of</a></dt>
+<dd class="details">Asmodee&nbsp;- Time's Up</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>33&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Classique14_MP" class="MarketPlaceOffers" title="2913774"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique14_MP|2913774");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<a href="http://www4.fnac.com/a2760081/Winning-Moves-Trivial-Pursuit-Humour?bl=HGENFpdd3" class="img"><img src="http://s3-wpo.yterium.net/contest/img/2760081_47x68.jpg" width="47" height="68" alt="Trivial Pursuit Humo"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2760081/Winning-Moves-Trivial-Pursuit-Humour?bl=HGENFpdd3">Trivial Pursuit Humour</a></dt>
+<dd class="details">Winning Moves&nbsp;- Trivial Pursuit</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>49&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Classique15_MP" class="MarketPlaceOffers" title="2760081"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique15_MP|2760081");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<a href="http://www4.fnac.com/a2990514/Mattel-Pictionary-man?bl=HGENFpdd4" class="img"><img src="http://s3-wpo.yterium.net/contest/img/2990514_47x68.jpg" width="47" height="68" alt="Pictionary MAN"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2990514/Mattel-Pictionary-man?bl=HGENFpdd4">Pictionary MAN</a></dt>
+<dd class="details">Mattel&nbsp;- Pictionary</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>63,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Classique16_MP" class="MarketPlaceOffers" title="2990514"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique16_MP|2990514");</script>
+</dd>
+</dl>
+</div>
+</li>
+<li class="last">
+<div class="produit posrel">
+<div class="cadre_produit context">
+<strong class="number">
+<a href="http://www4.fnac.com/a2913773/Asmodee-Time-s-Up-Academy?bl=HGENFpdd5" class="img"><img src="http://s2-wpo.yterium.net/contest/img/2913773_47x68.jpg" width="47" height="68" alt="Time's Up Academy"></a>
+</strong>
+</div>
+<dl class="desc">
+<dt><a href="http://www4.fnac.com/a2913773/Asmodee-Time-s-Up-Academy?bl=HGENFpdd5">Time's Up Academy</a></dt>
+<dd class="details">Asmodée&nbsp;- Time's Up</dd>
+<dd class="prix">
+<em class="delStylePrice">à partir de&nbsp;</em>19,90&nbsp;&euro;
+</dd>
+<dd class="shomeMV">
+<div id="Classique17_MP" class="MarketPlaceOffers" title="2989754"></div>
+<script type="text/javascript">MarketPlaceOffers.push("Classique17_MP|2989754");</script>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<div class="blk_footer pdg_ft pdg_v">
+<ul class="links">
+<li class="first">&raquo; <a href="http://www4.fnac.com/s142414/Jeux-de-societe/Jeux-pour-animer-vos-soirees?bl=HGENFpdd">Tous les jeux pour animer vos soirées&nbsp;!</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--/# include file="content.mini.html" -->
 </div>
 </div>
 <div id="col_gauche">
-<!--#include file="nav-sec.mini.html" -->
+<!--# include file="nav-sec.mini.html" -->
+	<h1 id="titres"><img alt="Enfants" src="http://s2-wpo.yterium.net/contest/img/vignette_enfants.png" width="180" height="62" /></h1>
+	<div id="navigation" class="mrg_b_shadw_big">
+	<div class="box-border"><div class="blkGris pdg_b"><div class="inside_block"><div class="blk_content">
+	<dl id="lkActus">
+	<dt>Actualités</dt>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s130378/Notre-univers-Playmobil?bl=HGENFarbo">Notre univers Playmobil</a></dd>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s134778/Notre-univers-Lego?bl=HGENFarbo">Notre univers Lego</a></dd>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s130443/Notre-univers-Disney?bl=HGENFarbo">Notre univers Disney</a></dd>
+	</dl>
+	<dl id="lkBonPlans">
+	<dt>Bons plans et petits prix</dt>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s135876/Bons-plans-sur-les-jouets?bl=HGENFarbo">Bons plans sur les jouets !</a></dd>
+	<dd class="rouge">» <a class="rouge" href="http://recherche.fnac.com/n188843/Offres-speciales-adherents-jouets?bl=HGENFarbo">Offres spéciales adhérents jouets</a></dd>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s119767/Petits-prix-jouets?bl=HGENFarbo">Petits prix jouets</a></dd>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s141749/10-Jours-coups-de-coeur-sur-les-jouets?bl=HGENFarbo">10 Jours coups de coeur sur les jouets !</a></dd>
+	</dl>
+	<dl id="lkPrefs">
+	<dt>Sélections et conseils Fnac </dt>
+	<dd class="rouge">» <a class="rouge" href="http://www4.fnac.com/s117837/Nouveautes-Jouets?bl=HGENFarbo">Nouveautés Jouets</a></dd>
+	<dd class="">» <a href="http://recherche.fnac.com/n136420/Nos-coups-de-coeurs-jouets?bl=HGENFarbo">Nos coups de coeurs jouets</a></dd>
+	<dd class="">» <a href="http://recherche.fnac.com/n157571/Nos-meilleures-ventes-jouets?bl=HGENFarbo">Nos meilleures ventes jouets</a></dd>
+	</dl>
+	</div></div></div>
+	<div class="blkOcre"><div class="inside_block"><div class="blk_content">
+	<dl>
+	<dt>Nos sélections héros</dt>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/Les-heros-des-tout-petits/sa128935?bl=HGENFarbo">Les héros des tout petits</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/Les-princesses-Disney/sa129544?bl=HGENFarbo">Les princesses Disney</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/Les-garcons-preferent/sa132965?bl=HGENFarbo">Les garçons préfèrent</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/Les-filles-preferent/sa132966?bl=HGENFarbo">Les filles préfèrent</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/Les-joueurs-preferent/sa139026?bl=HGENFarbo">Les joueurs préfèrent</a></dd>
+	</dl>
+	</div></div></div>
+	<div class="arboListe">
+	<dl>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s128786/Jouets-pour-filles">Jouets pour filles</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s128785/Jouets-pour-garcons">Jouets pour garçons</a></dd>
+	<dt>Nos sélections par âges</dt>
+	<dd class="moutarde">» <a href="http://livre.fnac.com/s148692/Sante-Bien-etre-Puericulture/Maternite-et-puericulture/Accessoires-de-Puericulture">Accessoires de Puériculture</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s126742/0-a-3-ans">0 à 3 ans</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s126743/3-a-5-ans">3 à 5 ans</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s126744/5-a-8-ans">5 à 8 ans</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s126745/8-a-12-ans">8 à 12 ans</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s126746/Plus-de-12-ans">Plus de 12 ans</a></dd>
+	<dt>Tous nos jouets</dt>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s133146/Deco-et-mode-enfant">Déco et mode enfant</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120214/Articles-de-fetes-et-deguisements">Articles de fêtes et déguisements</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120216/Jeux-creatifs">Jeux créatifs</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120992/Jouets-1er-age">Jouets 1er âge</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120225/Jeux-et-jouets-educatifs">Jeux et jouets éducatifs</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s138729/Jouets-en-bois">Jouets en bois</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120984/Jeux-de-plein-air-et-sports">Jeux de plein air et sports</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s178865/3-a-5-ans/Jeux-d-imitation">Jeux d'imitation</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120219/Jeux-de-construction">Jeux de construction</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120211/Jeux-de-societe">Jeux de société</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s136329/Modelisme">Modélisme</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s134278/Jouets-pour-filles/Poupees-et-peluches">Poupées et peluches</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120953/Puzzles">Puzzles</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s132339/Jouets-pour-garcons/Vehicules-et-Circuits">Véhicules et Circuits</a></dd>
+	<dt>Nos héros préférés</dt>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s129839/Tous-vos-heros-favoris/Charlotte-aux-fraises">Charlotte aux fraises</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s130541/Notre-univers-Disney/Cars">Cars</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s130559/Notre-univers-Disney/Les-Princesses-Disney">Les Princesses Disney</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s135709/Bakugan">Bakugan</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s129846/Tous-vos-heros-favoris/Dora-l-exploratrice">Dora l'exploratrice</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s129878/Tous-vos-heros-favoris/Pokemon">Pokemon</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s129778/Tous-vos-heros-favoris/Ben-10">Ben 10</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s129799/Tous-vos-heros-favoris/Star-Wars">Star Wars</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s129688/Tous-vos-heros-favoris">Tous vos héros favoris</a></dd>
+	<dt>Par marque</dt>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s131749/Asmodee">Asmodee</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s138899/Jouets-en-bois/Brio">Brio</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s134216/Jouets-pour-garcons/Clementoni">Clementoni</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s142989/Poupees-et-peluches/Corolle">Corolle</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s123474/Djeco">Djeco</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s123475/Fisher-price">Fisher-price</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s138936/Jouets-en-bois/Haba">Haba</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s136108/Hasbro/Parker">Hasbro / Parker</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s152357/Jeux-de-construction/Jeujura">Jeujura</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s143029/Poupees-et-peluches/Kaloo">Kaloo</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s136380/Jeux-de-construction/Kapla">Kapla</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s123478/Leapfrog">Leapfrog</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120220/Jeux-de-construction/Lego">Lego</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s143068/Poupees-et-peluches/Lilliputiens">Lilliputiens</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s134455/Jouets-pour-filles/Mattel">Mattel</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s123479/MB-Jeux">MB Jeux</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/l134215/Meccano/Jouets-pour-garcons?bl=HGENFarbo">Meccano</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s140585/Moulin-Roty">Moulin Roty</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s137303/0-a-3-ans/Nathan">Nathan</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s143119/Poupees-et-peluches/Noukie-s">Noukie's</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s132862/Jeux-de-construction/Playmobil">Playmobil</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s138594/Sentosphere">Sentosphère</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s123483/Ravensburger">Ravensburger</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s120158/Smoby">Smoby</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s138915/Jouets-en-bois/Vilac">Vilac</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s136160/5-a-8-ans/Vtech">Vtech</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s138521/Vulli">Vulli</a></dd>
+	<dt>Les rayons pour enfants</dt>
+	<dd class="moutarde">» <a href="http://livre.fnac.com/s11493/Livre-Jeunesse/Tout-l-univers-Livre-de-0-a-3-ans">Tout l'univers Livre de 0 à 3 ans</a></dd>
+	<dd class="moutarde">» <a href="http://livre.fnac.com/s11494/Livre-Jeunesse/Tout-l-univers-Livre-de-3-a-7-ans">Tout l'univers Livre de 3 à 7 ans</a></dd>
+	<dd class="moutarde">» <a href="http://livre.fnac.com/s11495/Livre-Jeunesse/Tout-l-univers-Livre-de-8-a-12-ans">Tout l'univers Livre de 8 à 12 ans</a></dd>
+	<dd class="moutarde">» <a href="http://video.fnac.com/s804/DVD-Enfants-Jeunesse">DVD Enfants, Jeunesse</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s133564/Plus-de-12-ans/Manga-pour-enfant">Manga pour enfant</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s119473/Jeux-video-pour-enfant">Jeux vidéo pour enfant</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s119474/Musique-pour-enfant">Musique pour enfant</a></dd>
+	<dd class="moutarde">» <a href="http://www4.fnac.com/s119475/Logiciels-educatifs">Logiciels éducatifs</a></dd>
+	</dl>
+	</div></div></div>
+<!--/# include file="nav-sec.mini.html" -->
 </div>
 <div id="col_droite">
-<!--#include file="extra.mini.html" -->
+<!--# include file="extra.mini.html" -->
+	<div id="col_droite_header_enfant">
+	<ul class="topbuttons"><li><a class="dispeblock txt_c" href="http://www.eveiletjeux.com?bl=HGENFhautDr" target="_blank"><img src="http://s3-wpo.yterium.net/contest/img/eveiletjeux4.png" width="154" height="26" alt="Fnac Eveil &amp; Jeux"></a></li></ul></div><div class="line object" style="margin:12px 0 21px 0"><a href="http://ad.zanox.com/ppc/?15474765C628194761T&ULP=[[http://logc57.xiti.com/gopc.url?xts=425426&xtor=AD-256-[sky]&xtloc=http://www.eveiletjeux.com?url=http://www.eveiletjeux.com/Commun/Xiti_Redirect.htm]]&bl=HGENFbansky" target="_blank" title="Fnac Eveil &amp; Jeux"><img src="http://s3-wpo.yterium.net/contest/img/186x756_25082010_stat.png" alt="Fnac Eveil &amp; Jeux" width="186" height="756" class="dispeblock" border="0" id="banner186756"></a></div><div class="block block_noir mrg_b_shadw_sm btmshadow"><div class="blk_inside"><h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s130378/Notre-univers-Playmobil?bl=HGENFPromoJouet"
+	class="illustre-bottom"
+	>Univers Playmobil<b class="spt-univers"></b></a></h2><div class="blk_content"><p class="mrg_no mrg_h">Offrez à vos enfants tous les Playmobil qu'ils désirent : pirates, chevaliers, pompiers, fées...</p><ul class="links mrg_h mrg_t_sm mrg_b"><li class="last">&raquo; <a href="http://www4.fnac.com/s130378/Notre-univers-Playmobil?bl=HGENFPromoJouet">Découvrez l'univers</a></li></ul></div></div></div><div class="block block_noir mrg_b_shadw_sm btmshadow"><div class="blk_inside"><h2 class="blk_header"><b></b><a href="http://www4.fnac.com/s136742/Jeux-et-jouets-educatifs/Vtech?bl=HGENFPromoJouet2"
+	class="illustre-bottom"
+	>Univers Vtech<b class="spt-univers" style="background-position: 0 -120px;"></b></a></h2><div class="blk_content"><p class="mrg_no mrg_h">Des jouets malins pour grandir intelligent ! Venez découvrir tous les jeux et jouets éducatifs et électroniques de Vtech</p><ul class="links mrg_h mrg_t_sm mrg_b"><li class="last">&raquo; <a href="http://www4.fnac.com/s136742/Jeux-et-jouets-educatifs/Vtech?bl=HGENFPromoJouet2">Découvrez l'univers</a></li></ul></div></div></div><div class="block block_noir mrg_b_shadw_sm btmshadow"><div class="blk_inside"><h2 class="blk_header"><b></b><a href="http://abonnement-magazine.fnac.com/module_enfant/page1.asp?bl=HGENFPromoPresse"
+	class="illustre-bottom"
+	>Abonnement presse<b class="spt-univers" style="background-position: 0 -240px;height:100px"></b></a></h2><div class="blk_content"><ul class="enf_vignette mrg_b mrg_t_sm"><li class="price txt_r"><strong>62,80&nbsp;&euro;</strong></li><li class="titre"><strong>Pomme d'Api</strong></li><li class="desc">1 an - 12 n°</li><li class="link_1">&raquo;
+	<a href="http://venteflash.abonnement-magazine.fnac.com/65/abonnement-magazine-pomme_d_api.html?bl=HGENFPromoPresse">
+	Je m'abonne</a></li><li class="link">&raquo;
+	<a href="http://abonnement-magazine.fnac.com/module_enfant/page1.asp?bl=HGENFPromoPresse">
+	Voir les magazines enfants</a></li></ul></div></div></div><div class="block block_noir mrg_b_shadw_sm btmshadow"><div class="blk_inside"><h2 class="blk_header"><b></b><a href="http://www.fnacspectacles.com/?bl=HGENFPromoSpectacle"
+	class="illustre-bottom"
+	>Spectacles<b class="spt-univers" style="background-position: 0 -350px;height:100px"></b></a></h2><div class="blk_content"><ul class="enf_vignette mrg_b mrg_t_sm"><li class="price txt_r"><span class="text09em">à partir de</span><br /><strong>21&nbsp;&euro;</strong></li><li class="titre"><strong>Oui-Oui et le cadeau surprise</strong></li><li class="desc">En tournée</li><li class="link_1">&raquo;
+	<a href="http://www.fnacspectacles.com/place-spectacle/recherche-billet-oui-oui-cadeau-surprise.htm#a125785973439?bl=HGENFPromoSpectacle">
+	Réservez vos billets</a></li><li class="link">&raquo;
+	<a href="http://www.fnacspectacles.com/place-spectacle/Enfants-p304216639723798547.htm?bl=HGENFPromoSpectacle">
+	Voir les spectacles pour enfants</a></li></ul></div></div></div><div class="block block_noir mrg_b_shadw_sm btmshadow"><div class="blk_inside"><h2 class="blk_header"><b></b><a href="http://www.fnac.com/guides/telechargement/special-enfants/default.asp?NID=0&RNID=0&bl=HGENFPromoMusique"
+	class="illustre-bottom"
+	>Sélections téléchargement<b class="spt-univers" style="background-position: 0 -466px;height:84px"></b></a></h2><div class="blk_content"><p class="mrg_no mrg_h">Découvrez nos sélections de chansons, livres audio, dessins-animés et jeux à télécharger pour vos enfants.</p><ul class="links mrg_h mrg_t_sm mrg_b"><li class="last">&raquo; <a href="http://www.fnac.com/guides/telechargement/special-enfants/default.asp?NID=0&RNID=0&bl=HGENFPromoMusique">En savoir plus</a></li></ul></div></div></div>
+<!--/# include file="extra.mini.html" -->
 </div>
 <div id="stat">
 <span id="pageName">Home enfants</span>
@@ -54,7 +838,33 @@ $.getScript('js/sources/s_code.js-h.14.20090227.js')
 if (window.jQuery) boot_js();
 //--></script>
 </div>
-<!--#include file="footer.mini.html" -->
+<!--# include file="footer.mini.html" -->
+<div id="iFrameFooter">
+<iframe allowtransparency="true" id="iFrameFooterLoad" src="iframe-footer/engagements.html" width="993" height="315" frameborder="0" scrolling="no" name="footer" marginheight="0" marginwidth="0">
+Votre navigateur ne supporte pas les iframes, vous pouvez consulter les engagements de la Fnac, les services Pratique et consulter des informations sur l'entreprise Fnac à cette adresse : <a href="http://www.fnac.com/Navigation/engagements-pratique-entreprise.asp">Navigation/engagements-pratique-entreprise.asp</a>
+</iframe>
+</div>
+<div id="subfooter">
+<ul class="mrg_t">
+<li class="first">Nos partenaires jeux vidéo :</li>
+<li class="first"><a href="http://www.playfrance.com/?bl=HGENFfoot" target="_blank" class="min">Jeux Playstation</a></li>
+<li><a href="http://www.xboxfrance.com/?bl=HGENFfoot" target="_blank" class="min">Jeux Xbox 360</a></li>
+<li><a href="http://www.wiidsfrance.com/?bl=HGENFfoot" target="_blank" class="min">Jeux Wii et DS</a></li>
+<li><a href="http://www.pcactu.com/?bl=HGENFfoot" target="_blank" class="min">Jeux PC</a></li>
+<li><a href="http://astuce-soluce.playfrance.com/index.php/Accueil?bl=HGENFfoot" target="_blank" class="min">Astuces et codes jeux vidéo</a></li>
+</ul>
+<ul class="mrg_t">
+<li class="first">Evénements à venir sur fnac.com :</li>
+<li class="first"><a href="http://www.fnac.com/fete-des-meres.asp?NID=0&RNID=0HGENFfoot" class="min">Fête des mères</a></li>
+<li><a href="http://www.fnac.com/fete-des-peres.asp?NID=0&RNID=0HGENFfoot" class="min">Fête des pères</a></li>
+<li><a href="http://www.fnac.com/noel.asp?NID=0&RNID=0HGENFfoot" class="min">Noël</a></li>
+<li><a href="http://www.fnac.com/soldes.asp?NID=0&RNID=0HGENFfoot" class="min">Soldes</a></li>
+</ul>
+<ul class="mrg_t">
+<li class="first">&copy;&nbsp;Fnac 2010</li>
+</ul>
+</div>
+<!--/# include file="footer.mini.html" -->
 </div>
 </body>
 </html>
