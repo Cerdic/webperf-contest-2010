@@ -238,8 +238,8 @@ $(function () {
 	});
 
 	// demarrer le gif anime
-	if ($('#banner186756').attr('src')!=='http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')
-		setTimeout("$('#banner186756').attr('src','http://s1.webperf-contest.com/4cc80752a91cc/img/186x756_25082010.gif')",2000);
+	if ($('#banner186756').attr('src')!=='http://s1-wpo.yterium.net/contest/img/186x756_25082010.gif')
+		setTimeout("$('#banner186756').attr('src','http://s1-wpo.yterium.net/contest/img/186x756_25082010.gif')",2000);
 });
 }
 if (typeof window.boot_js!='undefined')

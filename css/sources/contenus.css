@@ -160,10 +160,10 @@ Afin de ne pas faire de  redondance de code, les s�lecteurs seront simplement 
   background-image:url(img/offre-adherents-small.png);
 }
 .produit dd.pictoPrixAdhNormal{
-  background-image:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png);background-position: 10px -193px;
+  background-image:url(http://s2-wpo.yterium.net/contest/css/img/spt-pictos-bg.png);background-position: 10px -193px;
 }
 .produit dd.pictoPrixAdhBig{
-  background-image:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png);background-position: 10px -193px;
+  background-image:url(http://s2-wpo.yterium.net/contest/css/img/spt-pictos-bg.png);background-position: 10px -193px;
 }
 .produit dd.pictoPrixVertSmall{
   background-image:url(img/prix-vert-small.gif);
@@ -210,7 +210,7 @@ Afin de ne pas faire de  redondance de code, les s�lecteurs seront simplement 
 
 /*import ancienne feuille de style*/
 .produit dd.pictocoeur{
-  background-image:url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-pictos-bg.png);background-position: 10px -235px;
+  background-image:url(http://s2-wpo.yterium.net/contest/css/img/spt-pictos-bg.png);background-position: 10px -235px;
 }
 /*
 404

@@ -15,7 +15,7 @@ function onScroll(node){
 		{e.removeClass('lazy');$('#iFrameFooterLoad').attr('src','iframe-footer/engagements.html');}
 	e = $("#col_droite b.spt-univers.lazy",node);
 	if (e.length && !$.belowthefold(e.eq(0), {threshold : 100}))
-		e.removeClass("lazy").css('background-image','url(http://s2.webperf-contest.com/4cc80752a91cc/css/img/spt-univers.jpg)');
+		e.removeClass("lazy").css('background-image','url(http://s2-wpo.yterium.net/contest/css/img/spt-univers.jpg)');
 }
 
 /**

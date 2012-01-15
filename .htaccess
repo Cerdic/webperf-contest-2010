@@ -60,7 +60,7 @@ RewriteEngine  on
 #RewriteRule    MarketPlace/([0-9]*).html$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/([0-9]*)$  http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?Ref=FnacDirect&tagmode=any&PRID=$1  [P]
 #RewriteRule    MarketPlace/(.*)$  http://yterium.net/wpo/proxy.php$1  [P]
-RewriteRule    MarketPlace/(.*)$  http://entries.webperf-contest.com/4cc80752a91cc/marketplace.js  [P]
+RewriteRule    MarketPlace/(.*)$  http://wpo.yterium.net/contest/marketplace.js  [P]
 
 
 # Expiration des pages :
@@ -93,8 +93,8 @@ FileETag None
 
 #Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
 #Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=webperf-contest.com"
-#Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=entries.webperf-contest.com"
-#Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.entries.webperf-contest.com"
+#Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=wpo.yterium.net"
+#Header set Set-Cookie "s_ev14=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.wpo.yterium.net"
 #Header set Set-Cookie "s_sq=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
 #Header set Set-Cookie "campaign=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
 #Header set Set-Cookie "s_cc=1; expires=Wed, 1-Sep-2010 12:34:56 GMT; path=/;domain=.webperf-contest.com"
